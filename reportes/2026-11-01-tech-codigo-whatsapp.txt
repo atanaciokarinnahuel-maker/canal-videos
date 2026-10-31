@@ -1,0 +1,5 @@
+id=2026-11-01-tech-codigo-whatsapp
+voz_seg=31.477551
+final_seg=32.000000
+[Parsed_volumedetect_0 @ 0x55afc1c2c800] mean_volume: -15.2 dB
+[Parsed_volumedetect_0 @ 0x55afc1c2c800] max_volume: -1.5 dB
