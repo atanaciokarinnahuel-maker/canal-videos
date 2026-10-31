@@ -1,6 +1,6 @@
 id=2026-10-31-tech-mitos-celular
 voz_seg=44.669388
-final_seg=45.900000
-[Parsed_volumedetect_0 @ 0x56455a7d6680] mean_volume: -15.3 dB
-[Parsed_volumedetect_0 @ 0x56455a7d6680] max_volume: -1.4 dB
+final_seg=46.100000
+[Parsed_volumedetect_0 @ 0x55647e0326c0] mean_volume: -15.3 dB
+[Parsed_volumedetect_0 @ 0x55647e0326c0] max_volume: -1.4 dB
 youtube=sin_bloque
