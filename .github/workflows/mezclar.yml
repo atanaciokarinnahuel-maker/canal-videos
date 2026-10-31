@@ -33,7 +33,7 @@ jobs:
               -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -ar 44100 -movflags +faststart final.mp4
             mkdir -p reportes
             { echo "id=$id"; echo -n "voz_seg="; ffprobe -v error -show_entries format=duration -of csv=p=0 voz.mp3; echo -n "final_seg="; ffprobe -v error -show_entries format=duration -of csv=p=0 final.mp4; ffmpeg -i final.mp4 -af volumedetect -vn -f null - 2>&1 | grep -E "mean_volume|max_volume"; } > "reportes/$id.txt"
-            ffmpeg -y -v error -i final.mp4 -vn -ac 1 -b:a 48k "reportes/$id-audio.mp3"
+            ffmpeg -y -v error -i final.mp4 -vn -ac 2 -b:a 160k "reportes/$id-audio.mp3"
             gh release create "$id" final.mp4 --title "$id" --notes "Video final con voz" || gh release upload "$id" final.mp4 --clobber
             rm -f voz.mp3 final.mp4
             # Subida automática a YouTube vía Make (solo si hay youtube/<id>.json y el secreto)
