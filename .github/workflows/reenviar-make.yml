@@ -1,0 +1,23 @@
+name: Reenviar video a Make (YouTube)
+on:
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "id del trabajo, ej. 2026-11-01-tech-codigo-whatsapp"
+        required: true
+permissions:
+  contents: write
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enviar
+        env:
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+        run: |
+          sudo apt-get install -y -qq jq
+          mkdir -p reportes
+          scripts/enviar_make.sh "${{ github.event.inputs.job }}" | tee "reportes/envio-make-${{ github.event.inputs.job }}.txt"
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add reportes && git commit -m "Envío a Make [skip ci]" && git push || true

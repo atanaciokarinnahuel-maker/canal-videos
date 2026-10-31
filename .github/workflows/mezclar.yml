@@ -15,6 +15,7 @@ jobs:
       - name: Procesar trabajos nuevos
         env:
           GH_TOKEN: ${{ github.token }}
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
         run: |
           set -e
           for job in $(git diff --name-only HEAD~1 HEAD -- 'jobs/*.json'); do
@@ -35,6 +36,8 @@ jobs:
             ffmpeg -y -v error -i final.mp4 -vn -ac 1 -b:a 48k "reportes/$id-audio.mp3"
             gh release create "$id" final.mp4 --title "$id" --notes "Video final con voz" || gh release upload "$id" final.mp4 --clobber
             rm -f voz.mp3 final.mp4
+            # Subida automática a YouTube vía Make (solo si hay youtube/<id>.json y el secreto)
+            scripts/enviar_make.sh "$id" | tee -a "reportes/$id.txt"
           done
           git config user.name "github-actions"; git config user.email "actions@github.com"
           git add reportes && git commit -m "Reporte de mezcla [skip ci]" && git push || true
