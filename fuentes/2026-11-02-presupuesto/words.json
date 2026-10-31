@@ -1,0 +1,696 @@
+{
+"words": [
+{
+"text": "¿Empezarías",
+"start": 0.25,
+"end": 0.78
+},
+{
+"text": "a",
+"start": 0.78,
+"end": 0.896
+},
+{
+"text": "construir",
+"start": 0.896,
+"end": 1.38
+},
+{
+"text": "una",
+"start": 1.38,
+"end": 1.587
+},
+{
+"text": "casa",
+"start": 1.587,
+"end": 1.841
+},
+{
+"text": "sin",
+"start": 1.841,
+"end": 2.048
+},
+{
+"text": "saber",
+"start": 2.048,
+"end": 2.348
+},
+{
+"text": "cuánto",
+"start": 2.348,
+"end": 2.694
+},
+{
+"text": "cuesta?",
+"start": 2.694,
+"end": 3.04
+},
+{
+"text": "Lucas",
+"start": 3.46,
+"end": 3.76
+},
+{
+"text": "14:28,",
+"start": 3.76,
+"end": 4.613
+},
+{
+"text": "en",
+"start": 4.833,
+"end": 4.994
+},
+{
+"text": "paráfrasis:",
+"start": 4.994,
+"end": 5.524
+},
+{
+"text": "el",
+"start": 5.944,
+"end": 6.106
+},
+{
+"text": "que",
+"start": 6.106,
+"end": 6.313
+},
+{
+"text": "quiere",
+"start": 6.313,
+"end": 6.659
+},
+{
+"text": "edificar",
+"start": 6.659,
+"end": 7.097
+},
+{
+"text": "una",
+"start": 7.097,
+"end": 7.305
+},
+{
+"text": "torre,",
+"start": 7.305,
+"end": 7.605
+},
+{
+"text": "primero",
+"start": 7.825,
+"end": 8.216
+},
+{
+"text": "se",
+"start": 8.216,
+"end": 8.378
+},
+{
+"text": "sienta",
+"start": 8.378,
+"end": 8.724
+},
+{
+"text": "y",
+"start": 8.724,
+"end": 8.839
+},
+{
+"text": "calcula",
+"start": 8.839,
+"end": 9.231
+},
+{
+"text": "los",
+"start": 9.231,
+"end": 9.438
+},
+{
+"text": "gastos.",
+"start": 9.438,
+"end": 9.784
+},
+{
+"text": "Jesús",
+"start": 10.204,
+"end": 10.504
+},
+{
+"text": "hablaba",
+"start": 10.504,
+"end": 10.896
+},
+{
+"text": "del",
+"start": 10.896,
+"end": 11.104
+},
+{
+"text": "costo",
+"start": 11.104,
+"end": 11.403
+},
+{
+"text": "de",
+"start": 11.403,
+"end": 11.565
+},
+{
+"text": "seguirlo,",
+"start": 11.565,
+"end": 12.003
+},
+{
+"text": "pero",
+"start": 12.223,
+"end": 12.476
+},
+{
+"text": "el",
+"start": 12.476,
+"end": 12.638
+},
+{
+"text": "principio",
+"start": 12.638,
+"end": 13.122
+},
+{
+"text": "también",
+"start": 13.122,
+"end": 13.514
+},
+{
+"text": "aplica",
+"start": 13.514,
+"end": 13.86
+},
+{
+"text": "a",
+"start": 13.86,
+"end": 13.975
+},
+{
+"text": "tu",
+"start": 13.975,
+"end": 14.136
+},
+{
+"text": "dinero.",
+"start": 14.136,
+"end": 14.482
+},
+{
+"text": "Cuatro",
+"start": 14.902,
+"end": 15.248
+},
+{
+"text": "claves.",
+"start": 15.248,
+"end": 15.594
+},
+{
+"text": "Uno:",
+"start": 16.014,
+"end": 16.222
+},
+{
+"text": "siéntate",
+"start": 16.642,
+"end": 17.08
+},
+{
+"text": "primero.",
+"start": 17.08,
+"end": 17.472
+},
+{
+"text": "Antes",
+"start": 17.892,
+"end": 18.191
+},
+{
+"text": "de",
+"start": 18.191,
+"end": 18.353
+},
+{
+"text": "que",
+"start": 18.353,
+"end": 18.56
+},
+{
+"text": "empiece",
+"start": 18.56,
+"end": 18.952
+},
+{
+"text": "el",
+"start": 18.952,
+"end": 19.114
+},
+{
+"text": "mes,",
+"start": 19.114,
+"end": 19.321
+},
+{
+"text": "anota",
+"start": 19.541,
+"end": 19.841
+},
+{
+"text": "cuánto",
+"start": 19.841,
+"end": 20.187
+},
+{
+"text": "entra.",
+"start": 20.187,
+"end": 20.486
+},
+{
+"text": "Dos:",
+"start": 20.906,
+"end": 21.114
+},
+{
+"text": "conoce",
+"start": 21.534,
+"end": 21.88
+},
+{
+"text": "tu",
+"start": 21.88,
+"end": 22.041
+},
+{
+"text": "rebaño.",
+"start": 22.041,
+"end": 22.387
+},
+{
+"text": "Proverbios",
+"start": 22.807,
+"end": 23.337
+},
+{
+"text": "27:23",
+"start": 23.337,
+"end": 24.375
+},
+{
+"text": "dice",
+"start": 24.375,
+"end": 24.629
+},
+{
+"text": "que",
+"start": 24.629,
+"end": 24.836
+},
+{
+"text": "estés",
+"start": 24.836,
+"end": 25.136
+},
+{
+"text": "al",
+"start": 25.136,
+"end": 25.297
+},
+{
+"text": "tanto",
+"start": 25.297,
+"end": 25.597
+},
+{
+"text": "de",
+"start": 25.597,
+"end": 25.758
+},
+{
+"text": "lo",
+"start": 25.758,
+"end": 25.92
+},
+{
+"text": "que",
+"start": 25.92,
+"end": 26.127
+},
+{
+"text": "tienes.",
+"start": 26.127,
+"end": 26.473
+},
+{
+"text": "Revisa",
+"start": 26.893,
+"end": 27.239
+},
+{
+"text": "en",
+"start": 27.239,
+"end": 27.4
+},
+{
+"text": "qué",
+"start": 27.4,
+"end": 27.608
+},
+{
+"text": "se",
+"start": 27.608,
+"end": 27.769
+},
+{
+"text": "va",
+"start": 27.769,
+"end": 27.931
+},
+{
+"text": "cada",
+"start": 27.931,
+"end": 28.184
+},
+{
+"text": "peso.",
+"start": 28.184,
+"end": 28.438
+},
+{
+"text": "Tres:",
+"start": 28.858,
+"end": 29.112
+},
+{
+"text": "planifica",
+"start": 29.532,
+"end": 30.016
+},
+{
+"text": "sin",
+"start": 30.016,
+"end": 30.223
+},
+{
+"text": "apuro.",
+"start": 30.223,
+"end": 30.523
+},
+{
+"text": "Proverbios",
+"start": 30.943,
+"end": 31.473
+},
+{
+"text": "21:5:",
+"start": 31.473,
+"end": 32.188
+},
+{
+"text": "los",
+"start": 32.608,
+"end": 32.816
+},
+{
+"text": "planes",
+"start": 32.816,
+"end": 33.161
+},
+{
+"text": "del",
+"start": 33.161,
+"end": 33.369
+},
+{
+"text": "diligente",
+"start": 33.369,
+"end": 33.853
+},
+{
+"text": "llevan",
+"start": 33.853,
+"end": 34.199
+},
+{
+"text": "a",
+"start": 34.199,
+"end": 34.314
+},
+{
+"text": "la",
+"start": 34.314,
+"end": 34.476
+},
+{
+"text": "abundancia;",
+"start": 34.476,
+"end": 35.006
+},
+{
+"text": "la",
+"start": 35.226,
+"end": 35.387
+},
+{
+"text": "prisa,",
+"start": 35.387,
+"end": 35.687
+},
+{
+"text": "a",
+"start": 35.907,
+"end": 36.022
+},
+{
+"text": "la",
+"start": 36.022,
+"end": 36.184
+},
+{
+"text": "pobreza.",
+"start": 36.184,
+"end": 36.576
+},
+{
+"text": "Cuatro:",
+"start": 36.996,
+"end": 37.342
+},
+{
+"text": "guarda",
+"start": 37.762,
+"end": 38.107
+},
+{
+"text": "como",
+"start": 38.107,
+"end": 38.361
+},
+{
+"text": "la",
+"start": 38.361,
+"end": 38.522
+},
+{
+"text": "hormiga.",
+"start": 38.522,
+"end": 38.914
+},
+{
+"text": "Proverbios",
+"start": 39.334,
+"end": 39.865
+},
+{
+"text": "6:8:",
+"start": 39.865,
+"end": 40.303
+},
+{
+"text": "ella",
+"start": 40.723,
+"end": 40.976
+},
+{
+"text": "junta",
+"start": 40.976,
+"end": 41.276
+},
+{
+"text": "su",
+"start": 41.276,
+"end": 41.438
+},
+{
+"text": "comida",
+"start": 41.438,
+"end": 41.783
+},
+{
+"text": "en",
+"start": 41.783,
+"end": 41.945
+},
+{
+"text": "el",
+"start": 41.945,
+"end": 42.106
+},
+{
+"text": "verano.",
+"start": 42.106,
+"end": 42.452
+},
+{
+"text": "Aparta",
+"start": 42.872,
+"end": 43.218
+},
+{
+"text": "un",
+"start": 43.218,
+"end": 43.379
+},
+{
+"text": "poco",
+"start": 43.379,
+"end": 43.633
+},
+{
+"text": "cada",
+"start": 43.633,
+"end": 43.887
+},
+{
+"text": "mes.",
+"start": 43.887,
+"end": 44.094
+},
+{
+"text": "Como",
+"start": 44.514,
+"end": 44.768
+},
+{
+"text": "enseña",
+"start": 44.768,
+"end": 45.114
+},
+{
+"text": "1",
+"start": 45.114,
+"end": 45.505
+},
+{
+"text": "Corintios",
+"start": 45.505,
+"end": 45.99
+},
+{
+"text": "4:2,",
+"start": 45.99,
+"end": 46.474
+},
+{
+"text": "al",
+"start": 46.694,
+"end": 46.855
+},
+{
+"text": "administrador",
+"start": 46.855,
+"end": 47.524
+},
+{
+"text": "se",
+"start": 47.524,
+"end": 47.685
+},
+{
+"text": "le",
+"start": 47.685,
+"end": 47.847
+},
+{
+"text": "pide",
+"start": 47.847,
+"end": 48.1
+},
+{
+"text": "ser",
+"start": 48.1,
+"end": 48.308
+},
+{
+"text": "fiel.",
+"start": 48.308,
+"end": 48.561
+},
+{
+"text": "¿Tú",
+"start": 48.981,
+"end": 49.143
+},
+{
+"text": "ya",
+"start": 49.143,
+"end": 49.304
+},
+{
+"text": "haces",
+"start": 49.304,
+"end": 49.604
+},
+{
+"text": "presupuesto?",
+"start": 49.604,
+"end": 50.18
+},
+{
+"text": "Cuéntame",
+"start": 50.6,
+"end": 51.039
+},
+{
+"text": "en",
+"start": 51.039,
+"end": 51.2
+},
+{
+"text": "los",
+"start": 51.2,
+"end": 51.407
+},
+{
+"text": "comentarios,",
+"start": 51.407,
+"end": 51.984
+},
+{
+"text": "¡y",
+"start": 52.204,
+"end": 52.319
+},
+{
+"text": "sigue",
+"start": 52.319,
+"end": 52.619
+},
+{
+"text": "el",
+"start": 52.619,
+"end": 52.78
+},
+{
+"text": "canal!",
+"start": 52.78,
+"end": 53.08
+}
+],
+"voice_dur": 53.5,
+"estimated": true
+}
