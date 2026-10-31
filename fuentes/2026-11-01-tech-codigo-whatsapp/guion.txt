@@ -1,0 +1,14 @@
+Short Tecnología e IA (@Tech-s7u) · 2026-11-01 · Seguridad digital: el código de verificación de WhatsApp
+Estado: video con música y subtítulos, SIN voz (ElevenLabs respondió "Free generations are busy"; no se cobró).
+
+Guion para la voz (JC, voice_id 4XUsiqPDK4UACIM2BILe, eleven_v4):
+[excited] ¿Sabías que con solo seis números te pueden robar el WhatsApp? [upbeat] Si alguien te pide el código que te llegó por SMS, es una estafa, aunque diga ser tu banco, un amigo o el soporte. Clave uno: ese código no se comparte con nadie. Clave dos: entra a Ajustes, Cuenta, Verificación en dos pasos, y crea tu PIN. Clave tres: revisa Dispositivos vinculados y cierra lo que no reconozcas. [warmly] ¿Te pidieron el código alguna vez? Cuéntalo abajo y sigue el canal.
+
+Subtítulos sincronizados a ritmo estimado (~31 s de habla, inicio 0,45 s).
+
+Fuentes:
+- https://www.lagaceta.com.ar/nota/1114320/sociedad/como-evitar-te-roben-cuenta-whatsapp-tu-numero-celular-guia-definitiva-para-argentina.html
+- https://www.iprofesional.com/tecnologia/460209-me-robaron-whatsapp-usaron-mi-cuenta-para-pedir-plata-y-estas-lecciones-aprendi
+- https://www.cronista.com/infotechnology/gadgets/whatsapp-los-4-consejos-del-gobierno-nacional-para-evitar-caer-en-las-estafas-a-traves-de-la-plataforma
+- https://www.eset.com/py/acerca-de-eset/sala-de-prensa/comunicados-de-prensa/articulos-de-prensa/falso-mensaje-de-soporte-tecnico-de-whatsapp-busca-robar-cuentas/
+- https://www.ocu.org/tecnologia/telefono/consejos/activar-verificacion-whatsapp
