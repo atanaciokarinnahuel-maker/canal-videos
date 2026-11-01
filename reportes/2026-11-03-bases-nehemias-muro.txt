@@ -1,0 +1,6 @@
+id=2026-11-03-bases-nehemias-muro
+voz_seg=54.752653
+final_seg=56.100000
+[Parsed_volumedetect_0 @ 0x55d348044180] mean_volume: -15.6 dB
+[Parsed_volumedetect_0 @ 0x55d348044180] max_volume: -1.5 dB
+youtube=sin_bloque
