@@ -16,13 +16,13 @@ Karin, de Maimará (Jujuy, Argentina). Dueño de BITKAR (reparación de celulare
 ## Los dos canales
 | | Bases Bíblicas | Tecnología e IA (@Tech-s7u) |
 |---|---|---|
-| Series | A) Finanzas y mayordomía bíblica · B) Historias de la Biblia | IA práctica → Seguridad profunda → Reparación por dentro (rotan cada noche) |
+| Series | Patrón B, B, A: B) Historias de la Biblia narradas (2 de cada 3) · A) Finanzas y mayordomía bíblica. + 1 video largo horizontal (5–8 min) los domingos | IA práctica → Seguridad profunda → Reparación por dentro (rotan cada noche) |
 | Voz ElevenLabs | Sam Adam (18GZPpJvaVG53Nt3H52N) | JC (4XUsiqPDK4UACIM2BILe) |
 | Estilo | Ilustración cálida tipo película animada, luz dorada, personajes sin rostro detallado | Mascota original "Chispa" (robotito celeste), SVG/CSS 3D, glitch, partículas |
 | Publicación YouTube | Sola a las 07:00 vía Metricool (blogId 7772589; plan gratis = 20 posts/mes) | Karin la sube a mano |
 | Otras redes | Karin sube a mano (TikTok, Instagram @tcn_oia, Facebook) | Karin sube a mano |
 
-Bases: versículos con referencia + paráfrasis marcada, verificados; sin teología de la prosperidad; separar principio bíblico de consejo práctico.
+Bases: títulos SIN hashtags (los hashtags van en la descripción); cada video trae comentario para fijar y 3 preguntas para responder. Versículos con referencia + paráfrasis marcada, verificados; sin teología de la prosperidad; separar principio bíblico de consejo práctico.
 Tech: nada de trucos falsos, hacking dañino, logos, marcas ni personajes con copyright.
 
 ## Fórmula de retención (guía completa en plantillas/LEEME.md del repo)
@@ -39,12 +39,19 @@ Tech: nada de trucos falsos, hacking dañino, logos, marcas ni personajes con co
 |---|---|---|
 | 22:41 (01:41) | Short diario Tech | Hace el video de un día FUTURO. Solo avisa por texto. |
 | 03:13 | Short diario Bases | Hace el video, lo programa en Metricool. Solo avisa por texto. |
-| 07:22 | Videos del día en el chat | ÚNICA que envía archivos: solo los de HOY, con título, descripción y hashtags. Anota en entregas/registro.txt para no repetir. |
-| 20:37 los días 1, 6, 11, 16, 21 y 26 | Buscador de nichos | vidIQ (máx. 20 créditos) + web → ideas/temas-bases.md, ideas/temas-tech.md, ideas/nichos-nuevos.md + informe. |
+| 07:22 | Videos del día en el chat | ÚNICA que envía archivos: TODOS los de HOY (Short Bases, largo del domingo, Tech), con título, descripción, hashtags y comentario para fijar. Anota en entregas/registro.txt para no repetir. |
+| Viernes 21:47 | Video largo semanal Bases | Historia bíblica en 4–6 capítulos para el domingo. Solo avisa por texto. |
+| 20:37 los días 1, 6, 11, 16, 21 y 26 | Buscador de nichos | vidIQ (máx. 20 créditos) + web → ideas/temas-bases.md, ideas/temas-tech.md, ideas/nichos-nuevos.md + revisión de rendimiento (ideas/rendimiento.md) + informe. |
 
 Repositorio: github.com/atanaciokarinnahuel-maker/canal-videos
 - jobs/ (cada video, id = AAAA-MM-DD-…), videos/, fuentes/, paquetes/ (textos Bases), youtube/ (textos Tech), reportes/ (mezcla), ideas/, guiones/pendientes/ (guiones míos), entregas/registro.txt.
 - GitHub Actions mezcla voz + música (bajada automática) y genera reportes/<id>.txt y <id>-audio.mp3.
+
+## Estrategia (decisiones del 2 nov 2026)
+- Dato clave: el Short narrado de la viuda y la vasija de aceite rindió ~15 veces lo normal de Bases → más historias bíblicas narradas.
+- Monetización: hoy se pide 1.000 suscriptores + 4.000 horas (12 meses) o 10 millones de vistas de Shorts (90 días). Desde el 1 feb 2027 los canales nuevos necesitarán 1.000 suscriptores + 8.000 horas o 20 millones de vistas de Shorts. Por eso: Shorts para descubrir audiencia y videos largos para horas de reproducción.
+- Posible tercer canal: piloto "Archivos del Tiempo" (misterios históricos y arqueología, hechos con fuentes, sin pseudohistoria ni ocultismo). Piloto (1 episodio + 3 Shorts) el 2 nov a la noche; Karin decide si crea el canal.
+- Expediente liviano por video: título limpio, comentario fijado, 3 preguntas, siguiente idea; revisión de rendimiento cada 5 días con datos públicos.
 
 ## vidIQ (regla fija)
 - Cuenta: atanaciokarinnahuel@gmail.com, plan GRATIS (~150 créditos/mes, se renuevan a fin de mes). Karin decidió NO pagar el plan Máximo (US$49).
