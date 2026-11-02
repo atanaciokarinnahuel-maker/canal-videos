@@ -40,11 +40,17 @@ Tech: nada de trucos falsos, hacking dañino, logos, marcas ni personajes con co
 | 22:41 (01:41) | Short diario Tech | Hace el video de un día FUTURO. Solo avisa por texto. |
 | 03:13 | Short diario Bases | Hace el video, lo programa en Metricool. Solo avisa por texto. |
 | 07:22 | Videos del día en el chat | ÚNICA que envía archivos: solo los de HOY, con título, descripción y hashtags. Anota en entregas/registro.txt para no repetir. |
-| 20:37 cada 3 días | Buscador de nichos | vidIQ + web → ideas/temas-bases.md, ideas/temas-tech.md, ideas/nichos-nuevos.md + informe. |
+| 20:37 los días 1, 6, 11, 16, 21 y 26 | Buscador de nichos | vidIQ (máx. 20 créditos) + web → ideas/temas-bases.md, ideas/temas-tech.md, ideas/nichos-nuevos.md + informe. |
 
 Repositorio: github.com/atanaciokarinnahuel-maker/canal-videos
 - jobs/ (cada video, id = AAAA-MM-DD-…), videos/, fuentes/, paquetes/ (textos Bases), youtube/ (textos Tech), reportes/ (mezcla), ideas/, guiones/pendientes/ (guiones míos), entregas/registro.txt.
 - GitHub Actions mezcla voz + música (bajada automática) y genera reportes/<id>.txt y <id>-audio.mp3.
+
+## vidIQ (regla fija)
+- Cuenta: atanaciokarinnahuel@gmail.com, plan GRATIS (~150 créditos/mes, se renuevan a fin de mes). Karin decidió NO pagar el plan Máximo (US$49).
+- Nunca comprar ni activar planes pagos. El buscador de nichos gasta como máximo 20 créditos por vez; si quedan menos de 25, usa solo búsqueda web.
+- Nunca usar herramientas de vidIQ que generan contenido (video, voz, miniaturas, música).
+- Instagram y los canales de YouTube NO están conectados a vidIQ (decisión de Karin: dejarlo así).
 
 ## Para pedir cosas rápido
 - "Buscar nichos" → informe de temas y nichos ahora.
@@ -53,6 +59,5 @@ Repositorio: github.com/atanaciokarinnahuel-maker/canal-videos
 - "Informe" → qué se hizo y qué falta.
 
 ## Pendientes
-- Conectar Instagram @tcn_oia en app.vidiq.com.
 - Metricool llega a su límite ~20 de noviembre: desde ahí Bases también se sube a mano (o Make Core US$9/mes).
 - Make conectado y Skills de Make instaladas, sin escenario por ahora (el plan gratis solo admite archivos de 5 MB).
