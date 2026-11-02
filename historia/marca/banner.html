@@ -1,0 +1,34 @@
+<html><body style="margin:0;width:2560px;height:1440px;overflow:hidden">
+<svg width="2560" height="1440" viewBox="0 0 2560 1440" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient id="pap" cx="50%" cy="50%" r="75%"><stop offset="0" stop-color="#f1dcae"/><stop offset=".55" stop-color="#d6b077"/><stop offset="1" stop-color="#6e4520"/></radialGradient>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="9"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .18  0 0 0 0 .08  0 0 0 .38 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff0c4" stop-opacity=".75"/><stop offset="1" stop-color="#fff0c4" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="2560" height="1440" fill="url(#pap)"/>
+<rect width="2560" height="1440" fill="#000" filter="url(#grain)"/>
+<!-- cuadrícula de mapa antiguo -->
+<g stroke="#5a3515" stroke-width="2" opacity=".18" fill="none">
+ <path d="M0 520 Q1280 600 2560 520"/><path d="M0 720 L2560 720"/><path d="M0 920 Q1280 840 2560 920"/>
+ <path d="M300 0 Q420 720 300 1440"/><path d="M720 0 Q790 720 720 1440"/><path d="M1840 0 Q1770 720 1840 1440"/><path d="M2260 0 Q2140 720 2260 1440"/>
+</g>
+<!-- rosas de los vientos laterales (fuera del área segura, decorativas) -->
+<g transform="translate(520 720)" fill="#5a3515" opacity=".35"><polygon points="0,-170 16,-16 0,0 -16,-16"/><polygon points="0,170 16,16 0,0 -16,16"/><polygon points="-170,0 -16,-16 0,0 -16,16"/><polygon points="170,0 16,-16 0,0 16,16"/><circle r="120" fill="none" stroke="#5a3515" stroke-width="3"/></g>
+<g transform="translate(2040 720) rotate(20)" fill="#5a3515" opacity=".35"><polygon points="0,-170 16,-16 0,0 -16,-16"/><polygon points="0,170 16,16 0,0 -16,16"/><polygon points="-170,0 -16,-16 0,0 -16,16"/><polygon points="170,0 16,-16 0,0 16,16"/><circle r="120" fill="none" stroke="#5a3515" stroke-width="3"/></g>
+<!-- siluetas: pirámide, columna, templo andino -->
+<g fill="#4a2a10" opacity=".22">
+ <polygon points="120,1440 420,1080 720,1440"/><polygon points="560,1440 760,1180 960,1440"/>
+ <rect x="2180" y="1000" width="60" height="440"/><rect x="2160" y="980" width="100" height="30"/><rect x="2330" y="1060" width="60" height="380"/><rect x="2310" y="1040" width="100" height="30"/>
+</g>
+<ellipse cx="1280" cy="720" rx="900" ry="260" fill="url(#glow)"/>
+<!-- área segura 1546x423 centrada: x 507–2053, y 508–931 -->
+<line x1="700" y1="590" x2="1860" y2="590" stroke="#5a3515" stroke-width="4"/>
+<line x1="700" y1="598" x2="1860" y2="598" stroke="#5a3515" stroke-width="1.5"/>
+<text x="1280" y="745" text-anchor="middle" font-family="DejaVu Serif, serif" font-weight="bold" font-size="122" fill="#2e1808">Histor<tspan fill="#9a5b12">IA</tspan>s del mundo</text>
+<text x="1280" y="830" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-weight="bold" font-size="40" fill="#4a2a10" letter-spacing="7">MISTERIOS · CIVILIZACIONES · ARQUEOLOGÍA</text>
+<line x1="700" y1="868" x2="1860" y2="868" stroke="#5a3515" stroke-width="1.5"/>
+<text x="1280" y="915" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="36" fill="#3a200b">Documentales mié y sáb · Shorts todos los días · 20:00 (ARG)</text>
+<!-- sello -->
+<g transform="translate(2150 560) rotate(-12)"><circle r="78" fill="none" stroke="#8b1e12" stroke-width="7" opacity=".75"/><circle r="64" fill="none" stroke="#8b1e12" stroke-width="2" opacity=".75"/><text y="12" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-weight="bold" font-size="30" fill="#8b1e12" opacity=".8">ARCHIVO</text></g>
+<rect width="2560" height="1440" fill="none" stroke="#2a170a" stroke-width="40" opacity=".5"/>
+</svg></body></html>
