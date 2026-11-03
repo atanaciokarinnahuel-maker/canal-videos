@@ -1,0 +1,14 @@
+{
+  "channel": "tech",
+  "title": "¿Cuánto tarda una PC en adivinar tu contraseña? Hicimos la prueba",
+  "description": "Las páginas no guardan tu clave: guardan una huella (hash). Si esa lista se filtra, una sola tarjeta de video puede probar más de cien mil millones de claves por segundo (con huellas rápidas).\n8 minúsculas: unos 2 segundos. 8 con mayúsculas, números y símbolos: menos de un día. 16 letras al azar: más de 10.000 años. Y si repites la clave, ni la adivinan: la prueban en tus otras cuentas.\nLa receta: 16 caracteres o más, una distinta por sitio con un gestor de contraseñas, y verificación en dos pasos.\n¿Cuántos caracteres tiene la tuya? Solo el número, en los comentarios. Sigue el canal.\n#contraseñas #ciberseguridad #seguridaddigital #tecnologia #shorts",
+  "tags": ["contraseñas seguras", "cuánto tarda en hackearse una contraseña", "ciberseguridad", "gestor de contraseñas", "verificación en dos pasos"],
+  "hashtags": ["#contraseñas", "#ciberseguridad", "#seguridaddigital", "#hackers", "#tecnologia", "#tips", "#celular", "#internet", "#shorts", "#reels"],
+  "comentario_fijado": "¿Cuántos caracteres tiene tu contraseña más importante? Solo el número, ¡nunca la clave! 🔐",
+  "preguntas": [
+    "¿Una frase larga es mejor que una clave corta con símbolos? Sí: cada carácter extra multiplica las combinaciones; la longitud pesa más que los símbolos (siempre que no sea una frase famosa).",
+    "¿Es seguro un gestor de contraseñas? Sí, si lo proteges con una clave maestra larga y verificación en dos pasos; así cada sitio tiene una clave distinta y no tienes que recordarlas.",
+    "¿Cómo sé si mi clave se filtró? Hay servicios gratuitos de revisión de filtraciones y muchos navegadores y gestores avisan solos; si aparece, cámbiala en todos los sitios donde la usaste."
+  ],
+  "made_for_kids": false
+}
