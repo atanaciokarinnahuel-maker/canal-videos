@@ -1,0 +1,28 @@
+HistorIAs del mundo · Short 07/11/2026 20:00 · "La señal que NO estaba: la cruz" (serie Roanoke, mismo día que el documental largo)
+Voz: Damián (ElevenLabs, eleven_v4) · 59,04 s → acelerada ×1,04 en la mezcla (tempo) = 56,8 s · video 58,07 s
+
+Volvió el día del cumpleaños de su nieta… y no quedaba nadie.
+Más de cien personas, desaparecidas. Y la pista más importante no fue lo que encontró… sino lo que faltaba.
+Mil quinientos ochenta y siete, isla de Roanoke. John White deja allí a su familia y viaja a Inglaterra por provisiones.
+Acuerdan una señal: si se mudan, tallarán el nombre del lugar. Si huyen en peligro, agregarán una cruz.
+La guerra con España lo retiene tres años.
+Mil quinientos noventa. Las casas, desmontadas. En un árbol, tres letras: C… R… O.
+Y en un poste, completa: CROATOAN. La isla de un pueblo aliado, al sur.
+Ahora, mira bien la madera. No hay ninguna cruz.
+White creyó que estaban a salvo. Una tormenta le impidió buscarlos… y nunca volvió.
+¿Qué crees que pasó? El documental completo está en el canal. Sigue el canal.
+
+HECHO vs HIPÓTESIS
+- HECHO (relato de John White, 1590, publicado por Hakluyt): acuerdo de tallar el nombre del lugar y una cruz si había peligro; regreso el 18/08/1590 (3.er cumpleaños de Virginia Dare, nacida el 18/08/1587); casas desmontadas y empalizada; "CRO" en un árbol y "CROATOAN" en un poste; sin cruz; el mal tiempo impidió ir a Croatoan; White no volvió.
+- HIPÓTESIS (rotulada en pantalla): que los colonos se fueran a salvo a Croatoan. Nunca se probó.
+- Colonos: ~115 (se dice "más de cien").
+
+Fuentes
+- NC Dept. of Natural and Cultural Resources, "The Origins of the Lost Colony Mystery" (18/08/2016): https://www.dncr.nc.gov/blog/2016/08/18/origins-lost-colony-mystery
+- National Park Service, Fort Raleigh NHS, "The John White Colony": https://www.nps.gov/fora/learn/education/the-john-white-colony.htm
+- NCpedia, "Lost Colony" y "Croatoan": https://ncpedia.org/lost-colony · https://ncpedia.org/croatoan
+- Guion del documental de Karin + LEEME-correcciones (piloto/archivos-del-tiempo/insumos/)
+
+Imágenes: insumos válidos de Karin (09, 05 de fondo desenfocada, 07, 06 rotuladas "Ilustración"; 02 "Grabado, 1876"). Mapas, tronco, poste, barcos y siluetas: SVG propios.
+Recursos compartidos: fuentes tipográficas y papel desde ../2026-11-07-historia-largo-roanoke/assets/.
+Render: python3 render.py full 0 871 & python3 render.py full 871 1742 ; musica.py → musica.wav ; prep.py → words.json

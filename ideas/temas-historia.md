@@ -2,7 +2,7 @@
 
 Reglas: hechos reales con fuentes; separar HECHO de HIPÓTESIS; sin pseudohistoria ni ocultismo.
 Puntaje = promedio de Demanda (D), Competencia (C, 10 = poca), Encaje (E) y Facilidad de animar (F).
-Ya usados (no repetir): Ciudad de los Césares (largo 4 nov), Roanoke (largo 7 nov).
+Ya usados (no repetir): Ciudad de los Césares (largo 4 nov), Roanoke (largo 7 nov; Short "la cruz" 7 nov).
 
 ## Tanda 2026-11-06
 
