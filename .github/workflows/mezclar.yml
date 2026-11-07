@@ -22,7 +22,14 @@ jobs:
             [ -f "$job" ] || continue
             id=$(jq -r .id "$job"); video=$(jq -r .video "$job"); voz=$(jq -r .voice_url "$job")
             echo "Trabajo $id"
-            curl -sSL --fail -o voz.mp3 "$voz"
+            curl -sSL --fail -o voz_orig "$voz"
+            # Cortes de repeticiones y procesado de voz (opcional: "segmentos", "procesar_voz")
+            if jq -e '.segmentos or .procesar_voz' "$job" >/dev/null; then
+              python3 scripts/preparar_voz.py "$job" voz_orig voz.wav && ffmpeg -y -v error -i voz.wav -b:a 192k voz.mp3 && rm -f voz.wav
+            else
+              mv voz_orig voz.mp3
+            fi
+            rm -f voz_orig
                  tempo=$(jq -r '.tempo // 1' "$job"); delay=$(jq -r '.delay_ms // 0' "$job")
                  if [ "$tempo" != "1" ] || [ "$delay" != "0" ]; then
                    ffmpeg -y -v error -i voz.mp3 -af "atempo=$tempo,adelay=${delay}|${delay}" -ar 44100 voz2.mp3 && mv voz2.mp3 voz.mp3

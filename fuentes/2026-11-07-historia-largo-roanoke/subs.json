@@ -1,0 +1,857 @@
+[
+{
+"s": 1.42,
+"e": 4.2,
+"text": "En el año 1590, un hombre regresó"
+},
+{
+"s": 4.16,
+"e": 5.68,
+"text": "a una colonia donde había dejado"
+},
+{
+"s": 5.64,
+"e": 8.74,
+"text": "a su familia y a más de cien personas."
+},
+{
+"s": 9.02,
+"e": 11.08,
+"text": "Pero encontró algo extraño."
+},
+{
+"s": 11.2,
+"e": 13.66,
+"text": "Las casas habían sido desmontadas."
+},
+{
+"s": 13.62,
+"e": 16.08,
+"text": "Una empalizada alta rodeaba el lugar."
+},
+{
+"s": 16.04,
+"e": 17.32,
+"text": "No había habitantes,"
+},
+{
+"s": 17.28,
+"e": 19.96,
+"text": "no había señales claras de una batalla."
+},
+{
+"s": 19.92,
+"e": 22.38,
+"text": "Y entonces descubrió dos inscripciones."
+},
+{
+"s": 22.34,
+"e": 26.0,
+"text": "Primero, las letras «CRO»."
+},
+{
+"s": 25.96,
+"e": 28.0,
+"text": "Después, una palabra completa"
+},
+{
+"s": 27.96,
+"e": 30.54,
+"text": "tallada en una empalizada de madera:"
+},
+{
+"s": 30.5,
+"e": 32.28,
+"text": "«CROATOAN»."
+},
+{
+"s": 32.24,
+"e": 34.52,
+"text": "¿Qué había ocurrido con aquella comunidad?"
+},
+{
+"s": 34.48,
+"e": 36.18,
+"text": "¿Habían sido asesinados?"
+},
+{
+"s": 36.14,
+"e": 38.56,
+"text": "¿Habían escapado o habían encontrado"
+},
+{
+"s": 38.52,
+"e": 40.62,
+"text": "un lugar donde sobrevivir?"
+},
+{
+"s": 40.62,
+"e": 43.86,
+"text": "Esta es la historia de la colonia perdida de Roanoke."
+},
+{
+"s": 45.58,
+"e": 50.0,
+"text": "Para entender el misterio, debemos regresar a 1587."
+},
+{
+"s": 49.96,
+"e": 52.12,
+"text": "Inglaterra buscaba establecer una presencia"
+},
+{
+"s": 52.08,
+"e": 54.14,
+"text": "permanente en América del Norte."
+},
+{
+"s": 54.1,
+"e": 56.6,
+"text": "Bajo el respaldo de sir Walter Raleigh,"
+},
+{
+"s": 56.56,
+"e": 58.32,
+"text": "una expedición de aproximadamente"
+},
+{
+"s": 58.28,
+"e": 60.04,
+"text": "ciento dieciocho hombres,"
+},
+{
+"s": 60.0,
+"e": 62.74,
+"text": "mujeres y niños cruzó el océano con la intención"
+},
+{
+"s": 62.7,
+"e": 64.9,
+"text": "de establecer una nueva colonia."
+},
+{
+"s": 65.46,
+"e": 67.96,
+"text": "Su gobernador era John White,"
+},
+{
+"s": 67.96,
+"e": 70.02,
+"text": "un hombre que además de dirigir la expedición,"
+},
+{
+"s": 69.98,
+"e": 72.82,
+"text": "era conocido por sus dibujos y mapas."
+},
+{
+"s": 73.08,
+"e": 74.84,
+"text": "El destino previsto era la región"
+},
+{
+"s": 74.8,
+"e": 76.96,
+"text": "de bahía de Chesapeake,"
+},
+{
+"s": 77.0,
+"e": 79.34,
+"text": "pero durante el viaje hicieron una parada"
+},
+{
+"s": 79.3,
+"e": 81.12,
+"text": "en la isla de Roanoke,"
+},
+{
+"s": 81.08,
+"e": 84.32,
+"text": "frente a la costa de la actual Carolina del Norte."
+},
+{
+"s": 84.3,
+"e": 86.72,
+"text": "Allí esperaban encontrar a unos ingleses"
+},
+{
+"s": 86.68,
+"e": 89.34,
+"text": "que habían quedado de una expedición anterior."
+},
+{
+"s": 89.42,
+"e": 91.18,
+"text": "No los encontraron."
+},
+{
+"s": 91.26,
+"e": 93.56,
+"text": "Y el viaje tomó un rumbo diferente."
+},
+{
+"s": 93.52,
+"e": 94.92,
+"text": "El capitán de la flota se negó"
+},
+{
+"s": 94.88,
+"e": 96.72,
+"text": "a continuar hacia el norte."
+},
+{
+"s": 96.68,
+"e": 98.14,
+"text": "Los colonos tuvieron que quedarse"
+},
+{
+"s": 98.1,
+"e": 101.04,
+"text": "en Roanoke y reconstruir el asentamiento."
+},
+{
+"s": 101.0,
+"e": 102.74,
+"text": "Lo que debía ser una parada,"
+},
+{
+"s": 102.7,
+"e": 105.46,
+"text": "terminó convirtiéndose en su nuevo hogar."
+},
+{
+"s": 107.18,
+"e": 109.14,
+"text": "La situación no era sencilla."
+},
+{
+"s": 109.1,
+"e": 111.46,
+"text": "Los ingleses necesitaban alimentos,"
+},
+{
+"s": 111.42,
+"e": 113.3,
+"text": "suministros y relaciones estables"
+},
+{
+"s": 113.26,
+"e": 115.78,
+"text": "con los pueblos indígenas de la región."
+},
+{
+"s": 116.12,
+"e": 118.12,
+"text": "Pero las tensiones aumentaron."
+},
+{
+"s": 118.08,
+"e": 121.9,
+"text": "Uno de los colonos, George Howe, fue asesinado."
+},
+{
+"s": 121.86,
+"e": 124.1,
+"text": "Los ingleses responsabilizaron a los habitantes"
+},
+{
+"s": 124.06,
+"e": 127.679,
+"text": "de la región y, en represalia, atacaron por error"
+},
+{
+"s": 127.639,
+"e": 131.18,
+"text": "a un grupo de Croatoan, aliados de los ingleses,"
+},
+{
+"s": 131.14,
+"e": 134.02,
+"text": "que no habían participado de aquel asesinato."
+},
+{
+"s": 134.58,
+"e": 137.14,
+"text": "Manteo, un hombre Croatoan que había"
+},
+{
+"s": 137.1,
+"e": 140.28,
+"text": "colaborado con los ingleses y conocía su idioma,"
+},
+{
+"s": 140.24,
+"e": 142.5,
+"text": "ayudó a calmar la situación."
+},
+{
+"s": 142.66,
+"e": 144.56,
+"text": "En medio de estas dificultades,"
+},
+{
+"s": 144.52,
+"e": 147.2,
+"text": "ocurrió un acontecimiento importante:"
+},
+{
+"s": 147.16,
+"e": 151.4,
+"text": "nació Virginia Dare, nieta de John White y primera"
+},
+{
+"s": 151.36,
+"e": 154.18,
+"text": "niña inglesa nacida en aquella expedición."
+},
+{
+"s": 154.42,
+"e": 157.62,
+"text": "También nació otro niño de la familia Harvie."
+},
+{
+"s": 157.58,
+"e": 159.1,
+"text": "La colonia tenía familias,"
+},
+{
+"s": 159.06,
+"e": 161.22,
+"text": "niños y planes de futuro,"
+},
+{
+"s": 161.18,
+"e": 164.42,
+"text": "pero los alimentos escaseaban y se acercaba el invierno."
+},
+{
+"s": 164.38,
+"e": 166.94,
+"text": "Los colonos necesitaban ayuda."
+},
+{
+"s": 167.86,
+"e": 171.54,
+"text": "En agosto de 1587, los colonos solicitaron"
+},
+{
+"s": 171.5,
+"e": 173.92,
+"text": "que John White regresara a Inglaterra para"
+},
+{
+"s": 173.88,
+"e": 176.44,
+"text": "conseguir más personas y provisiones."
+},
+{
+"s": 176.4,
+"e": 179.16,
+"text": "Antes de partir, acordaron cómo dejar señales"
+},
+{
+"s": 179.12,
+"e": 181.76,
+"text": "si necesitaban abandonar el asentamiento."
+},
+{
+"s": 181.72,
+"e": 185.94,
+"text": "Si se trasladaban, debían indicar el lugar al que iban."
+},
+{
+"s": 185.9,
+"e": 189.86,
+"text": "Si lo hacían por una emergencia, debían añadir una cruz."
+},
+{
+"s": 189.82,
+"e": 192.0,
+"text": "Además, los colonos le dijeron"
+},
+{
+"s": 191.96,
+"e": 194.16,
+"text": "a White que pensaban trasladarse unas"
+},
+{
+"s": 194.12,
+"e": 196.58,
+"text": "cincuenta millas tierra adentro."
+},
+{
+"s": 196.6,
+"e": 199.76,
+"text": "White regresó a Inglaterra pensando que volvería pronto,"
+},
+{
+"s": 199.72,
+"e": 201.92,
+"text": "pero las circunstancias cambiaron."
+},
+{
+"s": 201.88,
+"e": 204.88,
+"text": "La guerra entre Inglaterra y España y la amenaza"
+},
+{
+"s": 204.84,
+"e": 207.86,
+"text": "de la armada española dificultaron la disponibilidad"
+},
+{
+"s": 207.82,
+"e": 210.62,
+"text": "de barcos y retrasaron su regreso."
+},
+{
+"s": 210.6,
+"e": 213.96,
+"text": "Pasaron los meses, después los años,"
+},
+{
+"s": 213.92,
+"e": 215.52,
+"text": "y mientras White intentaba organizar"
+},
+{
+"s": 215.48,
+"e": 218.12,
+"text": "una nueva expedición, no podía saber qué"
+},
+{
+"s": 218.08,
+"e": 220.84,
+"text": "estaba sucediendo al otro lado del océano."
+},
+{
+"s": 222.74,
+"e": 225.96,
+"text": "Finalmente, el 18 de agosto de 1590,"
+},
+{
+"s": 225.92,
+"e": 228.5,
+"text": "John White regresó a Roanoke."
+},
+{
+"s": 228.5,
+"e": 231.8,
+"text": "Era un día que había esperado durante mucho tiempo."
+},
+{
+"s": 231.76,
+"e": 233.1,
+"text": "Y no era un día cualquiera."
+},
+{
+"s": 233.06,
+"e": 234.5,
+"text": "Ese mismo día, su nieta,"
+},
+{
+"s": 234.46,
+"e": 238.04,
+"text": "Virginia Dare, cumplía tres años."
+},
+{
+"s": 238.0,
+"e": 239.96,
+"text": "Pero la colonia estaba deshabitada."
+},
+{
+"s": 239.92,
+"e": 243.04,
+"text": "No encontró a su familia ni a los demás colonos."
+},
+{
+"s": 243.16,
+"e": 244.88,
+"text": "Tampoco encontró señales evidentes"
+},
+{
+"s": 244.84,
+"e": 246.58,
+"text": "de una lucha en el asentamiento."
+},
+{
+"s": 246.54,
+"e": 249.24,
+"text": "En cambio, descubrió las inscripciones"
+},
+{
+"s": 249.2,
+"e": 251.78,
+"text": "que cambiarían la historia de aquel lugar."
+},
+{
+"s": 251.74,
+"e": 256.38,
+"text": "Las letras «CRO» aparecían talladas en un árbol."
+},
+{
+"s": 256.34,
+"e": 258.96,
+"text": "En una empalizada encontró la palabra completa:"
+},
+{
+"s": 258.92,
+"e": 260.54,
+"text": "«CROATOAN»."
+},
+{
+"s": 260.94,
+"e": 263.3,
+"text": "White conocía aquella palabra."
+},
+{
+"s": 263.26,
+"e": 265.8,
+"text": "Croatoan era el nombre de un pueblo indígena aliado"
+},
+{
+"s": 265.76,
+"e": 268.96,
+"text": "y también el de una isla situada al sur de Roanoke,"
+},
+{
+"s": 268.92,
+"e": 272.02,
+"text": "en la región de la actual isla Hatteras."
+},
+{
+"s": 272.1,
+"e": 274.76,
+"text": "Además, los colonos habían acordado dejar"
+},
+{
+"s": 274.72,
+"e": 277.94,
+"text": "una señal en el lugar al que se trasladarían."
+},
+{
+"s": 277.9,
+"e": 279.34,
+"text": "Y había algo más:"
+},
+{
+"s": 279.3,
+"e": 282.02,
+"text": "White no encontró la cruz que indicaría"
+},
+{
+"s": 281.98,
+"e": 283.92,
+"text": "una partida de emergencia."
+},
+{
+"s": 283.88,
+"e": 287.1,
+"text": "Para él, aquella era una pista importante."
+},
+{
+"s": 288.62,
+"e": 290.52,
+"text": "Una de las explicaciones más conocidas es"
+},
+{
+"s": 290.48,
+"e": 293.08,
+"text": "que los colonos se trasladaron a Croatoan."
+},
+{
+"s": 293.04,
+"e": 295.32,
+"text": "Esta posibilidad tiene sentido porque el mensaje"
+},
+{
+"s": 295.28,
+"e": 297.24,
+"text": "coincidía con el nombre del lugar"
+},
+{
+"s": 297.2,
+"e": 298.22,
+"text": "y con las instrucciones"
+},
+{
+"s": 298.18,
+"e": 300.54,
+"text": "que había dejado antes de partir."
+},
+{
+"s": 300.5,
+"e": 302.36,
+"text": "También existían relaciones previas"
+},
+{
+"s": 302.32,
+"e": 304.54,
+"text": "entre los ingleses y los Croatoan,"
+},
+{
+"s": 304.5,
+"e": 306.9,
+"text": "especialmente a través de Manteo."
+},
+{
+"s": 306.92,
+"e": 308.0,
+"text": "Pero hay un problema:"
+},
+{
+"s": 307.96,
+"e": 310.32,
+"text": "No tenemos pruebas definitivas de que los colonos"
+},
+{
+"s": 310.28,
+"e": 314.28,
+"text": "llegaron allí ni de qué ocurrió con ellos después."
+},
+{
+"s": 314.24,
+"e": 316.04,
+"text": "Otra hipótesis propone que algunos se"
+},
+{
+"s": 316.0,
+"e": 317.96,
+"text": "trasladaron tierra adentro siguiendo"
+},
+{
+"s": 317.92,
+"e": 320.08,
+"text": "las instrucciones de John White."
+},
+{
+"s": 320.04,
+"e": 321.42,
+"text": "En esa región se han encontrado"
+},
+{
+"s": 321.38,
+"e": 323.48,
+"text": "objetos de origen europeo,"
+},
+{
+"s": 323.44,
+"e": 325.1,
+"text": "pero no se ha podido demostrar"
+},
+{
+"s": 325.06,
+"e": 327.6,
+"text": "que pertenecían a la colonia perdida."
+},
+{
+"s": 327.56,
+"e": 329.92,
+"text": "También se han considerado el hambre,"
+},
+{
+"s": 329.88,
+"e": 333.04,
+"text": "las enfermedades y las dificultades ambientales."
+},
+{
+"s": 333.0,
+"e": 335.22,
+"text": "Una sequía prolongada afectó a la región"
+},
+{
+"s": 335.18,
+"e": 336.48,
+"text": "durante aquellos años y pudo"
+},
+{
+"s": 336.44,
+"e": 338.74,
+"text": "empeorar la escasez de alimentos."
+},
+{
+"s": 338.82,
+"e": 341.06,
+"text": "Otras teorías hablan de ataques españoles"
+},
+{
+"s": 341.02,
+"e": 344.08,
+"text": "o de fenómenos naturales, aunque tampoco explican"
+},
+{
+"s": 344.04,
+"e": 346.5,
+"text": "por completo las evidencias disponibles."
+},
+{
+"s": 346.46,
+"e": 348.98,
+"text": "La importancia de distinguir entre"
+},
+{
+"s": 349.0,
+"e": 351.44,
+"text": "una posibilidad y una certeza."
+},
+{
+"s": 351.4,
+"e": 354.7,
+"text": "Cada hipótesis intenta explicar una parte del misterio,"
+},
+{
+"s": 354.66,
+"e": 356.72,
+"text": "pero ninguna ha resuelto definitivamente"
+},
+{
+"s": 356.68,
+"e": 359.06,
+"text": "el destino de todos los colonos."
+},
+{
+"s": 360.58,
+"e": 362.32,
+"text": "John White creyó que los habitantes"
+},
+{
+"s": 362.28,
+"e": 364.8,
+"text": "podían haberse trasladado a Croatoan."
+},
+{
+"s": 364.76,
+"e": 368.56,
+"text": "De hecho, intentó dirigirse allí para buscarlos,"
+},
+{
+"s": 368.62,
+"e": 370.78,
+"text": "pero una tormenta y los problemas de navegación"
+},
+{
+"s": 370.74,
+"e": 373.18,
+"text": "obligaron a interrumpir el viaje."
+},
+{
+"s": 373.18,
+"e": 375.0,
+"text": "Regresó a Inglaterra sin encontrar"
+},
+{
+"s": 374.96,
+"e": 377.44,
+"text": "a su familia y nunca consiguió volver"
+},
+{
+"s": 377.4,
+"e": 380.4,
+"text": "a Roanoke para resolver lo ocurrido."
+},
+{
+"s": 380.36,
+"e": 382.74,
+"text": "Con el paso del tiempo, la historia de aquellas"
+},
+{
+"s": 382.7,
+"e": 384.8,
+"text": "colonias se convirtió en uno de los grandes enigmas"
+},
+{
+"s": 384.76,
+"e": 387.84,
+"text": "de la colonización inglesa en América del Norte."
+},
+{
+"s": 387.88,
+"e": 390.08,
+"text": "Quizás algunos colonos encontraron refugio entre"
+},
+{
+"s": 390.04,
+"e": 392.78,
+"text": "otras comunidades, quizás se dividieron y tomaron"
+},
+{
+"s": 392.74,
+"e": 395.5,
+"text": "caminos diferentes, pero todavía no tenemos pruebas"
+},
+{
+"s": 395.46,
+"e": 398.74,
+"text": "suficientes para reconstruir toda la historia."
+},
+{
+"s": 400.72,
+"e": 403.2,
+"text": "La colonia de Roanoke no dejó solamente una palabra"
+},
+{
+"s": 403.16,
+"e": 405.64,
+"text": "tallada en madera, dejó una pregunta que sigue"
+},
+{
+"s": 405.6,
+"e": 408.12,
+"text": "abierta más de cuatro siglos después."
+},
+{
+"s": 408.08,
+"e": 410.5,
+"text": "¿Aquellas personas desaparecieron"
+},
+{
+"s": 410.58,
+"e": 412.44,
+"text": "o simplemente dejaron de vivir donde"
+},
+{
+"s": 412.4,
+"e": 414.98,
+"text": "los ingleses esperaban encontrarlas?"
+},
+{
+"s": 415.14,
+"e": 418.06,
+"text": "Tal vez la respuesta no esté en una ciudad perdida,"
+},
+{
+"s": 418.02,
+"e": 419.72,
+"text": "sino en las comunidades y los lugares"
+},
+{
+"s": 419.68,
+"e": 422.539,
+"text": "donde pudieron haber continuado sus vidas."
+},
+{
+"s": 422.499,
+"e": 425.22,
+"text": "Mientras no aparezcan pruebas concluyentes,"
+},
+{
+"s": 425.18,
+"e": 426.8,
+"text": "Roanoke seguirá siendo una historia"
+},
+{
+"s": 426.76,
+"e": 428.94,
+"text": "que merece ser investigada."
+},
+{
+"s": 428.9,
+"e": 431.42,
+"text": "Porque el pasado no siempre desaparece,"
+},
+{
+"s": 431.38,
+"e": 435.3,
+"text": "a veces simplemente deja de ser comprendido."
+}
+]
