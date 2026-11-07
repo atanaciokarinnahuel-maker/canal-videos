@@ -1,0 +1,32 @@
+name: Descargar insumos (voz y transcripción)
+on:
+  push:
+    paths: ['descargas/*.json']
+permissions:
+  contents: write
+jobs:
+  descargar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg jq
+      - name: Descargar
+        run: |
+          set -e
+          for pedido in $(git diff --name-only HEAD~1 HEAD -- 'descargas/*.json'); do
+            [ -f "$pedido" ] || continue
+            id=$(jq -r .id "$pedido"); mkdir -p "insumos-voz/$id"
+            n=$(jq '.archivos | length' "$pedido")
+            for i in $(seq 0 $((n-1))); do
+              url=$(jq -r ".archivos[$i].url" "$pedido"); out=$(jq -r ".archivos[$i].nombre" "$pedido")
+              curl -sSL --fail -o "tmp_$i" "$url" || { echo "FALLO $out" >> "insumos-voz/$id/errores.txt"; continue; }
+              case "$out" in
+                *.mp3) ffmpeg -y -v error -i "tmp_$i" -ac 1 -ar 44100 -b:a 96k "insumos-voz/$id/$out"; rm -f "tmp_$i" ;;
+                *) mv "tmp_$i" "insumos-voz/$id/$out" ;;
+              esac
+            done
+          done
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add insumos-voz && git commit -m "Insumos descargados [skip ci]" && git push || true
