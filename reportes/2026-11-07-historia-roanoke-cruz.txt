@@ -1,0 +1,6 @@
+id=2026-11-07-historia-roanoke-cruz
+voz_seg=56.816327
+final_seg=58.100000
+[Parsed_volumedetect_0 @ 0x564fc6683f80] mean_volume: -15.0 dB
+[Parsed_volumedetect_0 @ 0x564fc6683f80] max_volume: -1.5 dB
+youtube=sin_bloque
