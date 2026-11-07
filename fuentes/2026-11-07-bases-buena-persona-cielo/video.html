@@ -1,0 +1,378 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#231a4f}
+#stage{position:absolute;inset:0;overflow:hidden;transform-origin:540px 960px}
+.L{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
+.L svg{position:absolute;left:0;top:0;overflow:visible}
+#cv{position:absolute;left:0;top:0}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 45%,rgba(0,0,0,0) 58%,rgba(20,12,50,.5) 100%)}
+.kt{position:absolute;left:30px;right:30px;text-align:center;font-family:'Inter Display','Inter';font-weight:900;line-height:.98;letter-spacing:-1px;color:#fff;-webkit-text-stroke:16px #231a4f;paint-order:stroke fill;text-shadow:0 10px 0 #231a4f;transform-origin:50% 50%;display:none}
+.kt .g{color:#f7b32b}.kt .r{color:#ff6f59}.kt .t{color:#5ee3d6}.kt .o{color:#ffa94d}
+.tag{display:inline-block;padding:14px 34px;border-radius:50px;background:#fff;color:#231a4f;border:7px solid #231a4f;box-shadow:0 9px 0 #231a4f;-webkit-text-stroke:0;text-shadow:none;font-size:44px;letter-spacing:0}
+.tag.gold{background:#f7b32b}.tag.teal{background:#5ee3d6}.tag.coral{background:#ff8f7d}
+#subs{position:absolute;left:40px;right:40px;top:1405px;height:150px;text-align:center;font-family:'Inter Display','Inter';font-weight:900;font-size:64px;line-height:1.08}
+#subs span{display:inline-block;margin:0 13px;color:#fff;-webkit-text-stroke:12px #231a4f;paint-order:stroke fill;transform-origin:50% 70%}
+#subs span.on{color:#f7b32b}
+#prog{position:absolute;left:0;top:0;width:1080px;height:260px}
+#chip{position:absolute;left:60px;top:214px;padding:10px 26px;border-radius:40px;background:rgba(255,255,255,.95);color:#231a4f;border:5px solid #231a4f;font-family:'Inter Display';font-weight:900;font-size:36px;white-space:nowrap;transform-origin:0 50%}
+#chip b{color:#d9480f}
+#flash{position:absolute;inset:0;background:#fffbe8;opacity:0}
+#edge{position:absolute;top:0;width:60px;height:1920px;background:linear-gradient(90deg,rgba(247,179,43,0),#fff3c4,rgba(247,179,43,0));display:none}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+<defs>
+ <linearGradient id="skyOasis" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a9db0"/><stop offset=".42" stop-color="#7fd6d0"/><stop offset=".72" stop-color="#ffe1b0"/><stop offset="1" stop-color="#ffc58f"/></linearGradient>
+ <linearGradient id="skyMorning" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fb3bf"/><stop offset=".45" stop-color="#ffd59e"/><stop offset=".8" stop-color="#ff9a76"/></linearGradient>
+ <linearGradient id="skyDim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16424f"/><stop offset=".55" stop-color="#2f6b78"/><stop offset="1" stop-color="#6f9c98"/></linearGradient>
+ <linearGradient id="skyCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f6e7a"/><stop offset=".55" stop-color="#3fc1c9"/><stop offset="1" stop-color="#bff0d8"/></linearGradient>
+ <linearGradient id="skyCoral" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset=".6" stop-color="#ffb26b"/><stop offset="1" stop-color="#ffe7a8"/></linearGradient>
+ <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a65"/><stop offset=".5" stop-color="#ffc46b"/><stop offset="1" stop-color="#fff1c9"/></linearGradient>
+ <linearGradient id="skyNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10243a"/><stop offset=".6" stop-color="#2b4f6e"/><stop offset="1" stop-color="#6aa0b0"/></linearGradient>
+ <linearGradient id="skySage" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e7d6b"/><stop offset=".6" stop-color="#8cb369"/><stop offset="1" stop-color="#f4e285"/></linearGradient>
+ <radialGradient id="gSun"><stop offset="0" stop-color="#fffbe8"/><stop offset=".35" stop-color="#ffe08a"/><stop offset=".6" stop-color="#ffc06b" stop-opacity=".55"/><stop offset="1" stop-color="#ffb36b" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gGlow"><stop offset="0" stop-color="#fff6d5" stop-opacity=".95"/><stop offset="1" stop-color="#f7b32b" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gFire"><stop offset="0" stop-color="#fff2b0"/><stop offset=".4" stop-color="#ffab3d" stop-opacity=".8"/><stop offset="1" stop-color="#ff6a2a" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gIron" cx=".35" cy=".3"><stop offset="0" stop-color="#9fb4bd"/><stop offset=".5" stop-color="#4d6670"/><stop offset="1" stop-color="#1f343c"/></radialGradient>
+ <radialGradient id="gCoin" cx=".35" cy=".3"><stop offset="0" stop-color="#fff6c0"/><stop offset=".5" stop-color="#f7c844"/><stop offset="1" stop-color="#c98614"/></radialGradient>
+ <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0a0"/><stop offset=".5" stop-color="#f7b32b"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+ <linearGradient id="gSand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d7a0"/><stop offset="1" stop-color="#e2b277"/></linearGradient>
+ <linearGradient id="gSand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9be82"/><stop offset="1" stop-color="#c9935a"/></linearGradient>
+ <linearGradient id="gGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8cf6f"/><stop offset="1" stop-color="#6f9c4a"/></linearGradient>
+ <linearGradient id="gParch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6df"/><stop offset="1" stop-color="#f3dcae"/></linearGradient>
+ <linearGradient id="gShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#231a4f" stop-opacity="0"/><stop offset="1" stop-color="#231a4f" stop-opacity=".35"/></linearGradient>
+ <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ee3d6"/><stop offset="1" stop-color="#2a9db0"/></linearGradient>
+ <filter id="fb3" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+ <filter id="fb6" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+ <filter id="fb12" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+
+ <linearGradient id="skyDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1f5c"/><stop offset=".45" stop-color="#8a4f9e"/><stop offset=".75" stop-color="#ff9a76"/><stop offset="1" stop-color="#ffd59e"/></linearGradient>
+ <linearGradient id="skyHeaven" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7a8"/><stop offset=".5" stop-color="#fff6dc"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+ <linearGradient id="skyIndigo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1240"/><stop offset=".6" stop-color="#3b2a7a"/><stop offset="1" stop-color="#6b4fa0"/></linearGradient>
+ <linearGradient id="skyGrey" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2840"/><stop offset="1" stop-color="#5a5670"/></linearGradient>
+ <linearGradient id="gHill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3a7a"/><stop offset="1" stop-color="#231a4f"/></linearGradient>
+ <linearGradient id="gStone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b9a0"/><stop offset="1" stop-color="#8f7b62"/></linearGradient>
+</defs></svg>
+<div id="stage">
+ <div id="LA" class="L"></div>
+ <div id="LB" class="L"></div>
+ <div id="edge"></div>
+ <div id="vig"></div>
+ <canvas id="cv" width="1080" height="1920"></canvas>
+ <div id="kts"></div>
+ <div id="subs"></div>
+ <svg id="prog" width="1080" height="260" viewBox="0 0 1080 260"></svg>
+ <div id="chip"></div>
+ <div id="flash"></div>
+</div>
+<script>
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const eo=t=>1-Math.pow(1-clamp(t),3);
+const eio=t=>{t=clamp(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const back=t=>{t=clamp(t);const c1=1.9,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
+const elastic=t=>{t=clamp(t);if(t===0||t===1)return t;return Math.pow(2,-9*t)*Math.sin((t*9-.75)*2*Math.PI/3)+1};
+const $=id=>document.getElementById(id);
+const R=i=>{const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+const P=(L,a,d)=>clamp((L-a)/d);
+function kf(T,a,ease=eio){if(T<=a[0][0])return a[0].slice(1);for(let i=1;i<a.length;i++){if(T<=a[i][0]){const d=a[i][0]-a[i-1][0];const u=d<=0?1:ease((T-a[i-1][0])/d);return a[i].slice(1).map((v,k)=>lerp(a[i-1][k+1],v,u))}}return a[a.length-1].slice(1)}
+function hex(c){return [1,3,5].map(i=>parseInt(c.substr(i,2),16))}
+function shade(c,f){const A=hex(c);return '#'+A.map(v=>Math.round(clamp(f<0?v*(1+f):v+(255-v)*f,0,255)).toString(16).padStart(2,'0')).join('')}
+const INK='#231a4f',GOLD='#f7b32b',CORAL='#ff6f59',AQUA='#3fc1c9',SAGE='#8cb369';
+let W=[],VOICE=0,DUR=0,GROUPS=[];
+const F=`font-family="Inter Display" font-weight="900"`;
+const TX=(x,y,t,fs,col='#fff',st=INK,sw=10,anc='middle')=>`<text x="${x}" y="${y}" text-anchor="${anc}" ${F} font-size="${fs}" fill="${col}" stroke="${st}" stroke-width="${sw}" paint-order="stroke fill">${t}</text>`;
+/* ===================== piezas ===================== */
+const sky=id=>`<rect x="-300" y="-300" width="1680" height="2520" fill="url(#${id})"/>`;
+function sun(x,y,r,op=1){return `<circle cx="${x}" cy="${y}" r="${r*3.2}" fill="url(#gSun)" opacity="${.75*op}"/><circle cx="${x}" cy="${y}" r="${r}" fill="#fff4d0" opacity="${op}"/>`}
+function rays(x,y,n,len,rot,op,col='#fff8dc',wd=.07){let s='';for(let i=0;i<n;i++){const a=rot+i*2*Math.PI/n;s+=`<path d="M${x} ${y} L${x+Math.cos(a-wd)*len} ${y+Math.sin(a-wd)*len} L${x+Math.cos(a+wd)*len} ${y+Math.sin(a+wd)*len}Z"/>`}return `<g fill="${col}" opacity="${op}">${s}</g>`}
+function mtn(yb,amp,col,seed,dx,extra=''){let d=`M-300 2300 L-300 ${yb}`;for(let x=-300;x<=1400;x+=40){const y=yb-amp*(.55+.3*Math.sin((x+dx)*.0062+seed)+.18*Math.sin((x+dx)*.017+seed*2.1));d+=` L${x} ${y.toFixed(1)}`}d+=` L1400 2300Z`;return `<path d="${d}" fill="${col}" ${extra}/>`}
+function mesa(x,yb,w,h,col){return `<path d="M${x-w/2-60} ${yb} L${x-w/2} ${yb-h} L${x+w/2} ${yb-h} L${x+w/2+60} ${yb}Z" fill="${col}"/><path d="M${x-w/2} ${yb-h} L${x+w/2} ${yb-h} L${x+w/2-10} ${yb-h+18} L${x-w/2+10} ${yb-h+18}Z" fill="${shade(col,.18)}"/>`}
+function cloud(x,y,s,col='#fff',op=.85){return `<g transform="translate(${x},${y}) scale(${s})" opacity="${op}" fill="${col}"><circle cx="-60" cy="0" r="46"/><circle cx="0" cy="-26" r="62"/><circle cx="62" cy="-4" r="44"/><circle cx="110" cy="12" r="30"/><rect x="-106" y="0" width="246" height="44" rx="22"/></g>`}
+function clouds(L,set,spd=14){return set.map(([x,y,s,c,o],i)=>cloud(((x+L*spd*(1+i%3*.4))%1500+1500)%1500-250,y,s,c,o)).join('')}
+function birds(L,x0,y0,n=4){let s='';for(let i=0;i<n;i++){const x=x0+L*70+i*46,y=y0+Math.sin(i*2)*22+Math.sin(L*3+i)*6,f=Math.sin(L*14+i*1.7)*10;s+=`<path d="M${x-16} ${y-f} Q${x-8} ${y-4} ${x} ${y} Q${x+8} ${y-4} ${x+16} ${y-f}" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>`}return s}
+function stars(L,n=60,seed=5){let s='';for(let i=0;i<n;i++){const x=R(seed+i)*1080,y=R(seed+i*3.3)*1050,r=1.5+R(seed+i*7)*3.5,tw=.35+.65*Math.abs(Math.sin(L*2.2+i));s+=`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff6d5" opacity="${tw}"/>`}return s}
+function ground(y,col='url(#gSand)',amp=18,seed=1,dx=0){let d=`M-300 2300 L-300 ${y}`;for(let x=-300;x<=1400;x+=60){d+=` L${x} ${(y-amp*Math.sin((x+dx)*.008+seed)).toFixed(1)}`}return `<path d="${d} L1400 2300Z" fill="${col}"/>`}
+function palm(x,yb,s,L,ph=0){const sw=Math.sin(L*1.6+ph)*4;let f='';for(let i=0;i<7;i++){const a=-160+i*24+sw*1.5;f+=`<g transform="rotate(${a})"><path d="M0 0 Q70 -36 150 -6 Q70 -12 0 0Z" fill="${i%2?'#2e8b57':'#3aa36a'}"/></g>`}
+ return `<g transform="translate(${x},${yb}) scale(${s})"><path d="M-10 0 Q-4 -150 ${18+sw} -300 L${34+sw} -300 Q12 -150 12 0Z" fill="#a0673a"/>${[0,1,2,3,4,5].map(i=>`<path d="M${-8+i*3} ${-30-i*46} L${14+i*3.4+sw*i/6} ${-38-i*46}" stroke="#7a4a26" stroke-width="5"/>`).join('')}<g transform="translate(${26+sw},-300)">${f}<circle r="12" fill="#7a4a26"/></g></g>`}
+function houses(yb,dx,s=1,seed=1,col='#f2d3a6'){let o='';for(let i=0;i<9;i++){const w=(90+R(seed+i)*80)*s,h=(80+R(seed+i*2)*140)*s,x=-200+i*170*s+dx;const c=shade(col,(R(seed+i*5)-.5)*.2);
+ o+=`<rect x="${x}" y="${yb-h}" width="${w}" height="${h}" fill="${c}"/><rect x="${x-6}" y="${yb-h-10}" width="${w+12}" height="14" rx="4" fill="${shade(c,-.15)}"/><rect x="${x+w*.3}" y="${yb-h*.6}" width="${18*s}" height="${26*s}" rx="${8*s}" fill="${INK}" opacity=".55"/>`;
+ if(R(seed+i*9)>.7)o+=`<path d="M${x+w*.15} ${yb-h-8} A${w*.35} ${w*.35} 0 0 1 ${x+w*.85} ${yb-h-8}Z" fill="${AQUA}"/>`}
+ return o+`<rect x="-300" y="${yb-1}" width="1700" height="400" fill="${shade(col,-.1)}"/>`}
+const ITEM={
+ bag:`<g transform="translate(0,-10)"><path d="M-30 -40 Q-48 20 -26 40 L26 40 Q48 20 30 -40Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><path d="M-22 -44 L22 -44 L14 -32 L-14 -32Z" fill="#a06a36"/><rect x="-18" y="-40" width="36" height="9" rx="4" fill="${GOLD}"/><circle cx="0" cy="8" r="14" fill="url(#gCoin)" stroke="#b07a10" stroke-width="3"/></g>`,
+ coin:`<circle r="18" fill="url(#gCoin)" stroke="#b07a10" stroke-width="4"/><circle r="9" fill="none" stroke="#fff3b0" stroke-width="3"/>`,
+ bread:`<ellipse cx="0" cy="-6" rx="38" ry="22" fill="#d9944a" stroke="#8a5424" stroke-width="5"/><path d="M-20 -14 L-12 -4 M0 -18 L6 -6 M18 -14 L24 -4" stroke="#f6c98a" stroke-width="5" stroke-linecap="round"/>`,
+ quill:`<path d="M0 0 L-6 -20 Q-30 -90 -10 -130 Q4 -80 6 -20Z" fill="#fff" stroke="${INK}" stroke-width="3"/><path d="M0 0 L-4 -22" stroke="${INK}" stroke-width="3"/>`,
+ lamp:`<circle cy="-30" r="70" fill="url(#gFire)" opacity=".8"/><path d="M-34 0 Q0 18 34 0 Q30 -14 0 -14 Q-30 -14 -34 0Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="4"/><path d="M28 -8 L46 -18" stroke="#7a4a26" stroke-width="7" stroke-linecap="round"/><path d="M46 -22 Q56 -44 48 -58 Q40 -44 46 -22Z" fill="#ffb347"/>`,
+ basket:`<path d="M-56 -40 L56 -40 L44 30 L-44 30Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><path d="M-50 -14 L50 -14 M-46 10 L46 10" stroke="#a06a36" stroke-width="5"/><circle cx="-24" cy="-48" r="18" fill="#ff8f6b"/><circle cx="8" cy="-52" r="20" fill="#9ccf6a"/><circle cx="34" cy="-46" r="16" fill="#ffd36b"/>`
+};
+function person(o){
+ const {x=0,y=0,s=1,robe='#2fa39a',cloth='#f6e7c8',skin='#c98d62',aL=12,aR=-12,head=0,item=null,itemR=0,itemL=null,itemLR=0,flip=false,crown=false,sash=GOLD,bob=0,step=0,beard='#5a3626',op=1,sil=null,lean=0}=o;
+ const rb=sil||robe,dk=sil||shade(robe,-.22),sk=sil||skin,cl=sil||cloth,sa=sil||sash;
+ const arm=(sd,a,it,ir)=>`<g transform="translate(${sd*30},-190) rotate(${a})"><rect x="-13" y="-8" width="26" height="102" rx="13" fill="${dk}"/><circle cx="0" cy="98" r="15" fill="${sk}"/>${it?`<g transform="translate(0,100) rotate(${ir-a})">${ITEM[it]}</g>`:''}</g>`;
+ const fx=Math.sin(step)*16;
+ return `<g transform="translate(${x},${y+bob}) scale(${s*(flip?-1:1)},${s})" opacity="${op}"><g transform="rotate(${lean} 0 0)">
+ <ellipse cx="0" cy="4" rx="74" ry="13" fill="#0a2a30" opacity="${sil?0:.18}"/>
+ <ellipse cx="${-22+fx}" cy="-2" rx="20" ry="9" fill="${sil||'#5a3a2a'}"/><ellipse cx="${22-fx}" cy="-2" rx="20" ry="9" fill="${sil||'#5a3a2a'}"/>
+ <path d="M-34 -206 Q-46 -100 -66 -4 L66 -4 Q46 -100 34 -206 Q0 -222 -34 -206Z" fill="${rb}"/>
+ <path d="M-30 -202 L36 -112 L22 -100 L-38 -186Z" fill="${sa}" opacity="${sil?1:.9}"/>
+ <rect x="-44" y="-124" width="88" height="14" rx="6" fill="${dk}"/>
+ <g transform="rotate(${head} 0 -214)">
+  <path d="M-44 -244 Q-46 -296 0 -298 Q46 -296 44 -244 L50 -196 Q0 -186 -50 -196Z" fill="${cl}"/>
+  <circle cx="0" cy="-246" r="31" fill="${sk}"/>
+  ${beard&&!sil?`<path d="M-26 -236 Q0 -196 26 -236 Q14 -220 0 -220 Q-14 -220 -26 -236Z" fill="${beard}"/>`:''}
+  ${crown?`<path d="M-34 -268 L-34 -306 L-18 -286 L0 -314 L18 -286 L34 -306 L34 -268Z" fill="${sil||GOLD}" stroke="${sil||'#b86e1a'}" stroke-width="4"/>`:`<path d="M-38 -254 Q-38 -294 0 -294 Q38 -294 38 -254 Q0 -272 -38 -254Z" fill="${cl}"/><path d="M-38 -258 Q0 -276 38 -258" stroke="${sil||shade(cloth,-.3)}" stroke-width="7" fill="none"/>`}
+ </g>
+ ${arm(-1,aL,itemL,itemLR)}${arm(1,aR,item,itemR)}
+ </g></g>`}
+/* gacela (perfil, mirando a la derecha) mode 0 parada,1 corre,2 salto */
+function heart(x,y,s,col=CORAL,op=1){return `<g transform="translate(${x},${y}) scale(${s})" opacity="${op}"><path d="M0 30 C-60 -10 -50 -60 -18 -60 C-6 -60 0 -50 0 -42 C0 -50 6 -60 18 -60 C50 -60 60 -10 0 30Z" fill="${col}" stroke="${INK}" stroke-width="6"/><ellipse cx="-22" cy="-40" rx="9" ry="6" fill="#fff" opacity=".6"/></g>`}
+
+/* ===================== piezas nuevas ===================== */
+const VIO='#8a6fd1',ROSE='#ff8fab';
+const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');
+function A(word,occ=1){const k=norm(word);let c=0;for(let i=0;i<W.length;i++){if(norm(W[i].text)===k){c++;if(c==occ)return W[i]}}console.error('ANCLA? '+word+' '+occ);return {start:0,end:0}}
+function cross(x,y,s,col='#5a3a2a',glow=0){return `<g transform="translate(${x},${y}) scale(${s})">${glow?`<circle cy="-150" r="${260}" fill="url(#gGlow)" opacity="${glow}"/>`:''}<rect x="-22" y="-330" width="44" height="340" rx="6" fill="${col}"/><rect x="-120" y="-250" width="240" height="40" rx="6" fill="${col}"/><rect x="-22" y="-330" width="12" height="340" fill="#fff" opacity=".12"/></g>`}
+function gate(x,y,s,open=0,glow=1){const w=150*(1-open);return `<g transform="translate(${x},${y}) scale(${s})"><circle cy="-200" r="330" fill="url(#gGlow)" opacity="${glow}"/>
+ <path d="M-190 0 L-190 -260 Q0 -470 190 -260 L190 0Z" fill="#fff6dc" stroke="${GOLD}" stroke-width="16"/>
+ <g><rect x="${-150}" y="-280" width="${w}" height="280" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/><rect x="${150-w}" y="-280" width="${w}" height="280" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/>
+ ${open<.5?[0,1,2,3,4].map(i=>`<rect x="${-140+i*62}" y="-270" width="10" height="262" fill="#b8791a" opacity=".55"/>`).join(''):''}</g>
+ <rect x="-210" y="-14" width="420" height="24" rx="10" fill="${GOLD}" stroke="#b8791a" stroke-width="5"/></g>`}
+function lock(x,y,s,shut=1){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-40 -10 L-40 -50 Q-40 -${90-20*(1-shut)} 0 -${90-20*(1-shut)} Q40 -${90-20*(1-shut)} 40 -50 L40 ${-10-30*(1-shut)}" stroke="#7d7a90" stroke-width="16" fill="none"/><rect x="-62" y="-14" width="124" height="104" rx="18" fill="${CORAL}" stroke="${INK}" stroke-width="8"/><circle cy="30" r="13" fill="${INK}"/><rect x="-5" y="34" width="10" height="28" fill="${INK}"/></g>`}
+function bible(x,y,s,open=1,L=0){const a=open;return `<g transform="translate(${x},${y}) scale(${s})"><circle cy="-60" r="${300*a}" fill="url(#gGlow)" opacity="${.9*a}"/>${rays(0,-40,16,520*a,L*.4,.25*a,'#fff3c4',.05)}
+ <path d="M0 0 L${-260*a-20} -30 L${-260*a-20} -330 L0 -300Z" fill="#fffaf0" stroke="#6b3b2a" stroke-width="10"/><path d="M0 0 L${260*a+20} -30 L${260*a+20} -330 L0 -300Z" fill="#fffaf0" stroke="#6b3b2a" stroke-width="10"/>
+ ${[0,1,2,3,4,5].map(i=>`<rect x="${-220*a}" y="${-270+i*40}" width="${170*a}" height="10" rx="5" fill="#d9c9a8"/><rect x="${40*a}" y="${-270+i*40}" width="${170*a}" height="10" rx="5" fill="#d9c9a8"/>`).join('')}
+ <path d="M-14 -300 L14 -300 L14 -230 L0 -244 L-14 -230Z" fill="${CORAL}"/></g>`}
+function scroll(x,y,s,ref,txt,L){const o=eo(P(L,0,.4));return `<g transform="translate(${x},${y}) scale(${s})"><rect x="${-380*o}" y="-190" width="${760*o}" height="380" fill="url(#gParch)" stroke="#b08a5a" stroke-width="8"/>
+ <rect x="${-400*o-30}" y="-215" width="60" height="430" rx="30" fill="#a0673a" stroke="#6b3b2a" stroke-width="6"/><rect x="${400*o-30}" y="-215" width="60" height="430" rx="30" fill="#a0673a" stroke="#6b3b2a" stroke-width="6"/>
+ ${o>.8?TX(0,-90,ref,64,'#7a3b1a','#fff6df',4)+`<rect x="-250" y="-62" width="500" height="7" rx="3" fill="${GOLD}"/>`+txt.map((t,i)=>`<text x="0" y="${10+i*62}" text-anchor="middle" ${F} font-size="50" fill="#5a3a20" opacity="${P(L,.35+i*.2,.2)}">${t}</text>`).join(''):''}</g>`}
+function gift(x,y,s,open=0,L=0){const lid=eo(open);return `<g transform="translate(${x},${y}) scale(${s})">${open>0?`<circle cy="-150" r="${380*lid}" fill="url(#gGlow)"/>`+rays(0,-120,18,700*lid,L*.6,.3*lid,'#fff3c4',.05):''}
+ <rect x="-170" y="-200" width="340" height="230" rx="14" fill="${CORAL}" stroke="${INK}" stroke-width="9"/><rect x="-26" y="-200" width="52" height="230" fill="${GOLD}"/>
+ <g transform="translate(${-lid*60},${-lid*190}) rotate(${-lid*24})"><rect x="-195" y="-250" width="390" height="70" rx="12" fill="#ff8f7d" stroke="${INK}" stroke-width="9"/><rect x="-26" y="-250" width="52" height="70" fill="${GOLD}"/>
+ <path d="M0 -250 Q-90 -330 -70 -260 Q-50 -240 0 -250 Q50 -240 70 -260 Q90 -330 0 -250Z" fill="${GOLD}" stroke="#b8791a" stroke-width="6"/></g></g>`}
+function scale_(x,y,s,tilt,lBag,rBag){const a=tilt*Math.PI/180,lx=-230*Math.cos(a),ly=-230*Math.sin(a);
+ const pan=(px,py,c)=>`<g transform="translate(${px},${py})"><path d="M0 0 L-90 160 M0 0 L90 160" stroke="#b8791a" stroke-width="6"/><path d="M-120 160 Q0 230 120 160Z" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/>${c}</g>`;
+ return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-14" y="-300" width="28" height="560" rx="10" fill="url(#gGold)"/><path d="M-130 270 L130 270 L90 230 L-90 230Z" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/><circle cy="-300" r="26" fill="${GOLD}" stroke="#b8791a" stroke-width="6"/>
+ <path d="M${lx} ${-300+ly} L${-lx} ${-300-ly}" stroke="url(#gGold)" stroke-width="22" stroke-linecap="round"/>${pan(lx,-300+ly,lBag)}${pan(-lx,-300-ly,rBag)}</g>`}
+function block(t,c){return `<g transform="translate(0,135)"><rect x="-95" y="-48" width="190" height="56" rx="10" fill="${c}" stroke="${INK}" stroke-width="5"/><text y="-10" text-anchor="middle" ${F} font-size="30" fill="#fff">${t}</text></g>`}
+function crowd(L,n,gray=0,y0=1350){let s='';for(let i=0;i<n;i++){const col=i%2?'#2fa39a':'#d9773a',r=Math.floor(i/6),x=110+(i%6)*172+(r%2)*86,y=y0+r*120,g=clamp(gray*1.6-i*.05);
+ s+=person({x,y,s:.48-r*.02,robe:g>.5?'#6b6880':col,cloth:g>.5?'#9a97ad':'#f6e7c8',skin:g>.5?'#8d8aa0':'#c98d62',sash:g>.5?'#7d7a90':GOLD,bob:-Math.abs(Math.sin(L*5+i))*6,head:Math.sin(L*2+i)*6,beard:g>.5?'#6b6880':'#5a3626'})}return s}
+function stamp(x,y,s,t,col=CORAL,L=0,a=0){const p=P(L,a,.25);if(p<=0)return '';const sc=lerp(2.2,1,eo(p));return `<g transform="translate(${x},${y}) rotate(-12) scale(${s*sc})" opacity="${clamp(p*3)}"><rect x="-300" y="-80" width="600" height="160" rx="24" fill="none" stroke="${col}" stroke-width="16"/>${TX(0,34,t,92,col,'#fff',6)}</g>`}
+function tomb(x,y,s,roll=0,L=0){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-360 40 Q-340 -330 0 -360 Q340 -330 360 40Z" fill="#8f7b62" stroke="#5e4c38" stroke-width="10"/>
+ <path d="M-120 40 L-120 -150 Q0 -260 120 -150 L120 40Z" fill="${roll>0?'#fff6dc':'#2a2030'}"/>${roll>0?`<circle cy="-90" r="${220*roll}" fill="url(#gGlow)"/>`+rays(0,-90,14,500*roll,L*.5,.3*roll,'#fff3c4',.06):''}
+ <g transform="translate(${roll*300},0) rotate(${roll*120} 0 -100)"><circle cy="-100" r="150" fill="url(#gStone)" stroke="#5e4c38" stroke-width="10"/><circle cy="-100" r="80" fill="none" stroke="#a8957a" stroke-width="8"/></g></g>`}
+function ladder(x,y,s,brk=0,L=0){let r='';for(let i=0;i<7;i++){const d=brk*clamp(brk*3-i*.3);r+=`<g transform="translate(${d*(i%2?60:-60)},${d*300}) rotate(${d*(i%2?40:-40)})"><rect x="-110" y="${-i*110-10}" width="220" height="20" rx="8" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><text x="0" y="${-i*110-22}" text-anchor="middle" ${F} font-size="40" fill="#fff" stroke="${INK}" stroke-width="7" paint-order="stroke fill">${['buenas obras','ayudo','no robo','voy a la iglesia','doy limosna','soy amable','me porto bien'][i]}</text></g>`}
+ return `<g transform="translate(${x},${y}) scale(${s})"><g transform="rotate(${brk*8})"><rect x="-130" y="-760" width="20" height="780" rx="8" fill="#a0673a" transform="translate(${-brk*80},0) rotate(${-brk*10})"/><rect x="110" y="-760" width="20" height="780" rx="8" fill="#a0673a" transform="translate(${brk*80},0) rotate(${brk*10})"/>${r}</g></g>`}
+function arrow(x0,y0,x1,y1,p){const x=lerp(x0,x1,p),y=lerp(y0,y1,p)+Math.sin(p*Math.PI)*-220,a=Math.atan2((y1-y0)-220*Math.PI*Math.cos(p*Math.PI),x1-x0)*180/Math.PI;
+ return `<g transform="translate(${x},${y}) rotate(${a})"><rect x="-110" y="-5" width="120" height="10" fill="#7a4a26"/><path d="M10 -18 L46 0 L10 18Z" fill="#9fb4bd"/><path d="M-110 0 L-130 -18 L-90 0 L-130 18Z" fill="${CORAL}"/></g>`}
+function hill(L,col='url(#gHill)'){return mtn(1420,180,col,2,0)}
+/* ===================== escenas (anclas en palabras de la voz) ===================== */
+let SC=[];
+function buildSC(){SC=[
+// 0 gancho: persona buena camina a la puerta del cielo… que se cierra
+{a:['y',1],o:-.07,tr:'cut',chip:'',cam:[[0,1.15,540,900],[2.4,1.0,540,960]],draw:L=>{
+ let s=sky('skyHeaven')+clouds(L,[[100,500,1.4,'#fff',.9],[700,380,1.1,'#fff',.8],[400,1500,2,'#fff',.95],[900,1600,1.6,'#fff',.9]],20);
+ const cl=P(L,1.6,.35);s+=gate(540,1050,1.3,1-eo(cl)*1,1);
+ s+=person({x:lerp(240,430,clamp(L/1.6)),y:1500,s:.95,robe:'#2fa39a',step:L*9,bob:-Math.abs(Math.sin(L*9))*8,aR:-30,item:'bread',itemR:20});
+ [0,1,2].forEach(i=>{const p=back(P(L,.15+i*.25,.3));if(p>0)s+=`<g transform="translate(${170+i*140},${1180-i*30}) scale(${p})"><circle r="40" fill="${SAGE}" stroke="${INK}" stroke-width="6"/><path d="M-18 0 L-5 14 L20 -14" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/></g>`});
+ if(cl>0)s+=lock(540,1020,1.1*back(cl));return s}},
+// 1 no es suficiente
+{a:['suficiente'],o:-.15,tr:'flash',chip:'',cam:[[0,1.1,540,1000],[1.6,1.0,540,960]],draw:L=>{
+ let s=sky('skyGrey')+rays(540,900,20,1500,L*.2,.06,'#fff',.05)+gate(540,1150,1.5,0,.3)+lock(540,1100,1.4);
+ s+=person({x:300,y:1560,s:1.05,robe:'#2fa39a',head:-14+Math.sin(L*3)*4,aL:20,aR:-20});
+ s+=stamp(540,700,1,'NO ALCANZA',CORAL,L,.15);return s}},
+// 2 muchos creen
+{a:['muchos'],o:-.06,tr:'wipe',chip:'',cam:[[0,1.0,540,960],[2.2,1.08,540,1000]],draw:L=>{
+ let s=sky('skyWarm')+sun(820,520,110)+clouds(L,[[100,380,1,'#fff',.8],[600,300,.8,'#fff',.7]],18)+houses(1180,-L*30,1,3,'#f2d3a6')+ground(1260,'url(#gSand)',10,1,L*40);
+ s+=crowd(L,12,0,1340);const b=back(P(L,.3,.35));s+=`<g transform="translate(540,640) scale(${b})"><rect x="-300" y="-90" width="600" height="160" rx="80" fill="#fff" stroke="${INK}" stroke-width="9"/><path d="M-60 70 L-100 140 L0 70Z" fill="#fff" stroke="${INK}" stroke-width="9"/><path d="M-62 66 L-94 128 L-6 66Z" fill="#fff"/>${TX(0,16,'"Yo soy bueno…"',62,INK,'#fff',2)}</g>`;return s}},
+// 3 checklist
+{a:['dano'],o:-.5,tr:'slide',chip:'',cam:[[0,1.05,540,960],[2.6,1.0,540,960]],draw:L=>{
+ let s=sky('skyCoral')+rays(540,900,24,1500,L*.3,.12,'#fff3c4',.06);
+ s+=`<g transform="translate(540,920) rotate(-2)"><rect x="-400" y="-380" width="800" height="740" rx="30" fill="url(#gParch)" stroke="#b08a5a" stroke-width="9"/>${TX(0,-280,'MI LISTA',70,INK,'#fff6df',4)}`;
+ const items=['No hago daño','Ayudo a otros','Buenas intenciones'],tt=[A('dano').start,A('ayudan').start,A('intenciones').start];
+ items.forEach((t,i)=>{const p=back(P(L+SC_T0(3),tt[i]-.1,.3)),y=-140+i*170;if(p>0)s+=`<g transform="translate(0,${y}) scale(${p})"><rect x="-340" y="-60" width="680" height="120" rx="22" fill="#fff" stroke="${INK}" stroke-width="6"/><circle cx="-270" cy="0" r="40" fill="${SAGE}" stroke="${INK}" stroke-width="6"/><path d="M-290 0 L-275 16 L-248 -16" stroke="#fff" stroke-width="10" fill="none" stroke-linecap="round"/><text x="-200" y="18" ${F} font-size="54" fill="${INK}">${t}</text></g>`});
+ return s+'</g>'}},
+// 4 Dios los recibirá → balanza con obras
+{a:['dios',1],o:-.1,tr:'zoom',chip:'',cam:[[0,1.12,540,900],[2,1.0,540,960]],draw:L=>{
+ let s=sky('skyHeaven')+rays(540,700,20,1400,L*.3,.18,'#fff',.05)+clouds(L,[[0,1600,2,'#fff',.95],[700,1650,1.8,'#fff',.9]],12);
+ const t=Math.sin(L*3)*6;s+=scale_(540,1050,1.2,-8+t,`${block('BUENAS OBRAS',SAGE)}`,`${block('¿CIELO?',VIO)}`);return s}},
+// 5 Pero... ¿qué dice la Biblia?
+{a:['pero',1],o:-.1,tr:'circle',cx:540,cy:960,chip:'',cam:[[0,1.2,540,960],[1.8,1.0,540,960]],draw:L=>{
+ let s=sky('skyIndigo')+stars(L,70,9)+bible(540,1250,1.5,eo(P(L,.3,.6)),L);return s}},
+// 6 Romanos 3:23
+{a:['romanos'],o:-.08,tr:'wipeup',chip:'Romanos 3:23',cam:[[0,1.06,540,960],[2.5,1.0,540,960]],draw:L=>{
+ let s=sky('skyDawn')+stars(L,40,3)+rays(540,1000,18,1500,L*.2,.1,'#fff3c4',.05);
+ s+=scroll(540,950,1.15,'Romanos 3:23',['Todos pecaron','y están destituidos','de la gloria de Dios'],L);return s}},
+// 7 pecado = errar el blanco
+{a:['pecado'],o:-.1,tr:'slide',chip:'Romanos 3:23',cam:[[0,1.0,540,960],[2.2,1.1,620,900]],draw:L=>{
+ let s=sky('skyIndigo')+stars(L,50,4);const gx=820,gy=640;s+=`<circle cx="${gx}" cy="${gy}" r="230" fill="url(#gGlow)"/><g transform="translate(${gx},${gy})">${[150,105,60,20].map((r,i)=>`<circle r="${r}" fill="${i%2?'#fff6dc':GOLD}" stroke="#b8791a" stroke-width="6"/>`).join('')}</g>`;
+ s+=TX(gx,gy-210,'LA GLORIA DE DIOS',44,'#fff',INK,8);
+ const p=clamp(L/1.1);s+=arrow(150,1300,gx-40,gy+60,Math.min(p,1)*0.72)+`<g opacity="${P(L,.9,.3)}">${TX(560,1180,'¡FALLAMOS!',80,CORAL,INK,10)}</g>`;
+ s+=person({x:150,y:1560,s:.9,robe:'#d9773a',aR:-70,aL:-50,flip:false});return s}},
+// 8 ¡Todos!
+{a:['todos',2],o:-.08,tr:'flash',chip:'',cam:[[0,1.1,540,1000],[1.6,1.0,540,1000]],draw:L=>{
+ let s=sky('skyGrey')+rays(540,700,20,1400,L*.3,.05,'#fff',.05);s+=crowd(L,24,clamp(L/1.2),1020);return s}},
+// 9 nadie puede presentarse
+{a:['existe'],o:-.3,tr:'cut',chip:'',cam:[[0,1.0,540,960],[3,1.12,540,1100]],draw:L=>{
+ let s=sky('skyIndigo')+`<circle cx="540" cy="520" r="${420+Math.sin(L*2)*20}" fill="url(#gGlow)"/>`+rays(540,520,24,1500,L*.2,.25,'#fff3c4',.05)+ground(1500,'url(#gHill)',8,2,0);
+ s+=person({x:540,y:1520,s:1.1,robe:'#6b6880',cloth:'#9a97ad',head:24,lean:8,aL:30,aR:-30});
+ s+=`<g opacity="${P(L,.3,.3)}">${TX(540,1000,'¿QUIÉN ES',84,'#fff',INK,10)}${TX(540,1110,'PERFECTO?',100,GOLD,INK,10)}</g>`;return s}},
+// 9b "nunca pequé" = falso
+{a:['diciendo'],o:-.1,tr:'slide',chip:'',cam:[[0,1.08,540,960],[2,1.0,540,960]],draw:L=>{
+ let s=sky('skyGrey')+rays(540,900,20,1500,L*.2,.06,'#fff',.05);const b=back(P(L,0,.35));
+ s+=`<g transform="translate(540,820) scale(${b}) rotate(${Math.sin(L*3)*2})"><rect x="-400" y="-170" width="800" height="300" rx="80" fill="#fff" stroke="${INK}" stroke-width="10"/><path d="M-80 120 L-140 230 L20 125Z" fill="#fff" stroke="${INK}" stroke-width="10"/><path d="M-82 114 L-132 210 L12 116Z" fill="#fff"/>${TX(0,30,'"NUNCA PEQUÉ"',96,INK,'#fff',2)}</g>`;
+ s+=person({x:300,y:1560,s:.95,robe:'#6b6880',cloth:'#9a97ad',head:-10,aR:-60});
+ s+=stamp(600,1150,.9,'NADIE',CORAL,L,.6);return s}},
+// 10 Efesios 2:8-9 (amanece)
+{a:['efesios'],o:-.08,tr:'circle',cx:540,cy:1100,chip:'Efesios 2:8-9',cam:[[0,1.08,540,1000],[2.4,1.0,540,960]],draw:L=>{
+ const up=eo(P(L,0,2));let s=sky('skyDawn')+sun(540,1300-up*500,140)+rays(540,1300-up*500,22,1500,L*.3,.2*up,'#fff3c4',.06)+mtn(1450,220,'#4a3a7a',1,0)+mtn(1600,180,'#231a4f',3,0);
+ s+=scroll(540,760,1,'Efesios 2:8-9',['Por gracia sois salvos','por medio de la fe…','no por obras'],L);return s}},
+// 11 gracia
+{a:['gracia'],o:-.1,tr:'zoom',chip:'Efesios 2:8-9',cam:[[0,1.15,540,960],[1.5,1.0,540,960]],draw:L=>{
+ let s=sky('skyHeaven')+rays(540,900,28,1600,L*.5,.35,GOLD,.04)+`<circle cx="540" cy="900" r="${300+40*Math.sin(L*4)}" fill="url(#gGlow)"/>`;
+ [0,1,2,3,4,5].forEach(i=>{s+=heart(540+Math.cos(i+L)*330,900+Math.sin(i*1.3+L)*330,.9,[CORAL,GOLD,ROSE][i%3])});return s}},
+// 12 no por obras → balanza rechaza
+{a:['obras',1],o:-.25,tr:'slide',chip:'Efesios 2:8-9',cam:[[0,1.0,540,960],[1.6,1.06,540,960]],draw:L=>{
+ let s=sky('skyCoral')+rays(540,900,24,1500,L*.3,.1,'#fff3c4',.06);s+=scale_(540,1100,1.1,10*Math.sin(L*5)*(1-P(L,.6,.4)),block('OBRAS',SAGE),block('PERDÓN',VIO));
+ s+=stamp(540,650,1,'NO POR OBRAS',CORAL,L,.4);return s}},
+// 13 comprar el perdón
+{a:['comprar'],o:-.2,tr:'wipe',chip:'',cam:[[0,1.06,540,960],[2,1.0,540,960]],draw:L=>{
+ let s=sky('skyIndigo')+stars(L,40,7);s+=`<g transform="translate(540,880) rotate(${Math.sin(L*3)*4})"><path d="M-300 -150 L200 -150 L330 0 L200 150 L-300 150Z" fill="#fff6dc" stroke="${GOLD}" stroke-width="12"/><circle cx="220" cy="0" r="26" fill="#231a4f"/>${TX(-60,-20,'PERDÓN',96,INK,'#fff',2)}${TX(-60,80,'$ ???',60,CORAL,'#fff',2)}</g>`;
+ for(let i=0;i<7;i++){const t=P(L,.1+i*.12,1.2);if(t>0)s+=`<g transform="translate(${200+i*110},${1200+t*700}) rotate(${t*300})">${ITEM.coin.replace('r="18"','r="40"').replace('r="9"','r="20"')}</g>`}
+ s+=stamp(540,1250,.9,'NO SE VENDE',CORAL,L,.7);return s}},
+// 14 ¡regalo!
+{a:['regalo'],o:-.45,tr:'circle',cx:540,cy:1000,chip:'',cam:[[0,1.12,540,1000],[2.4,1.0,540,960]],draw:L=>{
+ let s=sky('skyHeaven')+clouds(L,[[50,1550,2,'#fff',.95],[700,1600,1.8,'#fff',.9]],14);s+=gift(540,1250,1.6,P(L,.45,.5),L);
+ const p=back(P(L,.7,.4));if(p>0)s+=`<g transform="translate(540,620) scale(${p})"><rect x="-280" y="-70" width="560" height="140" rx="70" fill="${GOLD}" stroke="${INK}" stroke-width="10"/>${TX(0,26,'SALVACIÓN',72,'#fff',INK,9)}</g>`;return s}},
+// 15 Jesucristo murió (cruz al amanecer)
+{a:['jesucristo',1],o:-.1,tr:'flash',chip:'1 Corintios 15:3-4',cam:[[0,1.0,540,1000],[3,1.12,540,900]],draw:L=>{
+ let s=sky('skyDawn')+sun(540,980,170)+rays(540,980,24,1600,L*.15,.2,'#fff3c4',.05)+mtn(1300,120,'#4a3a7a',2,0);
+ s+=`<path d="M-300 2300 L-300 1360 Q540 1050 1380 1360 L1380 2300Z" fill="#231a4f"/>`+cross(540,1240,1.25,'#231a4f',.9)+cross(250,1330,.6,'#231a4f')+cross(830,1330,.6,'#231a4f')+birds(L,100,500,5);return s}},
+// 16 resucitó (tumba vacía)
+{a:['resucito'],o:-.15,tr:'zoom',chip:'1 Corintios 15:3-4',cam:[[0,1.1,540,1000],[2.5,1.0,540,960]],draw:L=>{
+ let s=sky('skyMorning')+sun(860,420,90)+clouds(L,[[100,380,1,'#fff',.8]],16)+ground(1420,'url(#gGrass)',12,2,0);
+ s+=tomb(500,1400,1.15,eo(P(L,.15,.8)),L)+palm(950,1440,.9,L);
+ const p=back(P(L,1.0,.35));if(p>0)s+=`<g transform="translate(540,650) scale(${p})">${TX(0,0,'¡VACÍA!',130,GOLD,INK,12)}</g>`;return s}},
+// 17 Él mismo dijo en Juan 14:6
+{a:['mismo'],o:-.2,tr:'wipeup',chip:'Juan 14:6',cam:[[0,1.05,540,960],[2.5,1.0,540,960]],draw:L=>{
+ let s=sky('skyIndigo')+stars(L,60,11)+bible(540,1250,1.4,1,L);return s}},
+// 18 Yo soy el camino (camino hacia la luz)
+{a:['camino',1],o:-.15,tr:'circle',cx:540,cy:700,chip:'Juan 14:6',cam:[[0,1.0,540,960],[3.5,1.18,540,800]],draw:L=>{
+ let s=sky('skyHeaven')+`<circle cx="540" cy="620" r="${380+Math.sin(L*3)*20}" fill="url(#gGlow)"/>`+rays(540,620,26,1600,L*.3,.3,GOLD,.04)+mtn(1050,90,'#e9d7f5',4,0)+mtn(1150,70,'#c9b6ec',5,0);
+ s+=`<path d="M440 2000 L640 2000 L560 780 L520 780Z" fill="#fff6dc" stroke="${GOLD}" stroke-width="8"/>`;for(let i=0;i<8;i++){const z=((i*.13+L*.25)%1),y=780+z*z*1200,w=6+z*30;s+=`<rect x="${540-w/2}" y="${y}" width="${w}" height="${4+z*16}" fill="${GOLD}" opacity=".7"/>`}
+ s+=cross(540,700,.55,'#fff',0)+person({x:540,y:1700,s:.9,robe:'#2fa39a',flip:true,step:L*7,bob:-Math.abs(Math.sin(L*7))*6,aL:-20,aR:20});return s}},
+// 19 no se trata de ser bueno → escalera de obras se rompe
+{a:['trata',1],o:-.1,tr:'flash',chip:'',cam:[[0,1.0,540,960],[2.4,1.05,540,1000]],draw:L=>{
+ let s=sky('skyGrey')+clouds(L,[[200,300,1.2,'#bdb9d0',.7],[750,420,1,'#bdb9d0',.6]],10)+ground(1600,'url(#gHill)',8,2,0);
+ s+=ladder(540,1600,1.4,eo(P(L,.7,.9)),L);s+=`<g transform="translate(540,240)">${gate(0,300,.5,0,.5)}</g>`;return s}},
+// 20 reconoce + fe en Jesucristo
+{a:['reconocer'],o:-.1,tr:'circle',cx:540,cy:900,chip:'',cam:[[0,1.08,540,1000],[3,1.0,540,960]],draw:L=>{
+ const up=eo(P(L,1,1.2));let s=sky(up>.5?'skyDawn':'skyIndigo')+stars(L,40,13)+`<circle cx="540" cy="700" r="${200+up*300}" fill="url(#gGlow)" opacity="${.4+up*.6}"/>`+cross(540,1000,.9,'#fff6dc',up)+ground(1480,'url(#gHill)',8,2,0);
+ s+=person({x:540,y:1520,s:1,robe:'#2fa39a',head:20-up*30,lean:6-up*6,aL:-60-up*80,aR:60+up*80});return s}},
+// 21 la pregunta: ¿obras o Cristo?
+{a:['pregunta'],o:-.1,tr:'slide',chip:'',cam:[[0,1.0,540,960],[3,1.04,540,960]],draw:L=>{
+ let s=`<rect x="-300" y="-300" width="840" height="2520" fill="#5a5670"/><rect x="540" y="-300" width="840" height="2520" fill="url(#skyHeaven)"/>`;
+ s+=`<g opacity=".95">${ladder(270,1500,.75,.25+.05*Math.sin(L*3),L)}</g>`+cross(810,1300,.9,'#5a3a2a',.9);
+ s+=`<rect x="532" y="-300" width="16" height="2520" fill="#fff"/>`;
+ const a=back(P(L,.2,.35)),b=back(P(L,.6,.35));s+=`<g transform="translate(270,560) scale(${a})">${TX(0,0,'¿TUS OBRAS?',72,'#fff',INK,10)}</g><g transform="translate(810,560) scale(${b})">${TX(0,0,'¿CRISTO?',84,GOLD,INK,10)}</g>`;
+ const v=back(P(L,1.2,.3));if(v>0)s+=`<g transform="translate(540,880) scale(${v})"><circle r="70" fill="${CORAL}" stroke="#fff" stroke-width="8"/>${TX(0,24,'VS',60,'#fff',INK,6)}</g>`;return s}},
+// 22 CTA
+{a:['suscribete'],o:-.1,tr:'circle',cx:540,cy:960,chip:'',cam:[[0,1.06,540,960],[2.6,1.0,540,960]],draw:L=>{
+ let s=sky('skyDawn')+sun(540,1150,150)+rays(540,1150,24,1500,L*.3,.2,'#fff3c4',.06)+mtn(1450,160,'#4a3a7a',1,0)+mtn(1600,140,'#231a4f',3,0);
+ const bp=back(P(L,.05,.4)),pulse=1+.04*Math.sin(L*8);s+=`<g transform="translate(540,900) scale(${bp*pulse})"><rect x="-370" y="-95" width="740" height="190" rx="95" fill="#e8344e" stroke="${INK}" stroke-width="12"/><rect x="-370" y="-95" width="740" height="80" rx="40" fill="#fff" opacity=".18"/>${TX(60,30,'SUSCRÍBETE',80,'#fff',INK,9)}
+ <g transform="translate(-290,0) rotate(${Math.sin(L*14)*16*(1-P(L,1.4,1))})"><path d="M-34 24 Q-34 -40 0 -44 Q34 -40 34 24 L44 34 L-44 34Z" fill="${GOLD}" stroke="${INK}" stroke-width="7"/><circle cy="44" r="10" fill="${GOLD}" stroke="${INK}" stroke-width="6"/></g></g>`;
+ const np=back(P(L,.5,.4));if(np>0)s+=`<g transform="translate(540,1110) scale(${np})"><rect x="-260" y="-56" width="520" height="104" rx="52" fill="#fff8ee" stroke="${INK}" stroke-width="8"/><text y="18" text-anchor="middle" ${F} font-size="54" fill="${INK}">Bases Bíblicas</text></g>`;
+ return s}},
+// 21b Examinemos todo a la luz de la Palabra
+{a:['examinemos'],o:-.1,tr:'circle',cx:540,cy:1000,chip:'',cam:[[0,1.1,540,1000],[3,1.0,540,960]],draw:L=>{
+ let s=sky('skyIndigo')+stars(L,60,17)+bible(540,1300,1.5,1,L);const lp=back(P(L,.3,.4));
+ if(lp>0)s+=`<g transform="translate(540,640) scale(${lp})">${TX(0,0,'A LA LUZ DE',84,'#fff',INK,10)}${TX(0,110,'LA PALABRA',110,GOLD,INK,12)}</g>`;return s}},
+];SC.forEach(sc=>{const w=A(...sc.a);sc.t0=Math.max(0,w.start+sc.o)});SC[0].t0=0;
+ for(let i=1;i<SC.length;i++)if(SC[i].t0<=SC[i-1].t0+.3)console.error('ORDEN '+i)}
+function SC_T0(i){return SC[i].t0}
+/* ===================== textos cinéticos (anclas) ===================== */
+let KT=[];
+const KTD=[
+ [['y',1],0,['suficiente'],-.2,300,104,'¿SER <span class="t">BUENO</span><br>ALCANZA?','slam'],
+ [['suficiente'],-.1,['cielo',1],.3,300,0,'','pop'],
+ [['muchos'],0,['intenciones'],-1.9,300,96,'MUCHOS<br><span class="g">CREEN</span>…','pop'],
+ [['dios',1],0,['pero',1],-.15,300,96,'¿DIOS ME<br><span class="g">RECIBIRÁ</span>?','pop'],
+ [['realmente'],-.2,['biblia'],.4,300,110,'¿QUÉ DICE LA<br><span class="g">BIBLIA</span>?','slam'],
+ [['todos',1],-.05,['pecado'],-.1,1270,0,'<span class="tag coral">TODOS</span>','pop'],
+ [['todos',2],-.08,['existe'],-.35,300,170,'¡<span class="r">TODOS</span>!','slam'],
+ [['gracia'],-.1,['fe'],-.1,300,150,'<span class="g">GRACIA</span>','slam'],
+ [['fe',1],-.1,['obras',1],-.3,300,120,'POR LA <span class="t">FE</span>','slam'],
+ [['regalo'],-.2,['jesucristo',1],-.2,1500,0,'<span class="tag gold">¡UN REGALO DE DIOS!</span>','pop'],
+ [['murio'],-.1,['resucito'],-.2,300,110,'MURIÓ POR<br><span class="r">NUESTROS PECADOS</span>','slam'],
+ [['dia'],-.25,['mismo'],-.25,1180,0,'<span class="tag gold">AL TERCER DÍA</span>','pop'],
+ [['camino',1],-.1,['verdad'],-.15,300,120,'EL <span class="g">CAMINO</span>','slam'],
+ [['verdad'],-.1,['vida'],-.15,300,120,'LA <span class="t">VERDAD</span>','slam'],
+ [['vida'],-.1,['trata',1],-.15,300,130,'LA <span class="r">VIDA</span>','slam'],
+ [['trata',1],0,['reconocer'],-.15,300,96,'NO SE TRATA DE<br><span class="r">SER BUENO</span>','pop'],
+ [['pecador'],-.15,['fe',2],-.1,300,104,'SOY<br><span class="r">PECADOR</span>','slam'],
+ [['fe',2],-.1,['pregunta'],-.15,300,84,'FE EN<br><span class="g">JESUCRISTO</span>','slam'],
+];
+function buildKT(){KT=KTD.map(k=>[A(...k[0]).start+k[1],A(...k[2]).start+k[3],k[4],k[5],k[6],k[7]]).filter(k=>k[4]);
+ $('kts').innerHTML=KT.map((k,i)=>`<div class="kt" id="kt${i}" style="top:${k[2]}px;${k[3]?`font-size:${k[3]}px`:''}">${k[4]}</div>`).join('')}
+function renderKT(T){KT.forEach((k,i)=>{const el=$('kt'+i);if(T<k[0]||T>k[1]){el.style.display='none';return}el.style.display='block';
+ const u=T-k[0],out=P(T,k[1]-.2,.2);let sc=1,ry=0,op=1-out;
+ if(k[5]=='slam'){sc=lerp(2.4,1,eo(u/.22));op*=clamp(u/.1);if(u>.22)sc=1+.04*Math.sin((u-.22)*6)}
+ else if(k[5]=='pop'){sc=back(u/.35);ry=Math.sin(u*2.4)*1.2}
+ sc*=1-.25*out;el.style.opacity=op;el.style.transform=`scale(${sc}) rotate(${ry}deg)`})}
+/* ===================== subtítulos ===================== */
+function buildGroups(){let cur=[];const out=[];W.forEach((w,i)=>{cur.push(i);const txt=cur.map(j=>W[j].text).join(' ');const end=/[.,!?:;…»]$/.test(w.text);if(end||cur.length>=4||txt.length>18){out.push(cur);cur=[]}});if(cur.length)out.push(cur);GROUPS=out}
+function renderSubs(T){let g=-1;for(let i=0;i<GROUPS.length;i++){if(T>=W[GROUPS[i][0]].start-.08)g=i}
+ const el=$('subs');if(g<0||T>VOICE+.25){el.innerHTML='';return}const grp=GROUPS[g];const last=W[grp[grp.length-1]];if(T>last.end+.6&&(g==GROUPS.length-1||T<W[GROUPS[g+1][0]].start-.08)){el.innerHTML='';return}
+ el.innerHTML=grp.map(j=>{const w=W[j],on=T>=w.start-.03&&T<=(j+1<W.length?Math.max(w.end,W[j+1].start-.03):w.end+.4);const p=P(T,w.start-.03,.14);const sc=on?1+.12*Math.sin(p*Math.PI)+.06:1;return `<span class="${on?'on':''}" style="transform:scale(${sc.toFixed(3)})">${w.text}</span>`}).join(' ');
+ const gp=P(T,W[grp[0]].start-.08,.12);el.style.transform=`translateY(${(1-eo(gp))*24}px)`;el.style.opacity=clamp(gp*1.5)}
+/* ============ indicador: farolito que recorre el camino hacia la puerta "?" ============ */
+const X0=70,X1=880;let REVEAL=0;
+function renderProg(T){const p=clamp(T/(VOICE+.2)),kx=X0+(X1-X0)*p,fin=T>VOICE+.1;let s='';
+ s+=`<rect x="${X0-20}" y="122" width="${X1-X0+40}" height="56" rx="28" fill="rgba(35,26,79,.75)" stroke="#fff" stroke-width="4"/>`;
+ s+=`<rect x="${X0}" y="144" width="${kx-X0}" height="12" rx="6" fill="${GOLD}"/>`;
+ for(let i=0;i<14;i++){const x=X0+(i+.5)*(X1-X0)/14;s+=`<rect x="${x-10}" y="147" width="20" height="6" rx="3" fill="${x<kx?'#fff6c8':'#7d7a90'}"/>`}
+ const kb=Math.sin(T*9)*4;s+=`<g transform="translate(${kx},${150+kb})"><circle r="40" fill="url(#gGlow)"/><rect x="-16" y="-24" width="32" height="40" rx="8" fill="#fff6c8" stroke="${GOLD}" stroke-width="6"/><path d="M-20 -24 L20 -24 L12 -36 L-12 -36Z" fill="${GOLD}"/><circle cy="-4" r="7" fill="#ffb347"/></g>`;
+ const rv=T>=REVEAL,o=eo(P(T,REVEAL,.5)),pu=1+(fin?.1*Math.sin(T*10):0);
+ s+=`<g transform="translate(985,150) scale(${pu})"><circle r="${rv?80:0}" fill="url(#gGlow)"/><rect x="-50" y="-66" width="100" height="120" rx="12" fill="${rv?'#fff6dc':INK}" stroke="${GOLD}" stroke-width="7"/>`;
+ s+=rv?`${cross(0,40,.24,'#b8791a')}<rect x="-46" y="-62" width="${46*(1-o)}" height="112" fill="url(#gGold)"/><rect x="${46*o}" y="-62" width="${46*(1-o)}" height="112" fill="url(#gGold)"/>`:TX(0,26,'?',76,GOLD,INK,3);
+ s+='</g>';
+ if(T<REVEAL&&T>2&&T<6){const q=P(T,2,.3)*(1-P(T,5.6,.3));s+=`<g opacity="${q}" transform="translate(930,236)"><rect x="-140" y="-24" width="280" height="48" rx="24" fill="${GOLD}" stroke="#fff" stroke-width="4"/>${TX(0,12,'al final: la puerta',30,'#fff',INK,5)}</g>`}
+ if(fin){const f=P(T,VOICE+.1,.4);s+=`<g transform="translate(950,240) scale(${back(f)})"><rect x="-82" y="-26" width="164" height="52" rx="26" fill="${SAGE}" stroke="#fff" stroke-width="4"/>${TX(0,14,'¡VIDA!',36,'#fff',INK,5)}</g>`}
+ $('prog').innerHTML=s}
+let lastChip='';function renderChip(T,i,L){const c=SC[i].chip;const el=$('chip');if(!c){el.style.display='none';return}el.style.display='block';if(c!==lastChip){el.innerHTML=c+' · <b>RVR1960</b>';lastChip=c}
+ const same=SC[i-1]&&SC[i-1].chip==c;el.style.transform=`scale(${same?1:back(P(L,.12,.35))})`;el.style.opacity=same?1:clamp(P(L,.12,.15))}
+/* ===================== partículas ===================== */
+const cv=$('cv'),cx=cv.getContext('2d');
+const DUST=Array.from({length:50},(_,i)=>({x:R(i+500)*1080,y:R(i+600)*1920,s:2+R(i+700)*5,v:15+R(i+800)*45,ph:R(i+900)*6,c:['#fff6d5','#f7b32b','#e3d7ff','#ffd9c7'][i%4]}));
+let BURSTS=[],SHAKES=[];
+function buildFX(){const bt=[[0,540,860,30],[SC[1].t0,540,1000,26],[A('todos',2).start,540,700,36],[A('gracia').start,540,900,40],[A('regalo').start+.3,540,1100,60],[A('resucito').start+.6,540,1000,40],[A('camino',1).start,985,150,30],[A('camino',1).start,540,700,40],[A('fe',2).start,540,900,30],[VOICE+.1,540,900,50],[VOICE+.1,985,150,30]];
+ BURSTS=bt.map(([t,x,y,n],k)=>({t,x,y,arr:Array.from({length:n},(_,i)=>({a:R(k*100+i)*Math.PI*2,v:380+R(k*100+i+50)*700,s:7+R(k*77+i)*12,c:['#f7b32b','#ff6f59','#8a6fd1','#fff','#8cb369'][i%5],r:R(i+k)*6,st:i%3==0}))}));
+ SHAKES=[[SC[0].t0+.1,10],[SC[1].t0,16],[A('todos',2).start,14],[SC[13].t0+.4,12],[SC[14].t0+.7,12],[A('regalo').start,10],[SC[20].t0+.7,14]]}
+function drawCv(T,dim){cx.clearRect(0,0,1080,1920);
+ DUST.forEach(p=>{const y=((p.y-T*p.v)%1920+1920)%1920,x=p.x+Math.sin(T*.7+p.ph)*24,tw=.35+.65*Math.abs(Math.sin(T*1.8+p.ph));cx.globalAlpha=(dim?.7:.45)*tw;cx.fillStyle=p.c;cx.beginPath();cx.arc(x,y,p.s,0,7);cx.fill()});
+ BURSTS.forEach(b=>{const d=T-b.t;if(d<0||d>1.3)return;const al=1-Math.pow(d/1.3,2);b.arr.forEach(q=>{const x=b.x+Math.cos(q.a)*q.v*d*(1-d/2.6),y=b.y+Math.sin(q.a)*q.v*d*(1-d/2.6)+600*d*d;cx.globalAlpha=al;cx.fillStyle=q.c;cx.save();cx.translate(x,y);cx.rotate(q.r+d*8);
+  if(q.st){cx.beginPath();for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,r=i%2?q.s*.4:q.s;cx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}cx.closePath();cx.fill()}else cx.fillRect(-q.s/2,-q.s/3,q.s,q.s*.66);cx.restore()})});cx.globalAlpha=1}
+/* ===================== render ===================== */
+function camT(sc,L){const [s,fx,fy]=kf(L,sc.cam);return {s,tx:540-fx*s,ty:960-fy*s}}
+function sceneIdx(T){let i=0;for(;i<SC.length-1&&T>=SC[i+1].t0;i++);return i}
+function svgOf(sc,L){return `<svg width="1080" height="1920" viewBox="0 0 1080 1920">${sc.draw(L)}</svg>`}
+function render(T){
+ const i=sceneIdx(T),sc=SC[i],L=T-sc.t0,D=.34;const Aa=$('LA'),B=$('LB');
+ B.innerHTML=svgOf(sc,L);let c=camT(sc,L);let bT=`translate(${c.tx}px,${c.ty}px) scale(${c.s})`;B.style.clipPath='none';B.style.opacity=1;
+ const inTr=i>0&&L<D&&['wipe','circle','zoom','slide','wipeup'].includes(sc.tr);$('edge').style.display='none';
+ if(inTr){const pv=SC[i-1],pl=T-pv.t0;Aa.style.display='block';Aa.innerHTML=svgOf(pv,pl);const pc=camT(pv,pl);let aT=`translate(${pc.tx}px,${pc.ty}px) scale(${pc.s})`;Aa.style.opacity=1;const e=eio(L/D);
+  if(sc.tr=='circle'){B.style.clipPath=`circle(${e*1250}px at ${sc.cx}px ${sc.cy}px)`}
+  else if(sc.tr=='wipe'){B.style.clipPath=`inset(0 0 0 ${(1-e)*100}%)`;const ed=$('edge');ed.style.display='block';ed.style.left=((1-e)*1080-30)+'px'}
+  else if(sc.tr=='wipeup'){B.style.clipPath=`inset(${(1-e)*100}% 0 0 0)`}
+  else if(sc.tr=='slide'){bT=`translateX(${(1-e)*1080}px) `+bT;aT=`translateX(${-e*540}px) `+aT}
+  else if(sc.tr=='zoom'){aT=`translate(540px,960px) scale(${1+e*1.6}) translate(-540px,-960px) `+aT;Aa.style.opacity=1-e;bT=`translate(540px,960px) scale(${.75+.25*e}) translate(-540px,-960px) `+bT;B.style.opacity=clamp(e*1.6)}
+  Aa.style.transform=aT}else{Aa.style.display='none';Aa.innerHTML=''}
+ B.style.transform=bT;
+ $('flash').style.opacity=sc.tr=='flash'&&L<.3?.85*(1-L/.3):0;
+ let sx=0,sy=0;SHAKES.forEach(([t,a])=>{const d=T-t;if(d>=0&&d<.45){const k=a*Math.exp(-d*8);sx+=Math.sin(d*70)*k;sy+=Math.cos(d*55)*k}});$('stage').style.transform=`translate(${sx}px,${sy}px)`;
+ drawCv(T,[5,6,7,9,14,18,24].includes(i));renderKT(T);renderSubs(T);renderProg(T);renderChip(T,i,L);
+}
+async function init(data){W=data.words;VOICE=data.voice_dur;DUR=data.dur;buildSC();REVEAL=A('camino',1).start;buildKT();buildGroups();buildFX();await document.fonts.ready;render(0);
+ return {n:W.length,groups:GROUPS.length,DUR,cuts:SC.map(s=>+s.t0.toFixed(2)),reveal:REVEAL}}
+</script></body></html>
