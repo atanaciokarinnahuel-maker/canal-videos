@@ -1,0 +1,33 @@
+{
+ "id": "2026-11-08-bases-largo",
+ "archivos": [
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/hceGdpYH0eNhHUAnJx3W/zM28KzPt2gD4NjK3rA3W/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=6B4HHZzIO-icql1A4ZNu40lgzZg=",
+   "nombre": "1-intro.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/wziBLRjegZpMfmuEXWkU/rotgkocgIz0X00ltIYRR/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=NKTNCL2Zq76OVme4slkPCr5c-MQ=",
+   "nombre": "2-lea.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/LyxYsqHI7t4rinJWHUCK/lHVRrGx9gTTGzz4z5pem/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=bYF8odi0y24TOmQbB4_eddXnPWI=",
+   "nombre": "3-abigail.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/J9YqRrRgaBqq3dr9QZ7m/3pJlyEuvBbMHuBiYLl8e/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=a7ddC_nb3uLcJTQdm8EgjJl3C5s=",
+   "nombre": "4-debora.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/ZHwAIvB9kuGnkU15mg4V/M5xeTtJNiTb9lmfXLL5y/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=c_a7tZiNGzO_DjM7Kxd6EPBz4bE=",
+   "nombre": "5-ana.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/kcqUmi2TwWzxYLHcPcWo/bTYPUyiJQT1RG8IJKs2F/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=of76GJBkxwhh_IoIe4u4SW60vcU=",
+   "nombre": "6-rizpa.mp3"
+  },
+  {
+   "url": "https://elevenlabsusercontent.com/database/workspace/20fb4ce0b57f495db7963ab72193ac21/content_generation/6bTU1rOGcxE3uW0Dh0SD/H1GMeNzpSGiJ7RNNOlNA/content.mp3?Expires=1794110400&KeyName=assets-cdn-key-1&Signature=K5pSbxtXb8HvJsB2VfTHvxEj_4A=",
+   "nombre": "7-cierre.mp3"
+  }
+ ]
+}
