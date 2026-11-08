@@ -1,0 +1,357 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#231a4f}
+#stage{position:absolute;inset:0;overflow:hidden}
+.L{position:absolute;inset:0;transform-origin:0 0}
+.L svg{position:absolute;left:0;top:0;overflow:visible}
+#cv{position:absolute;left:0;top:0}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 75% 75% at 50% 50%,rgba(0,0,0,0) 60%,rgba(20,12,50,.45) 100%)}
+#subs{position:absolute;left:120px;right:120px;top:952px;text-align:center;font-family:'Inter Display','Inter';font-weight:900;font-size:54px;line-height:1.05}
+#subs span{display:inline-block;margin:0 9px;color:#fff;-webkit-text-stroke:11px #231a4f;paint-order:stroke fill;transform-origin:50% 70%}
+#subs span.on{color:#f7b32b}
+#prog{position:absolute;left:0;top:0;width:1920px;height:220px}
+#chip{position:absolute;left:44px;top:40px;padding:10px 26px;border-radius:40px;background:rgba(255,255,255,.95);color:#231a4f;border:5px solid #231a4f;font-family:'Inter Display';font-weight:900;font-size:32px;white-space:nowrap;transform-origin:0 50%}
+#chip b{color:#d9480f;font-size:24px}
+#flash{position:absolute;inset:0;background:#fffbe8;opacity:0}
+#edge{position:absolute;top:0;width:60px;height:1080px;background:linear-gradient(90deg,rgba(247,179,43,0),#fff3c4,rgba(247,179,43,0));display:none}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+<defs>
+ <linearGradient id="skyOasis" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a9db0"/><stop offset=".42" stop-color="#7fd6d0"/><stop offset=".72" stop-color="#ffe1b0"/><stop offset="1" stop-color="#ffc58f"/></linearGradient>
+ <linearGradient id="skyMorning" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4fb3bf"/><stop offset=".45" stop-color="#ffd59e"/><stop offset=".8" stop-color="#ff9a76"/></linearGradient>
+ <linearGradient id="skyDim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16424f"/><stop offset=".55" stop-color="#2f6b78"/><stop offset="1" stop-color="#6f9c98"/></linearGradient>
+ <linearGradient id="skyCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f6e7a"/><stop offset=".55" stop-color="#3fc1c9"/><stop offset="1" stop-color="#bff0d8"/></linearGradient>
+ <linearGradient id="skyCoral" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a59"/><stop offset=".6" stop-color="#ffb26b"/><stop offset="1" stop-color="#ffe7a8"/></linearGradient>
+ <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a65"/><stop offset=".5" stop-color="#ffc46b"/><stop offset="1" stop-color="#fff1c9"/></linearGradient>
+ <linearGradient id="skyNight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10243a"/><stop offset=".6" stop-color="#2b4f6e"/><stop offset="1" stop-color="#6aa0b0"/></linearGradient>
+ <linearGradient id="skySage" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e7d6b"/><stop offset=".6" stop-color="#8cb369"/><stop offset="1" stop-color="#f4e285"/></linearGradient>
+ <radialGradient id="gSun"><stop offset="0" stop-color="#fffbe8"/><stop offset=".35" stop-color="#ffe08a"/><stop offset=".6" stop-color="#ffc06b" stop-opacity=".55"/><stop offset="1" stop-color="#ffb36b" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gGlow"><stop offset="0" stop-color="#fff6d5" stop-opacity=".95"/><stop offset="1" stop-color="#f7b32b" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gFire"><stop offset="0" stop-color="#fff2b0"/><stop offset=".4" stop-color="#ffab3d" stop-opacity=".8"/><stop offset="1" stop-color="#ff6a2a" stop-opacity="0"/></radialGradient>
+ <radialGradient id="gIron" cx=".35" cy=".3"><stop offset="0" stop-color="#9fb4bd"/><stop offset=".5" stop-color="#4d6670"/><stop offset="1" stop-color="#1f343c"/></radialGradient>
+ <radialGradient id="gCoin" cx=".35" cy=".3"><stop offset="0" stop-color="#fff6c0"/><stop offset=".5" stop-color="#f7c844"/><stop offset="1" stop-color="#c98614"/></radialGradient>
+ <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0a0"/><stop offset=".5" stop-color="#f7b32b"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+ <linearGradient id="gSand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d7a0"/><stop offset="1" stop-color="#e2b277"/></linearGradient>
+ <linearGradient id="gSand2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9be82"/><stop offset="1" stop-color="#c9935a"/></linearGradient>
+ <linearGradient id="gGrass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8cf6f"/><stop offset="1" stop-color="#6f9c4a"/></linearGradient>
+ <linearGradient id="gParch" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6df"/><stop offset="1" stop-color="#f3dcae"/></linearGradient>
+ <linearGradient id="gShade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#231a4f" stop-opacity="0"/><stop offset="1" stop-color="#231a4f" stop-opacity=".35"/></linearGradient>
+ <linearGradient id="gWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ee3d6"/><stop offset="1" stop-color="#2a9db0"/></linearGradient>
+ <filter id="fb3" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
+ <filter id="fb6" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+ <filter id="fb12" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+
+ <linearGradient id="skyDawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1f5c"/><stop offset=".45" stop-color="#8a4f9e"/><stop offset=".75" stop-color="#ff9a76"/><stop offset="1" stop-color="#ffd59e"/></linearGradient>
+ <linearGradient id="skyHeaven" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe7a8"/><stop offset=".5" stop-color="#fff6dc"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+ <linearGradient id="skyIndigo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1240"/><stop offset=".6" stop-color="#3b2a7a"/><stop offset="1" stop-color="#6b4fa0"/></linearGradient>
+ <linearGradient id="skyGrey" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2840"/><stop offset="1" stop-color="#5a5670"/></linearGradient>
+ <linearGradient id="gHill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3a7a"/><stop offset="1" stop-color="#231a4f"/></linearGradient>
+ <linearGradient id="gStone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9b9a0"/><stop offset="1" stop-color="#8f7b62"/></linearGradient>
+</defs></svg><div id="stage"><div id="LA" class="L"></div><div id="LB" class="L"></div><div id="edge"></div><div id="vig"></div><canvas id="cv" width="1920" height="1080"></canvas><div id="subs"></div><svg id="prog" width="1920" height="220" viewBox="0 0 1920 220"></svg><div id="chip"></div><div id="flash"></div></div>
+<script>
+let CHS=[];
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const eo=t=>1-Math.pow(1-clamp(t),3);
+const eio=t=>{t=clamp(t);return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+const back=t=>{t=clamp(t);const c1=1.9,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
+const elastic=t=>{t=clamp(t);if(t===0||t===1)return t;return Math.pow(2,-9*t)*Math.sin((t*9-.75)*2*Math.PI/3)+1};
+const $=id=>document.getElementById(id);
+const R=i=>{const x=Math.sin(i*127.1+311.7)*43758.5453;return x-Math.floor(x)};
+const P=(L,a,d)=>clamp((L-a)/d);
+function kf(T,a,ease=eio){if(T<=a[0][0])return a[0].slice(1);for(let i=1;i<a.length;i++){if(T<=a[i][0]){const d=a[i][0]-a[i-1][0];const u=d<=0?1:ease((T-a[i-1][0])/d);return a[i].slice(1).map((v,k)=>lerp(a[i-1][k+1],v,u))}}return a[a.length-1].slice(1)}
+function hex(c){return [1,3,5].map(i=>parseInt(c.substr(i,2),16))}
+function shade(c,f){const A=hex(c);return '#'+A.map(v=>Math.round(clamp(f<0?v*(1+f):v+(255-v)*f,0,255)).toString(16).padStart(2,'0')).join('')}
+const INK='#231a4f',GOLD='#f7b32b',CORAL='#ff6f59',AQUA='#3fc1c9',SAGE='#8cb369';
+let W=[],VOICE=0,DUR=0,GROUPS=[];
+const F=`font-family="Inter Display" font-weight="900"`;
+const TX=(x,y,t,fs,col='#fff',st=INK,sw=10,anc='middle')=>`<text x="${x}" y="${y}" text-anchor="${anc}" ${F} font-size="${fs}" fill="${col}" stroke="${st}" stroke-width="${sw}" paint-order="stroke fill">${t}</text>`;
+/* ===================== piezas ===================== */
+const sky=id=>`<rect x="-400" y="-300" width="2720" height="1700" fill="url(#${id})"/>`;
+function sun(x,y,r,op=1){return `<circle cx="${x}" cy="${y}" r="${r*3.2}" fill="url(#gSun)" opacity="${.75*op}"/><circle cx="${x}" cy="${y}" r="${r}" fill="#fff4d0" opacity="${op}"/>`}
+function rays(x,y,n,len,rot,op,col='#fff8dc',wd=.07){let s='';for(let i=0;i<n;i++){const a=rot+i*2*Math.PI/n;s+=`<path d="M${x} ${y} L${x+Math.cos(a-wd)*len} ${y+Math.sin(a-wd)*len} L${x+Math.cos(a+wd)*len} ${y+Math.sin(a+wd)*len}Z"/>`}return `<g fill="${col}" opacity="${op}">${s}</g>`}
+function mtn(yb,amp,col,seed,dx,extra=''){let d=`M-300 2300 L-300 ${yb}`;for(let x=-300;x<=2300;x+=40){const y=yb-amp*(.55+.3*Math.sin((x+dx)*.0062+seed)+.18*Math.sin((x+dx)*.017+seed*2.1));d+=` L${x} ${y.toFixed(1)}`}d+=` L2300 2300Z`;return `<path d="${d}" fill="${col}" ${extra}/>`}
+function mesa(x,yb,w,h,col){return `<path d="M${x-w/2-60} ${yb} L${x-w/2} ${yb-h} L${x+w/2} ${yb-h} L${x+w/2+60} ${yb}Z" fill="${col}"/><path d="M${x-w/2} ${yb-h} L${x+w/2} ${yb-h} L${x+w/2-10} ${yb-h+18} L${x-w/2+10} ${yb-h+18}Z" fill="${shade(col,.18)}"/>`}
+function cloud(x,y,s,col='#fff',op=.85){return `<g transform="translate(${x},${y}) scale(${s})" opacity="${op}" fill="${col}"><circle cx="-60" cy="0" r="46"/><circle cx="0" cy="-26" r="62"/><circle cx="62" cy="-4" r="44"/><circle cx="110" cy="12" r="30"/><rect x="-106" y="0" width="246" height="44" rx="22"/></g>`}
+function clouds(L,set,spd=14){return set.map(([x,y,s,c,o],i)=>cloud(((x+L*spd*(1+i%3*.4))%2400+2400)%2400-250,y,s,c,o)).join('')}
+function birds(L,x0,y0,n=4){let s='';for(let i=0;i<n;i++){const x=x0+L*70+i*46,y=y0+Math.sin(i*2)*22+Math.sin(L*3+i)*6,f=Math.sin(L*14+i*1.7)*10;s+=`<path d="M${x-16} ${y-f} Q${x-8} ${y-4} ${x} ${y} Q${x+8} ${y-4} ${x+16} ${y-f}" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>`}return s}
+function stars(L,n=60,seed=5){let s='';for(let i=0;i<n;i++){const x=R(seed+i)*1920,y=R(seed+i*3.3)*700,r=1.5+R(seed+i*7)*3.5,tw=.35+.65*Math.abs(Math.sin(L*2.2+i));s+=`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff6d5" opacity="${tw}"/>`}return s}
+function ground(y,col='url(#gSand)',amp=18,seed=1,dx=0){let d=`M-300 2300 L-300 ${y}`;for(let x=-300;x<=2300;x+=60){d+=` L${x} ${(y-amp*Math.sin((x+dx)*.008+seed)).toFixed(1)}`}return `<path d="${d} L2300 2300Z" fill="${col}"/>`}
+function palm(x,yb,s,L,ph=0){const sw=Math.sin(L*1.6+ph)*4;let f='';for(let i=0;i<7;i++){const a=-160+i*24+sw*1.5;f+=`<g transform="rotate(${a})"><path d="M0 0 Q70 -36 150 -6 Q70 -12 0 0Z" fill="${i%2?'#2e8b57':'#3aa36a'}"/></g>`}
+ return `<g transform="translate(${x},${yb}) scale(${s})"><path d="M-10 0 Q-4 -150 ${18+sw} -300 L${34+sw} -300 Q12 -150 12 0Z" fill="#a0673a"/>${[0,1,2,3,4,5].map(i=>`<path d="M${-8+i*3} ${-30-i*46} L${14+i*3.4+sw*i/6} ${-38-i*46}" stroke="#7a4a26" stroke-width="5"/>`).join('')}<g transform="translate(${26+sw},-300)">${f}<circle r="12" fill="#7a4a26"/></g></g>`}
+function houses(yb,dx,s=1,seed=1,col='#f2d3a6'){let o='';for(let i=0;i<15;i++){const w=(90+R(seed+i)*80)*s,h=(80+R(seed+i*2)*140)*s,x=-200+i*170*s+dx;const c=shade(col,(R(seed+i*5)-.5)*.2);
+ o+=`<rect x="${x}" y="${yb-h}" width="${w}" height="${h}" fill="${c}"/><rect x="${x-6}" y="${yb-h-10}" width="${w+12}" height="14" rx="4" fill="${shade(c,-.15)}"/><rect x="${x+w*.3}" y="${yb-h*.6}" width="${18*s}" height="${26*s}" rx="${8*s}" fill="${INK}" opacity=".55"/>`;
+ if(R(seed+i*9)>.7)o+=`<path d="M${x+w*.15} ${yb-h-8} A${w*.35} ${w*.35} 0 0 1 ${x+w*.85} ${yb-h-8}Z" fill="${AQUA}"/>`}
+ return o+`<rect x="-300" y="${yb-1}" width="2600" height="400" fill="${shade(col,-.1)}"/>`}
+const ITEM={
+ bag:`<g transform="translate(0,-10)"><path d="M-30 -40 Q-48 20 -26 40 L26 40 Q48 20 30 -40Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><path d="M-22 -44 L22 -44 L14 -32 L-14 -32Z" fill="#a06a36"/><rect x="-18" y="-40" width="36" height="9" rx="4" fill="${GOLD}"/><circle cx="0" cy="8" r="14" fill="url(#gCoin)" stroke="#b07a10" stroke-width="3"/></g>`,
+ coin:`<circle r="18" fill="url(#gCoin)" stroke="#b07a10" stroke-width="4"/><circle r="9" fill="none" stroke="#fff3b0" stroke-width="3"/>`,
+ bread:`<ellipse cx="0" cy="-6" rx="38" ry="22" fill="#d9944a" stroke="#8a5424" stroke-width="5"/><path d="M-20 -14 L-12 -4 M0 -18 L6 -6 M18 -14 L24 -4" stroke="#f6c98a" stroke-width="5" stroke-linecap="round"/>`,
+ quill:`<path d="M0 0 L-6 -20 Q-30 -90 -10 -130 Q4 -80 6 -20Z" fill="#fff" stroke="${INK}" stroke-width="3"/><path d="M0 0 L-4 -22" stroke="${INK}" stroke-width="3"/>`,
+ lamp:`<circle cy="-30" r="70" fill="url(#gFire)" opacity=".8"/><path d="M-34 0 Q0 18 34 0 Q30 -14 0 -14 Q-30 -14 -34 0Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="4"/><path d="M28 -8 L46 -18" stroke="#7a4a26" stroke-width="7" stroke-linecap="round"/><path d="M46 -22 Q56 -44 48 -58 Q40 -44 46 -22Z" fill="#ffb347"/>`,
+ basket:`<path d="M-56 -40 L56 -40 L44 30 L-44 30Z" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><path d="M-50 -14 L50 -14 M-46 10 L46 10" stroke="#a06a36" stroke-width="5"/><circle cx="-24" cy="-48" r="18" fill="#ff8f6b"/><circle cx="8" cy="-52" r="20" fill="#9ccf6a"/><circle cx="34" cy="-46" r="16" fill="#ffd36b"/>`
+};
+function person(o){
+ const {x=0,y=0,s=1,robe='#2fa39a',cloth='#f6e7c8',skin='#c98d62',aL=12,aR=-12,head=0,item=null,itemR=0,itemL=null,itemLR=0,flip=false,crown=false,sash=GOLD,bob=0,step=0,beard='#5a3626',op=1,sil=null,lean=0}=o;
+ const rb=sil||robe,dk=sil||shade(robe,-.22),sk=sil||skin,cl=sil||cloth,sa=sil||sash;
+ const arm=(sd,a,it,ir)=>`<g transform="translate(${sd*30},-190) rotate(${a})"><rect x="-13" y="-8" width="26" height="102" rx="13" fill="${dk}"/><circle cx="0" cy="98" r="15" fill="${sk}"/>${it?`<g transform="translate(0,100) rotate(${ir-a})">${ITEM[it]}</g>`:''}</g>`;
+ const fx=Math.sin(step)*16;
+ return `<g transform="translate(${x},${y+bob}) scale(${s*(flip?-1:1)},${s})" opacity="${op}"><g transform="rotate(${lean} 0 0)">
+ <ellipse cx="0" cy="4" rx="74" ry="13" fill="#0a2a30" opacity="${sil?0:.18}"/>
+ <ellipse cx="${-22+fx}" cy="-2" rx="20" ry="9" fill="${sil||'#5a3a2a'}"/><ellipse cx="${22-fx}" cy="-2" rx="20" ry="9" fill="${sil||'#5a3a2a'}"/>
+ <path d="M-34 -206 Q-46 -100 -66 -4 L66 -4 Q46 -100 34 -206 Q0 -222 -34 -206Z" fill="${rb}"/>
+ <path d="M-30 -202 L36 -112 L22 -100 L-38 -186Z" fill="${sa}" opacity="${sil?1:.9}"/>
+ <rect x="-44" y="-124" width="88" height="14" rx="6" fill="${dk}"/>
+ <g transform="rotate(${head} 0 -214)">
+  <path d="M-44 -244 Q-46 -296 0 -298 Q46 -296 44 -244 L50 -196 Q0 -186 -50 -196Z" fill="${cl}"/>
+  <circle cx="0" cy="-246" r="31" fill="${sk}"/>
+  ${beard&&!sil?`<path d="M-26 -236 Q0 -196 26 -236 Q14 -220 0 -220 Q-14 -220 -26 -236Z" fill="${beard}"/>`:''}
+  ${crown?`<path d="M-34 -268 L-34 -306 L-18 -286 L0 -314 L18 -286 L34 -306 L34 -268Z" fill="${sil||GOLD}" stroke="${sil||'#b86e1a'}" stroke-width="4"/>`:`<path d="M-38 -254 Q-38 -294 0 -294 Q38 -294 38 -254 Q0 -272 -38 -254Z" fill="${cl}"/><path d="M-38 -258 Q0 -276 38 -258" stroke="${sil||shade(cloth,-.3)}" stroke-width="7" fill="none"/>`}
+ </g>
+ ${arm(-1,aL,itemL,itemLR)}${arm(1,aR,item,itemR)}
+ </g></g>`}
+/* gacela (perfil, mirando a la derecha) mode 0 parada,1 corre,2 salto */
+function heart(x,y,s,col=CORAL,op=1){return `<g transform="translate(${x},${y}) scale(${s})" opacity="${op}"><path d="M0 30 C-60 -10 -50 -60 -18 -60 C-6 -60 0 -50 0 -42 C0 -50 6 -60 18 -60 C50 -60 60 -10 0 30Z" fill="${col}" stroke="${INK}" stroke-width="6"/><ellipse cx="-22" cy="-40" rx="9" ry="6" fill="#fff" opacity=".6"/></g>`}
+
+/* ===================== piezas nuevas ===================== */
+const VIO='#8a6fd1',ROSE='#ff8fab';
+function cross(x,y,s,col='#5a3a2a',glow=0){return `<g transform="translate(${x},${y}) scale(${s})">${glow?`<circle cy="-150" r="${260}" fill="url(#gGlow)" opacity="${glow}"/>`:''}<rect x="-22" y="-330" width="44" height="340" rx="6" fill="${col}"/><rect x="-120" y="-250" width="240" height="40" rx="6" fill="${col}"/><rect x="-22" y="-330" width="12" height="340" fill="#fff" opacity=".12"/></g>`}
+function gate(x,y,s,open=0,glow=1){const w=150*(1-open);return `<g transform="translate(${x},${y}) scale(${s})"><circle cy="-200" r="330" fill="url(#gGlow)" opacity="${glow}"/>
+ <path d="M-190 0 L-190 -260 Q0 -470 190 -260 L190 0Z" fill="#fff6dc" stroke="${GOLD}" stroke-width="16"/>
+ <g><rect x="${-150}" y="-280" width="${w}" height="280" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/><rect x="${150-w}" y="-280" width="${w}" height="280" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/>
+ ${open<.5?[0,1,2,3,4].map(i=>`<rect x="${-140+i*62}" y="-270" width="10" height="262" fill="#b8791a" opacity=".55"/>`).join(''):''}</g>
+ <rect x="-210" y="-14" width="420" height="24" rx="10" fill="${GOLD}" stroke="#b8791a" stroke-width="5"/></g>`}
+function lock(x,y,s,shut=1){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-40 -10 L-40 -50 Q-40 -${90-20*(1-shut)} 0 -${90-20*(1-shut)} Q40 -${90-20*(1-shut)} 40 -50 L40 ${-10-30*(1-shut)}" stroke="#7d7a90" stroke-width="16" fill="none"/><rect x="-62" y="-14" width="124" height="104" rx="18" fill="${CORAL}" stroke="${INK}" stroke-width="8"/><circle cy="30" r="13" fill="${INK}"/><rect x="-5" y="34" width="10" height="28" fill="${INK}"/></g>`}
+function bible(x,y,s,open=1,L=0){const a=open;return `<g transform="translate(${x},${y}) scale(${s})"><circle cy="-60" r="${300*a}" fill="url(#gGlow)" opacity="${.9*a}"/>${rays(0,-40,16,520*a,L*.4,.25*a,'#fff3c4',.05)}
+ <path d="M0 0 L${-260*a-20} -30 L${-260*a-20} -330 L0 -300Z" fill="#fffaf0" stroke="#6b3b2a" stroke-width="10"/><path d="M0 0 L${260*a+20} -30 L${260*a+20} -330 L0 -300Z" fill="#fffaf0" stroke="#6b3b2a" stroke-width="10"/>
+ ${[0,1,2,3,4,5].map(i=>`<rect x="${-220*a}" y="${-270+i*40}" width="${170*a}" height="10" rx="5" fill="#d9c9a8"/><rect x="${40*a}" y="${-270+i*40}" width="${170*a}" height="10" rx="5" fill="#d9c9a8"/>`).join('')}
+ <path d="M-14 -300 L14 -300 L14 -230 L0 -244 L-14 -230Z" fill="${CORAL}"/></g>`}
+function scroll(x,y,s,ref,txt,L){const o=eo(P(L,0,.4));return `<g transform="translate(${x},${y}) scale(${s})"><rect x="${-380*o}" y="-190" width="${760*o}" height="380" fill="url(#gParch)" stroke="#b08a5a" stroke-width="8"/>
+ <rect x="${-400*o-30}" y="-215" width="60" height="430" rx="30" fill="#a0673a" stroke="#6b3b2a" stroke-width="6"/><rect x="${400*o-30}" y="-215" width="60" height="430" rx="30" fill="#a0673a" stroke="#6b3b2a" stroke-width="6"/>
+ ${o>.8?TX(0,-90,ref,64,'#7a3b1a','#fff6df',4)+`<rect x="-250" y="-62" width="500" height="7" rx="3" fill="${GOLD}"/>`+txt.map((t,i)=>`<text x="0" y="${10+i*62}" text-anchor="middle" ${F} font-size="50" fill="#5a3a20" opacity="${P(L,.35+i*.2,.2)}">${t}</text>`).join(''):''}</g>`}
+function gift(x,y,s,open=0,L=0){const lid=eo(open);return `<g transform="translate(${x},${y}) scale(${s})">${open>0?`<circle cy="-150" r="${380*lid}" fill="url(#gGlow)"/>`+rays(0,-120,18,700*lid,L*.6,.3*lid,'#fff3c4',.05):''}
+ <rect x="-170" y="-200" width="340" height="230" rx="14" fill="${CORAL}" stroke="${INK}" stroke-width="9"/><rect x="-26" y="-200" width="52" height="230" fill="${GOLD}"/>
+ <g transform="translate(${-lid*60},${-lid*190}) rotate(${-lid*24})"><rect x="-195" y="-250" width="390" height="70" rx="12" fill="#ff8f7d" stroke="${INK}" stroke-width="9"/><rect x="-26" y="-250" width="52" height="70" fill="${GOLD}"/>
+ <path d="M0 -250 Q-90 -330 -70 -260 Q-50 -240 0 -250 Q50 -240 70 -260 Q90 -330 0 -250Z" fill="${GOLD}" stroke="#b8791a" stroke-width="6"/></g></g>`}
+function scale_(x,y,s,tilt,lBag,rBag){const a=tilt*Math.PI/180,lx=-230*Math.cos(a),ly=-230*Math.sin(a);
+ const pan=(px,py,c)=>`<g transform="translate(${px},${py})"><path d="M0 0 L-90 160 M0 0 L90 160" stroke="#b8791a" stroke-width="6"/><path d="M-120 160 Q0 230 120 160Z" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/>${c}</g>`;
+ return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-14" y="-300" width="28" height="560" rx="10" fill="url(#gGold)"/><path d="M-130 270 L130 270 L90 230 L-90 230Z" fill="url(#gGold)" stroke="#b8791a" stroke-width="6"/><circle cy="-300" r="26" fill="${GOLD}" stroke="#b8791a" stroke-width="6"/>
+ <path d="M${lx} ${-300+ly} L${-lx} ${-300-ly}" stroke="url(#gGold)" stroke-width="22" stroke-linecap="round"/>${pan(lx,-300+ly,lBag)}${pan(-lx,-300-ly,rBag)}</g>`}
+function block(t,c){return `<g transform="translate(0,135)"><rect x="-95" y="-48" width="190" height="56" rx="10" fill="${c}" stroke="${INK}" stroke-width="5"/><text y="-10" text-anchor="middle" ${F} font-size="30" fill="#fff">${t}</text></g>`}
+function crowd(L,n,gray=0,y0=1350){let s='';for(let i=0;i<n;i++){const col=i%2?'#2fa39a':'#d9773a',r=Math.floor(i/6),x=110+(i%6)*172+(r%2)*86,y=y0+r*120,g=clamp(gray*1.6-i*.05);
+ s+=person({x,y,s:.48-r*.02,robe:g>.5?'#6b6880':col,cloth:g>.5?'#9a97ad':'#f6e7c8',skin:g>.5?'#8d8aa0':'#c98d62',sash:g>.5?'#7d7a90':GOLD,bob:-Math.abs(Math.sin(L*5+i))*6,head:Math.sin(L*2+i)*6,beard:g>.5?'#6b6880':'#5a3626'})}return s}
+function stamp(x,y,s,t,col=CORAL,L=0,a=0){const p=P(L,a,.25);if(p<=0)return '';const sc=lerp(2.2,1,eo(p));return `<g transform="translate(${x},${y}) rotate(-12) scale(${s*sc})" opacity="${clamp(p*3)}"><rect x="-300" y="-80" width="600" height="160" rx="24" fill="none" stroke="${col}" stroke-width="16"/>${TX(0,34,t,92,col,'#fff',6)}</g>`}
+function tomb(x,y,s,roll=0,L=0){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-360 40 Q-340 -330 0 -360 Q340 -330 360 40Z" fill="#8f7b62" stroke="#5e4c38" stroke-width="10"/>
+ <path d="M-120 40 L-120 -150 Q0 -260 120 -150 L120 40Z" fill="${roll>0?'#fff6dc':'#2a2030'}"/>${roll>0?`<circle cy="-90" r="${220*roll}" fill="url(#gGlow)"/>`+rays(0,-90,14,500*roll,L*.5,.3*roll,'#fff3c4',.06):''}
+ <g transform="translate(${roll*300},0) rotate(${roll*120} 0 -100)"><circle cy="-100" r="150" fill="url(#gStone)" stroke="#5e4c38" stroke-width="10"/><circle cy="-100" r="80" fill="none" stroke="#a8957a" stroke-width="8"/></g></g>`}
+function ladder(x,y,s,brk=0,L=0){let r='';for(let i=0;i<7;i++){const d=brk*clamp(brk*3-i*.3);r+=`<g transform="translate(${d*(i%2?60:-60)},${d*300}) rotate(${d*(i%2?40:-40)})"><rect x="-110" y="${-i*110-10}" width="220" height="20" rx="8" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><text x="0" y="${-i*110-22}" text-anchor="middle" ${F} font-size="40" fill="#fff" stroke="${INK}" stroke-width="7" paint-order="stroke fill">${['buenas obras','ayudo','no robo','voy a la iglesia','doy limosna','soy amable','me porto bien'][i]}</text></g>`}
+ return `<g transform="translate(${x},${y}) scale(${s})"><g transform="rotate(${brk*8})"><rect x="-130" y="-760" width="20" height="780" rx="8" fill="#a0673a" transform="translate(${-brk*80},0) rotate(${-brk*10})"/><rect x="110" y="-760" width="20" height="780" rx="8" fill="#a0673a" transform="translate(${brk*80},0) rotate(${brk*10})"/>${r}</g></g>`}
+function arrow(x0,y0,x1,y1,p){const x=lerp(x0,x1,p),y=lerp(y0,y1,p)+Math.sin(p*Math.PI)*-220,a=Math.atan2((y1-y0)-220*Math.PI*Math.cos(p*Math.PI),x1-x0)*180/Math.PI;
+ return `<g transform="translate(${x},${y}) rotate(${a})"><rect x="-110" y="-5" width="120" height="10" fill="#7a4a26"/><path d="M10 -18 L46 0 L10 18Z" fill="#9fb4bd"/><path d="M-110 0 L-130 -18 L-90 0 L-130 18Z" fill="${CORAL}"/></g>`}
+function hill(L,col='url(#gHill)'){return mtn(1420,180,col,2,0)}
+/* ===================== piezas del largo (1920x1080) ===================== */
+const WD=1920,HT=1080,GY=880;
+const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');
+function A(b,word,occ=1){const k=norm(word);let c=0;for(const w of W){if(w.b===b&&norm(w.text)===k){c++;if(c==occ)return w}}console.error('ANCLA? '+b+' '+word+' '+occ);return {start:-1,end:-1}}
+function CHT(b){return CHS.find(c=>c.id==b).t}
+const PRE={lea:{robe:'#8a6fd1',cloth:'#e9dcff',beard:null,sash:GOLD},raquel:{robe:'#ff8fab',cloth:'#ffe3ea',beard:null,sash:'#fff'},jacob:{robe:'#2fa39a'},laban:{robe:'#9a6a3a',beard:'#d9d4c8',sash:'#5a3a20'},
+ abigail:{robe:'#ff6f59',cloth:'#ffe1c9',beard:null,sash:GOLD},david:{robe:'#3d6fd1',cloth:'#dfe8ff',beard:'#7a4a26'},nabal:{robe:'#5b8a3a',cloth:'#d8e8c0',beard:'#3a2a1a',sash:GOLD},criado:{robe:'#c98a4a',cloth:'#f6e7c8',beard:null},
+ debora:{robe:'#f7b32b',cloth:'#fff1c9',beard:null,sash:'#2fa39a'},barac:{robe:'#3fc1c9',cloth:'#e0fbff',beard:'#5a3626'},ana:{robe:'#3fc1c9',cloth:'#e0fbff',beard:null,sash:'#fff'},penina:{robe:'#c94f7c',cloth:'#ffd9e6',beard:null},
+ eli:{robe:'#f2efe6',cloth:'#fff',beard:'#e6e1d6',sash:'#3d6fd1'},elcana:{robe:'#7a5a3a',cloth:'#f0e0c8'},rizpa:{robe:'#5b4a8a',cloth:'#2b2440',beard:null,sash:'#8a6fd1'},hijo:{robe:'#2fa39a',beard:null,cloth:'#f6e7c8'},
+ sil:{sil:'#2a1d3a'},soldado:{robe:'#8e3b2e',cloth:'#c9b9a0',sash:'#5a3a20'}};
+function H(who,x,y,s,o={}){return person(Object.assign({x,y,s},PRE[who],o))}
+function walk(L,sp=8){return {step:L*sp,bob:-Math.abs(Math.sin(L*sp))*8}}
+function tent(x,y,s,c='#c98a4a'){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-200 0 L0 -230 L200 0Z" fill="${c}"/><path d="M-200 0 L0 -230 L-60 0Z" fill="${shade(c,.15)}"/><path d="M-36 0 L0 -120 L36 0Z" fill="${shade(c,-.45)}"/><path d="M0 -230 L0 -270" stroke="#5a3a20" stroke-width="8"/><path d="M0 -270 L40 -258 L0 -246Z" fill="${CORAL}"/></g>`}
+function sheep(x,y,s,ph=0){const b=Math.abs(Math.sin(ph))*6;return `<g transform="translate(${x},${y-b}) scale(${s})"><rect x="-30" y="-14" width="10" height="34" rx="4" fill="#3a2a2a"/><rect x="20" y="-14" width="10" height="34" rx="4" fill="#3a2a2a"/>${[[-30,-40,26],[0,-50,30],[30,-40,26],[-12,-26,26],[16,-26,26]].map(([a,b2,r])=>`<circle cx="${a}" cy="${b2}" r="${r}" fill="#fffaf0" stroke="#e2d7c4" stroke-width="3"/>`).join('')}<ellipse cx="56" cy="-50" rx="20" ry="16" fill="#3a2a2a"/><circle cx="62" cy="-54" r="3" fill="#fff"/></g>`}
+function flock(L,x0,y,n,s=.8){let o='';for(let i=0;i<n;i++)o+=sheep(x0+i*110+(i%2)*30,y+(i%3)*24,s,L*4+i);return o}
+function donkey(x,y,s,ph=0,load=0){const lg=Math.sin(ph)*14;return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-70" y="-60" width="16" height="64" rx="6" fill="#6b5a4a" transform="rotate(${lg} -62 -60)"/><rect x="40" y="-60" width="16" height="64" rx="6" fill="#6b5a4a" transform="rotate(${-lg} 48 -60)"/><ellipse cx="-6" cy="-84" rx="92" ry="44" fill="#8f7e6c"/><path d="M70 -100 L120 -160 L150 -140 L104 -84Z" fill="#8f7e6c"/><ellipse cx="146" cy="-148" rx="34" ry="22" fill="#8f7e6c"/><path d="M118 -168 L110 -214 L128 -172Z M134 -170 L136 -216 L146 -170Z" fill="#6b5a4a"/><circle cx="150" cy="-154" r="4" fill="#222"/>${load?`<rect x="-80" y="-170" width="140" height="70" rx="16" fill="#c98a4a" stroke="#7a4a26" stroke-width="5"/><g transform="translate(-40,-170)">${ITEM.bread}</g><g transform="translate(20,-176)">${ITEM.bag}</g>`:''}</g>`}
+function chariot(x,y,s,ph=0,col='#4d5a63'){const sp=ph*3;return `<g transform="translate(${x},${y}) scale(${s})"><path d="M80 -40 L210 -60 L240 -130 L200 -150 L150 -90 L80 -80Z" fill="${shade(col,-.3)}"/><rect x="-90" y="-120" width="150" height="80" rx="10" fill="${col}"/><rect x="-90" y="-120" width="150" height="16" fill="${shade(col,.3)}"/><g transform="translate(-20,-30) rotate(${sp*57})"><circle r="44" fill="none" stroke="#2a3238" stroke-width="10"/>${[0,1,2,3].map(k=>`<rect x="-4" y="-44" width="8" height="88" fill="#2a3238" transform="rotate(${k*45})"/>`).join('')}</g><path d="M-30 -120 L-30 -190" stroke="#2a3238" stroke-width="8"/><path d="M-30 -190 L10 -178 L-30 -166Z" fill="${CORAL}"/></g>`}
+function tabernacle(x,y,s){return `<g transform="translate(${x},${y}) scale(${s})"><rect x="-340" y="-170" width="680" height="170" fill="#f2e6cf" stroke="#b08a5a" stroke-width="6"/>${[...Array(9)].map((_,i)=>`<rect x="${-340+i*85-6}" y="-180" width="12" height="180" fill="url(#gGold)"/>`).join('')}<path d="M-120 -170 L-120 -330 L240 -330 L240 -170Z" fill="#7a4fa0"/><path d="M-120 -330 L60 -400 L240 -330Z" fill="#5b3a80"/><rect x="40" y="-280" width="60" height="110" fill="#d94a4a"/><rect x="-40" y="-120" width="80" height="120" fill="#3d6fd1"/></g>`}
+function rockB(x,y,s,c='#8f7b62'){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-300 0 L-260 -110 L-150 -170 L-20 -190 L120 -160 L240 -100 L300 0Z" fill="${c}"/><path d="M-150 -170 L-20 -190 L-60 -120 Z" fill="${shade(c,.2)}"/><path d="M120 -160 L240 -100 L160 -90Z" fill="${shade(c,-.2)}"/></g>`}
+function baby(x,y,s,ph=0){return `<g transform="translate(${x},${y}) scale(${s}) rotate(${Math.sin(ph)*6})"><ellipse cx="0" cy="0" rx="60" ry="34" fill="#fff6dc" stroke="#e2c99a" stroke-width="5"/><circle cx="54" cy="-6" r="26" fill="#c98d62"/><path d="M40 -26 Q54 -42 70 -24" fill="#5a3626"/><path d="M-40 -8 Q0 8 30 -8" stroke="#e2c99a" stroke-width="5" fill="none"/></g>`}
+function medal(x,y,r,txt,col,on=1,sub=''){return `<g transform="translate(${x},${y})"><circle r="${r*1.5}" fill="url(#gGlow)" opacity="${.8*on}"/><circle r="${r}" fill="${on?col:'#3a3060'}" stroke="${on?GOLD:'#7d7a90'}" stroke-width="${r*.12}"/>${TX(0,r*.36,txt,r*1.0,'#fff',INK,r*.14)}${sub?TX(0,r+r*.62,sub,r*.42,'#fff',INK,r*.1):''}</g>`}
+function bigNum(x,y,n,label,col=GOLD,s=1){return `<g transform="translate(${x},${y}) scale(${s})">${TX(0,0,n,190,col,INK,16)}${TX(0,80,label,56,'#fff',INK,10)}</g>`}
+function crownX(x,y,s,p=1){return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-80 30 L-80 -50 L-40 -10 L0 -70 L40 -10 L80 -50 L80 30Z" fill="${GOLD}" stroke="#b8791a" stroke-width="8"/><g opacity="${p}"><path d="M-110 -100 L110 80 M110 -100 L-110 80" stroke="${CORAL}" stroke-width="22" stroke-linecap="round"/></g></g>`}
+function sword(x,y,s,r=0){return `<g transform="translate(${x},${y}) rotate(${r}) scale(${s})"><path d="M-8 -200 L8 -200 L10 0 L-10 0Z" fill="#d6dde2" stroke="#7d8a93" stroke-width="4"/><rect x="-40" y="0" width="80" height="14" rx="6" fill="${GOLD}"/><rect x="-8" y="14" width="16" height="50" rx="6" fill="#7a4a26"/></g>`}
+function rainL(L,n=120,op=.6){let s='';for(let i=0;i<n;i++){const x=R(i+40)*2200-140,y=((R(i+90)*1300+L*1500)%1300)-150;s+=`<path d="M${x} ${y} l-14 46" stroke="#cfe3ff" stroke-width="4" opacity="${op}" stroke-linecap="round"/>`}return s}
+function barley(y,L,col='#e8c070',n=46){let s='';for(let i=0;i<n;i++){const x=-60+i*46,h=110+R(i)*60,sw=Math.sin(L*2+i*.6)*10;s+=`<path d="M${x} ${y} Q${x+sw/2} ${y-h/2} ${x+sw} ${y-h}" stroke="${shade(col,-.25)}" stroke-width="5" fill="none"/><ellipse cx="${x+sw}" cy="${y-h-14}" rx="9" ry="22" fill="${col}"/>`}return s}
+function eyes(L,x,y,n=4){let s='';for(let i=0;i<n;i++){const bl=Math.sin(L*3+i*2)>.9?.1:1;s+=`<g transform="translate(${x+i*150},${y+(i%2)*40})"><ellipse cx="-18" cy="0" rx="12" ry="${9*bl}" fill="#ffd25e"/><ellipse cx="18" cy="0" rx="12" ry="${9*bl}" fill="#ffd25e"/></g>`}return s}
+function torch(x,y,s,L){return `<g transform="translate(${x},${y}) scale(${s})"><circle cy="-130" r="120" fill="url(#gFire)" opacity=".9"/><rect x="-8" y="-110" width="16" height="140" fill="#7a4a26"/><path d="M0 -110 Q-30 -150 0 ${-190-Math.sin(L*12)*10} Q30 -150 0 -110Z" fill="#ffb347"/></g>`}
+function tagS(x,y,t,col=GOLD,fs=46,p=1){if(p<=0)return '';const w=t.length*fs*.56+70;return `<g transform="translate(${x},${y}) scale(${back(p)})"><rect x="${-w/2}" y="${-fs*.95}" width="${w}" height="${fs*1.6}" rx="${fs*.8}" fill="${col}" stroke="${INK}" stroke-width="7"/>${TX(0,fs*.22,t,fs,'#fff',INK,6)}</g>`}
+function bubble(x,y,t,fs=56,p=1,flip=0){if(p<=0)return '';const w=t.length*fs*.55+90;return `<g transform="translate(${x},${y}) scale(${back(p)})"><path d="M${flip?60:-60} 50 L${flip?110:-110} 130 L${flip?-10:10} 50Z" fill="#fff" stroke="${INK}" stroke-width="8"/><rect x="${-w/2}" y="-70" width="${w}" height="130" rx="60" fill="#fff" stroke="${INK}" stroke-width="8"/><path d="M${flip?56:-56} 44 L${flip?100:-100} 112 L${flip?-4:4} 44Z" fill="#fff"/>${TX(0,18,t,fs,INK,'#fff',2)}</g>`}
+function crowdS(L,n,x0,x1,y,s,o={}){let r='';for(let i=0;i<n;i++){const x=x0+(x1-x0)*i/Math.max(1,n-1)+(R(i)*30-15);r+=person(Object.assign({x,y:y+(i%3)*14,s:s*(.92+R(i+3)*.16),sil:o.sil||'#2a1d3a',step:(o.march?L*8+i:0),bob:o.march?-Math.abs(Math.sin(L*8+i))*6:0,aR:o.sw?-150:-12,item:o.sw?'quill':null},o.p||{}))}return r}
+function lightOn(x,y,r,L,op=1){return `<circle cx="${x}" cy="${y}" r="${r*(1+.05*Math.sin(L*3))}" fill="url(#gGlow)" opacity="${op}"/>`+rays(x,y,22,r*4,L*.25,.18*op,'#fff3c4',.05)}
+function sunrise(L,y0=760){const u=eo(P(L,0,2.5));return sky(u>.4?'skyMorning':'skyDawn')+sun(960,y0-u*260,120)+rays(960,y0-u*260,24,1600,L*.2,.15*u,'#fff3c4',.06)}
+function desert(L,dx=0,skyId='skyOasis'){return sky(skyId)+sun(1500,260,90)+clouds(L,[[200,180,1,'#fff',.7],[1100,140,.8,'#fff',.6]],12)+mesa(300-dx*.2,760,420,200,'#e9a46a')+mesa(1500-dx*.2,760,380,150,'#dd9056')+ground(800,'url(#gSand2)',14,2,dx*.5)+ground(GY,'url(#gSand)',10,1,dx)}
+function camp(L,dx=0){return desert(L,dx)+tent(360-dx,GY-20,1.0,'#c98a4a')+tent(1600-dx,GY-30,.8,'#b5653a')}
+function green(L,skyId='skyMorning'){return sky(skyId)+sun(1500,240,90)+clouds(L,[[150,170,1,'#fff',.8],[1000,120,.9,'#fff',.7]],12)+mtn(760,160,'#9cc47a',2,0)+ground(GY,'url(#gGrass)',12,2,0)}
+function night(L,id='skyIndigo'){return sky(id)+stars(L,90,7)+`<circle cx="1560" cy="200" r="70" fill="#fff6dc"/><circle cx="1590" cy="186" r="62" fill="${id=='skyNight'?'#10243a':'#1a1240'}" opacity=".0"/>`}
+function card(n,name,sub,col,icon,L){let s=sky('skyIndigo')+stars(L,80,n*7)+lightOn(960,470,240,L);
+ const p=back(P(L,.05,.45));s+=`<g transform="translate(960,420) scale(${p})">${medal(0,0,150,icon,col,1)}</g>`;
+ s+=`<g opacity="${P(L,.3,.3)}">${TX(960,180,n,64,GOLD,INK,10)}</g><g transform="translate(960,${730+30*(1-eo(P(L,.4,.4)))})" opacity="${P(L,.4,.3)}">${TX(0,0,name,120,'#fff',INK,14)}${TX(0,90,sub,56,GOLD,INK,9)}</g>`;return s}
+/* ===================== escenas ===================== */
+let SC=[];
+function buildSC(){const S=[];
+ const add=(at,o,tr,chip,draw,cam)=>S.push({at,o,tr,chip,draw,cam});
+ const C=(b,ord,name,sub,col,icon)=>S.push({t0:CHT(b)-1.6,tr:'flash',chip:'',draw:L=>card(ord,name,sub,col,icon,L),cam:[[0,1.1,960,540],[3,1.0,960,540]]});
+ /* ---- INTRO ---- */
+ S.push({t0:0,tr:'cut',chip:'',draw:L=>{let s=sunrise(L,820)+mtn(900,140,'#4a3a7a',2,0);['lea','abigail','debora','ana','rizpa'].forEach((w,i)=>s+=H(w,560+i*200,950,.85,{sil:'#231a4f'}));return s+crownX(960,300,1.2,P(L,.9,.3))}});
+ add(['intro','ninguna',2],-.1,'slide','',L=>{let s=sky('skyCoral')+ground(GY,'url(#gSand)',8,1,0)+crowdS(L,9,200,1700,GY,.8,{sw:1});return s+`<g transform="translate(960,420) scale(${back(P(L,.2,.4))})"><path d="M-260 -160 L260 160 M260 -160 L-260 160" stroke="${CORAL}" stroke-width="40" stroke-linecap="round"/></g>`});
+ add(['intro','una',1],-.15,'wipe','',L=>{let s=green(L)+H('lea',960,GY+10,1.2,{head:14});[0,1,2,3].forEach(i=>s+=H(['raquel','criado','jacob','laban'][i],[300,520,1420,1640][i],GY,.95,{flip:i<2}));return s+`<g opacity="${.5+.3*Math.sin(L*3)}">${lightOn(960,600,120,L,.5)}</g>`});
+ add(['intro','otra',1],-.15,'slide','',L=>{let s=sky('skyWarm')+tabernacle(1300,GY,1)+ground(GY,'url(#gSand)',6,3,0)+H('ana',700,GY+10,1.15,{head:18,aL:-150,aR:150,lean:4});return s+bubble(1150,260,'¿BORRACHA?',72,P(L,.4,.35),1)});
+ add(['intro','asi',1],-.2,'circle','',L=>{let s=sky('skyHeaven')+lightOn(960,520,300,L);['lea','abigail','debora','ana','rizpa'].forEach((w,i)=>s+=H(w,520+i*220,GY+20,.95,{bob:-Math.abs(Math.sin(L*4+i))*6}));return s+clouds(L,[[0,950,2,'#fff',.95],[1100,980,2,'#fff',.95]],10)});
+ add(['intro','hoy',1],-.15,'zoom','',L=>{let s=sky('skyIndigo')+stars(L,80,3)+lightOn(960,540,280,L);['L','A','D','A','?'].forEach((t,i)=>{const p=back(P(L,.2+i*.18,.35));if(p>0)s+=`<g transform="translate(${480+i*240},640) scale(${p})">${medal(0,0,90,t,[VIO,CORAL,GOLD,AQUA,'#5b4a8a'][i])}</g>`});return s});
+ add(['intro','quedate',1],-.15,'slide','',L=>{let s=night(L)+rockB(960,GY+60,1.3,'#4a3f60')+medal(960,520,130,'?','#5b4a8a',1);return s+`<g transform="translate(1500,${GY}) scale(1)">${H('david',0,0,1,{crown:true,flip:true,aR:-100})}</g>`});
+ add(['intro','comun',1],-.15,'circle','',L=>{let s=sky('skyIndigo')+stars(L,70,5);const p=eo(P(L,0,1.2));s+=`<path d="M480 560 Q960 ${560-120*Math.sin(L)} 1440 560" stroke="${GOLD}" stroke-width="10" fill="none" stroke-dasharray="${1100*p} 2000"/>`;['L','A','D','A','?'].forEach((t,i)=>s+=medal(480+i*240,560,80,t,[VIO,CORAL,GOLD,AQUA,'#5b4a8a'][i]));return s+bubble(960,300,'¿QUÉ TIENEN EN COMÚN?',60,P(L,.4,.4))});
+ /* ---- LEA ---- */
+ C('lea','1','LEA','la esposa que nadie eligió',VIO,'L');
+ add(['lea','padre',1],-.15,'wipe','',L=>camp(L,L*20)+H('laban',960,GY+10,1.1,{aL:40,aR:-40})+H('lea',640,GY+10,.95,{head:-8})+H('raquel',1280,GY+10,.95,{head:8,flip:true})+tagS(640,390,'LEA',VIO,48,P(L,.4,.3))+tagS(1280,390,'RAQUEL',ROSE,48,P(L,.7,.3)));
+ add(['lea','jacob',1],-.1,'slide','',L=>{let s=green(L)+flock(L,120,GY+40,4)+H('jacob',780,GY+10,1.1,{flip:false,head:-6})+H('raquel',1180,GY+10,1.05,{flip:true});for(let i=0;i<3;i++){const t=(L*.6+i/3)%1;s+=heart(980+Math.sin(t*9)*30,520-t*260,.7*(1-t)+.3,ROSE,1-t)}return s});
+ add(['lea','siete',1],-.12,'zoom','',L=>{const n=Math.min(7,1+Math.floor(L/0.55));let s=sky(L%1.1<.55?'skyMorning':'skyOasis')+sun(300+((L*400)%1400),240,80)+ground(GY,'url(#gGrass)',10,2,L*60)+flock(L,900,GY+30,6)+H('jacob',500,GY+10,1.05,walk(L,6));return s+bigNum(960,330,String(n),'AÑOS',GOLD)});
+ add(['lea','biblia',1],-.1,'circle','Génesis 29:20',L=>{let s=sky('skyWarm')+lightOn(960,520,200,L);for(let i=0;i<7;i++){const t=P(L,i*.25,.4);s+=`<g transform="translate(${420+i*180},${560-eo(t)*40}) rotate(${(1-eo(t))*-30})" opacity="${.3+.7*eo(t)}"><rect x="-70" y="-90" width="140" height="170" rx="14" fill="#fff" stroke="${INK}" stroke-width="6"/><rect x="-70" y="-90" width="140" height="40" rx="14" fill="${CORAL}"/>${TX(0,40,String(i+1),70,INK,'#fff',2)}</g>`}return s+heart(960,820,1.3,ROSE)});
+ add(['lea','boda',1],-.2,'wipe','',L=>{let s=night(L,'skyNight')+tent(960,GY+20,2.2,'#7a4a8a')+`<g transform="translate(700,${GY-120})">${ITEM.lamp}</g><g transform="translate(1220,${GY-120})">${ITEM.lamp}</g>`;return s+H('lea',960,GY+20,1.1,{cloth:'#fffaf0',robe:'#fffaf0',sash:GOLD})+tagS(960,300,'¿?',VIO,60,P(L,.6,.3))});
+ add(['lea','trampa',1],-.2,'flash','',L=>night(L,'skyNight')+tent(1400,GY+20,1.4,'#7a4a8a')+H('laban',760,GY+10,1.3,{head:Math.sin(L*6)*8,aR:-80+Math.sin(L*8)*20})+stampH(1150,420,'TRAMPA',L,.25));
+ add(['lea','sol',1],-.2,'circle','',L=>{let s=sunrise(L)+tent(1500,GY+20,1.3,'#7a4a8a')+ground(GY,'url(#gSand)',8,1,0);const v=eo(P(L,.6,.6));return s+H('lea',900,GY+10,1.2,{cloth:v>.5?PRE.lea.cloth:'#fffaf0',robe:v>.5?PRE.lea.robe:'#fffaf0'})+H('jacob',1240,GY+10,1.15,{flip:true,head:-10*v})});
+ add(['lea','era',2],-.15,'flash','',L=>sunrise(L)+ground(GY,'url(#gSand)',8,1,0)+H('lea',960,GY+10,1.35,{head:-10}));
+ add(['lea','reclamo',1],-.12,'slide','Génesis 29:25',L=>camp(L)+H('jacob',760,GY+10,1.2,{aR:-110+Math.sin(L*10)*14,lean:-6})+H('laban',1200,GY+10,1.15,{flip:true,aL:30})+bubble(900,280,'¿POR QUÉ ME HAS ENGAÑADO?',52,P(L,.2,.35)));
+ add(['lea','imagina',1],-.15,'zoom','',L=>{let s=sky('skyGrey')+stars(L,20,4)+ground(GY,'url(#gHill)',8,2,0);s+=H('lea',960,GY+10,1.3,{head:20,lean:6,robe:'#6b6880',cloth:'#9a97ad',sash:'#7d7a90'});return s+clouds(L,[[100,220,1.2,'#8d8aa0',.7],[1200,180,1,'#8d8aa0',.6]],8)});
+ add(['lea','genesis',1],-.12,'wipeup','Génesis 29:31',L=>sky('skyDawn')+stars(L,40,3)+scroll(960,520,1.15,'Génesis 29:31',['El Señor vio que Lea','era menospreciada'],L));
+ add(['lea','nadie',2],-.1,'circle','',L=>{const u=eo(P(L,.6,.6));let s=sky(u>.5?'skyHeaven':'skyGrey')+rays(960,-60,24,1400,L*.2,.25*u,'#fff3c4',.05)+`<path d="M760 -60 L1160 -60 L1120 ${GY} L800 ${GY}Z" fill="#fff6dc" opacity="${.45*u}"/>`+ground(GY,'url(#gHill)',8,2,0);return s+H('lea',960,GY+10,1.3,{head:20-34*u,aL:-30-60*u,aR:30+60*u})});
+ add(['lea','hijo',1],-.15,'slide','Génesis 29:32-34',L=>{let s=sky('skyWarm')+tent(1550,GY+20,1.2,'#c98a4a')+ground(GY,'url(#gSand)',6,1,0)+H('lea',700,GY+10,1.15,{aR:-60});for(let i=0;i<3;i++){const p=back(P(L,.2+i*1.3,.35));if(p>0)s+=`<g transform="translate(${1000+i*190},${700}) scale(${p})">${baby(0,0,1,L*3+i)}</g>`}const q=Math.floor(clamp(L/1.3,0,2));return s+bubble(700,280,'¿AHORA ME AMARÁ?',54,P(L,.2,.3)+(q>0?1:0))});
+ add(['lea','cuarto',1],-.2,'circle','Génesis 29:35',L=>{let s=sky('skyHeaven')+lightOn(960,420,260,L)+ground(GY,'url(#gGrass)',8,2,0);s+=H('lea',960,GY+10,1.25,{aL:-150,aR:150,head:-14});return s+baby(1300,760,1.1,L*3)});
+ add(['lea','juda',1],-.12,'zoom','',L=>{let s=sky('skyIndigo')+stars(L,50,9)+lightOn(960,540,240,L);return s+medal(960,500,170,'JUDÁ',GOLD,1)+tagS(960,800,'«ALABANZA»',VIO,58,P(L,.4,.3))});
+ add(['lea','david',1],-.15,'slide','',L=>{let s=sky('skyIndigo')+stars(L,60,11);const pts=[[360,'JUDÁ',VIO],[960,'DAVID',CORAL],[1560,'MESÍAS',GOLD]];const p=eo(P(L,0,2.2));s+=`<path d="M360 560 L${360+1200*p} 560" stroke="${GOLD}" stroke-width="12" stroke-linecap="round"/>`;pts.forEach(([x,t,c],i)=>{const q=back(P(L,i*1.0,.35));if(q>0)s+=`<g transform="translate(${x},560) scale(${q})">${medal(0,0,110,i==1?'♔':i==2?'✦':'J',c)}${TX(0,190,t,58,'#fff',INK,9)}</g>`});return s});
+ add(['lea','esposa',2],-.12,'circle','',L=>{let s=sky('skyHeaven')+lightOn(960,460,280,L)+`<path d="M200 600 L1720 600" stroke="${GOLD}" stroke-width="14" opacity=".8"/>`+ground(GY,'url(#gGrass)',8,2,0);return s+H('lea',960,GY+10,1.3,{aL:-40,aR:40})+tagS(960,250,'EN LA LÍNEA DEL MESÍAS',GOLD,56,P(L,.3,.4))});
+ /* ---- ABIGAIL ---- */
+ C('abigail','2','ABIGAIL','la mujer que frenó a un rey',CORAL,'A');
+ add(['abigail','david',1],-.12,'wipe','1 Samuel 25:13',L=>desert(L,L*60)+crowdS(L,10,200,1500,GY,.75,{march:1,sil:'#7a4a3a'})+H('david',1650,GY+10,1.05,Object.assign({flip:false},walk(L)))+bigNum(960,300,'600','HOMBRES',GOLD,.9));
+ add(['abigail','desierto',1],-.15,'slide','',L=>desert(L)+flock(L,200,GY+40,7)+H('soldado',1300,GY+10,1,{item:'quill',itemR:0})+H('soldado',1550,GY+10,1,{flip:true})+H('criado',800,GY+10,.95));
+ add(['abigail','rico',1],-.15,'zoom','1 Samuel 25:2-3',L=>{let s=desert(L,0,'skyWarm')+flock(L,1250,GY+40,5,.7)+H('nabal',760,GY+10,1.35,{aL:20,aR:-20,item:'bag',itemL:'bag'});for(let i=0;i<6;i++){s+=`<g transform="translate(${560+i*80},${GY+20})">${ITEM.coin}</g>`}return s+tagS(760,250,'NABAL',CORAL,60,P(L,.3,.3))});
+ add(['abigail','pidio',1],-.12,'slide','',L=>desert(L)+H('criado',700,GY+10,1.05,{aR:-70,item:'bread',head:12})+H('soldado',520,GY+10,1)+H('nabal',1250,GY+10,1.25,{flip:true,head:-8})+tagS(700,330,'CON RESPETO',AQUA,46,P(L,.4,.3)));
+ add(['abigail','quien',1],-.15,'flash','1 Samuel 25:10',L=>desert(L,0,'skyCoral')+H('nabal',960,GY+10,1.45,{head:-14+Math.sin(L*12)*6,aL:-120,aR:120})+bubble(960,250,'¿QUIÉN ES DAVID?',72,P(L,.1,.3)));
+ add(['abigail','vacias',1],-.25,'slide','',L=>desert(L,-L*80)+H('criado',800,GY+10,1.1,Object.assign({flip:true,aL:40,aR:-40},walk(L,6)))+H('soldado',1050,GY+10,1.05,Object.assign({flip:true},walk(L,6)))+tagS(960,300,'MANOS VACÍAS',CORAL,58,P(L,.2,.3)));
+ add(['abigail','ira',1],-.15,'flash','1 Samuel 25:13',L=>{let s=sky('skyCoral')+`<rect x="-400" y="-300" width="2720" height="1700" fill="#c0392b" opacity=".35"/>`+ground(GY,'url(#gSand2)',8,1,0)+H('david',960,GY+10,1.4,{aR:-150,item:'quill'});for(let i=0;i<5;i++){const p=back(P(L,.3+i*.12,.3));if(p>0)s+=sword(300+i*120+(i>2?900:0),GY-60,p*.9,-20+i*10)}return s});
+ add(['abigail','cuatrocientos',1],-.12,'wipe','',L=>{let s=desert(L,L*120,'skyCoral');for(let k=0;k<4;k++)s+=`<ellipse cx="${200+k*400+((L*200)%400)}" cy="${GY-30}" rx="260" ry="70" fill="#e2b277" opacity=".55"/>`;return s+crowdS(L,13,100,1800,GY,.7,{march:1,sw:1,sil:'#5a2a2a'})+bigNum(960,300,'400','GUERREROS',CORAL,.9)});
+ add(['abigail','criado',1],-.12,'slide','',L=>camp(L,L*90)+H('criado',800+L*60,GY+10,1.1,walk(L,12))+tagS(1300,300,'¡CORRE!',CORAL,58,P(L,.3,.3)));
+ add(['abigail','abigail',2],-.15,'circle','1 Samuel 25:3',L=>{let s=sky('skyWarm')+lightOn(960,460,220,L)+tent(1550,GY+20,1.2,'#c98a4a')+ground(GY,'url(#gSand)',6,1,0);return s+H('abigail',960,GY+10,1.35,{head:-6})+tagS(960,240,'BUEN ENTENDIMIENTO',GOLD,56,P(L,.6,.35))});
+ add(['abigail','segundo',1],-.2,'zoom','',L=>{let s=sky('skyCoral')+rays(960,520,20,1400,L*.4,.12,'#fff3c4',.06);const a=L*3;return s+`<g transform="translate(960,520)"><circle r="230" fill="#fff" stroke="${INK}" stroke-width="16"/><path d="M0 0 L0 -170" stroke="${INK}" stroke-width="14" stroke-linecap="round" transform="rotate(${a*57})"/><path d="M0 0 L110 0" stroke="${CORAL}" stroke-width="14" stroke-linecap="round"/><circle r="18" fill="${INK}"/></g>`});
+ add(['abigail','cargo',1],-.12,'slide','1 Samuel 25:18',L=>{let s=camp(L)+donkey(700,GY+10,1.2,L*4,1)+donkey(1150,GY+10,1.1,L*4+1,1)+H('abigail',1500,GY+10,1.1,{aR:-80});const it=[['200 PANES',A('abigail','panes').start],['VINO',A('abigail','vino').start],['5 OVEJAS',A('abigail','ovejas').start],['PASAS',A('abigail','pasas').start],['HIGOS',A('abigail','higos').start]];const T=L+S0();it.forEach(([t,tt],i)=>{s+=tagS(260+i*350,250+(i%2)*90,t,[GOLD,CORAL,AQUA,VIO,SAGE][i],42,P(T,tt-.1,.3))});return s});
+ add(['abigail','salio',1],-.15,'wipe','',L=>{let s=desert(L,L*70,'skyCoral')+`<ellipse cx="1700" cy="${GY-60}" rx="420" ry="140" fill="#e2b277" opacity=".7"/>`+crowdS(L,7,1450,1880,GY,.6,{march:1,sw:1,sil:'#5a2a2a'});return s+donkey(450,GY+10,1,L*5,1)+H('abigail',760,GY+10,1.05,walk(L,7))});
+ add(['abigail','inclino',1],-.12,'circle','1 Samuel 25:23-24',L=>desert(L,0,'skyWarm')+crowdS(L,6,1350,1850,GY-20,.7,{sw:1,sil:'#5a2a2a'})+H('david',1200,GY+10,1.25,{flip:true,aR:-30})+`<g transform="translate(760,${GY+10}) rotate(${-24*eo(P(L,0,.6))} 0 -40)">${H('abigail',0,0,1.15,{head:30,aL:-60,aR:60})}</g>`);
+ add(['abigail','conciencia',1],-.15,'wipeup','1 Samuel 25:31',L=>sky('skyDawn')+scroll(960,520,1.15,'1 Samuel 25:26-31',['No te vengues','por tu propia mano'],L));
+ add(['abigail','detuvo',1],-.15,'flash','',L=>{let s=desert(L,0,'skyMorning')+H('david',960,GY+10,1.4,{aR:-30*(1-eo(P(L,0,.8)))-12});for(let i=0;i<4;i++)s+=sword(300+i*130+(i>1?1000:0),GY,0.8,90*eo(P(L,.1,.8)));return s+tagS(960,240,'DAVID SE DETUVO',AQUA,64,P(L,.3,.3))});
+ add(['abigail','bendito',1],-.12,'circle','1 Samuel 25:32-33',L=>sky('skyHeaven')+lightOn(960,420,260,L)+ground(GY,'url(#gSand)',6,1,0)+H('david',1150,GY+10,1.25,{flip:true,aL:-140,aR:140})+H('abigail',760,GY+10,1.15,{head:10}));
+ add(['abigail','pan',1],-.12,'zoom','',L=>{let s=sky('skyWarm')+lightOn(960,520,240,L);s+=`<g transform="translate(700,560) scale(3)">${ITEM.bread}</g>`+bubble(1250,440,'…',90,P(L,.2,.3));return s+crownX(960,280,1,0)+tagS(960,840,'FRENÓ A UN FUTURO REY',CORAL,58,P(L,.6,.35))});
+ /* ---- DÉBORA ---- */
+ C('debora','3','DÉBORA','la jueza bajo la palmera',GOLD,'D');
+ add(['debora','israel',1],-.12,'wipe','Jueces 4:3',L=>sky('skyGrey')+ground(GY,'url(#gHill)',8,2,0)+crowdS(L,8,300,1600,GY,.8,{sil:'#3a3456',p:{head:18,lean:6}})+bigNum(960,330,'20','AÑOS DE OPRESIÓN',CORAL,.9));
+ add(['debora','general',1],-.15,'slide','Jueces 4:3',L=>{let s=sky('skyGrey')+mtn(760,120,'#4a3f60',3,0)+ground(GY,'url(#gHill)',6,2,L*80);for(let i=0;i<5;i++)s+=chariot(((i*420-L*260)%2300+2300)%2300-200,GY+10,.9,L*6+i);return s+bigNum(960,300,'900','CARROS DE HIERRO',GOLD,.9)});
+ add(['debora','tiempo',1],-.1,'wipe','Jueces 4:5',L=>green(L,'skyOasis')+palm(960,GY+10,1.8,L)+crowdS(L,5,300,700,GY,.75,{sil:null,p:PRE.criado})+tagS(330,300,'RAMÁ',AQUA,46,P(L,.4,.3))+tagS(1420,300,'BETEL',AQUA,46,P(L,.7,.3)));
+ add(['debora','alli',1],-.15,'circle','Jueces 4:4-5',L=>green(L,'skyOasis')+palm(1250,GY+10,1.9,L)+lightOn(1000,600,160,L,.6)+H('debora',1000,GY+10,1.3,{aR:-60})+H('criado',600,GY+10,1,{flip:false,head:10})+tagS(960,230,'PROFETISA Y JUEZA',GOLD,60,P(L,.5,.35)));
+ add(['debora','barac',1],-.12,'slide','Jueces 4:6-7',L=>green(L,'skyOasis')+palm(400,GY+10,1.6,L)+H('debora',600,GY+10,1.15,{aR:-90})+H('barac',1150,GY+10,1.2,{flip:true})+mtn(820,140,'#7a9c5a',5,0).replace('<path','<path opacity=".0"')+tagS(1450,300,'10.000 · MONTE TABOR',CORAL,46,P(L,1.6,.35)));
+ add(['debora','miedo',1],-.15,'zoom','Jueces 4:8',L=>sky('skyGrey')+ground(GY,'url(#gGrass)',8,2,0)+H('barac',960,GY+10,1.35,{lean:Math.sin(L*20)*2,head:14,aL:20,aR:-20})+bubble(960,240,'SI TÚ VAS, IRÉ',66,P(L,.8,.3)));
+ add(['debora','dudo',1],-.2,'flash','',L=>green(L,'skyMorning')+lightOn(960,520,200,L,.6)+H('debora',960,GY+10,1.4,{aR:-120})+bubble(960,240,'¡IRÉ CONTIGO!',72,P(L,.4,.3)));
+ add(['debora','honra',1],-.15,'slide','Jueces 4:9',L=>sky('skyWarm')+ground(GY,'url(#gGrass)',8,2,0)+H('debora',700,GY+10,1.2)+H('barac',1200,GY+10,1.2,{flip:true,head:10})+tagS(960,280,'LA HONRA NO SERÁ TUYA',VIO,56,P(L,.2,.3)));
+ add(['debora','levantate',1],-.15,'circle','Jueces 4:14',L=>{let s=sunrise(L,700)+mtn(900,330,'#4a6a4a',4,0)+H('debora',600,GY+40,1.2,{aR:-150});return s+crowdS(L,6,1000,1700,GY+30,.7,{sil:'#2a3a2a',sw:1})+bubble(700,230,'¡ESTE ES EL DÍA!',70,P(L,.3,.3))});
+ add(['debora','bajo',2],-.15,'flash','Jueces 4:15',L=>{let s=sky('skyNight')+`<rect x="-400" y="-300" width="2720" height="1700" fill="#2b4f6e"/>`+rainL(L,150,.7)+mtn(820,300,'#2a3a2a',4,0)+ground(GY,'url(#gHill)',8,2,0);for(let i=0;i<4;i++)s+=`<g transform="rotate(${-14+i*8} ${300+i*420} ${GY})">${chariot(300+i*420+L*40,GY,.85,L*2)}</g>`;if(Math.sin(L*7)>.92)s+=`<rect x="-400" y="-300" width="2720" height="1700" fill="#fff" opacity=".5"/>`;return s+tagS(960,250,'¡DESBARATADOS!',CORAL,66,P(L,.6,.3))});
+ add(['debora','fama',1],-.15,'wipe','',L=>green(L,'skyOasis')+palm(1150,GY+10,1.8,L)+H('debora',960,GY+10,1.2,{head:8}));
+ add(['debora','cancion',1],-.12,'circle','Jueces 5:7',L=>{let s=sky('skyHeaven')+lightOn(960,480,240,L)+ground(GY,'url(#gGrass)',8,2,0)+H('debora',960,GY+10,1.3,{aL:-150,aR:150,head:-10});for(let i=0;i<5;i++){const t=(L*.5+i/5)%1;s+=TX(760+i*90+Math.sin(t*8)*30,600-t*380,'♪',70,GOLD,INK,6).replace('<text','<text opacity="'+(1-t)+'"')}return s+tagS(960,230,'UNA MADRE EN ISRAEL',ROSE,60,P(L,1.2,.35))});
+ add(['debora','paz',1],-.15,'zoom','Jueces 5:31',L=>green(L)+flock(L,300,GY+40,6)+palm(1600,GY+10,1.3,L)+bigNum(960,330,'40','AÑOS DE PAZ',SAGE,.9));
+ /* ---- ANA ---- */
+ C('ana','4','ANA','la oración en silencio',AQUA,'A');
+ add(['ana','esposo',1],-.12,'wipe','1 Samuel 1:2',L=>sky('skyWarm')+tent(1600,GY+20,1.1,'#c98a4a')+ground(GY,'url(#gSand)',6,1,0)+H('elcana',960,GY+10,1.2)+H('penina',1250,GY+10,1.1,{flip:true})+baby(1400,820,.8,L*3)+baby(1500,760,.7,L*3+1)+H('ana',600,GY+10,1.1,{head:18}));
+ add(['ana','ano',1],-.12,'slide','1 Samuel 1:3',L=>desert(L,L*60,'skyMorning')+tabernacle(1550-L*20,GY,.8)+H('elcana',600,GY+10,1,walk(L))+H('penina',800,GY+10,.95,walk(L))+H('ana',350,GY+10,.95,walk(L,7))+tagS(1500,250,'SILÓ',AQUA,52,P(L,.4,.3)));
+ add(['ana','provocaba',1],-.12,'zoom','1 Samuel 1:6-7',L=>{let s=sky('skyGrey')+ground(GY,'url(#gSand2)',6,1,0)+H('penina',1200,GY+10,1.3,{flip:true,aR:-90+Math.sin(L*10)*12,head:-8})+H('ana',700,GY+10,1.25,{head:22,lean:6});for(let i=0;i<3;i++){const t=(L*.9+i/3)%1;s+=`<ellipse cx="${690+(i%2)*24}" cy="${GY-370+t*120}" rx="8" ry="12" fill="#9fd8ff" opacity="${1-t}"/>`}return s});
+ add(['ana','casa',1],-.12,'circle','1 Samuel 1:10',L=>sky('skyDawn')+tabernacle(1250,GY,1.1)+ground(GY,'url(#gSand)',6,1,0)+`<g transform="translate(620,${GY+10}) rotate(-10 0 -40)">${H('ana',0,0,1.2,{head:24,aL:-140,aR:-110})}</g>`+tagS(620,250,'EL ALMA AMARGADA',VIO,52,P(L,.6,.3)));
+ add(['ana','prometio',1],-.15,'wipeup','1 Samuel 1:11',L=>sky('skyIndigo')+stars(L,50,13)+scroll(960,520,1.15,'1 Samuel 1:11',['Si me das un hijo,','te lo dedicaré toda su vida'],L));
+ add(['ana','silencio',1],-.15,'zoom','1 Samuel 1:13',L=>{let s=sky('skyDawn')+lightOn(960,480,180,L,.5)+H('ana',960,GY+40,1.6,{head:16,aL:-140,aR:-110});return s+`<g transform="translate(1350,380)"><circle r="80" fill="#fff" stroke="${INK}" stroke-width="8"/><path d="M-30 -20 L0 -20 L30 -48 L30 48 L0 20 L-30 20Z" fill="${INK}"/><path d="M-60 60 L60 -60" stroke="${CORAL}" stroke-width="14"/></g>`});
+ add(['ana','eli',1],-.12,'slide','1 Samuel 1:13-14',L=>sky('skyWarm')+tabernacle(1400,GY,1)+ground(GY,'url(#gSand)',6,1,0)+H('eli',1150,GY+10,1.2,{flip:true,aR:-100,head:-8})+H('ana',650,GY+10,1.1,{head:20,aL:-140,aR:-110})+bubble(1150,250,'¿ESTÁS BORRACHA?',62,P(L,.6,.3)));
+ add(['ana','imagina',1],-.15,'zoom','',L=>sky('skyGrey')+ground(GY,'url(#gHill)',8,2,0)+H('ana',960,GY+60,1.7,{head:26,lean:8,robe:'#5f8f96'}));
+ add(['ana','respondio',1],-.12,'circle','1 Samuel 1:15',L=>sky('skyDawn')+lightOn(700,500,200,L,.7)+ground(GY,'url(#gSand)',6,1,0)+H('ana',700,GY+10,1.2,{aR:-60})+H('eli',1250,GY+10,1.15,{flip:true})+bubble(760,240,'HE DERRAMADO MI ALMA',58,P(L,1.2,.35)));
+ add(['ana','paz',1],-.12,'flash','1 Samuel 1:17',L=>sky('skyHeaven')+lightOn(960,460,220,L)+ground(GY,'url(#gSand)',6,1,0)+H('eli',1200,GY+10,1.15,{flip:true,aL:-120})+H('ana',720,GY+10,1.15,{head:-8})+tagS(960,240,'VE EN PAZ',AQUA,66,P(L,.1,.3)));
+ add(['ana','detalle',1],-.12,'wipeup','1 Samuel 1:18',L=>sky('skyDawn')+scroll(960,520,1.15,'1 Samuel 1:18',['Ana comió','y no estuvo más triste'],L));
+ add(['ana','todavia',1],-.15,'slide','',L=>{let s=sky('skyMorning')+sun(1500,250,90)+ground(GY,'url(#gGrass)',8,2,0)+H('ana',960,GY+10,1.3,{head:-6,aL:20,aR:-20});return s+tagS(560,300,'SIN RESPUESTA…',VIO,52,P(L,.1,.3))+tagS(1360,420,'¡PERO CON PAZ!',SAGE,58,P(L,1.6,.35))});
+ add(['ana','samuel',2],-.15,'circle','1 Samuel 1:20',L=>sky('skyHeaven')+lightOn(960,460,260,L)+ground(GY,'url(#gGrass)',8,2,0)+H('ana',820,GY+10,1.2,{aR:-70,aL:-40})+baby(1050,620,1.2,L*3)+tagS(1050,280,'SAMUEL',GOLD,64,P(L,.4,.3)));
+ add(['ana','promesa',1],-.12,'slide','1 Samuel 1:27-28',L=>sky('skyWarm')+tabernacle(1500,GY,.9)+ground(GY,'url(#gSand)',6,1,0)+H('eli',1200,GY+10,1.15,{flip:true,aL:-60})+H('ana',650,GY+10,1.1,{aR:-60})+H('hijo',900,GY+10,.6,{})+bubble(700,260,'LO DEDICO AL SEÑOR',56,P(L,.8,.35)));
+ add(['ana','nino',2],-.15,'zoom','1 Samuel 10:1 · 16:13',L=>{let s=sky('skyIndigo')+stars(L,60,15)+lightOn(960,420,220,L);s+=crownX(640,600,1.1,0)+crownX(1280,600,1.1,0);s+=TX(640,760,'SAÚL',56,'#fff',INK,9)+TX(1280,760,'DAVID',56,'#fff',INK,9);const p=P(L,.6,1.2);return s+`<g transform="translate(${640+640*eo(clamp(p*2-1))},${420+Math.sin(p*Math.PI*2)*20}) rotate(-40)"><path d="M-30 30 Q0 -80 60 -100 L70 -80 Q20 -60 20 40Z" fill="#e9dcc0" stroke="${INK}" stroke-width="6"/></g>`+tagS(960,240,'EL PROFETA QUE UNGIÓ A 2 REYES',GOLD,50,P(L,.3,.3))});
+ /* ---- RIZPA ---- */
+ C('rizpa','5','RIZPA','la vigilia en la roca','#5b4a8a','R');
+ add(['rizpa','saul',1],-.12,'wipe','2 Samuel 21:8',L=>sky('skyWarm')+ground(GY,'url(#gSand)',6,1,0)+H('rizpa',960,GY+10,1.25,{aL:60,aR:-60})+H('hijo',700,GY+10,.9)+H('hijo',1220,GY+10,.95,{flip:true,robe:'#3d6fd1'})+crownX(960,250,.6,0));
+ add(['rizpa','hambre',1],-.12,'slide','2 Samuel 21:1',L=>{let s=sky('skyCoral')+sun(960,300,160)+`<path d="M-300 ${GY} L2300 ${GY} L2300 1400 L-300 1400Z" fill="#c9935a"/>`;for(let i=0;i<14;i++)s+=`<path d="M${i*150} ${GY+40} l40 50 l-30 40 l50 60" stroke="#7a4a26" stroke-width="5" fill="none"/>`;return s+bigNum(960,500,'3','AÑOS DE HAMBRE',CORAL,.9)});
+ add(['rizpa','consulto',1],-.12,'circle','2 Samuel 21:1-2',L=>sky('skyIndigo')+stars(L,50,17)+lightOn(960,380,220,L,.8)+ground(GY,'url(#gHill)',8,2,0)+`<g transform="translate(960,${GY+10}) rotate(-8 0 -40)">${H('david',0,0,1.25,{crown:true,aL:-150,aR:-150,head:20})}</g>`+tagS(960,230,'UNA INJUSTICIA DE SAÚL',CORAL,54,P(L,1.2,.35)));
+ add(['rizpa','reparar',1],-.15,'slide','2 Samuel 21:3-6',L=>sky('skyGrey')+scale_(960,700,1.0,6*Math.sin(L*2),block('JURAMENTO',AQUA),block('CULPA',CORAL))+bigNum(1550,420,'7','DESCENDIENTES',GOLD,.7));
+ add(['rizpa','ellos',1],-.12,'zoom','',L=>{let s=sky('skyGrey')+ground(GY,'url(#gHill)',8,2,0)+crowdS(L,7,300,1620,GY,.85,{sil:'#3a3456'});return s+`<g opacity="${P(L,.4,.4)}">${H('hijo',830,GY,.85*1.02)}${H('hijo',1090,GY,.85,{robe:'#3d6fd1'})}</g>`+tagS(960,250,'SUS DOS HIJOS',VIO,58,P(L,.6,.3))});
+ add(['rizpa','ejecutados',1],-.15,'wipe','2 Samuel 21:9',L=>sky('skyGrey')+clouds(L,[[100,200,1.3,'#5a5670',.8],[1100,160,1.2,'#5a5670',.7]],6)+ground(GY,'url(#gHill)',8,2,0)+barley(GY+60,L,'#b9a06a')+tagS(960,300,'AL COMENZAR LA COSECHA',GOLD,52,P(L,.6,.35)));
+ add(['rizpa','cambiar',1],-.12,'slide','',L=>sky('skyGrey')+rockB(960,GY+40,1.6,'#6b6070')+`<g transform="translate(960,${GY-130}) rotate(-6 0 -40)">${H('rizpa',0,0,1.2,{head:26,lean:4})}</g>`);
+ add(['rizpa','tendio',1],-.12,'circle','2 Samuel 21:10',L=>{const p=eo(P(L,0,1.2));return sky('skyMorning')+ground(GY,'url(#gSand2)',6,1,0)+rockB(960,GY+40,1.6)+`<path d="M${780} ${GY-160} Q${960} ${GY-200-40*p} ${780+360*p} ${GY-170}" stroke="none" fill="#3a3046"/><rect x="760" y="${GY-190}" width="${380*p}" height="40" rx="10" fill="#3a3046"/>`+H('rizpa',960,GY-150,1.0)+tagS(960,260,'TELA DE LUTO',VIO,54,P(L,.8,.3))});
+ add(['rizpa','dia',1],-.15,'wipe','2 Samuel 21:10',L=>sky('skyOasis')+sun(1500,220,90)+ground(GY,'url(#gSand2)',6,1,0)+rockB(960,GY+40,1.6)+H('rizpa',960,GY-150,1.05,{aR:-150+Math.sin(L*8)*30,aL:-20})+birds(L,200,240,6)+birds(L*1.3,900,180,4)+tagS(400,350,'DE DÍA: LAS AVES',GOLD,48,P(L,.3,.3)));
+ add(['rizpa','noche',1],-.15,'flash','',L=>night(L,'skyNight')+ground(GY,'url(#gHill)',6,1,0)+eyes(L,300,GY-60,3)+eyes(L+1,1350,GY-80,3)+rockB(960,GY+40,1.6,'#4a3f60')+torch(1150,GY-150,1,L)+H('rizpa',920,GY-150,1.05,{aR:-110})+tagS(400,300,'DE NOCHE: LAS FIERAS',VIO,48,P(L,.3,.3)));
+ add(['rizpa','comienzo',1],-.12,'slide','',L=>{const p=eo(P(L,0,3.2));let s=sky(p>.85?'skyGrey':'skyCoral')+ground(GY,'url(#gSand2)',6,1,0)+rockB(960,GY+40,1.6)+H('rizpa',960,GY-150,1.0,{head:Math.sin(L*1.5)*10});s+=`<rect x="360" y="230" width="1200" height="34" rx="17" fill="rgba(0,0,0,.25)"/><rect x="360" y="230" width="${1200*p}" height="34" rx="17" fill="${GOLD}"/>`;return s+TX(360,200,'COSECHA',40,'#fff',INK,7,'start')+TX(1560,200,'LLUVIA',40,'#fff',INK,7,'end')+`<g transform="translate(${360+1200*p},247)">${baby(0,0,0,0)}<circle r="26" fill="#fff" stroke="${INK}" stroke-width="6"/></g>`});
+ add(['rizpa','nadie',1],-.12,'zoom','',L=>sky('skyGrey')+stars(L,20,3)+rockB(960,GY+80,2.0,'#5a5268')+H('rizpa',960,GY-140,1.2,{head:14})+tagS(960,250,'NADIE LA APLAUDIÓ',CORAL,58,P(L,1.2,.35)));
+ add(['rizpa','contaron',1],-.12,'slide','2 Samuel 21:11',L=>sky('skyWarm')+houses(GY-40,-L*30,1.2,5,'#f2d3a6')+ground(GY,'url(#gSand)',4,1,0)+H('criado',700,GY+10,1.05,{aR:-80})+H('david',1150,GY+10,1.3,{flip:true,crown:true,head:-6}));
+ add(['rizpa','rey',2],-.15,'circle','2 Samuel 21:12-14',L=>sky('skyHeaven')+lightOn(960,420,220,L,.8)+green(L,'skyHeaven').slice(0,0)+ground(GY,'url(#gGrass)',8,2,0)+H('david',760,GY+10,1.25,{crown:true,aR:-100})+tomb(1300,GY,.8,0,L)+tagS(960,250,'SEPULTURA DIGNA',SAGE,58,P(L,.5,.3)));
+ add(['rizpa','misericordia',1],-.2,'flash','2 Samuel 21:14',L=>{const g=eo(P(L,.5,1.5));return sky('skyGrey')+rainL(L,160,.7)+ground(GY,g>.5?'url(#gGrass)':'url(#gSand2)',8,2,0)+barley(GY+40,L,g>.5?'#9cc47a':'#b9a06a')+rockB(1400,GY+40,1.1)+H('rizpa',1400,GY-90,.9,{aL:-150,aR:150,head:-14})+tagS(820,280,'MISERICORDIA',AQUA,66,P(L,.8,.3))});
+ /* ---- CIERRE ---- */
+ S.push({t0:CHT('cierre')-1.6,tr:'flash',chip:'',draw:L=>card('','LO QUE NOS ENSEÑAN','5 mujeres · 1 principio',GOLD,'✦',L),cam:[[0,1.1,960,540],[3,1.0,960,540]]});
+ add(['cierre','cinco',1],-.12,'wipe','',L=>{let s=sky('skyIndigo')+stars(L,70,21);const T=L+S0();const ws=[['despreciada',1],['prudente',1],['valiente',1],['oro',1],['rindio',1]];['L','A','D','A','R'].forEach((t,i)=>{const tt=A('cierre',ws[i][0]).start;const on=T>=tt-.1;s+=medal(320+i*320,520,100,t,[VIO,CORAL,GOLD,AQUA,'#5b4a8a'][i],on?1:.0);s+=TX(320+i*320,720,['DESPRECIADA','PRUDENTE','VALIENTE','ORÓ','NO SE RINDIÓ'][i],40,'#fff',INK,8).replace('<text','<text opacity="'+P(T,tt-.1,.3)+'"')});return s});
+ add(['cierre','comun',1],-.15,'zoom','',L=>{let s=sky('skyIndigo')+stars(L,60,23);s+=`<path d="M320 540 L1600 540" stroke="${GOLD}" stroke-width="10" stroke-dasharray="${1280*eo(P(L,0,1))} 2000"/>`;['L','A','D','A','R'].forEach((t,i)=>s+=medal(320+i*320,540,90,t,[VIO,CORAL,GOLD,AQUA,'#5b4a8a'][i]));return s+bubble(960,280,'¿QUÉ TIENEN EN COMÚN?',60,P(L,.2,.3))});
+ add(['cierre','poder',1],-.15,'flash','',L=>{let s=sky('skyGrey');for(let i=0;i<5;i++)s+=crownX(320+i*320,520,.9,P(L,.2+i*.12,.25));return s});
+ add(['cierre','cotidiano',1],-.12,'slide','',L=>{let s=sky('skyWarm')+rays(960,540,24,1400,L*.2,.1,'#fff3c4',.06);const T=L+S0();const ic=[['casa',1,`${tent(0,60,.55,'#c98a4a')}`],['camino',1,`${donkey(-60,70,.55,L*4,1)}`],['palmera',1,`${palm(0,90,.7,L)}`],['oracion',1,`<g transform="translate(0,90)">${ITEM.lamp.replace(/translate\(0,0\)/,'')}</g>`],['roca',1,`${rockB(0,80,.5)}`]];ic.forEach(([w,o,g],i)=>{const tt=A('cierre',w,o).start;const p=back(P(T,tt-.1,.35));if(p>0)s+=`<g transform="translate(${320+i*320},560) scale(${p})"><circle cy="-20" r="140" fill="#fff" stroke="${INK}" stroke-width="8"/><g transform="translate(0,-40) scale(1.1)">${g}</g></g>`});return s});
+ add(['cierre','principio',1],-.12,'circle','',L=>{let s=sky('skyHeaven')+lightOn(960,520,330,L)+rays(960,520,30,1600,L*.3,.3,GOLD,.04);const p=back(P(L,.6,.5));return s+`<g transform="translate(960,470) scale(${p})">${TX(0,0,'DIOS VE A QUIEN',110,'#fff',INK,14)}${TX(0,140,'EL MUNDO NO MIRA',120,GOLD,INK,14)}</g>`});
+ add(['cierre','semana',1],-.15,'wipe','',L=>{let s=sky('skyIndigo')+stars(L,50,25);const T=L+S0();s+=TX(960,200,'PARA TU SEMANA',80,GOLD,INK,12);const it=[['elige',1,'Si nadie te elige: Dios te ve',VIO],['enojo',1,'Ante el enojo: calma y sabiduría',CORAL],['miedo',1,'Si tienes miedo: el Señor va delante',GOLD],['lagrimas',1,'Si oras con lágrimas: busca su paz',AQUA],['sufre',1,'Si alguien sufre: quédate a su lado','#5b4a8a']];it.forEach(([w,o,t,c],i)=>{const tt=A('cierre',w,o).start;const p=eo(P(T,tt-.3,.4));if(p>0)s+=`<g transform="translate(${360-200*(1-p)},${330+i*130})" opacity="${p}"><circle r="40" fill="${c}" stroke="#fff" stroke-width="6"/><path d="M-18 0 L-4 14 L20 -14" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round"/><text x="70" y="18" ${F} font-size="52" fill="#fff" stroke="${INK}" stroke-width="8" paint-order="stroke fill">${t}</text></g>`});return s});
+ add(['cierre','comentarios',1],-.25,'circle','',L=>{let s=sky('skyCard')+rays(960,540,24,1400,L*.3,.15,'#fff3c4',.06);s+=bubble(960,430,'¿CUÁL TE HABLÓ MÁS HOY?',66,P(L,.1,.35));['L','A','D','A','R'].forEach((t,i)=>{const p=back(P(L,.6+i*.12,.3));if(p>0)s+=`<g transform="translate(${480+i*240},740) scale(${p})">${medal(0,0,70,t,[VIO,CORAL,GOLD,AQUA,'#5b4a8a'][i])}</g>`});return s});
+ add(['cierre','suscribete',1],-.15,'circle','',L=>{let s=sunrise(L,800)+mtn(950,160,'#4a3a7a',1,0);const bp=back(P(L,.05,.4)),pu=1+.04*Math.sin(L*8);s+=`<g transform="translate(960,460) scale(${bp*pu})"><rect x="-400" y="-100" width="800" height="200" rx="100" fill="#e8344e" stroke="${INK}" stroke-width="12"/>${TX(60,32,'SUSCRÍBETE',86,'#fff',INK,10)}<g transform="translate(-310,0) rotate(${Math.sin(L*14)*16*(1-P(L,1.4,1))})"><path d="M-34 24 Q-34 -40 0 -44 Q34 -40 34 24 L44 34 L-44 34Z" fill="${GOLD}" stroke="${INK}" stroke-width="7"/><circle cy="44" r="10" fill="${GOLD}" stroke="${INK}" stroke-width="6"/></g></g>`;const np=back(P(L,.5,.4));if(np>0)s+=`<g transform="translate(960,680) scale(${np})"><rect x="-300" y="-60" width="600" height="110" rx="55" fill="#fff8ee" stroke="${INK}" stroke-width="8"/><text y="20" text-anchor="middle" ${F} font-size="60" fill="${INK}">Bases Bíblicas</text></g>`;return s+tagS(960,880,'una historia de la Biblia cada semana',GOLD,42,P(L,1.6,.4))});
+ S.forEach(sc=>{if(sc.at){const w=A(...sc.at);sc.t0=Math.max(0,w.start+sc.o)}if(!sc.cam){const k=S.indexOf(sc)%4;sc.cam=[[0,[1.0,1.08,1.04,1.0][k],[960,900,1020,960][k],540],[6,[1.07,1.0,1.0,1.06][k],[960,1020,900,980][k],540]]}});
+ S.sort((a,b)=>a.t0-b.t0);for(let i=1;i<S.length;i++)if(S[i].t0<S[i-1].t0+.6)console.error('JUNTAS '+i+' '+S[i].t0.toFixed(2));SC=S}
+let CURSC=null;function S0(){return CURSC?CURSC.t0:0}
+function stampH(x,y,t,L,a){return stamp(x,y,1.2,t,CORAL,L,a)}
+/* ===================== subtítulos ===================== */
+function buildGroups(){let cur=[];const out=[];W.forEach((w,i)=>{const nx=W[i+1];cur.push(i);const txt=cur.map(j=>W[j].text).join(' ');const end=/[.,!?:;…»]$/.test(w.text)&&txt.length>14;if(end||txt.length>34||!nx||nx.b!==w.b||nx.start-w.end>.6){out.push(cur);cur=[]}});GROUPS=out}
+function renderSubs(T){let g=-1;for(let i=0;i<GROUPS.length;i++){if(T>=W[GROUPS[i][0]].start-.08)g=i}
+ const el=$('subs');if(g<0){el.innerHTML='';return}const grp=GROUPS[g];const last=W[grp[grp.length-1]];if(T>last.end+.5){el.innerHTML='';return}
+ el.innerHTML=grp.map(j=>{const w=W[j],on=T>=w.start-.03&&T<=(j+1<W.length?Math.max(w.end,Math.min(W[j+1].start-.03,w.end+.3)):w.end+.4);const p=P(T,w.start-.03,.14);const sc=on?1+.1*Math.sin(p*Math.PI)+.04:1;return `<span class="${on?'on':''}" style="transform:scale(${sc.toFixed(3)})">${w.text}</span>`}).join(' ');
+ const gp=P(T,W[grp[0]].start-.08,.12);el.style.transform=`translateY(${(1-eo(gp))*18}px)`;el.style.opacity=clamp(gp*1.5)}
+/* ============ indicador: 5 medallones + "lo que tienen en común" ============ */
+const MX=[700,830,960,1090,1220],MC=[VIO,CORAL,GOLD,AQUA,'#5b4a8a'],ML=['L','A','D','A','R'],MB=['lea','abigail','debora','ana','rizpa'];let REVEAL=0;
+function renderProg(T){const p=clamp(T/(VOICE+.2));let s=`<rect x="600" y="30" width="760" height="76" rx="38" fill="rgba(35,26,79,.72)" stroke="#fff" stroke-width="4"/>`;
+ s+=`<rect x="660" y="64" width="${620*p}" height="8" rx="4" fill="${GOLD}"/>`;
+ MB.forEach((b,i)=>{const t0=CHT(b)-1.6,on=T>=t0,cur=on&&(i==4||T<CHT(MB[i+1])-1.6)&&T<CHT('cierre')-1.6;const pop=on?back(P(T,t0,.4)):1;const lab=(i==4&&!on)?'?':ML[i];
+  s+=`<g transform="translate(${MX[i]},68) scale(${(cur?1.25:1)*pop})">${cur?`<circle r="44" fill="url(#gGlow)"/>`:''}<circle r="26" fill="${on?MC[i]:'#3a3060'}" stroke="${on?GOLD:'#9a97ad'}" stroke-width="5"/>${TX(0,11,lab,30,'#fff',INK,5)}</g>`});
+ const rv=T>=REVEAL,f=eo(P(T,REVEAL,.6));s+=`<g transform="translate(1300,68)"><circle r="${rv?52*f:0}" fill="url(#gGlow)"/><circle r="26" fill="${rv?GOLD:INK}" stroke="${GOLD}" stroke-width="5"/>${TX(0,11,rv?'✦':'?',30,'#fff',INK,5)}</g>`;
+ if(T>CHT('intro')+20&&T<CHT('lea')-1.6){const q=P(T,CHT('intro')+20,.4)*(1-P(T,CHT('lea')-2,.4));s+=`<g opacity="${q}">${tagS(1300,150,'al final',GOLD,30,1)}</g>`}
+ $('prog').innerHTML=s}
+let lastChip='';function renderChip(T,i,L){const c=SC[i].chip;const el=$('chip');if(!c){el.style.display='none';return}el.style.display='block';if(c!==lastChip){el.innerHTML=c+' · <b>RVR1960, paráfrasis</b>';lastChip=c}
+ const same=SC[i-1]&&SC[i-1].chip==c;el.style.transform=`scale(${same?1:back(P(L,.12,.35))})`;el.style.opacity=same?1:clamp(P(L,.12,.15))}
+/* ===================== partículas ===================== */
+const cv=$('cv'),cx=cv.getContext('2d');
+const DUST=Array.from({length:60},(_,i)=>({x:R(i+500)*1920,y:R(i+600)*1080,s:2+R(i+700)*4,v:12+R(i+800)*35,ph:R(i+900)*6,c:['#fff6d5','#f7b32b','#e3d7ff','#ffd9c7'][i%4]}));
+let BURSTS=[];
+function buildFX(){const bt=[...MB.map(b=>[CHT(b)-1.2,960,420,50]),[A('lea','cuarto').start+.3,960,420,40],[A('abigail','detuvo').start,960,500,30],[A('debora','dudo').start,960,500,30],[A('ana','samuel',2).start,1050,620,40],[A('rizpa','misericordia').start+.5,820,280,40],[REVEAL+.6,960,520,70],[REVEAL,1300,68,24]];
+ BURSTS=bt.map(([t,x,y,n],k)=>({t,x,y,arr:Array.from({length:n},(_,i)=>({a:R(k*100+i)*Math.PI*2,v:380+R(k*100+i+50)*700,s:7+R(k*77+i)*12,c:['#f7b32b','#ff6f59','#8a6fd1','#fff','#8cb369'][i%5],r:R(i+k)*6,st:i%3==0}))}))}
+function drawCv(T){cx.clearRect(0,0,1920,1080);
+ DUST.forEach(p=>{const y=((p.y-T*p.v)%1080+1080)%1080,x=p.x+Math.sin(T*.7+p.ph)*24,tw=.35+.65*Math.abs(Math.sin(T*1.8+p.ph));cx.globalAlpha=.4*tw;cx.fillStyle=p.c;cx.beginPath();cx.arc(x,y,p.s,0,7);cx.fill()});
+ BURSTS.forEach(b=>{const d=T-b.t;if(d<0||d>1.3)return;const al=1-Math.pow(d/1.3,2);b.arr.forEach(q=>{const x=b.x+Math.cos(q.a)*q.v*d*(1-d/2.6),y=b.y+Math.sin(q.a)*q.v*d*(1-d/2.6)+600*d*d;cx.globalAlpha=al;cx.fillStyle=q.c;cx.save();cx.translate(x,y);cx.rotate(q.r+d*8);
+  if(q.st){cx.beginPath();for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,r=i%2?q.s*.4:q.s;cx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}cx.closePath();cx.fill()}else cx.fillRect(-q.s/2,-q.s/3,q.s,q.s*.66);cx.restore()})});cx.globalAlpha=1}
+/* ===================== render ===================== */
+function camT(sc,L){const [s,fx,fy]=kf(L,sc.cam);return {s,tx:960-fx*s,ty:540-fy*s}}
+function sceneIdx(T){let i=0;for(;i<SC.length-1&&T>=SC[i+1].t0;i++);return i}
+function svgOf(sc,L){CURSC=sc;return `<svg width="1920" height="1080" viewBox="0 0 1920 1080">${sc.draw(L)}</svg>`}
+function render(T){
+ const i=sceneIdx(T),sc=SC[i],L=T-sc.t0,D=.4;const Aa=$('LA'),B=$('LB');
+ B.innerHTML=svgOf(sc,L);let c=camT(sc,L);let bT=`translate(${c.tx}px,${c.ty}px) scale(${c.s})`;B.style.clipPath='none';B.style.opacity=1;
+ const inTr=i>0&&L<D&&['wipe','circle','zoom','slide','wipeup'].includes(sc.tr);$('edge').style.display='none';
+ if(inTr){const pv=SC[i-1],pl=T-pv.t0;Aa.style.display='block';Aa.innerHTML=svgOf(pv,pl);CURSC=sc;const pc=camT(pv,pl);let aT=`translate(${pc.tx}px,${pc.ty}px) scale(${pc.s})`;Aa.style.opacity=1;const e=eio(L/D);
+  if(sc.tr=='circle'){B.style.clipPath=`circle(${e*1150}px at 960px 540px)`}
+  else if(sc.tr=='wipe'){B.style.clipPath=`inset(0 0 0 ${(1-e)*100}%)`;const ed=$('edge');ed.style.display='block';ed.style.left=((1-e)*1920-30)+'px'}
+  else if(sc.tr=='wipeup'){B.style.clipPath=`inset(${(1-e)*100}% 0 0 0)`}
+  else if(sc.tr=='slide'){bT=`translateX(${(1-e)*1920}px) `+bT;aT=`translateX(${-e*960}px) `+aT}
+  else if(sc.tr=='zoom'){aT=`translate(960px,540px) scale(${1+e*1.6}) translate(-960px,-540px) `+aT;Aa.style.opacity=1-e;bT=`translate(960px,540px) scale(${.75+.25*e}) translate(-960px,-540px) `+bT;B.style.opacity=clamp(e*1.6)}
+  Aa.style.transform=aT}else{Aa.style.display='none';Aa.innerHTML=''}
+ B.style.transform=bT;
+ $('flash').style.opacity=sc.tr=='flash'&&L<.3?.8*(1-L/.3):0;
+ drawCv(T);renderSubs(T);renderProg(T);renderChip(T,i,L);
+}
+async function init(data){W=data.words;VOICE=data.voice_dur;DUR=data.dur;CHS=data.chapters;buildSC();REVEAL=A('cierre','principio').start;buildGroups();buildFX();await document.fonts.ready;render(0);
+ return {n:W.length,groups:GROUPS.length,DUR,scenes:SC.length,cuts:SC.map(s=>+s.t0.toFixed(1)),reveal:REVEAL}}
+</script></body></html>

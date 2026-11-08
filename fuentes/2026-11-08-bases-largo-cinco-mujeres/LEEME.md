@@ -1,4 +1,5 @@
-# 2026-11-08-bases-largo-cinco-mujeres (EN PAUSA)
-- Guion verificado y voz Sam Adam generada (flow ElevenLabs xcHVGi1e6OSUDth5pCDy, 7 nodos TTS + 7 de transcripción; ids en segmentos.json). NO regenerar la voz.
-- Bloqueo (06/11/2026 22:00): el entorno de producción no puede descargar de elevenlabsusercontent.com (política de red), así que no hubo audio ni tiempos locales; el video no se renderizó.
-- Para continuar: permitir el dominio elevenlabsusercontent.com en la configuración de red, o que Karin grabe/descargue los audios y los suba a Drive como 2026-11-08-bases-largo.
+# 2026-11-08-bases-largo-cinco-mujeres (TERMINADO 07/11/2026 23:10)
+- Voz: Sam Adam, 7 bloques del flow ElevenLabs xcHVGi1e6OSUDth5pCDy (NO se regeneró; 0 créditos extra). Enlaces y tiempos por palabra obtenidos con 7 transcripciones nuevas (0 créditos); audio bajado con `descargas/2026-11-08-bases-largo.json` → workflow `descargar.yml` → `insumos-voz/2026-11-08-bases-largo/`.
+- `voz-final.mp3`: bloques unidos con 1,6 s de pausa antes de cada capítulo + EQ/compresión/-16 LUFS. `words.json`/`data.json`: tiempos en la voz final.
+- `video.html` (1920×1080, ~100 escenas ancladas a palabras, tarjetas de capítulo, indicador de 5 medallones + "✦" que se revela en "Dios ve a quien el mundo no mira") · `render.py full A B` (24 fps, 4 partes) · `musica.py` (-22 dB, cambia por capítulo) · `miniatura.py` → `miniatura.jpg`.
+- Mezcla hecha localmente con el mismo filtro de `mezclar.yml` (no hay job: el mp4 de 79 MB no se guarda en el repo). Video final: release `2026-11-08-bases-largo-cinco-mujeres`.
