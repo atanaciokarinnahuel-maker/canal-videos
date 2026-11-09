@@ -1,6 +1,0 @@
-id=2026-11-08-tech-anticitera-remotion
-voz_seg=52.192653
-final_seg=53.600000
-[Parsed_volumedetect_0 @ 0x555e66b3d900] mean_volume: -15.4 dB
-[Parsed_volumedetect_0 @ 0x555e66b3d900] max_volume: -1.4 dB
-youtube=sin_bloque

@@ -1,6 +1,0 @@
-id=2026-11-04-bases-deudas-gacela
-voz_seg=57.338776
-final_seg=58.800000
-[Parsed_volumedetect_0 @ 0x558c671ea900] mean_volume: -15.6 dB
-[Parsed_volumedetect_0 @ 0x558c671ea900] max_volume: -1.4 dB
-youtube=sin_bloque

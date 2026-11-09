@@ -1,6 +1,0 @@
-id=2026-11-03-tech-google-lens
-voz_seg=46.367347
-final_seg=47.700000
-[Parsed_volumedetect_0 @ 0x55ac9f7b1740] mean_volume: -15.3 dB
-[Parsed_volumedetect_0 @ 0x55ac9f7b1740] max_volume: -1.5 dB
-make_webhook=sin_secreto

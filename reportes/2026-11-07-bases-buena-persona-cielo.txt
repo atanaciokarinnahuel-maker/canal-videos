@@ -1,6 +1,0 @@
-id=2026-11-07-bases-buena-persona-cielo
-voz_seg=57.573878
-final_seg=58.900000
-[Parsed_volumedetect_0 @ 0x564a3bf7e780] mean_volume: -15.4 dB
-[Parsed_volumedetect_0 @ 0x564a3bf7e780] max_volume: -1.4 dB
-youtube=sin_bloque

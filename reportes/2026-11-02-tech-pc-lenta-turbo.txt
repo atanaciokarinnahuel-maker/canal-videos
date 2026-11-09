@@ -1,6 +1,0 @@
-id=2026-11-02-tech-pc-lenta-turbo
-voz_seg=44.355918
-final_seg=45.800000
-[Parsed_volumedetect_0 @ 0x55dfd243b1c0] mean_volume: -15.3 dB
-[Parsed_volumedetect_0 @ 0x55dfd243b1c0] max_volume: -1.4 dB
-youtube=sin_bloque

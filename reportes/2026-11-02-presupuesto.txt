@@ -1,5 +1,0 @@
-id=2026-11-02-presupuesto
-voz_seg=59.794286
-final_seg=61.133333
-[Parsed_volumedetect_0 @ 0x560133afa600] mean_volume: -16.0 dB
-[Parsed_volumedetect_0 @ 0x560133afa600] max_volume: -1.5 dB

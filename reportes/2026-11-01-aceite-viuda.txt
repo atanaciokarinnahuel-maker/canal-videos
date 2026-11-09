@@ -1,5 +1,0 @@
-id=2026-11-01-aceite-viuda
-voz_seg=52.767347
-final_seg=54.100000
-[Parsed_volumedetect_0 @ 0x556f9e1b2140] mean_volume: -15.3 dB
-[Parsed_volumedetect_0 @ 0x556f9e1b2140] max_volume: -1.5 dB

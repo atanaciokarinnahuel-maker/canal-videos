@@ -1,6 +1,0 @@
-id=2026-11-06-tech-contrasenas
-voz_seg=56.346122
-final_seg=57.700000
-[Parsed_volumedetect_0 @ 0x557ec22b8f00] mean_volume: -15.2 dB
-[Parsed_volumedetect_0 @ 0x557ec22b8f00] max_volume: -1.4 dB
-make_webhook=sin_secreto

@@ -1,5 +1,0 @@
-id=2026-10-31-diezmo-ofrendas
-voz_seg=59.559184
-final_seg=60.900000
-[Parsed_volumedetect_0 @ 0x562d5ab1de00] mean_volume: -15.5 dB
-[Parsed_volumedetect_0 @ 0x562d5ab1de00] max_volume: -0.9 dB
