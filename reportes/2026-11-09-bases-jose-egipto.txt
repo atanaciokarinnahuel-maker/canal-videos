@@ -1,0 +1,6 @@
+id=2026-11-09-bases-jose-egipto
+voz_seg=60.786939
+final_seg=62.100000
+[Parsed_volumedetect_0 @ 0x555a9028a000] mean_volume: -15.1 dB
+[Parsed_volumedetect_0 @ 0x555a9028a000] max_volume: -1.5 dB
+youtube=sin_bloque
