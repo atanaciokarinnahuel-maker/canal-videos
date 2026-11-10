@@ -25,5 +25,8 @@
     "remotion": "^4.0.542",
     "three": "^0.169.0",
     "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15"
   }
 }

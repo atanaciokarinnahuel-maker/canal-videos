@@ -1,19 +1,13 @@
 import React from 'react';
 import {Composition} from 'remotion';
-import {Previz} from './Previz';
-import {VeloRasgado} from './Video';
-import {DURATION_S, FPS, HEIGHT, WIDTH} from './timeline';
+import {Largo} from './Largo';
+import {SHOTS} from './shots';
+import {FPS, FRAMES, HEIGHT, WIDTH} from './tl';
 
 export const Root: React.FC = () => (
   <>
-  <Composition id="Previz" component={Previz} durationInFrames={3} fps={FPS} width={1920} height={1080} />
-  <Composition
-    id="VeloRasgado"
-    component={VeloRasgado}
-    durationInFrames={DURATION_S * FPS}
-    fps={FPS}
-    width={WIDTH}
-    height={HEIGHT}
-  />
+    <Composition id="Largo" component={Largo} durationInFrames={FRAMES} fps={FPS} width={WIDTH} height={HEIGHT} />
+    {/* Hoja de control: un frame por plano */}
+    <Composition id="QA" component={Largo} durationInFrames={SHOTS.length} fps={FPS} width={WIDTH} height={HEIGHT} defaultProps={{qa: true, qaAt: 0.55}} />
   </>
 );
