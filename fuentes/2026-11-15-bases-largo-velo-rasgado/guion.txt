@@ -1,10 +1,10 @@
 Largo Bases Bíblicas · pedido directo de Karin (10 nov 2026) · "El velo se rasgó de arriba abajo: el detalle que lo cambia todo"
-ESTADO: BORRADOR — pendiente de aprobación de Karin. Voz todavía NO generada.
-Formato: 16:9, 4–5 min (~700 palabras). Voz prevista: Sam Adam (18GZPpJvaVG53Nt3H52N), eleven_v4, pausas recortadas y tempo ×1,1.
+ESTADO: guion ampliado y aprobado por Karin (10 nov 2026): "más de 5 minutos, para sacar varios Shorts"; agrega acceso directo a Dios, Redentor y Cordero que tomó tu lugar.
+Formato: 16:9, más de 5 min (~920 palabras). La voz se genera por bloques (bloques/N-*.txt) para poder cortar Shorts. Voz prevista: Sam Adam (18GZPpJvaVG53Nt3H52N), eleven_v4, pausas recortadas y tempo ×1,1.
 Estilo: 3D "oro mate y obsidiana" (Remotion + React Three Fiber), el mismo modelo visual del primer corte vertical.
-Indicador: menorá de 7 llamas; cada capítulo enciende una. La séptima se enciende en la revelación ("¿qué hay hoy del otro lado?" → TRONO DE LA GRACIA), ~80 % del video.
+Indicador: menorá de 7 llamas; cada capítulo enciende una. La séptima se enciende en la revelación ("¿qué hay hoy del otro lado?" → TRONO DE LA GRACIA), ~78 % del video.
 Interruptor de atención: capítulo 4 ("Pero espera. Aquí hay un problema"), ~40 %.
-Fuentes (RVR1960, verificadas): Éx 25:22; 26:31-35 · Gn 3:24 · Is 59:2 · Lv 16:2, 4, 6, 12-15, 34 · Heb 9:7 · Heb 10:1-4, 11-12 · Mt 27:45-46, 50-51 · Mr 15:38 · Jn 19:30 · Heb 9:11-12 · Heb 10:19-20 · Lc 22:19 · Heb 4:16 · 1 Ti 2:5 · Jn 14:6.
+Fuentes (RVR1960, verificadas): Éx 25:31-37; 26:31-35; 30:6; 40:29 · Gn 3:24 · Is 59:2 · Lv 16:2, 4, 6, 12-15, 34 · Heb 9:7 · Heb 10:1-4, 11-12 · Mt 27:45-46, 50-51 · Mr 15:38 · Jn 19:30 · Heb 9:11-12 · Heb 10:19-20 · Lc 22:19 · Heb 4:16 · 1 Ti 2:5 · Jn 14:6 · Lv 16:20-22 · Heb 9:8 · Jn 1:29 · Is 53:5 · 1 P 1:18-19; 3:18 · Heb 4:15 · Heb 13:12 · Jn 4:21-24 · Heb 7:25.
 Decisiones de Karin: sin el dato del grosor del velo (tradición, no Biblia). No se dice "viernes" ni medidas del velo (no verificables en el texto).
 Inferencias rotuladas como tales en el guion: "un hombre habría empezado desde abajo" (argumento, no cita).
 
@@ -12,28 +12,26 @@ Inferencias rotuladas como tales en el guion: "un hombre habría empezado desde 
 Cuando Jesús murió, algo se rompió dentro del templo de Jerusalén. Y Mateo anota un detalle de tres palabras que casi nadie mira… pero que lo cambia todo. Quédate hasta el final: cuando se encienda la séptima lámpara, vas a ver qué hay hoy del otro lado.
 
 [1 · EL VELO]
-Primero, entra conmigo. La casa de Dios tenía tres espacios: el atrio, el Lugar Santo… y al fondo, el Lugar Santísimo. Allí estaba el arca del pacto. Allí, dijo Dios, me encontraré contigo. Y entre ese lugar y todo lo demás colgaba una cortina: el velo. Azul, púrpura y carmesí. Una obra de arte… que funcionaba como un muro.
+Primero, entra conmigo. La casa de Dios tenía tres espacios. Afuera, el atrio, con el altar de los sacrificios. Adentro, el Lugar Santo, donde ardía un candelabro de oro con siete lámparas. Y al fondo, el Lugar Santísimo. Allí estaba el arca del pacto. Allí, dijo Dios, me encontraré contigo. Pero entre ese lugar y todo lo demás colgaba una cortina: el velo. Azul, púrpura y carmesí. Una obra de arte… que funcionaba como un muro.
 
 [2 · LOS QUERUBINES]
-Mira el bordado: querubines. ¿Dónde aparecieron antes? En Génesis tres. Cuando el hombre pecó, Dios puso querubines para guardar el camino al árbol de la vida. El velo repetía el mensaje del Edén: hasta aquí llegas. No porque Dios no quisiera estar cerca… sino porque el pecado hace separación entre el hombre y un Dios santo.
+Ahora mira el bordado: querubines. ¿Dónde habían aparecido antes? En Génesis tres. Cuando el hombre pecó y fue echado del huerto, Dios puso querubines y una espada encendida para guardar el camino al árbol de la vida. El velo repetía el mensaje del Edén: hasta aquí llegas. Y no porque Dios no quisiera estar cerca. Isaías lo explica: son nuestros pecados los que hacen separación entre nosotros y un Dios santo. El problema nunca fue la cortina. El problema éramos nosotros.
 
 [3 · UN HOMBRE, UN DÍA, CON SANGRE]
-Entonces, ¿nadie podía pasar? Uno solo: el sumo sacerdote. Un solo día al año: el Día de la Expiación. Y Dios le advirtió a Aarón: no entres en cualquier momento, para que no mueras. Ese día se lavaba, se vestía de lino, y entraba con una nube de incienso… y con sangre. Sangre por sus propios pecados. Y sangre por los del pueblo. Nunca sin sangre. Y cuando salía… el velo se cerraba otra vez.
+Entonces, ¿nadie podía pasar? Uno solo: el sumo sacerdote. Y un solo día al año: el Día de la Expiación. Dios le advirtió a Aarón: no entres en cualquier momento, para que no mueras. Ese día se lavaba, se vestía de lino, y cruzaba el velo envuelto en una nube de incienso… y con sangre. Sangre por sus propios pecados. Y sangre por los del pueblo. Nunca sin sangre. Afuera, sobre la cabeza de un macho cabrío vivo, confesaba los pecados de todos… y lo enviaban lejos, al desierto. Un sustituto, cargando la culpa de otros. Y cuando el sacerdote salía… el velo se cerraba otra vez.
 
 [4 · EL PROBLEMA]
-Pero espera. Aquí hay un problema. Si ese sacrificio funcionaba… ¿por qué había que repetirlo cada año? Hebreos responde sin rodeos: porque la sangre de los toros y de los machos cabríos no puede quitar los pecados. Cada año, el mismo recordatorio: el pecado sigue ahí. El velo sigue ahí. Todo era una sombra. El anuncio de algo mejor. De Alguien mejor.
+Pero espera. Aquí hay un problema. Si ese sacrificio funcionaba… ¿por qué había que repetirlo cada año? Hebreos responde sin rodeos: porque la sangre de los toros y de los machos cabríos no puede quitar los pecados. Cada año, el mismo recordatorio: el pecado sigue ahí. El velo sigue ahí. Y el Espíritu Santo estaba enseñando algo con eso: que el camino al Lugar Santísimo todavía no se había abierto. Todo era una sombra. El anuncio de algo mejor. De Alguien mejor.
 
-[5 · LA HORA NOVENA]
-Y ese Alguien llegó. Jerusalén. Fuera de la ciudad, una cruz. Desde el mediodía, tinieblas sobre toda la tierra. Cerca de las tres de la tarde, Jesús clama a gran voz. Juan registra lo que dijo: consumado es. Y entrega el espíritu. En ese mismo instante, dentro del templo… el velo se rasga en dos.
+[5 · DE ARRIBA ABAJO]
+Y ese Alguien llegó. Juan el Bautista lo vio venir y dijo: he aquí el Cordero de Dios, que quita el pecado del mundo. Tiempo después: Jerusalén. Fuera de la ciudad, una cruz. Desde el mediodía, tinieblas sobre toda la tierra. Cerca de las tres de la tarde, Jesús clama a gran voz. Juan registra lo que dijo: consumado es. Y entrega el espíritu. En ese mismo instante, dentro del templo… el velo se rasga en dos. Y ahora sí, las tres palabras de Mateo: de arriba abajo. Piénsalo. Un hombre habría empezado desde abajo, desde donde alcanzan sus manos. Pero empezó arriba, donde ningún hombre llega. Nadie escaló hasta Dios. Nadie pagó su entrada. Lo rasgó Dios. No fue el hombre subiendo hacia Dios: fue Dios bajando hacia el hombre.
 
-[6 · DE ARRIBA ABAJO]
-Y ahora sí, las tres palabras de Mateo: de arriba abajo. Piénsalo. Un hombre habría empezado desde abajo, desde donde alcanzan sus manos. Pero empezó arriba, donde ningún hombre llega. Nadie escaló hasta Dios. Nadie pagó su entrada. Lo rasgó Dios. No fue el hombre subiendo hacia Dios: fue Dios bajando hacia el hombre.
-¿Y por qué justo en ese momento? Porque el verdadero Sumo Sacerdote acababa de ofrecer el sacrificio. No con sangre ajena: con su propia sangre. No cada año: una vez para siempre. Los sacerdotes nunca terminaban. Cristo ofreció un solo sacrificio… y se sentó.
-Y Hebreos dice algo asombroso: el camino nuevo se abrió a través del velo, esto es, de su carne. El velo se rasgó… porque su cuerpo fue entregado por ti.
+[6 · EL CORDERO QUE TOMÓ TU LUGAR]
+¿Y por qué se rasgó justo en ese momento? Porque el sacrificio verdadero acababa de ofrecerse. Durante siglos murieron corderos que no podían salvar a nadie. Ahora moría el Cordero perfecto: sin mancha, sin pecado. Y murió en un lugar que no era suyo. Era el tuyo. Era el mío. Isaías lo anunció siglos antes: herido fue por nuestras rebeliones; el castigo de nuestra paz fue sobre él. Y Pedro lo resume así: Cristo padeció una sola vez por los pecados, el justo por los injustos, para llevarnos a Dios. ¿Lo oíste? Para llevarnos a Dios. Por eso no entró con sangre ajena, sino con su propia sangre. No cada año: una vez para siempre. Los sacerdotes nunca terminaban. Cristo ofreció un solo sacrificio… y se sentó. Y Hebreos dice algo asombroso: el camino nuevo se abrió a través del velo, esto es, de su carne. El velo se rasgó… porque su cuerpo fue entregado por ti.
 
 [7 · EL OTRO LADO]
-Entonces… ¿qué hay hoy del otro lado? Ya no un lugar prohibido. Un trono. Un trono de gracia. Hebreos cuatro dieciséis: acerquémonos confiadamente al trono de la gracia, para alcanzar misericordia. Por eso ya no necesitas otro sacrificio. Ni otro sacerdote que entre por ti. Hay un solo mediador entre Dios y los hombres: Jesucristo.
+Entonces… ¿qué hay hoy del otro lado? Ya no un lugar prohibido. Un trono. Un trono de gracia. Hebreos cuatro dieciséis: acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia. ¿Entiendes lo que eso significa? Ya no tienes que ir a un lugar especial para encontrarte con Dios. Ya no tienes que buscar a alguien que entre por ti. Tú mismo puedes hablar con Dios. Hoy. Donde estés. Por medio de Jesucristo: tu Redentor, el Cordero perfecto que tomó tu lugar… el lugar que tú merecías. Tus hermanos pueden orar contigo. Pero nadie más tiene que hacer de puente. Porque hay un solo mediador entre Dios y los hombres: Jesucristo hombre. Y Él vive siempre para interceder por ti.
 
 [CIERRE]
-Pero mira bien: el velo está abierto… y aun así, hay que entrar. Y se entra de una sola manera. No por tus obras. No por tus méritos. Por su sangre. Jesús lo dijo: nadie viene al Padre, sino por mí. Así que no te quedes afuera, mirando un velo que ya no existe. Acércate. Hoy.
-Y dime: ¿te acercas a Dios con confianza… o todavía con miedo? Te leo en los comentarios. Y suscríbete a Bases Bíblicas: cada domingo, otra historia a la luz de la Palabra.
+Pero mira bien: el velo está abierto… y aun así, hay que entrar. Y se entra de una sola manera. No por tus obras. No por tus méritos. Por su sangre. Jesús lo dijo: yo soy el camino; nadie viene al Padre, sino por mí. Así que no te quedes afuera, mirando un velo que ya no existe. Cree en Él. Acércate. Hoy. Y dime: ¿le hablas a Dios con confianza… o todavía con miedo? Te leo en los comentarios. Y suscríbete a Bases Bíblicas, para más historias a la luz de la Palabra.
+
