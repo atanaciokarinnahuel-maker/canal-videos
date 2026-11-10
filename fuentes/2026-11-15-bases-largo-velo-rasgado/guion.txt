@@ -1,5 +1,5 @@
 Largo Bases Bíblicas · pedido directo de Karin (10 nov 2026) · "El velo se rasgó de arriba abajo: el detalle que lo cambia todo"
-ESTADO: guion ampliado y aprobado por Karin (10 nov 2026): "más de 5 minutos, para sacar varios Shorts"; agrega acceso directo a Dios, Redentor y Cordero que tomó tu lugar.
+ESTADO: TERMINADO y enviado a Karin (10 nov 2026). Voz: 9 bloques, 5.072 créditos, 372 s en crudo → 5:48 de video. Guion ampliado y aprobado por Karin: "más de 5 minutos, para sacar varios Shorts"; agrega acceso directo a Dios, Redentor y Cordero que tomó tu lugar.
 Formato: 16:9, más de 5 min (~920 palabras). La voz se genera por bloques (bloques/N-*.txt) para poder cortar Shorts. Voz prevista: Sam Adam (18GZPpJvaVG53Nt3H52N), eleven_v4, pausas recortadas y tempo ×1,1.
 Estilo: 3D "oro mate y obsidiana" (Remotion + React Three Fiber), el mismo modelo visual del primer corte vertical.
 Indicador: menorá de 7 llamas; cada capítulo enciende una. La séptima se enciende en la revelación ("¿qué hay hoy del otro lado?" → TRONO DE LA GRACIA), ~78 % del video.
