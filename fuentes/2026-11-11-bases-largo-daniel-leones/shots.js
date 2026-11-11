@@ -126,7 +126,7 @@ const PLAN={
  {s:5,kind:'sky',p:0},
  {s:7,a:'L_dan',z:.1,fx:{dark:.25,rays:'L',rs:.25,dust:1}},
  {s:8,a:'L_shaftEnd',b:'L_hole',fx:{dark:.2,rays:'L',rs:.3,dust:1}},
- {s:9,a:'L_wide',z:.06,fx:{dark:.15,glow:[.5,.40,.26,.9],dust:1},tag:'Daniel 6:22'},
+ {s:9,a:'L_wide',z:.06,fx:{dark:.15,glow:[.5,.40,.2,.5],dust:1},tag:'Daniel 6:22'},
  {s:10,a:'L_lionL',z:.08},
  {s:11,a:'L_dan2',z:.08,fx:{glow:[.5,.5,.18,.35]}}],
 9:[{s:0,kind:'sky',p:[.1,1]},
