@@ -26,7 +26,7 @@ const GROUPS: Group[] = (() => {
 })();
 
 /** Subtítulos palabra por palabra con la palabra activa resaltada. */
-export const Captions: React.FC<{t: number; bottom?: number; size?: number}> = ({t, bottom = 78, size = 84}) => {
+export const Captions: React.FC<{t: number; bottom?: number; size?: number; maxWidth?: number}> = ({t, bottom = 78, size = 84, maxWidth = 1560}) => {
   let g: Group | null = null;
   for (const x of GROUPS) if (x.start - 0.06 <= t) g = x;
   if (!g || t > g.end + 0.55) return null;
@@ -38,7 +38,7 @@ export const Captions: React.FC<{t: number; bottom?: number; size?: number}> = (
   const inn = Math.min(1, (t - (g.start - 0.06)) / 0.12);
   return (
     <AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: bottom}}>
-      <div style={{display: 'flex', gap: 20, flexWrap: 'wrap', justifyContent: 'center', maxWidth: 1560, opacity: inn, transform: `translateY(${(1 - inn) * 14}px)`}}>
+      <div style={{display: 'flex', gap: 20, flexWrap: 'wrap', justifyContent: 'center', maxWidth, opacity: inn, transform: `translateY(${(1 - inn) * 14}px)`}}>
         {words.map((w, i) => {
           const on = i === active;
           return (
