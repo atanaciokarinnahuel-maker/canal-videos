@@ -1,0 +1,22 @@
+name: Analizar video de referencia (fotogramas y cortes)
+on:
+  push:
+    paths: ['analisis/pedidos/*.json']
+permissions:
+  contents: write
+jobs:
+  analizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg jq fonts-dejavu-core
+      - name: Analizar
+        run: |
+          for pedido in $(git diff --name-only HEAD~1 HEAD -- 'analisis/pedidos/*.json'); do
+            [ -f "$pedido" ] || continue
+            bash scripts/analizar_video.sh "$pedido"
+          done
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add analisis && git commit -m "Análisis de video [skip ci]" && git push || true
