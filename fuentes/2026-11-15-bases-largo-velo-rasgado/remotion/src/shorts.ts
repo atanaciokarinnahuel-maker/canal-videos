@@ -1,7 +1,7 @@
 import {B, BLOCKS, at} from './tl';
 
 export type ShortDef = {id: string; n: number; t0: number; t1: number; hook: string};
-const TAIL = 1.9; // cola con la llamada a seguir
+const TAIL = 3.2; // cola: manda a ver el video completo
 export const SHORT_TAIL = TAIL;
 const blk = (n: number) => [B(n) - 0.15, BLOCKS[n].end + 0.35] as const;
 

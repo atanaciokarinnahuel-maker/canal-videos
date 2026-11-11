@@ -1,18 +1,21 @@
 # El velo rasgado — 8 Shorts (datos de publicación)
 
 Serie de 8 Shorts verticales (1080×1920, 24 fps, voz Sam Adam, −14 LUFS) sacados del largo «El velo se rasgó de arriba abajo».
-Cada uno lleva arriba «EL VELO RASGADO · N DE 8» y termina con «Sigue en la parte N+1 · Suscríbete» (el 8 cierra con la tarjeta del canal).
-Orden sugerido: uno por día, del 1 al 8. El largo se puede enlazar como video relacionado en cada Short.
+Cada uno lleva arriba «EL VELO RASGADO · N DE 8» y termina con una tarjeta de 3 s: «Esto es solo una parte · Mira el video completo · «El velo se rasgó de arriba abajo» · En el canal Bases Bíblicas».
+TODOS apuntan al video principal. Al subir cada Short: en YouTube Studio → Detalles → «Video relacionado», elegir el largo (así aparece el enlace tocable debajo del Short). Subir primero el largo.
+Agregar al final de CADA descripción: ▶ Video completo: «El velo se rasgó de arriba abajo: el detalle que lo cambia todo» (enlace del largo).
+Agregar al final de CADA comentario fijado: 🎬 El video completo está en el canal: (enlace del largo).
+Orden sugerido: uno por día, del 1 al 8.
 Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús #BasesBíblicas #EstudioBíblico #Shorts #Reels
 
 ---
 
 ## 1 · short-1-el-velo.mp4 (31 s)
 **Título:** La cortina del templo que funcionaba como un muro
-**Descripción:** La casa de Dios tenía tres espacios: el atrio, el Lugar Santo y el Lugar Santísimo. Y entre la presencia de Dios y todo lo demás colgaba una cortina: el velo. Parte 1 de 8 de «El velo rasgado».
+**Descripción:** La casa de Dios tenía tres espacios: el atrio, el Lugar Santo y el Lugar Santísimo. Y entre la presencia de Dios y todo lo demás colgaba una cortina: el velo. Parte 1 de 8. ▶ Mira el video completo en el canal.
 📖 Éxodo 26:31-35 · Éxodo 30:6
 **Hashtags:** #Tabernáculo #ElVelo #Éxodo #LugarSantísimo
-**Comentario para fijar:** ¿Sabías que el tabernáculo tenía tres espacios? Mañana: por qué el velo tenía querubines bordados 👇
+**Comentario para fijar:** ¿Sabías que el tabernáculo tenía tres espacios? Lo explico completo en el video largo del canal 👇
 **3 preguntas para responder**
 1. «¿Qué había en el Lugar Santo?» — El candelabro de siete lámparas, la mesa de los panes y el altar del incienso (Éxodo 26:35; 30:1-6).
 2. «¿Qué había dentro del arca?» — Las tablas del pacto; Hebreos 9:4 menciona también la urna del maná y la vara de Aarón.
@@ -20,7 +23,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 2 · short-2-los-querubines.mp4 (33 s)
 **Título:** ¿Por qué el velo del templo tenía querubines?
-**Descripción:** Los querubines bordados en el velo ya habían aparecido antes: en Génesis 3, guardando el camino al árbol de la vida. El velo repetía el mensaje del Edén: hasta aquí llegas. Parte 2 de 8.
+**Descripción:** Los querubines bordados en el velo ya habían aparecido antes: en Génesis 3, guardando el camino al árbol de la vida. El velo repetía el mensaje del Edén: hasta aquí llegas. Parte 2 de 8. ▶ Mira el video completo en el canal.
 📖 Éxodo 26:31 · Génesis 3:24 · Isaías 59:2
 **Hashtags:** #Querubines #Génesis #Edén #Pecado
 **Comentario para fijar:** El problema nunca fue la cortina. ¿Qué es lo que de verdad nos separa de Dios? 👇 (Isaías 59:2)
@@ -31,7 +34,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 3 · short-3-un-hombre-un-dia.mp4 (40 s)
 **Título:** Solo un hombre podía cruzar el velo, y un solo día al año
-**Descripción:** El sumo sacerdote entraba al Lugar Santísimo una vez al año, en el Día de la Expiación, con una nube de incienso… y nunca sin sangre. Afuera, un macho cabrío cargaba la culpa de todos. Parte 3 de 8.
+**Descripción:** El sumo sacerdote entraba al Lugar Santísimo una vez al año, en el Día de la Expiación, con una nube de incienso… y nunca sin sangre. Afuera, un macho cabrío cargaba la culpa de todos. Parte 3 de 8. ▶ Mira el video completo en el canal.
 📖 Levítico 16 · Hebreos 9:7
 **Hashtags:** #DíaDeLaExpiación #Levítico #SumoSacerdote #Hebreos
 **Comentario para fijar:** «Nunca sin sangre». ¿Por qué crees que Dios lo estableció así? 👇 (Hebreos 9:22)
@@ -42,7 +45,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 4 · short-4-el-problema.mp4 (34 s)
 **Título:** El sacrificio que había que repetir cada año
-**Descripción:** Si el sacrificio del Día de la Expiación funcionaba, ¿por qué había que repetirlo cada año? Hebreos responde sin rodeos: la sangre de los animales no puede quitar los pecados. Todo era una sombra de Alguien mejor. Parte 4 de 8.
+**Descripción:** Si el sacrificio del Día de la Expiación funcionaba, ¿por qué había que repetirlo cada año? Hebreos responde sin rodeos: la sangre de los animales no puede quitar los pecados. Todo era una sombra de Alguien mejor. Parte 4 de 8. ▶ Mira el video completo en el canal.
 📖 Hebreos 10:1-4 · Hebreos 9:8
 **Hashtags:** #Hebreos10 #Sacrificio #Sombra #Cristo
 **Comentario para fijar:** Todo era una sombra… ¿de quién? Te leo 👇
@@ -53,7 +56,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 5 · short-5-de-arriba-abajo.mp4 (36 s)
 **Título:** ¿Quién rasgó el velo del templo? Mira hacia dónde se rompió
-**Descripción:** Cuando Jesús entregó el espíritu, el velo del templo se rasgó en dos. Mateo agrega tres palabras: de arriba abajo. No fue el hombre subiendo hacia Dios: fue Dios bajando hacia el hombre. Parte 5 de 8.
+**Descripción:** Cuando Jesús entregó el espíritu, el velo del templo se rasgó en dos. Mateo agrega tres palabras: de arriba abajo. No fue el hombre subiendo hacia Dios: fue Dios bajando hacia el hombre. Parte 5 de 8. ▶ Mira el video completo en el canal.
 📖 Mateo 27:50-51 · Juan 19:30
 **Hashtags:** #ElVeloRasgado #Mateo27 #ConsumadoEs #Evangelio
 **Comentario para fijar:** «De arriba abajo». ¿Lo habías notado antes? 👇 (Mateo 27:51)
@@ -64,7 +67,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 6 · short-6-el-cordero.mp4 (38 s)
 **Título:** El Cordero perfecto que tomó tu lugar
-**Descripción:** Durante siglos murieron corderos que no podían salvar a nadie. En la cruz murió el Cordero perfecto, en un lugar que no era suyo: era el tuyo. El justo por los injustos, para llevarnos a Dios. Parte 6 de 8.
+**Descripción:** Durante siglos murieron corderos que no podían salvar a nadie. En la cruz murió el Cordero perfecto, en un lugar que no era suyo: era el tuyo. El justo por los injustos, para llevarnos a Dios. Parte 6 de 8. ▶ Mira el video completo en el canal.
 📖 Isaías 53:5 · 1 Pedro 1:19; 3:18 · Juan 1:29
 **Hashtags:** #CorderoDeDios #Isaías53 #Sustitución #Gracia
 **Comentario para fijar:** «El justo por los injustos, para llevarnos a Dios». ¿Qué significa para ti? 👇 (1 Pedro 3:18)
@@ -75,7 +78,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 7 · short-7-el-otro-lado.mp4 (48 s)
 **Título:** ¿Qué hay hoy del otro lado del velo?
-**Descripción:** Ya no un lugar prohibido: un trono de gracia. Ya no tienes que ir a un lugar especial ni buscar a alguien que entre por ti. Puedes hablar con Dios tú mismo, por medio de Jesucristo, el único mediador. Parte 7 de 8.
+**Descripción:** Ya no un lugar prohibido: un trono de gracia. Ya no tienes que ir a un lugar especial ni buscar a alguien que entre por ti. Puedes hablar con Dios tú mismo, por medio de Jesucristo, el único mediador. Parte 7 de 8. ▶ Mira el video completo en el canal.
 📖 Hebreos 4:16 · 1 Timoteo 2:5 · Hebreos 7:25 · Juan 4:21-24
 **Hashtags:** #TronoDeLaGracia #Oración #UnSoloMediador #Hebreos4
 **Comentario para fijar:** ¿Le hablas a Dios directamente? Cuéntame 👇 «Acerquémonos, pues, confiadamente al trono de la gracia» (Hebreos 4:16)
@@ -86,7 +89,7 @@ Hashtags comunes (sumar a los propios de cada uno hasta 8–10): #Biblia #Jesús
 
 ## 8 · short-8-hay-que-entrar.mp4 (40 s)
 **Título:** El velo está abierto… pero hay que entrar
-**Descripción:** El velo está abierto, y aun así hay que entrar. Y se entra de una sola manera: no por tus obras ni por tus méritos, sino por su sangre. «Yo soy el camino… nadie viene al Padre, sino por mí». Parte 8 de 8.
+**Descripción:** El velo está abierto, y aun así hay que entrar. Y se entra de una sola manera: no por tus obras ni por tus méritos, sino por su sangre. «Yo soy el camino… nadie viene al Padre, sino por mí». Parte 8 de 8. ▶ Mira el video completo en el canal.
 📖 Juan 14:6 · Efesios 2:8-9 · Hebreos 10:19-22
 **Hashtags:** #Salvación #Juan146 #Fe #Evangelio
 **Comentario para fijar:** ¿Le hablas a Dios con confianza… o todavía con miedo? Te leo 👇
