@@ -7,3 +7,4 @@ Pedido directo de Karin (11 nov 2026). Documental largo de Bases Bíblicas, 14:0
 - **Gráficos propios:** mapa del imperio (ruta al exilio, 120 sátrapas, línea Babilonia→Jerusalén, decreto), palacio de noche/amanecer, tarjetas de capítulo, versículos y listas, subtítulos completos.
 - **Archivos:** `guion.json` → `align.py` (frases.json) → `build.py` (voz final + data.json) → `video.html` + `shots.js` + `mapa.js` → `render.py full A B` (4 partes) → `musica.py` → `mezclar_local.sh`. Miniatura: `miniatura.py`.
 - **Entrega:** el mp4 final pesa más de 100 MB y no se guarda en el repo; se envió a Karin por el chat. Textos en `paquetes/2026-11-11-bases-largo-daniel-leones.json`.
+- **Final:** 14:00,3 · 1920×1080 · 24 fps · H.264 ≈1,9 Mb/s · AAC estéreo 192 kb/s · −15,1 LUFS · 219 MB. Música en `musica.py` (colchón −21 dB, baja sola bajo la voz).
