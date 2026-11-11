@@ -22,3 +22,25 @@ Ya usados (no repetir): Ciudad de los Césares (largo 4 nov), Roanoke (largo 7 n
 Notas:
 - Los 4 aptos para largo (#2, #3, #5, #6) dan 8–12 min con material de sobra. El #3 y el #5 encajan también con el público de Bases Bíblicas.
 - El formato "lista de N misterios" funciona en español (outliers de 14x a 112x en vidIQ), pero los canales que lo hacen con IA masiva (marcados "AI-labeled") son justo lo que YouTube no monetiza: la voz y las fuentes de Karin son la ventaja.
+
+## Tanda 2026-11-11 (pedido directo de Karin, enlazada al largo de Daniel en Bases Bíblicas)
+
+Idea central: usar HistorIAs para contar el **contexto histórico** del mundo de Daniel (Babilonia y Persia) y mandar público de un canal al otro.
+Estado de verificación: el #1 se verificó con búsqueda web el 11/11/2026; los #2–#5 son datos conocidos pero **hay que verificarlos al escribir el guion**.
+
+| # | Bloque | Título-gancho | Ángulo (HECHO / HIPÓTESIS) | Gancho 2 s |
+|---|---|---|---|---|
+| 1 | Arqueología bíblica · Mesopotamia | La noche que cayó Babilonia (539 a. C.) **(apto para largo)** | HECHO: la Crónica de Nabonido (tablilla del Museo Británico) dice que Sippar cayó el día 14 "sin batalla", que el día 16 Ugbaru y el ejército de Ciro entraron en Babilonia "sin batalla", y que Ciro entró el día 3 de Arahsamnu (fines de octubre de 539 a. C.). HECHO: Heródoto y Jenofonte cuentan otra cosa (asedio, río desviado, fiesta). HIPÓTESIS: cómo conciliar ambos relatos. Belsasar: su nombre aparece en los cilindros de Nabonido hallados en Ur (1854, J. G. Taylor) como hijo mayor del rey; que fuera "corregente" es interpretación | "La ciudad más fuerte del mundo cayó en una noche… y casi sin pelear" |
+| 2 | Arqueología · Persia | El Cilindro de Ciro: ¿la primera carta de derechos humanos? | HECHO: cilindro de arcilla hallado en Babilonia (1879), hoy en el Museo Británico; cuenta la toma de la ciudad desde el lado persa. MITO A DESMONTAR: llamarlo "primera declaración de derechos humanos" es una lectura moderna que muchos historiadores discuten | "Este cilindro de barro está en la ONU… y no dice lo que te contaron" |
+| 3 | Mesopotamia · leones | ¿De verdad los reyes tenían leones? | HECHO: relieves asirios de Nínive (cacería de leones de Asurbanipal) muestran leones soltados desde jaulas; la Vía Procesional de Babilonia tenía leones de ladrillo vidriado (Puerta de Ishtar, hoy en Berlín). HIPÓTESIS: cómo era exactamente un "foso" | "Los reyes de Mesopotamia criaban leones… y hay pruebas talladas en piedra" |
+| 4 | Persia · desciframiento | Behistún: la roca que nos enseñó a leer cuneiforme | HECHO: inscripción trilingüe de Darío I en un acantilado de Irán; Henry Rawlinson la copió en el siglo XIX y fue clave para descifrar el cuneiforme (la "Rosetta" de Mesopotamia) | "Un hombre se colgó de un acantilado para copiar este mensaje" |
+| 5 | Persia · misterio | Persépolis ardió en una noche: ¿venganza o borrachera? | HECHO: Alejandro tomó Persépolis en 330 a. C. y el palacio se incendió. HIPÓTESIS: las fuentes antiguas no coinciden en si fue una decisión política o un exceso tras un banquete | "La capital más lujosa de Persia desapareció en una noche de fuego" |
+
+Esquema del #1 (largo de 8–10 min con la voz de Karin):
+1. Gancho (0:00–0:30): murallas, el Éufrates atravesando la ciudad, "nadie podía tomarla".
+2. Babilonia en su apogeo: quién era Nabonido y por qué pasó años lejos de la capital (HECHO: cilindros y crónica).
+3. El avance de Ciro: Opis, Sippar (día 14), Babilonia (día 16) según la Crónica de Nabonido.
+4. Las dos versiones: la tablilla ("sin batalla") frente a Heródoto y Jenofonte (río desviado, fiesta). Cartel HECHO / HIPÓTESIS en pantalla.
+5. La Biblia: Daniel 5 (el banquete de Belsasar) y qué aportó la arqueología sobre Belsasar, sin exagerar lo que las tablillas prueban.
+6. Después de esa noche: entra Ciro, el Cilindro de Ciro, el regreso de los exiliados (Esdras 1). Cierre: "y bajo ese nuevo imperio ocurre la historia del foso de los leones" → enlace al largo de Bases Bíblicas.
+Fuentes a citar en la descripción: Crónica de Nabonido (ABC 7, Grayson), Cilindro de Ciro (Museo Británico), Heródoto I.191, Jenofonte, *Ciropedia* VII.5, Daniel 5 y Esdras 1 (RVR1960).
