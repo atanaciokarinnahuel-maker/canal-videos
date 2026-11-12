@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 # Baja un video de referencia y deja en analisis/<id>/ hojas de fotogramas, lista de cortes y un reporte.
 # El video NO se guarda en el repo. Uso: analizar_video.sh analisis/pedidos/<id>.json
-# Pedido: {"id": "...", "drive_id": "...", "youtube_id": "..."} (alcanza con uno de los dos orígenes).
+# Pedido: {"id": "...", "drive_id": "...", "youtube_id": "...", "recorte": "ancho:alto:x:y"}
+# Alcanza con uno de los dos orígenes. "recorte" es opcional: sirve cuando el video real ocupa
+# solo una franja del cuadro (por ejemplo, una descarga vertical de TikTok de un video horizontal).
 # Para probar sin red: VIDEO_LOCAL=/ruta/video.mp4 analizar_video.sh pedido.json
 set -u
 pedido="$1"
 id=$(jq -r .id "$pedido")
 drive=$(jq -r '.drive_id // empty' "$pedido")
 yt=$(jq -r '.youtube_id // empty' "$pedido")
+recorte=$(jq -r '.recorte // empty' "$pedido")
 out="analisis/$id"
 tmp=$(mktemp -d)
 v="$tmp/video.mp4"
@@ -45,7 +48,8 @@ dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$v")
 
 fuente=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
 marca="drawtext=fontfile=${fuente}:text='%{pts\:hms}':x=4:y=4:fontsize=16:fontcolor=white:box=1:boxcolor=black@0.6"
-caja() { echo "scale=$1:$2:force_original_aspect_ratio=decrease,pad=$1:$2:(ow-iw)/2:(oh-ih)/2"; }
+pre=""; [ -n "$recorte" ] && pre="crop=${recorte}," && echo "recorte: $recorte" >> "$rep"
+caja() { echo "${pre}scale=$1:$2:force_original_aspect_ratio=decrease,pad=$1:$2:(ow-iw)/2:(oh-ih)/2"; }
 
 # 1) Todo el video: 1 fotograma cada 4 s, 30 por hoja.
 ffmpeg -v error -y -i "$v" -an -vf "fps=1/4,$(caja 320 180),${marca},tile=6x5" -q:v 6 "$out/general_%02d.jpg"
@@ -57,17 +61,18 @@ ffmpeg -v error -y -sseof -60 -i "$v" -an -vf "fps=1,$(caja 480 270),tile=5x6" -
 n=0
 for p in 0.002 0.02 0.10 0.30 0.50 0.70 0.90 0.985; do
   n=$((n+1)); t=$(awk -v d="$dur" -v p="$p" 'BEGIN{printf "%.2f", d*p}')
-  ffmpeg -v error -y -ss "$t" -i "$v" -an -frames:v 1 -vf "scale=1280:-2" -q:v 4 "$out/detalle_$(printf %02d $n)_${t%.*}s.jpg"
+  ffmpeg -v error -y -ss "$t" -i "$v" -an -frames:v 1 -vf "${pre}scale=1280:-2" -q:v 4 "$out/detalle_$(printf %02d $n)_${t%.*}s.jpg"
 done
-# 5) Cortes de plano (cambios de escena).
-ffmpeg -v error -y -i "$v" -an -vf "scale=320:-2,select='gt(scene,0.25)',showinfo" -f null - 2>&1 \
-  | grep -o 'pts_time:[0-9.]*' | cut -d: -f2 > "$out/cortes.txt" || true
-c=$(wc -l < "$out/cortes.txt")
+# 5) Cambios de imagen. Se guarda cada cambio con su puntaje (0 a 1) y se cuenta con tres umbrales,
+#    porque en videos de ilustraciones de un mismo color los cambios puntúan bajo.
+ffmpeg -v error -y -i "$v" -an -vf "${pre}scale=320:-2,select='gt(scene,0.06)',metadata=print:file=$tmp/esc.txt" -f null - || true
+awk '/pts_time/{split($0,a,"pts_time:"); t=a[2]} /scene_score/{split($0,b,"="); printf "%.2f %.3f\n", t, b[2]}' "$tmp/esc.txt" > "$out/cortes.txt" 2>/dev/null || : > "$out/cortes.txt"
 {
-  echo "cortes_detectados: $c"
-  awk -v d="$dur" -v c="$c" 'BEGIN{ if (c>0) printf "plano_promedio_s: %.1f\n", d/(c+1) }'
-  echo "cortes_por_minuto:"
-  awk '{m=int($1/60); k[m]++} END{for(i=0;i<=m;i++) printf "  min %02d: %d\n", i, k[i]+0}' "$out/cortes.txt"
+  for u in 0.06 0.12 0.25; do
+    awk -v u="$u" -v d="$dur" '$2>u{c++} END{printf "cambios_umbral_%s: %d (uno cada %.1f s)\n", u, c, d/(c+1)}' "$out/cortes.txt"
+  done
+  echo "cambios_por_minuto (umbral 0.12):"
+  awk -v d="$dur" '$2>0.12{k[int($1/60)]++} END{for(i=0;i<=int(d/60);i++) printf "  min %02d: %d\n", i, k[i]+0}' "$out/cortes.txt"
   echo "RESULTADO: ok"
 } >> "$rep"
 rm -rf "$tmp"
