@@ -4,7 +4,37 @@ duracion_s: 1650.822676
 tamano_bytes: 149185542
 video: h264,576,1036,30/1
 audio: aac,44100,2
-cortes_detectados: 0
-cortes_por_minuto:
-  min 00: 0
+recorte: 576:324:0:356
+cambios_umbral_0.06: 165 (uno cada 9.9 s)
+cambios_umbral_0.12: 149 (uno cada 11.0 s)
+cambios_umbral_0.25: 142 (uno cada 11.5 s)
+cambios_por_minuto (umbral 0.12):
+  min 00: 12
+  min 01: 7
+  min 02: 5
+  min 03: 4
+  min 04: 5
+  min 05: 4
+  min 06: 6
+  min 07: 4
+  min 08: 8
+  min 09: 4
+  min 10: 4
+  min 11: 4
+  min 12: 5
+  min 13: 5
+  min 14: 4
+  min 15: 4
+  min 16: 5
+  min 17: 8
+  min 18: 5
+  min 19: 5
+  min 20: 4
+  min 21: 6
+  min 22: 5
+  min 23: 5
+  min 24: 4
+  min 25: 4
+  min 26: 5
+  min 27: 8
 RESULTADO: ok
