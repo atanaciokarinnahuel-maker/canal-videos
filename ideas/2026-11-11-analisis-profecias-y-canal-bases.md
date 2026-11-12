@@ -2,9 +2,10 @@
 
 ## 0. Qué pude ver y qué no
 
-- El archivo de Drive `Cada profecía cumplida por Jesús.mp4` (149 MB) existe, pero **no pude abrirlo**: el conector de Drive solo descarga hasta 10 MB, el archivo no tiene transcripción y este entorno tiene bloqueados drive.google.com y youtube.com.
-- Trabajé con la **transcripción del mismo video en YouTube** (vidIQ): "Cada Profecía cumplida por Jesús en el Antiguo Testamento", canal *Plegarias Benditas | La Biblia en su contexto*, 27:27. Coincide en título y en temas con tu serie del velo. **No pude comparar los dos archivos**: si el tuyo es otro video, avisame.
-- Lo que NO analicé: imagen, música, ritmo de cortes, miniatura. Solo lo que se dice.
+- **Texto:** transcripción completa del video en YouTube (vidIQ): "Cada Profecía cumplida por Jesús en el Antiguo Testamento", canal *Plegarias Benditas | La Biblia en su contexto*, 27:27.
+- **Imagen:** tu archivo de Drive (149 MB, 27:31). No lo vi reproducido: un flujo de GitHub Actions lo bajó y sacó 1 fotograma cada 4 segundos de todo el video, 1 por segundo del primer minuto y medio y del último minuto, y la lista de cambios de imagen. Están en `analisis/2026-11-11-profecias-jesus/`.
+- Tu archivo es una descarga de TikTok (cuenta @bendigoalpueblodeisrael) del mismo video: mismo título en pantalla, misma duración y mismas frases en los subtítulos.
+- **Lo que NO analicé:** la música, la voz y las transiciones entre imágenes. De fotogramas sueltos no se puede saber si hay fundidos ni cómo suena.
 
 ## 1. Ficha del video de referencia
 
@@ -71,6 +72,37 @@ El último es la prueba útil para vos: un canal de menos de 3.000 suscriptores 
 7. **Detalle físico y pequeño**: la túnica sin costura, el hueso no quebrado, la dirección en que se rasga el velo. Los detalles chicos convencen más que las afirmaciones grandes.
 8. **Pedido de comentario con pregunta específica** al final de cada acto, no un "suscribite" genérico. Resultado: 92 comentarios.
 9. **Cierre con decisión personal**, no con resumen.
+
+## 3b. Lo visual (visto en los fotogramas)
+
+| Elemento | Qué hace |
+|---|---|
+| Estilo | Un solo estilo de principio a fin: ilustración tipo grabado antiguo sobre pergamino, en sepia y dorado. Casi sin otros colores (azul para María, rojo en algún altar). |
+| Ritmo | Unos 150 cambios de imagen en 27 minutos. Primer medio minuto: una imagen cada ~6 s. Después: una cada ~12 s (4 o 5 por minuto), parejo hasta el final. |
+| Movimiento | Cada imagen es fija con acercamiento o alejamiento lento. No hay animación de personajes. |
+| Subtítulos | Siempre en pantalla, abajo al centro: 2 o 3 palabras por vez, mayúsculas blancas con borde negro y una palabra resaltada en celeste. |
+| Botón de "me gusta" | Un ícono animado arriba a la derecha, en bucle, desde el segundo 36 hasta el final. |
+| Arranque | La primera imagen y el primer subtítulo aparecen en el segundo 0. Sin logo, sin portada, sin saludo. |
+| Pedidos de suscripción | Solo hablados, sobre imágenes de libros, rollos y velas. No hay cartel ni botón dibujado. |
+| Cierre | Termina sobre la última imagen. No hay pantalla final con videos sugeridos. |
+
+**Lo que hace bien**
+- La imagen ilustra literalmente la frase: el altar de Abel y el de Caín lado a lado (2:45), Belén cuando se nombra Belén (8:44), un árbol genealógico para el linaje de David (9:36).
+- El estilo único hace que 150 imágenes distintas se sientan un solo video.
+- El subtítulo palabra por palabra mantiene el ojo ocupado aunque la imagen dure 12 segundos.
+
+**Lo que hace mal (y podés superar)**
+- **Ningún versículo en pantalla.** En todos los fotogramas que vi no aparece una sola referencia bíblica. Vos ya las mostrás: es tu ventaja para un público que quiere comprobar.
+- **Se nota la generación automática.** Adán y Eva tienen cuatro caras distintas en los primeros 22 segundos y aparecen vestidos mientras el narrador dice "estaban desnudos". Hacia 16:48 la figura de Cristo resucitado parece una mujer.
+- **Relleno genérico.** Cuando la frase es abstracta pone rollos, libros y velas (0:48–1:08, 8:24–8:40, 17:32–17:52 y todo el cierre).
+- **Sin pantalla final**: pierde el clic al siguiente video.
+
+**Qué significa para tu largo del Cordero (6–7 min)**
+- Unas 40 imágenes alcanzan: 5 en los primeros 30 segundos y después una cada 10–12 segundos. Es bastante menos trabajo por minuto que tus Shorts (31 planos en 62 segundos en el de José).
+- Mantener tu estilo de ilustración cálida, pero con una sola paleta para todo el video.
+- Referencia del versículo en pantalla cada vez que se cita.
+- Los mismos personajes con la misma cara en todas sus escenas (Abraham e Isaac, sobre todo).
+- Pantalla final de 10–15 segundos que lleve al Short de obras o Cristo.
 
 ## 4. Lo que hay que corregir antes de usar algo de esto
 
