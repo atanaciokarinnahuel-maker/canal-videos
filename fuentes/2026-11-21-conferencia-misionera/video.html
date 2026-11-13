@@ -1,0 +1,363 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow:hidden;background:#040a1c}
+body{font-family:'Inter Display','Inter',sans-serif;color:#fff;font-weight:900}
+#stage{position:absolute;left:0;top:0;overflow:hidden;transform-origin:50% 50%}
+#stage>*{position:absolute}
+#cv{left:0;top:0}
+.emo{font-family:'Noto Color Emoji';font-weight:400}
+b{font-weight:900;color:#ffc93c}
+#vig{inset:0;background:radial-gradient(ellipse 85% 80% at 50% 50%,rgba(0,0,0,0) 55%,rgba(2,5,16,.62) 100%)}
+#flash{inset:0;background:#fff8dc;opacity:0}
+#scrim{inset:0;opacity:0}
+.H #scrim{background:linear-gradient(90deg,rgba(4,10,28,.96) 0,rgba(4,10,28,.86) 38%,rgba(4,10,28,0) 60%)}
+.V #scrim{background:linear-gradient(180deg,rgba(4,10,28,0) 43%,rgba(4,10,28,.93) 52%,rgba(4,10,28,.97) 100%)}
+
+/* barra superior */
+#bug{display:flex;align-items:center;gap:14px;white-space:nowrap}
+#bug .live{background:#e3182d;border-radius:8px;padding:7px 16px 7px 14px;font-size:27px;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+#bug .dot{width:15px;height:15px;border-radius:50%;background:#fff}
+#bug .nm{font-size:27px;letter-spacing:3px;color:#dbe8ff}
+#trk{display:flex;align-items:center;gap:10px}
+#trk .s{width:62px;height:62px;border-radius:50%;border:4px solid rgba(255,255,255,.25);background:rgba(4,10,28,.8);display:flex;align-items:center;justify-content:center;font-size:33px;position:relative}
+#trk .s i{position:absolute;right:-7px;bottom:-7px;width:27px;height:27px;border-radius:50%;background:#38e08c;color:#04210f;font:900 19px 'Inter Display';display:flex;align-items:center;justify-content:center;font-style:normal}
+#trk .ar{font-size:26px;color:#7fa6e6;margin:0 2px}
+
+/* titulo de pais */
+#title .row{display:flex;align-items:center;gap:26px;white-space:nowrap}
+#title .flag{font-size:112px;line-height:1}
+#title .nm{font-size:112px;line-height:1;letter-spacing:-2px;text-shadow:0 6px 30px rgba(0,0,0,.6)}
+#title .sub{margin-top:12px;font-size:31px;letter-spacing:5px;color:#6fd3ff;font-weight:800;white-space:nowrap}
+
+/* tarjeta de noticia */
+#card{background:rgba(8,18,44,.93);border:2px solid rgba(255,255,255,.14);border-radius:24px;padding:26px 34px 26px 44px;box-shadow:0 22px 60px rgba(0,0,0,.55);overflow:hidden}
+#card .bar{position:absolute;left:0;top:0;bottom:0;width:14px}
+#card .tag{display:inline-block;font-size:27px;letter-spacing:3px;padding:7px 18px;border-radius:9px;color:#06122b}
+#card .hl{margin-top:18px;font-weight:800;line-height:1.1;letter-spacing:-.5px}
+.H #card .hl{font-size:57px}.V #card .hl{font-size:59px}
+#card .src{margin-top:16px;font:600 25px 'Inter';color:#8fa6cf;letter-spacing:.3px}
+#card .pg{display:flex;gap:10px;margin-top:18px}
+#card .pg span{flex:1;height:7px;border-radius:4px;background:rgba(255,255,255,.16);overflow:hidden}
+#card .pg span em{display:block;height:100%;width:0;background:#fff;border-radius:4px}
+
+/* textos sobre el mapa general */
+#ovt{text-align:center}
+#ovt .in{display:inline-block;background:rgba(4,10,28,.84);border:2px solid rgba(255,255,255,.14);border-radius:24px;padding:18px 40px 20px}
+#ovt .l1{line-height:1.02;letter-spacing:-1px}
+.H #ovt .l1{font-size:66px;white-space:nowrap}.V #ovt .l1{font-size:92px}
+#ovt .l2{margin-top:8px;font-weight:800;letter-spacing:5px;color:#6fd3ff}
+.H #ovt .l2{font-size:28px}.V #ovt .l2{font-size:32px}
+
+/* intro */
+#intro{inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#band{background:#e3182d;padding:16px 56px;transform-origin:50% 50%;box-shadow:0 18px 60px rgba(227,24,45,.55);white-space:nowrap;letter-spacing:2px}
+.H #band{font-size:128px}.V #band{font-size:96px}
+#intro .i1{letter-spacing:6px;color:#dbe8ff}.H #intro .i1{font-size:50px}.V #intro .i1{font-size:46px}
+#intro .i2{letter-spacing:14px;color:#6fd3ff;font-weight:800;margin:20px 0 14px}.H #intro .i2{font-size:36px}.V #intro .i2{font-size:36px}
+#intro .big{line-height:.96;letter-spacing:-3px;text-shadow:0 10px 50px rgba(0,0,0,.7)}
+.H #intro .big{font-size:150px}.V #intro .big{font-size:122px}
+#intro .gold{color:#ffc93c}
+#intro .i4{margin-top:34px;border:4px solid #ffc93c;border-radius:60px;padding:12px 40px;letter-spacing:5px;color:#ffc93c;background:rgba(4,10,28,.7)}
+.H #intro .i4{font-size:44px}.V #intro .i4{font-size:44px}
+
+/* impacto */
+#imp .tg{display:inline-block;background:#e3182d;border-radius:9px;padding:8px 20px;font-size:30px;letter-spacing:4px}
+#imp .nm{line-height:1;letter-spacing:-4px;color:#ffc93c;text-shadow:0 10px 50px rgba(0,0,0,.7);margin-top:14px;white-space:nowrap}
+.H #imp .nm{font-size:190px}.V #imp .nm{font-size:196px}
+#imp .sub{font-size:42px;letter-spacing:7px;color:#dbe8ff;font-weight:800;margin-top:10px;white-space:nowrap}
+.V #imp{text-align:center}
+
+/* cierre */
+#fin .tg{display:inline-block;background:#e3182d;border-radius:9px;padding:8px 20px;font-size:29px;letter-spacing:4px}
+#fin .h1{line-height:.98;letter-spacing:-2.5px;margin-top:18px;text-shadow:0 8px 40px rgba(0,0,0,.7)}
+.H #fin .h1{font-size:108px}.V #fin .h1{font-size:98px}
+#fin .gold{color:#ffc93c}
+#fin .date{display:inline-block;margin-top:24px;background:#ffc93c;color:#06122b;border-radius:18px;padding:10px 30px 12px;letter-spacing:-1px;white-space:nowrap;box-shadow:0 14px 50px rgba(255,201,60,.35);transform-origin:0 50%}
+.H #fin .date{font-size:88px}.V #fin .date{font-size:80px}
+#fin .ch{margin-top:26px;font-weight:800;line-height:1.1}.H #fin .ch{font-size:47px}.V #fin .ch{font-size:45px}
+#fin .ad{margin-top:10px;font-weight:700;color:#cfe0ff;line-height:1.15}.H #fin .ad{font-size:41px}.V #fin .ad{font-size:38px}
+#fin .iv{margin-top:24px;color:#6fd3ff;font-weight:800;line-height:1.12}.H #fin .iv{font-size:45px}.V #fin .iv{font-size:42px}
+#fin .iv span{color:#fff}
+#fin>div>*{transform-origin:0 50%}
+
+/* cintillo */
+#tick{left:0;right:0;height:62px;background:#e3182d;overflow:hidden;white-space:nowrap;box-shadow:0 -6px 30px rgba(0,0,0,.4)}
+#tick .t{position:absolute;left:0;top:0;line-height:62px;font-size:30px;letter-spacing:1.5px;will-change:transform}
+#tick .t i{font-style:normal;color:#ffd9de;margin:0 26px}
+</style></head><body>
+<div id="stage">
+ <canvas id="cv"></canvas>
+ <div id="vig"></div>
+ <div id="scrim"></div>
+ <div id="bug"><div class="live"><span class="dot"></span>EN VIVO</div><div class="nm">NOTICIERO MISIONERO</div></div>
+ <div id="trk"></div>
+ <div id="title"><div class="row"><span class="flag emo"></span><span class="nm"></span></div><div class="sub"></div></div>
+ <div id="card"><div class="bar"></div><span class="tag"></span><div class="hl"></div><div class="src"></div><div class="pg"><span><em></em></span><span><em></em></span><span><em></em></span><span><em></em></span></div></div>
+ <div id="ovt"><div class="in"><div class="l1"></div><div class="l2"></div></div></div>
+ <div id="imp"><span class="tg">PUNTO DE ENCUENTRO</span><div class="nm">MAIMARÁ</div><div class="sub">JUJUY · ARGENTINA <span class="emo">🇦🇷</span></div></div>
+ <div id="fin"><div>
+   <span class="tg f">ESTÁS INVITADO</span>
+   <div class="h1 f">PRIMERA GRAN<br>CONFERENCIA<br><span class="gold">MISIONERA</span></div>
+   <div class="f"><div class="date">21 y 22 de NOVIEMBRE</div></div>
+   <div class="ch f">Iglesia Bautista Getsemaní Fundamental</div>
+   <div class="ad f"><span class="emo">📍</span> Calle Froilán Calverti · Maimará, Jujuy</div>
+   <div class="iv f">Invitación especial para todos.<br><span>¡Los esperamos!</span></div>
+ </div></div>
+ <div id="intro">
+   <div id="band">ÚLTIMO MOMENTO</div>
+   <div class="i1 it">IGLESIA BAUTISTA GETSEMANÍ</div>
+   <div class="i2 it">INVITA A LA</div>
+   <div class="big it">PRIMERA GRAN</div>
+   <div class="big it">CONFERENCIA</div>
+   <div class="big gold it">MISIONERA</div>
+   <div class="i4 it">MAIMARÁ · JUJUY</div>
+ </div>
+ <div id="tick"><div class="t"></div></div>
+ <div id="flash"></div>
+</div>
+<script src="mapdata.js"></script>
+<script>
+// ====================== CONTENIDO (datos verificados, ver guion.txt) ======================
+const TAGC={red:'#ff5466',blue:'#4fd0ff',green:'#38e08c',gold:'#ffc93c'};
+const C=[
+ {id:'862',name:'VENEZUELA',flag:'🇻🇪',cap:'CARACAS',lon:-66.9,lat:10.49,sub:'CARACAS · AMÉRICA DEL SUR',fit:.56,col:'#ffd23f',
+  cards:[
+   {tag:'ACTUALIDAD',c:'blue',h:'<b>Enero 2026:</b> cae Maduro. Hoy se negocia una transición, aún <b>sin fecha de elecciones</b>.',src:'Fuente: EFE · Infobae (nov. 2026)'},
+   {tag:'ALERTA',c:'red',h:'Casi <b>8 millones</b> de venezolanos dejaron su tierra desde 2015.',src:'Fuente: ONU (ACNUR · OIM)'},
+   {tag:'BUENA NOTICIA',c:'green',h:'En plena crisis, la <b>iglesia evangélica</b> no deja de crecer.',src:'Fuente: Consejo Evangélico de Venezuela'},
+   {tag:'LOS PIONEROS',c:'gold',h:'<b>1951:</b> nace la primera convención bautista con 6 iglesias. Hoy son <b>más de 700</b>.',src:'Fuente: Baptist Press'}]},
+ {id:'800',name:'UGANDA',flag:'🇺🇬',cap:'KAMPALA',lon:32.58,lat:0.35,sub:'KAMPALA · ÁFRICA ORIENTAL',fit:.42,col:'#ff8a3d',
+  cards:[
+   {tag:'CAMPO ABIERTO',c:'green',h:'La mitad del país tiene <b>menos de 17 años</b>: una generación entera por alcanzar.',src:'Fuente: ONU, estimación 2026'},
+   {tag:'ALERTA',c:'red',h:'Más de la mitad vive con <b>menos de 3 dólares</b> por día.',src:'Fuente: Banco Mundial (2026)'},
+   {tag:'ALERTA',c:'red',h:'<b>Julio 2026:</b> asesinan a un pastor de 25 años tras un debate con conversiones.',src:'Pr. Bernard Mulongo · Fuente: Morning Star News'},
+   {tag:'LOS PIONEROS',c:'gold',h:'<b>1877:</b> llegan los primeros misioneros. Hoy <b>8 de cada 10</b> se dicen cristianos.',src:'Fuente: Dictionary of African Christian Biography'}]},
+ {id:'643',name:'RUSIA',flag:'🇷🇺',cap:'MOSCÚ',lon:37.62,lat:55.75,sub:'MOSCÚ · EUROPA Y ASIA',fit:.96,col:'#7fc4ff',box:[1085,40,1800,262],
+  cards:[
+   {tag:'ALERTA',c:'red',h:'<b>Desde 2016</b>, evangelizar fuera de un templo registrado se paga con multa.',src:'Ley Yarovaya · Fuente: Forum 18'},
+   {tag:'ALERTA',c:'red',h:'<b>Abril 2026:</b> multan en Kazán a <b>4 bautistas</b> por adorar en una casa.',src:'Fuente: International Christian Concern'},
+   {tag:'FE FIRME',c:'green',h:'Con multas y cierres, las iglesias no registradas <b>se siguen reuniendo</b>.',src:'Fuente: Forum 18 (2026)'},
+   {tag:'LOS PIONEROS',c:'gold',h:'<b>1867:</b> Nikita Voronin, el primer bautista ruso, se bautiza en el río Kura.',src:'Fuente: Baptist History & Heritage Society'}]},
+ {id:'356',name:'INDIA',flag:'🇮🇳',cap:'NUEVA DELHI',lon:77.21,lat:28.61,sub:'NUEVA DELHI · ASIA DEL SUR',fit:.7,col:'#ff9f43',
+  cards:[
+   {tag:'ALERTA',c:'red',h:'<b>13 de sus 28 estados</b> ya tienen leyes anticonversión.',src:'Fuente: CSW · UCA News (2026)'},
+   {tag:'ALERTA',c:'red',h:'<b>Más de 700 ataques</b> a cristianos registrados en 2025.',src:'Fuente: United Christian Forum'},
+   {tag:'DATO',c:'blue',h:'<b>Puesto 12</b> entre los países donde más cuesta seguir a Cristo.',src:'Fuente: Puertas Abiertas · Lista Mundial 2026'},
+   {tag:'LOS PIONEROS',c:'gold',h:'<b>1793:</b> llega William Carey, bautista inglés: el «padre de las misiones modernas».',src:'Fuente: historia bautista'}]},
+ {id:'608',name:'FILIPINAS',flag:'🇵🇭',cap:'MANILA',lon:120.98,lat:14.6,sub:'MANILA · SUDESTE ASIÁTICO',fit:.66,col:'#57e0d0',
+  cards:[
+   {tag:'DATO',c:'blue',h:'Más de <b>7.600 islas</b> y unos <b>20 ciclones</b> tropicales cada año.',src:'Fuente: NAMRIA · PAGASA'},
+   {tag:'DATO',c:'blue',h:'<b>8 de cada 10</b> filipinos se declaran católicos.',src:'Fuente: Censo 2020 (PSA)'},
+   {tag:'CAMPO ABIERTO',c:'green',h:'Solo <b>1 de cada 10</b> es protestante o evangélico: hay mucho por sembrar.',src:'Fuente: Censo 2020 (PSA)'},
+   {tag:'LOS PIONEROS',c:'gold',h:'<b>1900:</b> Eric Lund y Braulio Manikan abren en Iloilo la primera iglesia bautista.',src:'Fuente: Central Philippine University'}]}
+];
+const TICK=['«ID POR TODO EL MUNDO Y PREDICAD EL EVANGELIO A TODA CRIATURA» — MARCOS 16:15','PRIMERA GRAN CONFERENCIA MISIONERA','21 Y 22 DE NOVIEMBRE','IGLESIA BAUTISTA GETSEMANÍ FUNDAMENTAL · MAIMARÁ, JUJUY','VENEZUELA · UGANDA · RUSIA · INDIA · FILIPINAS','INVITACIÓN ESPECIAL PARA TODOS'];
+
+// ====================== TIEMPOS ======================
+const T_OV=6,T_C0=12,SEG=15,FLY=1.9,CARD0=2.0,CARDD=3.25,T_MID=T_C0+SEG*5,T_ARC=T_MID+2,T_IMP=T_ARC+4,T_FIN=T_IMP+3,DUR=T_FIN+13;
+const Ti=i=>T_C0+SEG*i;
+const PIN_T=[7.0,7.6,8.2,8.8,9.4], T_MEET=10.3;
+const ARC_T=[T_ARC+2.3,T_ARC+1.7,T_ARC+1.2,T_ARC+.7,T_ARC+.2];   // todas llegan juntas en T_IMP
+
+// ====================== UTILIDADES ======================
+const D2R=Math.PI/180,clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),lerp=(a,b,u)=>a+(b-a)*u;
+const eC=u=>u<.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2, eO=u=>1-Math.pow(1-u,3), eB=u=>{const c=1.70158;return 1+(c+1)*Math.pow(u-1,3)+c*Math.pow(u-1,2)};
+function proj(lon,lat){const l=lon*D2R,p=lat*D2R,p2=p*p,p4=p2*p2;
+ return [1000+365.6*l*(0.8707-0.131979*p2+p4*(-0.013791+p4*(0.003971*p2-0.001529*p4))),520-365.6*p*(1.007226+p2*(0.015085+p4*(-0.044475+0.028874*p2-0.005916*p4)))];}
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+let W,H,FMT,L,cv,ctx,P={},FEAT={},GRAT,MAI,OV,FIN,FOC=[],ARCS=[],ROUTES=[],tickW=1,cardKey='',titleKey=-1,ovKey='';
+
+function init(o){
+ FMT=o.format||'H'; W=FMT==='H'?1920:1080; H=FMT==='H'?1080:1920; document.body.className=FMT;
+ const st=$('#stage'); st.style.width=W+'px'; st.style.height=H+'px';
+ cv=$('#cv'); cv.width=W; cv.height=H; ctx=cv.getContext('2d');
+ L=FMT==='H'?{win:{cx:1390,cy:548,w:900,h:740},ov:{x:1000,y:455,s:.93,px:960,py:556},finCam:{s:4.4,px:1440,py:560},
+   lab:[[0,-46],[0,46],[0,-46],[0,-46],[0,46]],labS:30,capS:30,
+   bug:[60,34],trk:[1380,30],title:[90,150],card:[90,400,830],ovt:[610,852,1040],imp:[90,330],fin:[90,120,1010],tick:1018}
+  :{win:{cx:540,cy:610,w:960,h:680},ov:{x:1000,y:450,s:.56,px:540,py:640},finCam:{s:3.6,px:540,py:480},
+   lab:[[0,-40],[0,40],[0,-40],[0,-40],[0,40]],labS:25,capS:30,
+   bug:[44,128],trk:[44,206],title:[60,985],card:[60,1172,960],ovt:[40,1000,1000],imp:[40,960],fin:[64,812,952],tick:1610};
+ const pos=(id,p,w)=>{const e=$(id);e.style.left=p[0]+'px';e.style.top=p[1]+'px';if(p[2]||w)e.style.width=(p[2]||w)+'px'};
+ pos('#bug',L.bug);pos('#trk',L.trk);pos('#title',L.title);pos('#card',L.card);pos('#ovt',L.ovt);pos('#imp',L.imp,FMT==='V'?1000:0);pos('#fin',L.fin);
+ $('#tick').style.top=L.tick+'px';
+ // rastreador de progreso
+ $('#trk').innerHTML=C.map(c=>`<div class="s"><span class="emo">${c.flag}</span><i>✓</i></div>`).join('')+'<span class="ar">▸</span><div class="s m"><span class="emo">📍</span></div>';
+ // cintillo
+ const seg=TICK.map(s=>s+'<i>◆</i>').join(''); $('#tick .t').innerHTML=`<span>${seg}</span><span>${seg}</span><span>${seg}</span><span>${seg}</span>`;
+ tickW=$('#tick .t span').getBoundingClientRect().width;
+ // geometria
+ for(const m of MAP){m.p=new Path2D(m.d);} C.forEach((c,i)=>{c.m=MAP.find(m=>m.id===c.id);c.pt=proj(c.lon,c.lat);FEAT[c.id]=i;});
+ P.arg=MAP.find(m=>m.id==='032'); MAI=proj(-65.41,-23.62);
+ GRAT=new Path2D();
+ for(let lon=-180;lon<=180;lon+=20){for(let lat=-80;lat<=84;lat+=2){const q=proj(lon,lat);lat===-80?GRAT.moveTo(q[0],q[1]):GRAT.lineTo(q[0],q[1]);}}
+ for(let lat=-60;lat<=80;lat+=20){for(let lon=-180;lon<=180;lon+=4){const q=proj(lon,lat);lon===-180?GRAT.moveTo(q[0],q[1]):GRAT.lineTo(q[0],q[1]);}}
+ OV={...L.ov}; FIN={x:MAI[0],y:MAI[1]+8,...L.finCam};
+ FOC=C.map(c=>{const b=c.box||c.m.b,bw=b[2]-b[0],bh=b[3]-b[1];return {x:b[0]+bw/2,y:b[1]+bh/2,s:Math.min(L.win.w/bw,L.win.h/bh)*c.fit,px:L.win.cx,py:L.win.cy};});
+ const curve=(a,b,k)=>{const dx=b[0]-a[0],dy=b[1]-a[1],d=Math.hypot(dx,dy);let nx=-dy/d,ny=dx/d;if(ny>0){nx=-nx;ny=-ny}const lift=d*k+18;return {a,b,c:[(a[0]+b[0])/2+nx*lift,(a[1]+b[1])/2+ny*lift],d};};
+ ARCS=C.map(c=>curve(c.pt,MAI,.2)); ROUTES=C.slice(1).map((c,i)=>curve(C[i].pt,c.pt,.16));
+ return {DUR,format:FMT,W,H,T_OV,T_C0,SEG,FLY,CARD0,CARDD,T_MID,T_ARC,T_IMP,T_FIN,PIN_T,T_MEET,ARC_T,
+   cards:C.flatMap((c,i)=>c.cards.map((k,j)=>({t:Ti(i)+CARD0+j*CARDD,c:k.c})))};
+}
+const bez=(q,u)=>[(1-u)*(1-u)*q.a[0]+2*u*(1-u)*q.c[0]+u*u*q.b[0],(1-u)*(1-u)*q.a[1]+2*u*(1-u)*q.c[1]+u*u*q.b[1]];
+
+// ====================== CAMARA ======================
+function fly(A,B,u,bump){const e=eC(clamp(u));if(bump===undefined)bump=clamp(Math.hypot(B.x-A.x,B.y-A.y)/480,.2,1.25);
+ return {x:lerp(A.x,B.x,e),y:lerp(A.y,B.y,e),px:lerp(A.px,B.px,e),py:lerp(A.py,B.py,e),s:Math.exp(lerp(Math.log(A.s),Math.log(B.s),e)-bump*Math.sin(Math.PI*e))};}
+const hold=(i,t)=>({...FOC[i],s:FOC[i].s*(1+.05*clamp((t-Ti(i)-FLY)/(SEG-FLY)))});
+function cam(t){
+ if(t<T_OV)return {...OV,s:OV.s*(1.24-.24*eO(t/T_OV))};
+ if(t<T_C0)return {...OV};
+ if(t<T_MID){const i=Math.min(4,Math.floor((t-T_C0)/SEG)),t0=Ti(i);
+   if(t<t0+FLY)return fly(i?hold(i-1,t0):OV,FOC[i],(t-t0)/FLY);return hold(i,t);}
+ if(t<T_ARC)return fly(hold(4,T_MID),OV,(t-T_MID)/1.9);
+ const drift=u=>({...OV,x:OV.x-70*u,s:OV.s*(1+.07*u)});
+ if(t<T_IMP)return drift((t-T_ARC)/4);
+ if(t<T_IMP+2.6)return fly(drift(1),FIN,(t-T_IMP)/2.6,0);
+ return {...FIN,s:FIN.s*(1+.04*clamp((t-T_IMP-2.6)/12))};
+}
+
+// ====================== MAPA (canvas) ======================
+let CAM;
+const sx=m=>[CAM.px+(m[0]-CAM.x)*CAM.s,CAM.py+(m[1]-CAM.y)*CAM.s];
+function rr(x,y,w,h,r){ctx.beginPath();ctx.roundRect(x,y,w,h,r);}
+function label(x,y,flag,txt,size,a,sub){if(a<=0)return;ctx.save();ctx.globalAlpha=a;ctx.textBaseline='middle';
+ ctx.font=`900 ${size}px 'Inter Display'`;const tw=ctx.measureText(txt).width,fw=flag?size*1.42:0,pad=size*.5,w=tw+fw+pad*2,h=size*1.72,x0=clamp(x-w/2,8,W-w-8);
+ rr(x0,y-h/2,w,h,h/2);ctx.fillStyle='rgba(4,10,28,.9)';ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='rgba(255,255,255,.3)';ctx.stroke();
+ if(flag){ctx.font=`${size*1.05}px 'Noto Color Emoji'`;ctx.fillStyle='#fff';ctx.fillText(flag,x0+pad,y+size*.06);}
+ ctx.font=`900 ${size}px 'Inter Display'`;ctx.fillStyle='#fff';ctx.fillText(txt,x0+pad+fw,y+size*.04);
+ if(sub){ctx.font=`700 ${size*.6}px 'JetBrains Mono'`;const sw=ctx.measureText(sub).width,sh=size*.98,sy=y+h/2+5;rr(x0+w/2-sw/2-12,sy,sw+24,sh,sh/2);ctx.fillStyle='rgba(4,10,28,.9)';ctx.fill();ctx.fillStyle='#6fd3ff';ctx.textAlign='center';ctx.fillText(sub,x0+w/2,sy+sh/2+1);}
+ ctx.restore();}
+function pin(p,col,t,a,r){if(a<=0)return;const q=sx(p);ctx.save();ctx.globalAlpha=a;
+ for(let k=0;k<2;k++){const u=((t*.8+k*.5)%1);ctx.beginPath();ctx.arc(q[0],q[1],r+u*r*4.2,0,7);ctx.strokeStyle=col;ctx.globalAlpha=a*(1-u)*.8;ctx.lineWidth=3;ctx.stroke();}
+ ctx.globalAlpha=a;ctx.shadowColor=col;ctx.shadowBlur=22;ctx.beginPath();ctx.arc(q[0],q[1],r,0,7);ctx.fillStyle=col;ctx.fill();ctx.shadowBlur=0;
+ ctx.beginPath();ctx.arc(q[0],q[1],r*.42,0,7);ctx.fillStyle='#fff';ctx.fill();ctx.restore();}
+function strokeCurve(q,u0,u1,n){ctx.beginPath();for(let k=0;k<=n;k++){const p=sx(bez(q,lerp(u0,u1,k/n)));k?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]);}ctx.stroke();}
+
+function drawMap(t){
+ CAM=cam(t);const s=CAM.s;
+ ctx.setTransform(1,0,0,1,0,0);
+ const g=ctx.createRadialGradient(W/2,H*.45,0,W/2,H*.45,Math.max(W,H)*.75);g.addColorStop(0,'#0e2a5c');g.addColorStop(1,'#040a1c');ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ ctx.setTransform(s,0,0,s,CAM.px-CAM.x*s,CAM.py-CAM.y*s);
+ ctx.lineJoin='round';ctx.lineWidth=1/s;ctx.strokeStyle='rgba(110,170,255,.13)';ctx.stroke(GRAT);
+ // niveles de resaltado por pais destacado
+ const act=[],vis=[];
+ C.forEach((c,i)=>{const t0=Ti(i);let a=0,v=0;
+   if(t>=PIN_T[i]&&t<T_C0+1)a=(.4+.6*Math.exp(-(t-PIN_T[i])*3))*(1-clamp((t-T_C0)/.9));
+   if(t>=t0+.8&&t<t0+SEG+.5)a=Math.max(a,clamp((t-t0-.8)/.6)*(1-clamp((t-t0-SEG)/.5)));
+   if(t>=t0+SEG)v=clamp((t-t0-SEG)/.5);
+   if(t>=ARC_T[i]-.3&&t<T_IMP+1)a=Math.max(a,.75*clamp((t-ARC_T[i]+.3)/.4)*(1-clamp((t-T_IMP)/1)));
+   act[i]=a;vis[i]=v;});
+ const argA=clamp((t-T_IMP)/.5);
+ ctx.fillStyle='#143363';ctx.strokeStyle='rgba(125,180,255,.5)';ctx.lineWidth=.9/s;
+ for(const m of MAP){ctx.fillStyle=(m.id in FEAT)?'#1e4f96':'#143363';ctx.fill(m.p);ctx.stroke(m.p);}
+ C.forEach((c,i)=>{
+   if(vis[i]>0){ctx.globalAlpha=vis[i]*.5;ctx.fillStyle='#c9a13a';ctx.fill(c.m.p);ctx.globalAlpha=1;}
+   if(act[i]>0){ctx.save();ctx.globalAlpha=act[i];ctx.shadowColor='#ffc93c';ctx.shadowBlur=40;ctx.fillStyle='#ffc93c';ctx.fill(c.m.p);ctx.shadowBlur=0;
+     ctx.strokeStyle='#fff3c4';ctx.lineWidth=2.2/s;ctx.stroke(c.m.p);ctx.restore();}});
+ if(argA>0){ctx.save();ctx.globalAlpha=argA*.9;ctx.shadowColor='#74c7f5';ctx.shadowBlur=34;ctx.fillStyle='#3d8fd0';ctx.fill(P.arg.p);ctx.shadowBlur=0;ctx.strokeStyle='#d6f0ff';ctx.lineWidth=2/s;ctx.stroke(P.arg.p);ctx.restore();}
+ // ---- en espacio de pantalla ----
+ ctx.setTransform(1,0,0,1,0,0);ctx.lineCap='round';
+ // rutas entre paises (camino recorrido)
+ const rA=1-clamp((t-T_MID-.6)/1);
+ if(rA>0)ROUTES.forEach((q,i)=>{const u=eC(clamp((t-Ti(i+1))/(FLY-.1)));if(u<=0)return;ctx.save();ctx.globalAlpha=.75*rA;ctx.setLineDash([3,13]);ctx.lineWidth=4;ctx.strokeStyle='#ffe9a8';strokeCurve(q,0,u,70);ctx.restore();
+   if(u<1){const p=sx(bez(q,u));ctx.beginPath();ctx.arc(p[0],p[1],7,0,7);ctx.fillStyle='#fff';ctx.shadowColor='#ffc93c';ctx.shadowBlur=20;ctx.fill();ctx.shadowBlur=0;}});
+ // arcos finales hacia Maimara
+ ARCS.forEach((q,i)=>{const p=clamp((t-ARC_T[i])/(T_IMP-ARC_T[i]));if(p<=0)return;const u=Math.pow(p,1.7),col=C[i].col;
+   ctx.save();ctx.globalAlpha=t>T_IMP?lerp(1,.6,clamp((t-T_IMP)/2)):1;ctx.strokeStyle=col;ctx.shadowColor=col;ctx.shadowBlur=20;ctx.lineWidth=FMT==='H'?5:4.5;strokeCurve(q,0,u,80);
+   ctx.shadowBlur=0;ctx.strokeStyle='rgba(255,255,255,.75)';ctx.lineWidth=1.6;strokeCurve(q,0,u,80);
+   if(p<1){const h=sx(bez(q,u));ctx.shadowColor='#fff';ctx.shadowBlur=30;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(h[0],h[1],10,0,7);ctx.fill();}
+   ctx.restore();});
+ // pines y etiquetas
+ C.forEach((c,i)=>{const t0=Ti(i),q=sx(c.pt);
+   // vista general (inicio)
+   let a=clamp((t-PIN_T[i])/.25)*(1-clamp((t-T_C0-.2)/.5));
+   if(a>0){const drop=(1-eB(clamp((t-PIN_T[i])/.45)))*-90;pin([c.pt[0],c.pt[1]+drop/s],c.col,t,a,FMT==='H'?11:9);label(q[0]+L.lab[i][0],q[1]+L.lab[i][1]+drop,c.flag,c.name,L.labS,a);}
+   // capital durante el pais
+   a=clamp((t-t0-1.6)/.3)*(1-clamp((t-t0-SEG+.2)/.3));
+   if(a>0){pin(c.pt,'#ff5466',t,a,12);label(q[0],q[1]-L.capS*3.05,null,c.cap,L.capS,a,`${Math.abs(c.lat).toFixed(1)}°${c.lat<0?'S':'N'} ${Math.abs(c.lon).toFixed(1)}°${c.lon<0?'O':'E'}`);}
+   // vista general (final, salida de los arcos)
+   a=clamp((t-ARC_T[i]+.5)/.3)*(1-clamp((t-T_IMP-.1)/.5));
+   if(a>0){pin(c.pt,c.col,t,a,FMT==='H'?11:9);label(q[0]+L.lab[i][0],q[1]+L.lab[i][1],c.flag,c.name,L.labS,a);}});
+ // Maimara: adelanto misterioso + impacto + pin final
+ const m=sx(MAI);
+ let a=clamp((t-T_MEET)/.3)*(1-clamp((t-T_C0-.1)/.5));
+ if(a>0){for(let k=0;k<3;k++){const u=((t*.9+k/3)%1);ctx.beginPath();ctx.arc(m[0],m[1],8+u*46,0,7);ctx.strokeStyle=`rgba(116,199,245,${a*(1-u)})`;ctx.lineWidth=4;ctx.stroke();}
+   ctx.font=`900 ${FMT==='H'?40:34}px 'Inter Display'`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=`rgba(255,255,255,${a})`;ctx.fillText('?',m[0],m[1]+2);ctx.textAlign='left';}
+ if(t>=T_ARC&&t<T_IMP){const u=(t-T_ARC)/4;for(let k=0;k<3;k++){const v=((t*1.1+k/3)%1);ctx.beginPath();ctx.arc(m[0],m[1],6+v*(30+u*40),0,7);ctx.strokeStyle=`rgba(255,255,255,${(.25+.5*u)*(1-v)})`;ctx.lineWidth=3;ctx.stroke();}}
+ if(t>=T_IMP){const d=t-T_IMP,R=Math.max(W,H);
+   for(let k=0;k<4;k++){const u=clamp((d-k*.16)/1.3);if(u>0&&u<1){ctx.beginPath();ctx.arc(m[0],m[1],eO(u)*R*.62,0,7);ctx.strokeStyle=`rgba(255,${220-k*18},${120-k*20},${(1-u)*.9})`;ctx.lineWidth=14*(1-u)+2;ctx.stroke();}}
+   const b=clamp(d/.55);if(b<1){ctx.save();ctx.translate(m[0],m[1]);ctx.strokeStyle=`rgba(255,244,200,${1-b})`;ctx.lineWidth=7*(1-b)+1;for(let k=0;k<18;k++){const an=k/18*6.283+.2,r0=eO(b)*R*.1,r1=eO(b)*R*.34*(k%2?1:.62);ctx.beginPath();ctx.moveTo(Math.cos(an)*r0,Math.sin(an)*r0);ctx.lineTo(Math.cos(an)*r1,Math.sin(an)*r1);ctx.stroke();}ctx.restore();}
+   const pa=clamp(d/.3);pin(MAI,'#ffc93c',t,pa,FMT==='H'?17:16);
+   label(m[0],m[1]-(FMT==='H'?70:66),'📍','MAIMARÁ',FMT==='H'?40:38,clamp((d-2.2)/.5));}
+ // oscurecido de la intro
+ const dk=.74*(1-clamp((t-5.5)/.8));if(dk>0){ctx.fillStyle=`rgba(3,7,20,${dk})`;ctx.fillRect(0,0,W,H);}
+}
+
+// ====================== TEXTOS (DOM) ======================
+function A(el,t,a,b,o){o=o||{};const din=o.din||.4,dout=o.dout||.25;
+ if(t<a||t>=b+dout){el.style.display='none';return 0;}
+ el.style.display=o.disp||'block';const ui=clamp((t-a)/din),uo=clamp((t-b)/dout),e=o.back?eB(ui):eO(ui);
+ const op=Math.min(clamp(ui*2.4),1-uo),dx=(o.dx||0)*(1-e),dy=(o.dy||0)*(1-e)-(o.oy||0)*uo,sc=(o.sc?o.sc+(1-o.sc)*e:1)*(1-.05*uo)*(o.mul||1);
+ el.style.opacity=op;el.style.transform=`translate(${dx}px,${dy}px) scale(${sc})`;return op;}
+
+function drawDOM(t){
+ // --- intro ---
+ const intro=$('#intro');intro.style.display=t<6.1?'flex':'none';
+ if(t<6.1){A($('#band'),t,.2,1.85,{sc:1.7,back:1,din:.35,dout:.2});
+   const it=$$('#intro .it'),tin=[2.05,2.45,2.9,3.25,3.6,4.4];
+   it.forEach((e,i)=>A(e,t,tin[i],5.55,{dy:i<2?-30:46,sc:i>=2&&i<5?1.25:1,back:i>=2,din:.38,dout:.35,oy:20}));}
+ // --- barra, rastreador, cintillo ---
+ const topA=clamp((t-5.7)/.5);$('#bug').style.opacity=topA;$('#trk').style.opacity=topA;
+ $('#bug .dot').style.opacity=(t%1)<.55?1:.25;
+ $$('#trk .s').forEach((e,i)=>{let done,actv;
+   if(i<5){done=t>=Ti(i)+SEG;actv=t>=Ti(i)&&!done;}else{done=false;actv=t>=T_IMP;}
+   const pop=i<5?Math.exp(-Math.max(0,t-Ti(i)-SEG)*6)*(done?1:0):Math.exp(-Math.max(0,t-T_IMP)*5)*(actv?1:0);
+   e.style.borderColor=actv?'#ffc93c':done?'#38e08c':'rgba(255,255,255,.25)';e.style.opacity=actv||done?1:.5;
+   e.style.transform=`scale(${1+(actv?.1+.04*Math.sin(t*5):0)+pop*.35})`;e.style.boxShadow=actv?'0 0 24px rgba(255,201,60,.7)':'none';
+   const ck=e.querySelector('i');if(ck)ck.style.display=done?'flex':'none';});
+ $('#tick').style.opacity=clamp((t-5.7)/.5);
+ $('#tick .t').style.transform=`translateX(${-((t*150)%tickW)}px)`;
+ // --- velo de lectura ---
+ const sc=Math.max(clamp((t-T_C0-.7)/.8)*(1-clamp((t-T_MID+.1)/.7)),clamp((t-T_IMP-.25)/.9));$('#scrim').style.opacity=sc;
+ // --- textos de la vista general ---
+ const ov=$('#ovt');let txt=null,ka,kb,l2='';
+ const n=PIN_T.filter(p=>t>=p).length;
+ if(t>=6.5&&t<T_MEET-.15){txt=n?`<b>${n}</b> ${n===1?'NACIÓN':'NACIONES'}`:'EL MUNDO ENTERO';l2=n?'REPRESENTADAS EN LA CONFERENCIA':'CABE EN UNA CONFERENCIA';ka=6.5;kb=T_MEET-.4;}
+ else if(t>=T_MEET&&t<T_C0+.2){txt='UN <b>PUNTO DE ENCUENTRO</b>';l2='¿DÓNDE? QUEDATE HASTA EL FINAL';ka=T_MEET;kb=T_C0-.3;}
+ else if(t>=T_MID+.9&&t<T_ARC+.15){txt='<b>5</b> NACIONES';l2='UN SOLO DESTINO';ka=T_MID+.9;kb=T_ARC-.1;}
+ else if(t>=T_ARC+.3&&t<T_IMP){txt='TODOS LOS CAMINOS <b>LLEVAN A…</b>';l2='▸ ▸ ▸';ka=T_ARC+.3;kb=T_IMP-.25;}
+ if(txt){const key=txt+l2;if(key!==ovKey){ovKey=key;ov.querySelector('.l1').innerHTML=FMT==='V'?txt.replace('TODOS LOS CAMINOS ','TODOS LOS CAMINOS<br>').replace('UN <b>','UN <b>').replace('PUNTO DE ENCUENTRO','PUNTO DE<br>ENCUENTRO'):txt;ov.querySelector('.l2').textContent=l2;}
+   const bump=n&&t<T_MEET?1+.12*Math.exp(-(t-PIN_T[n-1])*9):1;A(ov,t,ka,kb,{dy:40,din:.35,dout:.2,mul:bump});}
+ else ov.style.display='none';
+ // --- pais: titulo + tarjetas ---
+ const ti=$('#title'),cd=$('#card');
+ if(t>=T_C0&&t<T_MID+.3){const i=Math.min(4,Math.floor((t-T_C0)/SEG)),c=C[i],t0=Ti(i);
+   // el titulo del pais anterior termina de salir durante el vuelo
+   const ii=(t<t0+.25&&i>0)?i-1:i,cc=C[ii],tt=Ti(ii);
+   if(titleKey!==ii){titleKey=ii;ti.querySelector('.flag').textContent=cc.flag;ti.querySelector('.nm').textContent=cc.name;ti.querySelector('.sub').textContent=cc.sub;}
+   A(ti,t,tt+.85,tt+SEG,{dx:-90,din:.45,dout:.22});
+   const j=Math.floor((t-t0-CARD0)/CARDD);
+   if(t>=t0+CARD0&&j<4){const k=c.cards[j],tc=t0+CARD0+j*CARDD,key=i+'-'+j;
+     if(key!==cardKey){cardKey=key;cd.querySelector('.bar').style.background=TAGC[k.c];const tg=cd.querySelector('.tag');tg.textContent=k.tag;tg.style.background=TAGC[k.c];
+       cd.querySelector('.hl').innerHTML=k.h;cd.querySelector('.src').textContent=k.src;}
+     A(cd,t,tc,tc+CARDD-.22,{dx:-70,din:.32,dout:.2});
+     $$('#card .pg em').forEach((e,q)=>{e.style.width=(q<j?100:q>j?0:clamp((t-tc)/(CARDD-.25))*100)+'%';e.style.background=q===j?TAGC[k.c]:'#fff';});}
+   else cd.style.display='none';}
+ else{ti.style.display='none';cd.style.display='none';}
+ // --- impacto ---
+ const d=t-T_IMP;$('#flash').style.opacity=d>=0?Math.max(0,1-d/.4)*.92:0;
+ const sh=d>=0?24*Math.exp(-d*4.5):0;$('#stage').style.transform=sh>.3?`translate(${Math.sin(t*83)*sh}px,${Math.cos(t*67)*sh}px)`:'none';
+ const imp=$('#imp');
+ if(t>=T_IMP+.2&&t<T_FIN+.2){imp.style.display='block';A(imp.querySelector('.tg'),t,T_IMP+.2,T_FIN-.25,{dy:-30,disp:'inline-block'});
+   A(imp.querySelector('.nm'),t,T_IMP+.3,T_FIN-.25,{sc:2.3,back:1,din:.45});A(imp.querySelector('.sub'),t,T_IMP+.8,T_FIN-.25,{dy:30});}
+ else imp.style.display='none';
+ // --- cierre ---
+ const fin=$('#fin');
+ if(t>=T_FIN){fin.style.display='block';const tin=[0,.3,1.0,1.75,2.15,2.9];
+   $$('#fin .f').forEach((e,i)=>A(e,t,T_FIN+tin[i],1e9,{dx:i===2?0:-60,sc:i===2?1.6:1,back:i===2,din:.45,disp:i===0?'inline-block':'block'}));
+   $('#fin .date').style.transform=`scale(${1+.018*Math.sin((t-T_FIN)*3.2)})`;}
+ else fin.style.display='none';
+}
+function render(t){drawMap(t);drawDOM(t);return 1;}
+</script></body></html>

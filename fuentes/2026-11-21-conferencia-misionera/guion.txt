@@ -1,0 +1,47 @@
+INVITACIÓN — PRIMERA GRAN CONFERENCIA MISIONERA EN MAIMARÁ
+Iglesia Bautista Getsemaní Fundamental · 21 y 22 de noviembre de 2026 · Calle Froilán Calverti, Maimará, Jujuy
+Formato: noticiero sin voz (música + titulares). Duración 1:49. Horizontal 1920x1080 y vertical 1080x1920.
+Datos verificados el 13 nov 2026. Cada tarjeta muestra su fuente en pantalla.
+
+ESTRUCTURA
+0:00  "ÚLTIMO MOMENTO" → Iglesia Bautista Getsemaní invita a la PRIMERA GRAN CONFERENCIA MISIONERA · Maimará, Jujuy
+0:06  Mapa del mundo: 5 naciones representadas → "Un punto de encuentro. ¿Dónde? Quedate hasta el final"
+0:12  Venezuela · 0:27 Uganda · 0:42 Rusia · 0:57 India · 1:12 Filipinas (15 s cada una, 4 tarjetas)
+1:27  "5 naciones, un solo destino" → los 5 caminos salen juntos hacia Maimará
+1:33  ¡PUM! Impacto en MAIMARÁ · Jujuy · Argentina
+1:36  Cartel final: fechas, iglesia, dirección, "Invitación especial para todos. ¡Los esperamos!"
+Cintillo: «Id por todo el mundo y predicad el evangelio a toda criatura» — Marcos 16:15 (RVR1960)
+
+VENEZUELA (Caracas)
+- ACTUALIDAD: Enero 2026: cae Maduro. Hoy se negocia una transición, aún sin fecha de elecciones. [EFE / Infobae, 13 nov 2026]
+- ALERTA: Casi 8 millones de venezolanos dejaron su tierra desde 2015. [ONU: ACNUR-OIM; Dpto. de Estado de EE. UU.]
+- BUENA NOTICIA: En plena crisis, la iglesia evangélica no deja de crecer. [Consejo Evangélico de Venezuela; sociólogos coinciden en el crecimiento, las cifras varían entre 10 % y 20 %]
+- LOS PIONEROS: 1951: nace la primera convención bautista con 6 iglesias. Hoy son más de 700. [Baptist Press]
+
+UGANDA (Kampala)
+- CAMPO ABIERTO: La mitad del país tiene menos de 17 años (edad mediana 17,1). [ONU / Worldometer 2026]
+- ALERTA: Más de la mitad vive con menos de 3 dólares por día (54,4 %). [Banco Mundial, abril 2026]
+- ALERTA: Julio 2026: asesinan al pastor Bernard Mulongo, de 25 años, tras un debate con conversiones (Mbale). [Morning Star News]
+- LOS PIONEROS: 1877: llegan los primeros misioneros a Buganda. Hoy 8 de cada 10 se dicen cristianos. [Dictionary of African Christian Biography; censo]
+
+RUSIA (Moscú)
+- ALERTA: Desde 2016 (ley Yarovaya), evangelizar fuera de un templo registrado se paga con multa. [Forum 18]
+- ALERTA: Abril 2026: multan en Kazán a 4 bautistas por adorar en una casa (15.000 rublos cada uno). [International Christian Concern]
+- FE FIRME: Con multas y cierres, las iglesias no registradas se siguen reuniendo. [Forum 18, 2026]
+- LOS PIONEROS: 1867: Nikita Voronin, el primer bautista ruso, se bautiza en el río Kura (Tiflis). [Baptist History & Heritage Society]
+
+INDIA (Nueva Delhi)
+- ALERTA: 13 de sus 28 estados ya tienen leyes anticonversión (Maharashtra, 2026, es el n.º 13). [CSW / UCA News]
+- ALERTA: Más de 700 ataques a cristianos registrados en 2025 (706 de enero a noviembre). [United Christian Forum]
+- DATO: Puesto 12 en la Lista Mundial de la Persecución 2026. [Puertas Abiertas]
+- LOS PIONEROS: 1793: llega William Carey, bautista inglés, el "padre de las misiones modernas".
+
+FILIPINAS (Manila)
+- DATO: Más de 7.600 islas (7.641) y unos 20 ciclones tropicales cada año. [NAMRIA / PAGASA]
+- DATO: 8 de cada 10 filipinos se declaran católicos (78,8 %). [Censo 2020, PSA]
+- CAMPO ABIERTO: Solo 1 de cada 10 es protestante o evangélico. [Censo 2020, PSA]
+- LOS PIONEROS: 1900: Eric Lund y Braulio Manikan abren en Iloilo (Jaro) la primera iglesia bautista. [Central Philippine University]
+
+PARA CAMBIAR ALGO
+Todos los textos están al principio de video.html (constante C). Tiempos en la sección TIEMPOS.
+Render: node render.js H full 0 3270 (y V) · Música: python3 musica.py salida.wav
