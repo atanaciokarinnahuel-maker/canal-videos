@@ -1,0 +1,22 @@
+{
+ "pie": "Profecía 1 de 19",
+ "escenas": [
+  {"en": 0,                    "escena": "rollo",     "titulo": "1.ª PROFECÍA", "sub": "de la Biblia", "cam": [540, 820, 1.0, 540, 820, 1.12]},
+  {"en": ["Dios", 1, -0.25],   "escena": "jardin",    "cam": [540, 760, 1.0, 420, 900, 1.22]},
+  {"en": ["Adán", 1],          "escena": "pareja",    "cam": [520, 980, 1.02, 470, 1120, 1.3]},
+  {"en": ["medio", 1, -0.2],   "escena": "serpiente", "cam": [540, 820, 1.0, 560, 1080, 1.28]},
+  {"en": ["descendiente", 1, -0.3], "escena": "talon", "golpe": 1.9, "herida": 4.0, "cam": [540, 900, 1.0, 520, 1180, 1.3]},
+  {"en": ["Una", 1],           "escena": "talon",     "golpe": -1, "herida": -1, "cam": [330, 1290, 1.7, 640, 1380, 1.9]},
+  {"en": ["Miles", 1],         "escena": "pesebre",   "cam": [540, 860, 1.0, 560, 1080, 1.34]},
+  {"en": ["Juan", 1, -0.2],    "escena": "escritura", "titulo": "1 Juan 3", "cam": [540, 960, 1.0, 520, 1120, 1.25]},
+  {"en": ["cruz", 1, -0.5],    "escena": "cruz",      "victoria": 3.0, "cam": [540, 820, 1.0, 600, 1250, 1.3]},
+  {"en": ["promesa", 1, -0.3], "escena": "nombre",    "titulo": "JESÚS", "cam": [540, 820, 0.96, 540, 820, 1.1]},
+  {"en": ["¿Sabías", 1],       "escena": "biblia",    "titulo": "GÉNESIS", "cam": [540, 880, 1.0, 470, 1080, 1.3]}
+ ],
+ "refs": [
+  {"desde": ["Génesis", 1, -0.1], "hasta": ["Miles", 1], "texto": "Génesis 3:15"},
+  {"desde": ["Pablo", 1], "hasta": ["Juan", 1, -0.2], "texto": "Gálatas 4:4"},
+  {"desde": ["Juan", 1, 0.3], "hasta": ["cruz", 1, -0.5], "texto": "1 Juan 3:8"}
+ ],
+ "sello": {"en": ["vencida", 1, 0.25], "texto": "CUMPLIDA"}
+}

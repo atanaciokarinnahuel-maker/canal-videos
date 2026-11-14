@@ -8,6 +8,30 @@ Punto de partida: el video "Cada Profecía cumplida por Jesús en el Antiguo Tes
 - Cada guion tiene entre 110 y 140 palabras: 50–58 segundos con la voz de Sam Adam al tempo que ya usás. Unos 750 créditos de ElevenLabs por Short, unos 14.000 por los 19.
 - Estilo: sepia tipo grabado, igual que el largo del Cordero.
 
+## 0. Plan decidido por Karin (14 nov)
+
+- **Dos Shorts por día, en orden, del 1 al 19.** Son 10 días de publicación (el último día sale uno solo).
+- **Animación nueva: sepia tipo grabado.** Plantilla en `plantillas/sepia/`.
+- Separar los dos del día por varias horas. Nunca juntos: los 7 del 11 nov subidos en 13 minutos se pisaron entre sí.
+
+| Día | Shorts |
+|---|---|
+| 1 | 1 · La primera promesa — 2 · La pregunta de Isaac |
+| 2 | 3 · La puerta con sangre — 4 · Ni un hueso roto |
+| 3 | 5 · Belén — 6 · Un brote en un tronco cortado |
+| 4 | 7 · El Rey que eligió un burro — 8 · Las burlas |
+| 5 | 9 · Echaron suertes — 10 · Las marcas en sus manos |
+| 6 | 11 · Callado ante sus acusadores — 12 · Despreciado por los suyos |
+| 7 | 13 · Mirarán al que traspasaron — 14 · El cuerpo que no vio corrupción |
+| 8 | 15 · La señal de Jonás — 16 · "Destruid este templo" |
+| 9 | 17 · "Mi Redentor vive" — 18 · El Siervo que muere y después vive |
+| 10 | 19 · Más de quinientos testigos |
+
+**Estado al 14 nov**
+- Short 1: animación terminada con tiempos estimados, sin voz. Fuentes en `fuentes/profecias-01-primera-promesa/`.
+- Shorts 2 a 19: guion listo, animación sin hacer. Cada uno necesita sus escenas nuevas (altar, puerta, Belén, burro, etc.).
+- **Bloqueo:** la voz. El conector de ElevenLabs está sin autorizar; sin voz no hay video publicable.
+
 ## 1. El video dividido en sus profecías
 
 | # | Minuto en el video | Profecía | Cumplimiento | Short | Nota |
@@ -53,7 +77,7 @@ Resultado: 23 puntos en el video, 19 Shorts. Dos quedan para el largo y dos ya l
 
 ## 3. Los 19 guiones
 
-Cierre común para todos, después de la pregunta: **"Sígueme: mañana, otra profecía cumplida."**
+Cierre común para todos, después de la pregunta: **"Sígueme para ver la próxima profecía cumplida."** (ya no dice "mañana" porque salen dos por día).
 Hashtags para la descripción (no en el título): #Biblia #Jesús #ProfecíasBíblicas #AntiguoTestamento #EstabaEscrito #Evangelio #EstudioBíblico #BasesBíblicas
 
 ---

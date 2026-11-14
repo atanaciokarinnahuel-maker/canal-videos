@@ -37,3 +37,12 @@ Karin quiere recibir el video terminado + descripción + hashtags DESPUÉS de qu
 {"id":"<id>","titulo":"<≤70 caracteres>","descripcion":"<3–4 líneas>","hashtags":["#...", "..."]}
 ```
 (8–10 hashtags universales: temáticos + #shorts #reels; en español.) La tarea de las 07:22 lo lee, arma el mp4 con audio y se lo envía.
+
+## 5. Plantilla "sepia" (serie "Estaba escrito", Bases Bíblicas)
+Grabado antiguo sobre pergamino, dibujado por código en SVG. Carpeta `plantillas/sepia/`.
+- `video.html`: motor y biblioteca de escenas (`rollo`, `jardin`, `pareja`, `serpiente`, `talon`, `pesebre`, `escritura`, `cruz`, `nombre`, `biblia`). Las figuras no tienen rasgos de rostro a propósito: así un personaje no cambia de cara entre escenas.
+- `escenas.json` (uno por video): lista de escenas con su palabra ancla (`"en": ["palabra", n.º de aparición, desfase en s]`), movimiento de cámara, referencias bíblicas en pantalla y el sello "CUMPLIDA". Las escenas siguen a las palabras, no a los segundos: al cambiar la voz solo se reemplaza `words.json`.
+- `estimar_tiempos.py guion_voz.txt words.json`: tiempos ESTIMADOS para armar la animación antes de tener la voz. Con la voz real hay que reemplazar `words.json` por los tiempos reales y volver a renderizar.
+- `render.js` (Node + Playwright): `node render.js frames 0,5,10` para revisar cuadros; `node render.js full 0 860` y `node render.js full 860 1720` en paralelo para el video, y unir con ffmpeg.
+- Ritmo: una escena cada 4–8 s con cámara en movimiento continuo y subtítulos de 2–3 palabras. Es más lento que la regla de "algo cambia cada 1–2 s" del punto 1; es una prueba pedida por Karin el 14 nov.
+- Falta: música propia de la plantilla (los videos anteriores la generan con `musica.py`) y las escenas de los Shorts 2 a 19.
