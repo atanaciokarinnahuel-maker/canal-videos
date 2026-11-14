@@ -1,8 +1,8 @@
 pedido: 2026-11-14-prueba-transcripcion-jose
-origen: archivo del repo (videos/2026-11-09-bases-jose-egipto.mp4)
-duracion_s: 62.050000
-tamano_bytes: 35895522
-video: h264,1080,1920,30/1
-audio: aac,44100,2
-transcripcion: ok, modelo small, 0 palabras
+origen: archivo del repo (insumos-voz/2026-11-09-bases-jose-egipto/voz.mp3)
+duracion_s: 71.000816
+tamano_bytes: 852368
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 188 palabras
 RESULTADO: ok
