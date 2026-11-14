@@ -65,7 +65,7 @@ dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$v")
 
 if [ "$transcribir" = "true" ]; then
   pip install -q faster-whisper >/dev/null 2>&1 || true
-  ffmpeg -v error -y -i "$v" -vn -ac 1 -ar 16000 "$tmp/audio.wav"
+  ffmpeg -v error -y -i "$v" -vn -ac 1 -ar 16000 -c:a pcm_s16le "$tmp/audio.wav"
   if python3 scripts/transcribir.py "$tmp/audio.wav" "$out/transcripcion.txt" "$modelo" "$idioma" 2> "$tmp/tr.txt"; then
     echo "transcripcion: ok, modelo $modelo, $(wc -w < "$out/transcripcion.txt") palabras" >> "$rep"
   else
