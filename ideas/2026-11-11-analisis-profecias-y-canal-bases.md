@@ -3,7 +3,8 @@
 ## 0. Qué pude ver y qué no
 
 - **Texto:** transcripción completa del video en YouTube (vidIQ): "Cada Profecía cumplida por Jesús en el Antiguo Testamento", canal *Plegarias Benditas | La Biblia en su contexto*, 27:27.
-- **Imagen:** tu archivo de Drive (149 MB, 27:31). No lo vi reproducido: un flujo de GitHub Actions lo bajó y sacó 1 fotograma cada 4 segundos de todo el video, 1 por segundo del primer minuto y medio y del último minuto, y la lista de cambios de imagen. Están en `analisis/2026-11-11-profecias-jesus/`.
+- **Transcripción completa, palabra por palabra:** está en tu Drive, en el documento "Transcripción - Cada profecía cumplida por Jesús". No la dejé en este repo porque el repo es público y el texto es de otro canal.
+- **Imagen:** tu archivo de Drive (149 MB, 27:31). No lo vi reproducido: un flujo de GitHub Actions lo bajó y sacó 1 fotograma cada 4 segundos de todo el video, 1 por segundo del primer minuto y medio y del último minuto, y la lista de cambios de imagen. Las hojas de fotogramas se borraron del repo el 14 nov (son imágenes de un video ajeno en un repo público); quedan el reporte y la lista de cambios en `analisis/2026-11-11-profecias-jesus/`.
 - Tu archivo es una descarga de TikTok (cuenta @bendigoalpueblodeisrael) del mismo video: mismo título en pantalla, misma duración y mismas frases en los subtítulos.
 - **Lo que NO analicé:** la música, la voz y las transiciones entre imágenes. De fotogramas sueltos no se puede saber si hay fundidos ni cómo suena.
 
@@ -132,6 +133,7 @@ No te paso el texto del otro canal para volver a narrarlo: sería contenido reut
 **Título:** El Cordero: la promesa que empezó en un jardín y terminó en una cruz
 **Alternativas:** ¿Por qué Jesús tuvo que morir? La respuesta empieza en Génesis · 7 escenas de la Biblia que anunciaban a Jesús
 **Duración estimada:** ~900 palabras, 6–7 minutos. Unos 5.500–6.000 créditos de ElevenLabs (parecido al largo de las 5 mujeres).
+**Estilo (decidido el 14 nov, a prueba en este video):** sepia tipo grabado antiguo sobre pergamino, como el video de referencia, en lugar de la ilustración cálida habitual. Una sola paleta, referencia bíblica en pantalla en cada cita, y los mismos personajes con la misma cara en todas sus escenas.
 **Miniatura:** cordero blanco iluminado, sombra en forma de cruz sobre el suelo. Texto: "ESTABA ESCRITO".
 
 > **[GANCHO]**

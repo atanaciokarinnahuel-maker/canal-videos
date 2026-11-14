@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
-# Baja un video de referencia y deja en analisis/<id>/ hojas de fotogramas, lista de cortes y un reporte.
-# El video NO se guarda en el repo. Uso: analizar_video.sh analisis/pedidos/<id>.json
-# Pedido: {"id": "...", "drive_id": "...", "youtube_id": "...", "recorte": "ancho:alto:x:y"}
-# Alcanza con uno de los dos orígenes. "recorte" es opcional: sirve cuando el video real ocupa
-# solo una franja del cuadro (por ejemplo, una descarga vertical de TikTok de un video horizontal).
+# Baja un video y deja en analisis/<id>/ un reporte y, según el pedido, la transcripción y/o
+# hojas de fotogramas con la lista de cambios de imagen. El video NO se guarda en el repo.
+# Uso: analizar_video.sh analisis/pedidos/<id>.json
+# Pedido (JSON):
+#   id           nombre de la carpeta de salida (obligatorio)
+#   drive_id     id de un archivo de Drive compartido como "cualquier persona con el enlace"
+#   youtube_id   id de YouTube (suele fallar: YouTube bloquea las descargas desde GitHub)
+#   archivo      ruta de un video o audio que ya está en el repo
+#   transcribir  true para sacar el texto con Whisper (por defecto false)
+#   modelo       modelo de Whisper: small (por defecto) o medium (más exacto, 3 veces más lento)
+#   idioma       por defecto "es"
+#   fotogramas   false para no sacar imágenes (por defecto true)
+#   recorte      "ancho:alto:x:y" si el video real ocupa solo una franja del cuadro
+# OJO: el repo es público. Lo que este flujo deja en analisis/ lo puede ver cualquiera.
 # Para probar sin red: VIDEO_LOCAL=/ruta/video.mp4 analizar_video.sh pedido.json
 set -u
 pedido="$1"
@@ -11,6 +20,11 @@ id=$(jq -r .id "$pedido")
 drive=$(jq -r '.drive_id // empty' "$pedido")
 yt=$(jq -r '.youtube_id // empty' "$pedido")
 recorte=$(jq -r '.recorte // empty' "$pedido")
+archivo=$(jq -r '.archivo // empty' "$pedido")
+transcribir=$(jq -r '.transcribir // false' "$pedido")
+fotos=$(jq -r 'if .fotogramas == false then "false" else "true" end' "$pedido")
+modelo=$(jq -r '.modelo // "small"' "$pedido")
+idioma=$(jq -r '.idioma // "es"' "$pedido")
 out="analisis/$id"
 tmp=$(mktemp -d)
 v="$tmp/video.mp4"
@@ -18,11 +32,14 @@ rm -rf "$out"; mkdir -p "$out"
 rep="$out/reporte.txt"
 echo "pedido: $id" > "$rep"
 
-es_video() { ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 "$1" 2>/dev/null | grep -q .; }
+es_video() { ffprobe -v error -show_entries stream=codec_name -of csv=p=0 "$1" 2>/dev/null | grep -q .; }
 
 ok=0
 if [ -n "${VIDEO_LOCAL:-}" ]; then
   cp "$VIDEO_LOCAL" "$v" && ok=1 && echo "origen: archivo local" >> "$rep"
+fi
+if [ $ok = 0 ] && [ -n "$archivo" ] && [ -f "$archivo" ]; then
+  cp "$archivo" "$v" && ok=1 && echo "origen: archivo del repo ($archivo)" >> "$rep"
 fi
 if [ $ok = 0 ] && [ -n "$drive" ]; then
   curl -sSL -o "$v" "https://drive.usercontent.google.com/download?id=${drive}&export=download&confirm=t" || true
@@ -46,6 +63,17 @@ dur=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$v")
   echo "audio: $(ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,sample_rate,channels -of csv=p=0 "$v")"
 } >> "$rep"
 
+if [ "$transcribir" = "true" ]; then
+  pip install -q faster-whisper >/dev/null 2>&1 || true
+  ffmpeg -v error -y -i "$v" -vn -ac 1 -ar 16000 "$tmp/audio.wav"
+  if python3 scripts/transcribir.py "$tmp/audio.wav" "$out/transcripcion.txt" "$modelo" "$idioma" 2> "$tmp/tr.txt"; then
+    echo "transcripcion: ok, modelo $modelo, $(wc -w < "$out/transcripcion.txt") palabras" >> "$rep"
+  else
+    echo "transcripcion: falló: $(tail -n 2 "$tmp/tr.txt" | tr '\n' ' ' | cut -c1-300)" >> "$rep"
+  fi
+fi
+
+if [ "$fotos" = "true" ]; then
 fuente=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
 marca="drawtext=fontfile=${fuente}:text='%{pts\:hms}':x=4:y=4:fontsize=16:fontcolor=white:box=1:boxcolor=black@0.6"
 pre=""; [ -n "$recorte" ] && pre="crop=${recorte}," && echo "recorte: $recorte" >> "$rep"
@@ -73,6 +101,7 @@ awk '/pts_time/{split($0,a,"pts_time:"); t=a[2]} /scene_score/{split($0,b,"="); 
   done
   echo "cambios_por_minuto (umbral 0.12):"
   awk -v d="$dur" '$2>0.12{k[int($1/60)]++} END{for(i=0;i<=int(d/60);i++) printf "  min %02d: %d\n", i, k[i]+0}' "$out/cortes.txt"
-  echo "RESULTADO: ok"
 } >> "$rep"
+fi
+echo "RESULTADO: ok" >> "$rep"
 rm -rf "$tmp"
