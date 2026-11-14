@@ -61,9 +61,9 @@ beat = 0.5
 add(boom(1.2), 0.2, 0, 0.55); add(stab([note(m) for m in (38, 50, 57, 62, 65)], 1.4), 0.2, 0, 0.16); add(crash(1.4), 0.2, 0, 0.05)
 add(pad([note(26), note(38)], 6.2, 500), 0, 0, 0.22)
 for k, t in enumerate(np.arange(2.0, 5.5, 0.25)): add(blip(1760 if k % 4 else 2349, 0.05), t, 0.3 if k % 2 else -0.3, 0.035)
-for t, ch, g in [(2.05, (50, 57, 62), .09), (2.45, (50, 57, 62), .09), (2.9, (50, 57, 62, 65), .15), (3.25, (55, 58, 62, 67), .16), (3.6, (57, 61, 64, 69, 76), .2), (4.4, (62, 69, 74, 77), .13)]:
+for t, ch, g in [(2.05, (50, 57, 62), .09), (2.45, (50, 57, 62), .09), (2.9, (50, 57, 62, 65), .15), (3.25, (55, 58, 62, 67), .16), (3.6, (57, 61, 64, 69, 76), .2), (4.15, (62, 66, 69, 74), .1), (4.7, (62, 69, 74, 77), .13)]:
     add(stab([note(m) for m in ch], 0.7), t, 0, g); add(tom(80 if t < 3.6 else 62), t, 0, 0.22 if t >= 2.9 else 0.1)
-add(bell(note(86), 1.2), 4.4, 0.2, 0.06); add(riser(1.0), 5.0, 0, 0.07); add(whoosh(0.7), 5.45, 0, 0.14)
+add(bell(note(86), 1.2), 4.15, 0.2, 0.07); add(bell(note(90), 1.2), 4.7, -0.2, 0.05); add(riser(1.0), 5.0, 0, 0.07); add(whoosh(0.7), 5.45, 0, 0.14)
 
 # ---------------- cama rítmica: vista general + países ----------------
 ROOTS = [38, 41, 43, 45, 46]                      # Re m, Fa, Sol m, La, Si♭ (un color por país)
@@ -113,25 +113,46 @@ for k, t in enumerate(np.arange(T_IMP - 1.5, T_IMP - 0.05, 0.0625)): add(snare()
 for k, t in enumerate(sorted(I['ARC_T'])):             # salida de cada arco
     add(whoosh(0.8), t, [0.7, 0.4, 0.1, -0.2, -0.6][k], 0.17); add(bell(note([62, 66, 69, 74, 78][k]), 1.0), t, 0, 0.1)
 
-# ---------------- ¡PUM! + himno final (93–109) ----------------
+# ---------------- ¡PUM! en Maimará (93–96) ----------------
+T_HARV, T_LEMA = I['T_HARV'], I['T_LEMA']
 add(boom(2.4), T_IMP, 0, 0.95); add(boom(1.2), T_IMP + 0.02, 0, 0.4); add(crash(3.2), T_IMP, 0, 0.13)
 add(stab([note(m) for m in (38, 50, 57, 62, 66, 69, 74)], 2.2, 4200), T_IMP, 0, 0.2)
-PROG = [(38, (62, 66, 69)), (45, (61, 64, 69)), (47, (62, 66, 71)), (43, (62, 67, 71)), (38, (62, 66, 69)), (45, (61, 64, 69)), (43, (62, 67, 71)), (38, (62, 66, 69))]
-MEL = [(78, 81, 86, 81), (76, 81, 85, 81), (78, 83, 86, 83), (79, 83, 86, 91), (78, 81, 86, 90), (76, 81, 85, 88), (79, 83, 86, 91), (86,)]
-for b_, (root, ch) in enumerate(PROG):
-    t0 = T_IMP + b_ * 2.0; last = b_ == len(PROG) - 1; d = 2.4 if last else 2.0
-    add(pad([note(m) for m in ch] + [note(ch[0] - 12)], d, 2600), t0, 0, 0.11)
-    if b_: add(stab([note(m) for m in ch] + [note(root + 12)], 0.8, 3600), t0, 0, 0.12 if not last else 0.2)
-    if last:
-        add(boom(1.6), t0, 0, 0.5); add(crash(2.4), t0, 0, 0.09); add(bass(note(root), 2.0), t0, 0, 0.26); add(bell(note(86), 2.0), t0, 0, 0.1); add(bell(note(90), 2.0), t0 + .12, 0.3, 0.08); break
+def soft_bar(t0, root, ch, mel, g=1.0, d=2.0):          # compás suave: colchón + arpa
+    add(pad([note(m) for m in ch] + [note(ch[0] - 12)], d + 0.3, 2400), t0, 0, 0.12 * g); add(bass(note(root), 1.6), t0, 0, 0.2 * g)
+    for k, mm in enumerate(mel): add(bell(note(mm), 1.3), t0 + k * (d / len(mel)), -0.4 + 0.8 * k / max(1, len(mel) - 1), 0.085 * g)
+def full_bar(t0, root, ch, mel):                         # compás completo: himno con batería
+    add(pad([note(m) for m in ch] + [note(ch[0] - 12)], 2.0, 2600), t0, 0, 0.11); add(stab([note(m) for m in ch] + [note(root + 12)], 0.8, 3600), t0, 0, 0.12)
     for k in range(8):
         tt = t0 + k * beat / 2
         add(bass(note(root), beat * 0.46), tt, 0, 0.2); add(pluck(note(ch[OST[k]] + 12)), tt, 0.3 if k % 2 else -0.3, 0.05)
-        if b_ >= 1:
-            if k % 2 == 0: add(kick(), tt, 0, 0.33)
-            add(hat(k == 7), tt, 0.25 if k % 2 else -0.25, 0.04 if k % 2 == 0 else 0.055)
-            if k in (2, 6): add(clap(), tt, 0, 0.11)
-    for k, m in enumerate(MEL[b_]): add(bell(note(m), 0.9), t0 + k * beat, 0.15, 0.1 if b_ >= 1 else 0.06)
+        if k % 2 == 0: add(kick(), tt, 0, 0.33)
+        add(hat(k == 7), tt, 0.25 if k % 2 else -0.25, 0.04 if k % 2 == 0 else 0.055)
+        if k in (2, 6): add(clap(), tt, 0, 0.11)
+    for k, mm in enumerate(mel): add(bell(note(mm), 0.9), t0 + k * beat, 0.15, 0.1)
+soft_bar(T_IMP, 38, (62, 66, 69), (78, 81, 86, 81), 0.9)
+soft_bar(T_IMP + 2, 45, (61, 64, 69), (76, 81, 85, 88), 0.9)
+# ---------------- el trigal (96–103): viento, arpa y el lema ----------------
+def wind(d):
+    t = T(d); s = rng.standard_normal(len(t)); b, a = sg.butter(2, [350 / (sr / 2), 1500 / (sr / 2)], 'band')
+    return sg.lfilter(b, a, s) * (0.55 + 0.45 * np.sin(2 * np.pi * 0.27 * t + 1.0)) * np.minimum(1, t / 1.2) * np.minimum(1, (d - t) / 1.5)
+add(whoosh(1.3), T_HARV - 0.3, 0, 0.16); add(wind(T_FIN - T_HARV + 1.0), T_HARV - 0.2, -0.3, 0.1); add(wind(T_FIN - T_HARV + 1.0), T_HARV, 0.4, 0.08)
+add(bell(note(90), 1.6), T_HARV + 0.8, 0.3, 0.07); add(bell(note(86), 1.6), T_HARV + 1.0, -0.3, 0.07)          # entra el versículo
+soft_bar(T_HARV + 1, 47, (62, 66, 71), (74, 78, 83, 86, 90, 86, 83, 78), 1.0)                                    # Si menor
+add(riser(1.0, 200, 1500), T_LEMA - 1.0, 0, 0.06)
+add(boom(1.8), T_LEMA, 0, 0.6); add(crash(2.6), T_LEMA, 0, 0.1); add(tom(60), T_LEMA + 0.38, 0, 0.4)             # ¡LA COSECHA / ESTÁ LISTA!
+add(stab([note(m) for m in (43, 55, 62, 67, 71, 74)], 1.8, 4000), T_LEMA, 0, 0.2); add(stab([note(m) for m in (55, 62, 67, 71, 79)], 1.4, 4000), T_LEMA + 0.38, 0, 0.17)
+soft_bar(T_LEMA, 43, (62, 67, 71), (79, 83, 86, 91, 86, 83, 79, 83), 1.1)                                        # Sol
+soft_bar(T_LEMA + 2, 45, (61, 64, 69), (76, 81, 85, 88, 85, 88, 93, 88), 1.1)                                    # La → resuelve en el cartel
+for k, t in enumerate(np.arange(T_FIN - 1.0, T_FIN - 0.02, 0.0625)): add(snare(), t, 0, 0.025 + 0.006 * k)
+add(riser(1.2, 250, 2200), T_FIN - 1.2, 0, 0.08)
+# ---------------- cartel final (103–114): himno ----------------
+add(boom(1.6), T_FIN, 0, 0.5); add(crash(2.6), T_FIN, 0, 0.1)
+PROG = [(38, (62, 66, 69)), (45, (61, 64, 69)), (47, (62, 66, 71)), (43, (62, 67, 71))]
+MEL = [(78, 81, 86, 90), (76, 81, 85, 88), (78, 83, 86, 83), (79, 83, 86, 91)]
+for b_, (root, ch) in enumerate(PROG): full_bar(T_FIN + b_ * 2.0, root, ch, MEL[b_])
+t0 = T_FIN + 8.0                                                                                                  # acorde final
+add(pad([note(m) for m in (50, 62, 66, 69, 74)], 2.9, 2600), t0, 0, 0.13); add(stab([note(m) for m in (38, 50, 62, 66, 69, 74)], 1.6, 3800), t0, 0, 0.2)
+add(boom(1.6), t0, 0, 0.5); add(crash(2.6), t0, 0, 0.09); add(bass(note(38), 2.2), t0, 0, 0.26); add(bell(note(86), 2.2), t0, 0, 0.1); add(bell(note(90), 2.2), t0 + .12, 0.3, 0.08)
 for k, dt in enumerate([0, .3, 1.0, 1.75, 2.15, 2.9]):   # entradas del cartel final
     add(whoosh(0.35), T_FIN + dt - 0.05, -0.3, 0.09)
     if k == 2: add(tom(62), T_FIN + dt, 0, 0.3); add(pop(800), T_FIN + dt, 0, 0.25)

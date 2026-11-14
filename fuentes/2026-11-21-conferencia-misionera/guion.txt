@@ -1,6 +1,7 @@
 INVITACIÓN — PRIMERA GRAN CONFERENCIA MISIONERA EN MAIMARÁ
 Iglesia Bautista Getsemaní Fundamental · 21 y 22 de noviembre de 2026 · Calle Froilán Calverti, Maimará, Jujuy
-Formato: noticiero sin voz (música + titulares). Duración 1:49. Horizontal 1920x1080 y vertical 1080x1920.
+Lema: «La cosecha está lista».
+Formato: noticiero sin voz (música + titulares). Duración 1:54. Horizontal 1920x1080 y vertical 1080x1920.
 Datos verificados el 13 nov 2026. Cada tarjeta muestra su fuente en pantalla.
 
 ESTRUCTURA
@@ -9,8 +10,13 @@ ESTRUCTURA
 0:12  Venezuela · 0:27 Uganda · 0:42 Rusia · 0:57 India · 1:12 Filipinas (15 s cada una, 4 tarjetas)
 1:27  "5 naciones, un solo destino" → los 5 caminos salen juntos hacia Maimará
 1:33  ¡PUM! Impacto en MAIMARÁ · Jujuy · Argentina
-1:36  Cartel final: fechas, iglesia, dirección, "Invitación especial para todos. ¡Los esperamos!"
-Cintillo: «Id por todo el mundo y predicad el evangelio a toda criatura» — Marcos 16:15 (RVR1960)
+1:36  EL TRIGAL: amanecer sobre un campo de trigo con los cerros de la Quebrada (Paleta del Pintor) al fondo.
+      Una multitud camina por el sendero hacia la luz llevando las 5 banderas (la cosecha de almas).
+      Versículo: «A la verdad la mies es mucha, mas los obreros pocos» — Mateo 9:37 (RVR1960)
+1:39  Lema: LA COSECHA ESTÁ LISTA
+1:43  Cartel final sobre el trigal: fechas, iglesia, dirección, "Invitación especial para todos. ¡Los esperamos!"
+El lema también aparece en la intro (0:04) y en el cintillo.
+Cintillo: lema + Mateo 9:37 + «Id por todo el mundo y predicad el evangelio a toda criatura» — Marcos 16:15 (RVR1960)
 
 VENEZUELA (Caracas)
 - ACTUALIDAD: Enero 2026: cae Maduro. Hoy se negocia una transición, aún sin fecha de elecciones. [EFE / Infobae, 13 nov 2026]
@@ -44,4 +50,5 @@ FILIPINAS (Manila)
 
 PARA CAMBIAR ALGO
 Todos los textos están al principio de video.html (constante C). Tiempos en la sección TIEMPOS.
-Render: node render.js H full 0 3270 (y V) · Música: python3 musica.py salida.wav
+El trigal se dibuja en la función drawField de video.html.
+Render: node render.js H full 0 3420 (y V) · Música: python3 musica.py salida.wav
