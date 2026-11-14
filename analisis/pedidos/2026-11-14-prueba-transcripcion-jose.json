@@ -1,7 +1,7 @@
 {
  "id": "2026-11-14-prueba-transcripcion-jose",
- "archivo": "videos/2026-11-09-bases-jose-egipto.mp4",
+ "archivo": "insumos-voz/2026-11-09-bases-jose-egipto/voz.mp3",
  "transcribir": true,
  "fotogramas": false,
- "intento": 2
+ "intento": 3
 }
