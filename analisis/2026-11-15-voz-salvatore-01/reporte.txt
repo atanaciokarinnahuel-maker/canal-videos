@@ -1,0 +1,8 @@
+pedido: 2026-11-15-voz-salvatore-01
+origen: archivo del repo (insumos-voz/profecias-01-primera-promesa/voz.mp3)
+duracion_s: 111.020408
+tamano_bytes: 1776788
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 258 palabras
+RESULTADO: ok
