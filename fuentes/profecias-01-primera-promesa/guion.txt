@@ -1,15 +1,17 @@
 Short Bases Bíblicas · Serie "Estaba escrito", profecía 1 de 19 · "La primera promesa de la Biblia" (Génesis 3:15)
 Guion de Claude (15 nov 2026), a partir del pedido de Karin de dividir en Shorts las profecías del video de referencia.
-Voz: Damián (BPwS5yO6aXvwg8auqNwS), eleven_v4. Toma de 52,27 s (741 créditos) + frase de las pieles generada aparte e insertada (121 créditos).
-Prueba del 15 nov, a pedido de Karin (más grave y más lenta): la voz se reproduce al 91 % de velocidad (scripts/voz_grave.py), sin volver a generarla. Video: 68,93 s.
-Ilustraciones del pecado agregadas: el fruto, las hojas de higuera (Gn 3:7-8) y las túnicas de pieles (Gn 3:21).
+Versión 3 (15 nov), a pedido de Karin: voz más grave, más suspenso, y sin recortar la parte de las hojas, las pieles y la sangre.
+Voz: Salvatore (t3eeeqhBjrUqcrPvDqUn), eleven_v4, 1 toma de 104,36 s (1.326 créditos), reproducida al 94 % (scripts/voz_grave.py). Video: 112,32 s.
+Salvatore es la voz más grave de la cuenta: tono medio medido en su muestra ~96 Hz (Damián ~123, Jorge ~118, Japa ~147).
+Versiones anteriores descartadas: Sam Adam (741 créditos), Damián (741) y Damián al 91 % con la frase de las pieles insertada (121).
+La parte de las hojas, las pieles y la sangre toma las ideas del video de referencia, escritas con palabras propias.
 "Un inocente tuvo que morir" es una deducción de Gn 3:21 (el texto no nombra al animal).
-Primera versión (descartada por Karin el 15 nov: pidió una voz más grave y seria): Sam Adam, 54,99 s, 741 créditos.
+Música con suspenso: nota grave, latido y tensión antes de las escenas clave; pasa a tono mayor en la cruz.
 Tiempos de palabras: los devuelve ElevenLabs (scripts/generar_voz.py), no son estimados.
-Estilo: plantilla sepia (grabado sobre pergamino). 13 escenas. Rojo solo para la herida y el sello; azul solo para María.
+Estilo: plantilla sepia (grabado sobre pergamino). 18 escenas. Rojo solo para la herida y el sello; azul solo para María.
 Indicador: línea de PROFECÍA a CUMPLIMIENTO; sello "CUMPLIDA" en "fue vencida".
 En la voz, "Génesis 3:15" se dice "Génesis tres, quince"; la referencia aparece escrita en pantalla.
-Fuentes (RVR1960): Gn 3:7, 15, 21; Gá 4:4; 1 Jn 3:8.
+Fuentes (RVR1960): Gn 3:7, 15, 21; Gá 4:4; 1 Jn 3:8; Heb 9:22 (idea de la sangre).
 
 TÍTULO: La primera profecía de la Biblia no la dijo un profeta
 DESCRIPCIÓN: La primera promesa de un Salvador está en Génesis 3:15, el mismo día en que entró el pecado. Miles de años después, Pablo y Juan explican cómo se cumplió en Jesús. Serie "Estaba escrito": una profecía por video. Versículos: Génesis 3:15, Gálatas 4:4, 1 Juan 3:8 (Reina-Valera 1960).
