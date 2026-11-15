@@ -1,0 +1,8 @@
+pedido: 2026-11-15-voz-damian-03
+origen: archivo del repo (insumos-voz/profecias-03-puerta-con-sangre/voz.mp3)
+duracion_s: 53.968980
+tamano_bytes: 863964
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 149 palabras
+RESULTADO: ok

@@ -1,0 +1,8 @@
+pedido: 2026-11-15-voz-damian-02
+origen: archivo del repo (insumos-voz/profecias-02-pregunta-de-isaac/voz.mp3)
+duracion_s: 54.831020
+tamano_bytes: 877757
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 146 palabras
+RESULTADO: ok

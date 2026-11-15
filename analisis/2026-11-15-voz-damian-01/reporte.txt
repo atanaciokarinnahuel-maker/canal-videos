@@ -1,0 +1,8 @@
+pedido: 2026-11-15-voz-damian-01
+origen: archivo del repo (insumos-voz/profecias-01-primera-promesa/voz.mp3)
+duracion_s: 52.271020
+tamano_bytes: 836797
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 148 palabras
+RESULTADO: ok
