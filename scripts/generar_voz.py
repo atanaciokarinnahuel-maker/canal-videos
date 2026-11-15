@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Genera la voz de un guion con la API de ElevenLabs y saca los tiempos reales de cada palabra.
-Uso: generar_voz.py guion_voz.txt carpeta_salida [voice_id] [modelo]
+Uso: generar_voz.py guion_voz.txt carpeta_salida [voice_id] [modelo] [max_segundos]
+Si la toma dura más que max_segundos (57 por defecto), se acelera lo justo (tope x1,15) y se
+ajustan los tiempos; la toma original queda como voz_original.mp3.
 Deja en la carpeta: voz.mp3, alineacion.json (respuesta cruda de tiempos) y words.json
 ({"words": [{"text", "start", "end"}], "voice_dur"}), que es lo que lee la animación.
 La clave NO va en este archivo ni en variables: el proxy de la sesión la agrega sola al
@@ -11,6 +13,7 @@ import base64, json, os, subprocess, sys, tempfile
 guion, out = sys.argv[1], sys.argv[2]
 voz = sys.argv[3] if len(sys.argv) > 3 else "18GZPpJvaVG53Nt3H52N"   # Sam Adam
 modelo = sys.argv[4] if len(sys.argv) > 4 else "eleven_v4"
+maximo = float(sys.argv[5]) if len(sys.argv) > 5 else 57.0
 texto = " ".join(open(guion, encoding="utf-8").read().split())
 os.makedirs(out, exist_ok=True)
 
@@ -42,6 +45,13 @@ for c, s, e in zip(ch, t0, t1):
 if cur: words.append({"text": cur, "start": round(a, 3), "end": round(b, 3)})
 dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
                             os.path.join(out, "voz.mp3")], capture_output=True, text=True).stdout)
-json.dump({"words": words, "voice_dur": round(dur, 2), "modelo": modelo, "voz": voz, "caracteres": len(texto)},
+tempo = 1.0
+if dur > maximo:
+    tempo = round(min(1.15, dur / (maximo - 0.5)), 3)
+    mp3 = os.path.join(out, "voz.mp3"); orig = os.path.join(out, "voz_original.mp3"); os.replace(mp3, orig)
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", orig, "-af", f"atempo={tempo}", "-ar", "44100", "-b:a", "128k", mp3], check=True)
+    for w in words: w["start"] = round(w["start"] / tempo, 3); w["end"] = round(w["end"] / tempo, 3)
+    dur = dur / tempo
+json.dump({"words": words, "voice_dur": round(dur, 2), "modelo": modelo, "voz": voz, "caracteres": len(texto), "tempo": tempo},
           open(os.path.join(out, "words.json"), "w"), ensure_ascii=False)
-print(f"{len(words)} palabras, {dur:.2f} s, {len(texto)} caracteres, modelo {modelo}")
+print(f"{len(words)} palabras, {dur:.2f} s, {len(texto)} caracteres, modelo {modelo}, tempo x{tempo}")

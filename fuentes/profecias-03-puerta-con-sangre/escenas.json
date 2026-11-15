@@ -1,0 +1,22 @@
+{
+ "pie": "Profecía 3 de 19",
+ "escenas": [
+  {"en": 0,                       "escena": "egipto",    "cam": [540, 860, 1.0, 560, 1100, 1.3]},
+  {"en": ["era", 1, -0.1],        "escena": "puerta",    "listo": true, "cam": [540, 900, 1.0, 540, 760, 1.25]},
+  {"en": ["Última", 1, -0.1],     "escena": "egipto",    "sombra": 0.1, "cam": [540, 760, 1.05, 540, 900, 1.2]},
+  {"en": ["Dios", 1, -0.3],       "escena": "cordero",   "cielo": "gDusk", "cam": [540, 900, 1.0, 540, 1180, 1.4]},
+  {"en": ["sacrificarlo", 1, -0.1], "escena": "puerta",  "postes": ["postes", 1, -0.9], "dintel": ["dintel", 1, -0.6], "cam": [540, 1000, 1.0, 540, 820, 1.2]},
+  {"en": ["prometió", 1, -0.3],   "escena": "calle",     "cam": [540, 900, 1.0, 540, 1150, 1.35]},
+  {"en": ["No", 1, -0.1],         "escena": "familia",   "cam": [540, 860, 1.0, 540, 1050, 1.2]},
+  {"en": ["Más", 1, -0.15],       "escena": "jerusalen", "cam": [600, 900, 1.0, 380, 1180, 1.4]},
+  {"en": ["Pablo", 1, -0.3],      "escena": "cruz",      "sinSerpiente": true, "cam": [540, 820, 1.0, 540, 1000, 1.25]},
+  {"en": ["pregunta", 1, -0.4],   "escena": "puerta",    "listo": true, "cam": [540, 1000, 1.05, 540, 720, 1.5]},
+  {"en": ["Sígueme", 1, -0.1],    "escena": "biblia",    "titulo": "ÉXODO 12", "cam": [540, 880, 1.0, 470, 1080, 1.3]}
+ ],
+ "refs": [
+  {"desde": ["poner", 1], "hasta": ["prometió", 1, -0.3], "texto": "Éxodo 12:7"},
+  {"desde": ["Veré", 1, -0.1], "hasta": ["No", 1, -0.1], "texto": "Éxodo 12:13"},
+  {"desde": ["nuestra", 1, -0.1], "hasta": ["pregunta", 1, -0.4], "texto": "1 Corintios 5:7"}
+ ],
+ "sello": {"en": ["sacrificada", 1, 0.35], "texto": "CUMPLIDA"}
+}

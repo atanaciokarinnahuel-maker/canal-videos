@@ -1,6 +1,7 @@
 Short Bases Bíblicas · Serie "Estaba escrito", profecía 1 de 19 · "La primera promesa de la Biblia" (Génesis 3:15)
 Guion de Claude (15 nov 2026), a partir del pedido de Karin de dividir en Shorts las profecías del video de referencia.
-Voz: Sam Adam (18GZPpJvaVG53Nt3H52N), eleven_v4, 1 toma de 54,99 s (741 créditos), sin acelerar ni recortar. Video: 56,29 s.
+Voz: Damián (BPwS5yO6aXvwg8auqNwS), eleven_v4, 1 toma de 52,27 s (741 créditos), sin acelerar ni recortar. Video: 53,57 s.
+Primera versión (descartada por Karin el 15 nov: pidió una voz más grave y seria): Sam Adam, 54,99 s, 741 créditos.
 Tiempos de palabras: los devuelve ElevenLabs (scripts/generar_voz.py), no son estimados.
 Estilo: plantilla sepia (grabado sobre pergamino). 11 escenas. Rojo solo para la herida y el sello; azul solo para María.
 Indicador: línea de PROFECÍA a CUMPLIMIENTO; sello "CUMPLIDA" en "fue vencida".

@@ -1,0 +1,240 @@
+{
+ "pie": "Profecía 2 de 19",
+ "escenas": [
+  {
+   "en": 0,
+   "escena": "caminata",
+   "cam": [
+    520,
+    900,
+    1.0,
+    500,
+    1120,
+    1.3
+   ]
+  },
+  {
+   "en": [
+    "Abraham",
+    1,
+    -0.15
+   ],
+   "escena": "monte",
+   "cam": [
+    540,
+    900,
+    1.0,
+    560,
+    1000,
+    1.3
+   ]
+  },
+  {
+   "en": [
+    "Isaac",
+    2,
+    -0.1
+   ],
+   "escena": "caminata",
+   "cielo": "gDusk",
+   "pregunta": [
+    "dónde",
+    1,
+    -0.1
+   ],
+   "cam": [
+    560,
+    1080,
+    1.25,
+    680,
+    1100,
+    1.5
+   ]
+  },
+  {
+   "en": [
+    "Abraham",
+    2,
+    -0.1
+   ],
+   "escena": "caminata",
+   "arriba": true,
+   "cam": [
+    500,
+    820,
+    1.0,
+    420,
+    1000,
+    1.35
+   ]
+  },
+  {
+   "en": [
+    "Dios",
+    2,
+    -0.15
+   ],
+   "escena": "altar",
+   "luz": 0.25,
+   "cam": [
+    540,
+    860,
+    1.0,
+    540,
+    1100,
+    1.25
+   ]
+  },
+  {
+   "en": [
+    "Abraham",
+    3,
+    -0.1
+   ],
+   "escena": "carnero",
+   "cam": [
+    540,
+    900,
+    1.0,
+    520,
+    1150,
+    1.2
+   ]
+  },
+  {
+   "en": [
+    "Fíjate",
+    1,
+    -0.1
+   ],
+   "escena": "texto",
+   "lineas": [
+    "¿DÓNDE ESTÁ",
+    "EL CORDERO?"
+   ],
+   "cam": [
+    540,
+    820,
+    0.98,
+    540,
+    820,
+    1.12
+   ]
+  },
+  {
+   "en": [
+    "Siglos",
+    1,
+    -0.15
+   ],
+   "escena": "jordan",
+   "cam": [
+    540,
+    920,
+    1.0,
+    520,
+    1200,
+    1.32
+   ]
+  },
+  {
+   "en": [
+    "He",
+    1,
+    -0.1
+   ],
+   "escena": "cordero",
+   "cam": [
+    540,
+    900,
+    1.0,
+    540,
+    1180,
+    1.4
+   ]
+  },
+  {
+   "en": [
+    "Dios",
+    4,
+    -0.2
+   ],
+   "escena": "cruz",
+   "sinSerpiente": true,
+   "cam": [
+    540,
+    820,
+    1.0,
+    540,
+    1000,
+    1.25
+   ]
+  },
+  {
+   "en": [
+    "¿Conocías",
+    1,
+    -0.1
+   ],
+   "escena": "biblia",
+   "titulo": "GÉNESIS 22",
+   "cam": [
+    540,
+    880,
+    1.0,
+    470,
+    1080,
+    1.3
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "desde": [
+    "Dios",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "Dios",
+    2,
+    -0.15
+   ],
+   "texto": "Génesis 22:8"
+  },
+  {
+   "desde": [
+    "Abraham",
+    3,
+    0.4
+   ],
+   "hasta": [
+    "Fíjate",
+    1,
+    -0.1
+   ],
+   "texto": "Génesis 22:13"
+  },
+  {
+   "desde": [
+    "He",
+    1,
+    0.2
+   ],
+   "hasta": [
+    "Dios",
+    4,
+    -0.2
+   ],
+   "texto": "Juan 1:29"
+  }
+ ],
+ "sello": {
+  "en": [
+   "proveyó",
+   1,
+   0.35
+  ],
+  "texto": "CUMPLIDA"
+ }
+}

@@ -1,0 +1,8 @@
+# Archivos temporales del render de la plantilla sepia (scripts/armar_sepia.sh)
+fuentes/profecias-*/part_*.mp4
+fuentes/profecias-*/tmp_*.mp4
+fuentes/profecias-*/r1.log
+fuentes/profecias-*/r2.log
+fuentes/profecias-*/l.txt
+fuentes/profecias-*/frames/
+fuentes/profecias-*/musica.wav
