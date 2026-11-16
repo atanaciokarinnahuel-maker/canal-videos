@@ -1,0 +1,5 @@
+id=2026-11-16-tech-bateria-hinchada
+voz_seg=60.553968
+final_seg=61.900000
+[Parsed_volumedetect_0 @ 0x7cbb54002000] mean_volume: -14.9 dB
+[Parsed_volumedetect_0 @ 0x7cbb54002000] max_volume: -1.4 dB
