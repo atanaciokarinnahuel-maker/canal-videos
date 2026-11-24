@@ -47,7 +47,7 @@ def tension(d=2.2):
     return (s * trem + nz) * (t / d) ** 2.2
 def trueno():
     t = T(1.6); return np.sin(2 * np.pi * np.cumsum(38 + 50 * np.exp(-t * 10)) / sr) * np.exp(-t * 3.2) + lp(rng.standard_normal(len(t)), 500) * np.exp(-t * 6) * .5
-claves = [e[1] for e in info['escenas'] if e[0] in ('serpiente', 'talon', 'pieles', 'cordero', 'altares', 'cruz', 'puerta', 'altar', 'calle') and e[1] > 1]
+claves = [e[1] for e in info['escenas'] if e[0] in ('serpiente', 'talon', 'pieles', 'cordero', 'altares', 'cruz', 'puerta', 'altar', 'calle', 'carga', 'llamado', 'carnero') and e[1] > 1]
 compas = 4.0
 menor = [[50, 57, 62, 65], [46, 53, 58, 62], [43, 55, 58, 62], [45, 52, 57, 61]]      # Re m, Si b, Sol m, La
 mayor = [[50, 57, 62, 66], [43, 55, 59, 62], [45, 52, 57, 61], [50, 57, 62, 66]]      # Re, Sol, La, Re

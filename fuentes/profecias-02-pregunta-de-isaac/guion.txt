@@ -1,16 +1,20 @@
-Short Bases Bíblicas · Serie "Estaba escrito", profecía 2 de 19 · "La pregunta de Isaac" (Génesis 22 → Juan 1:29)
-Guion de Claude (15 nov 2026). Voz: Damián (BPwS5yO6aXvwg8auqNwS), eleven_v4, 1 toma de 54,83 s (758 créditos), sin acelerar. Video: 56,13 s.
-Tiempos de palabras: los devuelve ElevenLabs (scripts/generar_voz.py).
-Estilo: plantilla sepia. 11 escenas. Sello "CUMPLIDA" en "Dios se proveyó de cordero".
-En la voz, "Génesis 22" se dice "Génesis veintidós"; las referencias aparecen escritas en pantalla.
-No se dibuja el cuchillo: la escena del altar muestra la luz que detiene a Abraham.
-Fuentes (RVR1960): Gn 22:2, 7-8, 13; Jn 1:29. "Unos dos mil años" es la fecha tradicional de Abraham, redondeada.
+Short Bases Bíblicas · Serie "Estaba escrito", profecía 2 de 19 · "La pregunta de Isaac" (Génesis 22 → Juan 1:29 · Romanos 8:32)
+Versión 2 (24 nov 2026), con el formato aprobado en el Short 1 v3: voz de Salvatore, suspenso y relato completo.
+Voz: Salvatore (t3eeeqhBjrUqcrPvDqUn), eleven_v4, 1 toma de 140,75 s (1.820 créditos), reproducida al 94 % (scripts/voz_grave.py). Video: 151,03 s.
+Versión 1 descartada: Damián, 54,83 s (758 créditos), guion corto.
+Escenas: 24. Nuevas en la plantilla: estrellas (promesa), tienda (nacimiento de Isaac), llamado, Isaac cargando la leña con una cruz de luz
+que asoma en el cielo, altar con Isaac atado y el cuchillo en alto, y el templo en el monte Moriah. Abraham aparece con canas.
+Sello "CUMPLIDA" en "Y Dios proveyó", sobre el nombre JESÚS.
+Referencias en pantalla (no se dicen en la voz salvo "Hebreos").
+Fuentes (RVR1960): Gn 12:4 y 21:5 (25 años de espera: 75 → 100 años); Gn 15:5; Gn 22:2, 4-14; Heb 11:19; 2 Cr 3:1; Jn 1:29; Ro 8:32.
+Notas: "unos dos mil años" es la fecha tradicional de Abraham, redondeada. "Ofrécelo en holocausto sobre uno de los montes de Moriah" resume Gn 22:2.
+"En la cruz… no lo detuvo" es una conclusión teológica (Ro 8:32), no una cita.
 
 TÍTULO: La pregunta de Isaac que tardó dos mil años en responderse
-DESCRIPCIÓN: Camino al monte, Isaac preguntó: "¿Dónde está el cordero?". Abraham respondió: "Dios se proveerá de cordero". Ese día apareció un carnero; siglos después, Juan el Bautista señaló a Jesús: "He aquí el Cordero de Dios". Serie "Estaba escrito": una profecía por video. Versículos: Génesis 22:7-8, 13; Juan 1:29 (Reina-Valera 1960).
-HASHTAGS (en la descripción): #Biblia #Jesús #CorderoDeDios #Abraham #Isaac #ProfecíasBíblicas #AntiguoTestamento #EstabaEscrito #BasesBíblicas #Shorts
-COMENTARIO PARA FIJAR: ¿Conocías esta conexión entre Génesis 22 y Juan 1:29? Te leo. Esta es la profecía 2 de 19.
+DESCRIPCIÓN: Abraham esperó 25 años a su hijo. Un día Dios le pidió que lo ofreciera en el monte Moriah. Camino arriba, Isaac preguntó: "¿Dónde está el cordero?". Abraham respondió: "Dios se proveerá de cordero". Siglos después, Juan el Bautista señaló a Jesús: "He aquí el Cordero de Dios". En Moriah, Dios detuvo el cuchillo; con su propio Hijo, no lo detuvo. Serie "Estaba escrito": una profecía por video. Versículos: Génesis 22:2-14; Hebreos 11:19; Juan 1:29; Romanos 8:32 (Reina-Valera 1960).
+HASHTAGS (en la descripción): #Biblia #Jesús #CorderoDeDios #Abraham #Isaac #Génesis22 #ProfecíasBíblicas #EstabaEscrito #BasesBíblicas #Shorts
+COMENTARIO PARA FIJAR: "En Moriah, Dios detuvo el cuchillo. En la cruz, no lo detuvo." ¿Conocías esta conexión? Te leo. Esta es la profecía 2 de 19.
 PREGUNTAS QUE PUEDEN HACERTE:
-1. "¿Por qué Dios le pidió eso a Abraham?" Fue una prueba (Gn 22:1) y Dios mismo la detuvo (Gn 22:12). Hebreos 11:17-19 dice que Abraham creía que Dios podía levantar a Isaac de entre los muertos.
-2. "¿Un carnero no es lo mismo que un cordero?" No: el carnero es el macho adulto. El texto dice "cordero" en la pregunta (22:7-8) y "carnero" en lo que apareció (22:13).
-3. "¿Dónde queda ese monte?" Génesis dice "tierra de Moriah" (22:2); 2 Crónicas 3:1 ubica en el monte Moriah el templo de Jerusalén.
+1. "¿Por qué Dios le pidió eso a Abraham?" Fue una prueba (Gn 22:1) y Dios mismo la detuvo (Gn 22:12). Abraham confiaba en que Dios podía levantar a Isaac de entre los muertos (Heb 11:19).
+2. "¿Un carnero no es lo mismo que un cordero?" No: el carnero es el macho adulto. Isaac preguntó por un cordero (22:7-8) y apareció un carnero (22:13).
+3. "¿Es el mismo monte del templo?" Génesis dice "tierra de Moriah" (22:2) y 2 Crónicas 3:1 ubica el templo "en el monte Moriah". La tradición los identifica; la Biblia no lo dice con esas palabras.

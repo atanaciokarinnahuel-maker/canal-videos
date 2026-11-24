@@ -4,13 +4,19 @@
   {
    "en": 0,
    "escena": "caminata",
+   "cielo": "gDusk",
+   "pregunta": [
+    "pregunta",
+    1,
+    -0.1
+   ],
    "cam": [
-    520,
+    540,
     900,
     1.0,
-    500,
-    1120,
-    1.3
+    600,
+    1050,
+    1.25
    ]
   },
   {
@@ -18,6 +24,54 @@
     "Abraham",
     1,
     -0.15
+   ],
+   "escena": "estrellas",
+   "cam": [
+    540,
+    760,
+    1.0,
+    470,
+    1000,
+    1.25
+   ]
+  },
+  {
+   "en": [
+    "cien",
+    1,
+    -0.4
+   ],
+   "escena": "tienda",
+   "cam": [
+    540,
+    1000,
+    1.0,
+    600,
+    1150,
+    1.3
+   ]
+  },
+  {
+   "en": [
+    "Hasta",
+    1,
+    -0.1
+   ],
+   "escena": "llamado",
+   "cam": [
+    540,
+    820,
+    1.0,
+    480,
+    1150,
+    1.35
+   ]
+  },
+  {
+   "en": [
+    "Tres",
+    1,
+    -0.1
    ],
    "escena": "monte",
    "cam": [
@@ -31,9 +85,83 @@
   },
   {
    "en": [
-    "Isaac",
+    "tercer",
+    1,
+    -0.4
+   ],
+   "escena": "caminata",
+   "sinLena": true,
+   "cam": [
+    420,
+    1000,
+    1.1,
+    760,
+    860,
+    1.35
+   ]
+  },
+  {
+   "en": [
+    "volveremos",
     2,
     -0.1
+   ],
+   "escena": "texto",
+   "lineas": [
+    "VOLVEREMOS.",
+    "LOS DOS."
+   ],
+   "cam": [
+    540,
+    820,
+    0.98,
+    540,
+    820,
+    1.12
+   ]
+  },
+  {
+   "en": [
+    "Hebreos",
+    1,
+    -0.1
+   ],
+   "escena": "monte",
+   "cam": [
+    560,
+    1000,
+    1.25,
+    560,
+    980,
+    1.45
+   ]
+  },
+  {
+   "en": [
+    "Entonces",
+    1,
+    -0.1
+   ],
+   "escena": "carga",
+   "presagio": [
+    "juntos",
+    1,
+    0
+   ],
+   "cam": [
+    560,
+    1000,
+    1.0,
+    640,
+    900,
+    1.25
+   ]
+  },
+  {
+   "en": [
+    "Isaac",
+    4,
+    -0.3
    ],
    "escena": "caminata",
    "cielo": "gDusk",
@@ -54,7 +182,7 @@
   {
    "en": [
     "Abraham",
-    2,
+    4,
     -0.1
    ],
    "escena": "caminata",
@@ -70,26 +198,32 @@
   },
   {
    "en": [
-    "Dios",
-    2,
-    -0.15
+    "Llegan",
+    1,
+    -0.1
    ],
    "escena": "altar",
-   "luz": 0.25,
+   "isaac": true,
+   "cuchillo": true,
+   "luz": [
+    "Abraham",
+    6,
+    -0.1
+   ],
    "cam": [
-    540,
-    860,
-    1.0,
-    540,
-    1100,
-    1.25
+    460,
+    980,
+    1.05,
+    380,
+    900,
+    1.35
    ]
   },
   {
    "en": [
-    "Abraham",
-    3,
-    -0.1
+    "alza",
+    1,
+    -0.4
    ],
    "escena": "carnero",
    "cam": [
@@ -103,7 +237,7 @@
   },
   {
    "en": [
-    "Fíjate",
+    "fíjate",
     1,
     -0.1
    ],
@@ -125,7 +259,25 @@
    "en": [
     "Siglos",
     1,
-    -0.15
+    -0.1
+   ],
+   "escena": "jerusalen",
+   "templo": true,
+   "sinCruces": true,
+   "cam": [
+    500,
+    980,
+    1.0,
+    330,
+    1100,
+    1.4
+   ]
+  },
+  {
+   "en": [
+    "junto",
+    1,
+    -0.4
    ],
    "escena": "jordan",
    "cam": [
@@ -155,9 +307,29 @@
   },
   {
    "en": [
-    "Dios",
-    4,
-    -0.2
+    "Abraham",
+    9,
+    -0.3
+   ],
+   "escena": "texto",
+   "lineas": [
+    "TU HIJO,",
+    "TU ÚNICO"
+   ],
+   "cam": [
+    540,
+    820,
+    0.98,
+    540,
+    820,
+    1.12
+   ]
+  },
+  {
+   "en": [
+    "Pablo",
+    1,
+    -0.3
    ],
    "escena": "cruz",
    "sinSerpiente": true,
@@ -168,6 +340,78 @@
     540,
     1000,
     1.25
+   ]
+  },
+  {
+   "en": [
+    "Moriah",
+    3,
+    -0.4
+   ],
+   "escena": "altar",
+   "isaac": true,
+   "luz": 0,
+   "cam": [
+    540,
+    900,
+    1.0,
+    560,
+    1050,
+    1.2
+   ]
+  },
+  {
+   "en": [
+    "cruz",
+    1,
+    -0.3
+   ],
+   "escena": "cruz",
+   "sinSerpiente": true,
+   "cam": [
+    540,
+    1000,
+    1.2,
+    540,
+    760,
+    1.0
+   ]
+  },
+  {
+   "en": [
+    "llamó",
+    1,
+    -0.5
+   ],
+   "escena": "texto",
+   "lineas": [
+    "JEHOVÁ",
+    "PROVEERÁ"
+   ],
+   "cam": [
+    540,
+    820,
+    0.98,
+    540,
+    820,
+    1.12
+   ]
+  },
+  {
+   "en": [
+    "proveyó",
+    1,
+    -0.5
+   ],
+   "escena": "nombre",
+   "titulo": "JESÚS",
+   "cam": [
+    540,
+    820,
+    0.96,
+    540,
+    820,
+    1.1
    ]
   },
   {
@@ -191,29 +435,133 @@
  "refs": [
   {
    "desde": [
-    "Dios",
+    "estrellas",
+    1,
+    -0.3
+   ],
+   "hasta": [
+    "cien",
+    1,
+    -0.4
+   ],
+   "texto": "Génesis 15:5"
+  },
+  {
+   "desde": [
+    "cien",
+    1,
+    -0.2
+   ],
+   "hasta": [
+    "Hasta",
+    1,
+    -0.1
+   ],
+   "texto": "Génesis 21:5"
+  },
+  {
+   "desde": [
+    "Toma",
     1,
     -0.1
    ],
    "hasta": [
-    "Dios",
-    2,
-    -0.15
+    "Tres",
+    1,
+    -0.1
    ],
-   "texto": "Génesis 22:8"
+   "texto": "Génesis 22:2"
   },
   {
    "desde": [
-    "Abraham",
-    3,
-    0.4
+    "siervos",
+    1,
+    -0.2
    ],
    "hasta": [
-    "Fíjate",
+    "Hebreos",
+    1,
+    -0.1
+   ],
+   "texto": "Génesis 22:5"
+  },
+  {
+   "desde": [
+    "Hebreos",
+    1,
+    0.2
+   ],
+   "hasta": [
+    "Entonces",
+    1,
+    -0.1
+   ],
+   "texto": "Hebreos 11:19"
+  },
+  {
+   "desde": [
+    "leña",
+    1,
+    -0.2
+   ],
+   "hasta": [
+    "Isaac",
+    4,
+    -0.3
+   ],
+   "texto": "Génesis 22:6"
+  },
+  {
+   "desde": [
+    "Padre",
+    2,
+    -0.1
+   ],
+   "hasta": [
+    "Llegan",
+    1,
+    -0.1
+   ],
+   "texto": "Génesis 22:7-8"
+  },
+  {
+   "desde": [
+    "voz",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "alza",
+    1,
+    -0.4
+   ],
+   "texto": "Génesis 22:11-12"
+  },
+  {
+   "desde": [
+    "carnero",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "fíjate",
     1,
     -0.1
    ],
    "texto": "Génesis 22:13"
+  },
+  {
+   "desde": [
+    "templo",
+    1,
+    -0.2
+   ],
+   "hasta": [
+    "junto",
+    1,
+    -0.4
+   ],
+   "texto": "2 Crónicas 3:1"
   },
   {
    "desde": [
@@ -222,18 +570,57 @@
     0.2
    ],
    "hasta": [
-    "Dios",
-    4,
-    -0.2
+    "Abraham",
+    9,
+    -0.3
    ],
    "texto": "Juan 1:29"
+  },
+  {
+   "desde": [
+    "Abraham",
+    9,
+    0.1
+   ],
+   "hasta": [
+    "Pablo",
+    1,
+    -0.3
+   ],
+   "texto": "Génesis 22:12"
+  },
+  {
+   "desde": [
+    "escatimó",
+    1,
+    -0.2
+   ],
+   "hasta": [
+    "Moriah",
+    3,
+    -0.4
+   ],
+   "texto": "Romanos 8:32"
+  },
+  {
+   "desde": [
+    "llamó",
+    1,
+    -0.2
+   ],
+   "hasta": [
+    "proveyó",
+    1,
+    -0.5
+   ],
+   "texto": "Génesis 22:14"
   }
  ],
  "sello": {
   "en": [
    "proveyó",
    1,
-   0.35
+   0.25
   ],
   "texto": "CUMPLIDA"
  }
