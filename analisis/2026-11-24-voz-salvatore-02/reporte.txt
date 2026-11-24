@@ -1,0 +1,8 @@
+pedido: 2026-11-24-voz-salvatore-02
+origen: archivo del repo (insumos-voz/profecias-02-pregunta-de-isaac/voz.mp3)
+duracion_s: 149.702132
+tamano_bytes: 2396204
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 370 palabras
+RESULTADO: ok
