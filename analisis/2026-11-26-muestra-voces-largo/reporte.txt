@@ -1,0 +1,8 @@
+pedido: 2026-11-26-muestra-voces-largo
+origen: archivo del repo (insumos-voz/largo-01-muestra/voz.mp3)
+duracion_s: 61.543265
+tamano_bytes: 1231979
+video: 
+audio: mp3,44100,1
+transcripcion: ok, modelo small, 126 palabras
+RESULTADO: ok
