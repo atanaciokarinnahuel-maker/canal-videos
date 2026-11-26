@@ -10,7 +10,8 @@ data.guion = JSON.parse(fs.readFileSync(path.join(HERE, 'escenas.json'), 'utf8')
 data.dur = Math.round((data.voice_dur + 1.3) * 100) / 100;
 (async () => {
   const b = await chromium.launch();
-  const pg = await b.newPage({ viewport: { width: 1080, height: 1920 } });
+  const HZ = data.guion.formato === 'h';
+  const pg = await b.newPage({ viewport: HZ ? { width: 1920, height: 1080 } : { width: 1080, height: 1920 } });
   pg.on('pageerror', e => console.log('PAGEERROR', e.message));
   pg.on('console', m => { if (m.type() === 'error') console.log('CONSOLE', m.text()); });
   await pg.goto('file://' + path.join(HERE, 'video.html'));

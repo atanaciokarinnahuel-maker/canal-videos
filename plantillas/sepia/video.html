@@ -152,23 +152,33 @@ const SCN={
 };
 
 /* ---------- motor ---------- */
-let W=[],VOICE=0,DUR=0,G=null,SC=[],GROUPS=[],REFS=[],SEAL=null;
+let W=[],VOICE=0,DUR=0,G=null,SC=[],GROUPS=[],REFS=[],SEAL=null,HZ=false;
 function A(word,occ=1){const k=norm(word);let c=0;for(let i=0;i<W.length;i++){if(norm(W[i].text)===k){c++;if(c==occ)return W[i]}}console.error('ANCLA? '+word+' '+occ);return {start:0,end:0}}
 const at=a=>typeof a==='number'?a:A(a[0],a[1]||1).start+(a[2]||0);
-function init(d){W=d.words;VOICE=d.voice_dur;DUR=d.dur;G=d.guion;
+function init(d){W=d.words;VOICE=d.voice_dur;DUR=d.dur;G=d.guion;HZ=G.formato==='h';
+ if(HZ){document.documentElement.style.width=document.body.style.width='1920px';document.documentElement.style.height=document.body.style.height='1080px';
+  ['grain','hud','top'].forEach(id=>{const e=$(id);e.setAttribute('width',1920);e.setAttribute('height',1080);if(id!=='grain')e.setAttribute('viewBox','0 0 1920 1080')});
+  $('grain').querySelectorAll('rect').forEach(r=>{r.setAttribute('width',1920);r.setAttribute('height',1080)});
+  const sb=$('subs').style;sb.top='868px';sb.left='170px';sb.right='170px';sb.height='130px';sb.fontSize='58px';
+  const cs=$('chip').style;cs.top='58px';cs.left='62px';cs.right='auto';cs.textAlign='left';$('chipIn').style.fontSize='36px'}
  SC=G.escenas.map(e=>({...e,t0:Math.max(0,at(e.en)-.12)}));SC.forEach((s,i)=>{s.t1=i<SC.length-1?SC[i+1].t0:DUR;['golpe','herida','victoria','luz','pregunta','postes','dintel','sombra','presagio'].forEach(k=>{if(Array.isArray(s[k]))s[k]=at(s[k])-s.t0})});
  REFS=(G.refs||[]).map(r=>({t0:at(r.desde),t1:at(r.hasta),texto:r.texto}));
  SEAL=G.sello?{t:at(G.sello.en),texto:G.sello.texto||'CUMPLIDA'}:null;
  let cur=[];GROUPS=[];W.forEach((w,i)=>{cur.push(i);const txt=cur.map(j=>W[j].text).join(' ');if(/[.,!?:;…»]$/.test(w.text)||cur.length>=3||txt.length>15){GROUPS.push(cur);cur=[]}});if(cur.length)GROUPS.push(cur);
  return {dur:DUR,voz:VOICE,sello:SEAL?+SEAL.t.toFixed(2):null,escenas:SC.map(s=>[s.escena,+s.t0.toFixed(2),+(s.t1-s.t0).toFixed(2)]),grupos:GROUPS.length}}
 function drawScene(svgId,layId,i,T,op){const s=SC[i],L=T-s.t0,D=s.t1-s.t0,u=eio(clamp(L/Math.max(D,.01))*.92+.04);const c=s.cam||[540,820,1.04,540,820,1.14];const x=lerp(c[0],c[3],u),y=lerp(c[1],c[4],u),z=lerp(c[2],c[5],u);
- $(svgId).innerHTML=`<g filter="url(#wob)">${SCN[s.escena](L,D,s)}</g>`;const el=$(layId);el.style.opacity=op;el.style.transform=`translate(${540-x*z}px,${820-y*z}px) scale(${z})`}
+ $(svgId).innerHTML=`<g filter="url(#wob)">${SCN[s.escena](L,D,s)}</g>`;const el=$(layId);el.style.opacity=op;if(HZ){const zz=1.12+(z-1)*.5;el.style.transform=`translate(${960-x*zz}px,${540-(y+185)*zz}px) scale(${zz})`}else el.style.transform=`translate(${540-x*z}px,${820-y*z}px) scale(${z})`}
+function hudH(p,done){const x0=740,x1=1180;return `<rect x="22" y="22" width="1876" height="1036" fill="none" ${S(6)} opacity=".85"/><rect x="36" y="36" width="1848" height="1008" fill="none" ${S(2.5)} opacity=".7"/>${[[36,36,1,1],[1884,36,-1,1],[36,1044,1,-1],[1884,1044,-1,-1]].map(([x,y,a,b])=>`<path d="M${x} ${y+60*b} q${26*a} ${-9*b} ${30*a} ${-32*b} q${22*a} ${-4*b} ${30*a} ${-30*b}" fill="none" ${S(4)} opacity=".8"/>`).join('')}
+ <rect x="640" y="58" width="640" height="94" fill="${P1}" opacity=".9" ${S(4)}/><text x="960" y="98" text-anchor="middle" ${SERIF} font-weight="700" font-size="36" fill="${INK}" letter-spacing="8">ESTABA ESCRITO</text>
+ <text x="${x0-14}" y="132" ${SERIF} font-size="20" fill="${INK}" letter-spacing="2" text-anchor="end">PROFECÍA</text><text x="${x1+14}" y="132" ${SERIF} font-size="20" fill="${done?RED:INK}" font-weight="${done?700:400}" letter-spacing="2" text-anchor="start">CUMPLIMIENTO</text>
+ <line x1="${x0}" y1="125" x2="${x1}" y2="125" ${S(3)} opacity=".35" stroke-dasharray="3 9"/><line x1="${x0}" y1="125" x2="${lerp(x0,x1,p)}" y2="125" ${S(5,RED)}/><circle cx="${lerp(x0,x1,p)}" cy="125" r="9" fill="${RED}" ${S(3)}/>
+ <text x="960" y="1030" text-anchor="middle" ${SERIF} font-style="italic" font-size="24" fill="${INK}" opacity=".75" letter-spacing="2">${G.pie||''}</text>`}
 function render(T){let i=0;for(let k=0;k<SC.length;k++)if(T>=SC[k].t0)i=k;const f=clamp((T-SC[i].t0)/.4);
  if(i>0&&f<1){drawScene('sB','LB',i-1,T,1)}else{$('sB').innerHTML='';$('LB').style.opacity=0}
  drawScene('sA','LA',i,T,i>0?f:1);
  /* cabecera: título de la serie y línea de tinta que avanza de PROFECÍA a CUMPLIMIENTO */
  const p=clamp(T/(VOICE+.2)),x0=110,x1=970,kx=lerp(x0,x1,p),done=SEAL&&T>=SEAL.t;
- $('hud').innerHTML=`<rect x="26" y="26" width="1028" height="1868" fill="none" ${S(6)} opacity=".85"/><rect x="42" y="42" width="996" height="1836" fill="none" ${S(2.5)} opacity=".7"/>${[[42,42,1,1],[1038,42,-1,1],[42,1878,1,-1],[1038,1878,-1,-1]].map(([x,y,a,b])=>`<path d="M${x} ${y+70*b} q${30*a} ${-10*b} ${34*a} ${-36*b} q${26*a} ${-4*b} ${36*a} ${-34*b}" fill="none" ${S(4)} opacity=".8"/>`).join('')}
+ $('hud').innerHTML=HZ?hudH(p,done):`<rect x="26" y="26" width="1028" height="1868" fill="none" ${S(6)} opacity=".85"/><rect x="42" y="42" width="996" height="1836" fill="none" ${S(2.5)} opacity=".7"/>${[[42,42,1,1],[1038,42,-1,1],[42,1878,1,-1],[1038,1878,-1,-1]].map(([x,y,a,b])=>`<path d="M${x} ${y+70*b} q${30*a} ${-10*b} ${34*a} ${-36*b} q${26*a} ${-4*b} ${36*a} ${-34*b}" fill="none" ${S(4)} opacity=".8"/>`).join('')}
  <rect x="150" y="104" width="780" height="124" fill="${P1}" opacity=".9" ${S(4)}/><text x="540" y="156" text-anchor="middle" ${SERIF} font-weight="700" font-size="44" fill="${INK}" letter-spacing="9">ESTABA ESCRITO</text><text x="540" y="156" text-anchor="middle" ${SERIF} font-size="44" fill="${INK}" letter-spacing="9" opacity="0">.</text>
  <text x="${x0-6}" y="216" ${SERIF} font-size="28" fill="${INK}" letter-spacing="3" text-anchor="start" transform="translate(64,0)">PROFECÍA</text><text x="${x1+6}" y="216" ${SERIF} font-size="28" fill="${done?RED:INK}" font-weight="${done?700:400}" letter-spacing="3" text-anchor="end" transform="translate(-64,0)">CUMPLIMIENTO</text>
  <line x1="${x0+70}" y1="186" x2="${x1-70}" y2="186" ${S(3)} opacity=".35" stroke-dasharray="3 9"/><line x1="${x0+70}" y1="186" x2="${lerp(x0+70,x1-70,p)}" y2="186" ${S(6,RED)}/><circle cx="${lerp(x0+70,x1-70,p)}" cy="186" r="11" fill="${RED}" ${S(3)}/>
@@ -176,7 +186,7 @@ function render(T){let i=0;for(let k=0;k<SC.length;k++)if(T>=SC[k].t0)i=k;const 
  /* referencia bíblica en pantalla */
  const r=REFS.find(r=>T>=r.t0&&T<r.t1),ch=$('chip');if(r){ch.style.display='block';$('chipIn').innerHTML=r.texto+'<i>RVR1960</i>';const a=back(clamp((T-r.t0)/.3));$('chipIn').style.transform=`scale(${a})`}else ch.style.display='none';
  /* sello de cumplimiento */
- let top='';if(SEAL&&T>=SEAL.t){const q=clamp((T-SEAL.t)/.28),sc=lerp(2.6,1,eo(q));top=`<g transform="translate(780,${r?486:392}) rotate(-11) scale(${sc})" opacity="${clamp(q*3)}"><rect x="-250" y="-74" width="500" height="148" rx="16" fill="${P1}" fill-opacity=".85" ${S(12,RED)}/><rect x="-232" y="-56" width="464" height="112" rx="8" fill="none" ${S(4,RED)}/><text x="0" y="28" text-anchor="middle" ${SERIF} font-weight="700" font-size="76" fill="${RED}" letter-spacing="5">${SEAL.texto}</text></g>`}$('top').innerHTML=top;
+ let top='';if(SEAL&&T>=SEAL.t){const q=clamp((T-SEAL.t)/.28),sc=lerp(2.6,1,eo(q));top=`<g transform="${HZ?`translate(1560,${r?300:250}) rotate(-9) scale(${.82*sc})`:`translate(780,${r?486:392}) rotate(-11) scale(${sc})`}" opacity="${clamp(q*3)}"><rect x="-250" y="-74" width="500" height="148" rx="16" fill="${P1}" fill-opacity=".85" ${S(12,RED)}/><rect x="-232" y="-56" width="464" height="112" rx="8" fill="none" ${S(4,RED)}/><text x="0" y="28" text-anchor="middle" ${SERIF} font-weight="700" font-size="76" fill="${RED}" letter-spacing="5">${SEAL.texto}</text></g>`}$('top').innerHTML=top;
  /* subtítulos: 2 o 3 palabras, la activa resaltada */
  let g=-1;for(let k=0;k<GROUPS.length;k++)if(T>=W[GROUPS[k][0]].start-.08)g=k;const el=$('subs');
  if(g<0||T>W[GROUPS[g][GROUPS[g].length-1]].end+.55){el.innerHTML='';return}
