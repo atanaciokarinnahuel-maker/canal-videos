@@ -1,0 +1,22 @@
+{
+ "modelo": "eleven_v4",
+ "grave": 0.94,
+ "voces": {
+  "narrador": "t3eeeqhBjrUqcrPvDqUn",
+  "dios": "t3eeeqhBjrUqcrPvDqUn",
+  "jesus": "BPwS5yO6aXvwg8auqNwS",
+  "cain": "ifgQptCyquMG1K4fdoT3",
+  "m1": "18GZPpJvaVG53Nt3H52N", "m2": "4XUsiqPDK4UACIM2BILe", "m3": "57D8YIbQSuE3REDPO6Vm", "m4": "GcxVzkrklctDNSL0D1AO", "m5": "k0cKCpdFDYiojW6PwPrO"
+ },
+ "lineas": [
+  {"v": "narrador", "t": "[whispers] [dramatically] En el campo, lejos de todos… Caín se levanta contra su hermano Abel. [pause] Y lo mata. [softly] Entonces, en medio del silencio… Dios pregunta:", "pausa": 0.5},
+  {"v": "dios", "t": "[deep voice] [slowly] ¿Dónde está Abel, tu hermano?", "efecto": "eco", "pausa": 0.6},
+  {"v": "cain", "t": "[nervous] No sé. [defensively] ¿Soy yo acaso guarda de mi hermano?", "pausa": 0.6},
+  {"v": "dios", "t": "[angry] [deep voice] ¿Qué has hecho? La voz de la sangre de tu hermano clama a mí desde la tierra.", "efecto": "eco", "pausa": 0.9},
+  {"v": "narrador", "t": "[softly] Miles de años después, en un aposento alto, Jesús toma una copa…", "pausa": 0.5},
+  {"v": "jesus", "t": "[softly] [sad] Bebed de ella todos; [warmly] porque esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados.", "pausa": 0.9},
+  {"v": ["m1", "m2", "m3", "m4", "m5"], "t": "[shouting] ¡Crucifícale! ¡Crucifícale!", "efecto": "multitud", "pausa": 0.8},
+  {"v": "jesus", "t": "[exhales] [trembling voice] Consumado es.", "pausa": 0.9},
+  {"v": "narrador", "t": "[dramatically] La sangre de Abel pedía justicia. [pause] La sangre de Jesús… [softly] habla mejor que la de Abel.", "pausa": 0.6}
+ ]
+}
