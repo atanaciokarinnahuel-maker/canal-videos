@@ -62,3 +62,10 @@ Respuestas de Karin a las preguntas previas (el video es largo y gasta muchos cr
   Ya están en la Parte 1: la copa (10:54) y la puerta que se vuelve cruz (9:20).
 - 2 o 3 momentos con video IA (el velo que se rasga, la piedra que se mueve, la resurrección).
 - Cierre: invitación a la fe (Ef 2:8-9, Ro 10:9-10) y oración guiada.
+
+## Entrega de la Parte 1 (27 nov 2026)
+- Video entregado por el chat: 15:39, 1080p, 345 MiB. Drive tiene las miniaturas y el documento con los textos (el video no entra: límite de 10 MB desde acá).
+- "La sangre de Abel pedía justicia": Karin preguntó si es bíblico. Se deja igual (Gn 4:10-11, Mt 23:35, Ap 6:10, Heb 12:24);
+  la explicación quedó como pregunta 4 en `parte1/publicacion.txt`.
+- Miniatura: Karin va a **probar las dos** con "Probar y comparar" de YouTube Studio (A: la puerta; B: el cuchillo).
+- Siguiente paso: **esperar** a que Karin vea el video completo y diga si hay que cambiar algo. Después: Shorts del largo y Parte 2 (créditos del 30 nov).
