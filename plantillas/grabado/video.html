@@ -47,7 +47,7 @@ async function init(d){Wd=d.words;VOICE=d.voice_dur;DUR=d.dur;G=d.guion;
  NOISE=noiseTex(480,270,3,7);NPX=NOISE.getContext('2d').getImageData(0,0,480,270).data;NMN=255;NMX=0;for(let i=0;i<NPX.length;i+=4){NMN=Math.min(NMN,NPX[i]);NMX=Math.max(NMX,NPX[i])}
  MASK=document.createElement('canvas');MASK.width=480;MASK.height=270;MCX=MASK.getContext('2d');
  for(let k=0;k<4;k++)GRAIN.push(noiseTex(640,360,40+k*17,0));
- return {dur:DUR,voz:VOICE,escenas:SC.map(s=>[s.img,+s.t0.toFixed(2),+(s.t1-s.t0).toFixed(2)]),grupos:GROUPS.length}}
+ return {dur:DUR,voz:VOICE,escenas:SC.map(s=>[s.img,+s.t0.toFixed(2),+(s.t1-s.t0).toFixed(2)]),capitulos:CAPS.map(c=>+c.t0.toFixed(2)),temblores:SHAKES.map(k=>+k.t.toFixed(2)),grupos:GROUPS.length}}
 /* encuadre: cam=[x0,y0,z0,x1,y1,z1]: centro en fracciones de la imagen y zoom (1 = la imagen cubre justo el cuadro) */
 function drawImg(ctx,s,T){const im=IMG[s.img],L=T-s.t0,D=Math.max(.01,s.t1-s.t0)+.8,u=eio(clamp(L/D));const c=s.cam||[.5,.5,1.04,.5,.5,1.16];
  const x=lerp(c[0],c[3],u),y=lerp(c[1],c[4],u),z=lerp(c[2],c[5],u);let sx=0,sy=0;

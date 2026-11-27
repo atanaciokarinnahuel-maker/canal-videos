@@ -1,0 +1,3561 @@
+{
+ "escenas": [
+  {
+   "img": "img/cuchillo.png",
+   "en": 0,
+   "cam": [
+    0.5,
+    0.5,
+    1.02,
+    0.45,
+    0.42,
+    1.35
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/puerta.png",
+   "en": [
+    "una familia en la noche",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "un hombre sangra",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.4,
+    1.5
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "tres escenas",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/sangre_tierra.png",
+   "en": [
+    "porque la biblia dice",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.55,
+    1.05,
+    0.42,
+    0.78,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.3,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "hoy vamos a abrir",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.38,
+    0.5,
+    1.22,
+    0.6,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/eden.png",
+   "en": [
+    "la primera profecia",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.55,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/eden.png",
+   "en": [
+    "en un jardin",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.62,
+    0.5,
+    1.22,
+    0.4,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/serpiente_arbol.png",
+   "en": [
+    "el dia en que entro",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.25,
+    0.72,
+    1.45
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/eden.png",
+   "en": [
+    "adan y eva acababan",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.6,
+    0.6,
+    1.25,
+    0.66,
+    0.6,
+    1.8
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/serpiente_arbol.png",
+   "en": [
+    "la serpiente parecia",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.55,
+    0.45,
+    1.5
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/luz_juicio.png",
+   "en": [
+    "pero en medio del juicio",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.64,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/talon.png",
+   "en": [
+    "un descendiente de la mujer",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.6,
+    0.68,
+    1.45
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/talon.png",
+   "en": [
+    "genesis tres quince",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/eden.png",
+   "en": [
+    "y ese dia paso",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.25,
+    0.7,
+    1.5,
+    0.15,
+    0.72,
+    1.75
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/pieles.png",
+   "en": [
+    "antes de sacarlos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.42,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/pieles.png",
+   "en": [
+    "la biblia no dice de que animal",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.38,
+    0.5,
+    1.22,
+    0.6,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/leon_cordero.png",
+   "en": [
+    "para cubrir al culpable",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.64,
+    0.62,
+    1.7
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.55,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/sangre_tierra.png",
+   "en": [
+    "fue la primera sangre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.42,
+    0.8,
+    1.7
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/ofrendas.png",
+   "en": [
+    "desde ese dia la sangre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "y cada uno senalaba",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/pesebre.png",
+   "en": [
+    "miles de anos despues pablo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.35,
+    0.25
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "y juan explica",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.62,
+    1.4
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "en la cruz jesus fue herido",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.4,
+    1.55
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/talon.png",
+   "en": [
+    "pero la serpiente fue vencida",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.62,
+    0.75,
+    1.6
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "la promesa mas antigua",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cain_campo.png",
+   "en": [
+    "pero antes de que esa promesa",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "niebla",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/ofrendas.png",
+   "en": [
+    "adan y eva tuvieron dos hijos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/ofrendas.png",
+   "en": [
+    "un dia los dos trajeron",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.38,
+    0.5,
+    1.22,
+    0.6,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/ofrendas.png",
+   "en": [
+    "y dios miro con agrado",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.3,
+    0.42,
+    1.55
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.3,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "por que hebreos lo responde",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/cain_enojo.png",
+   "en": [
+    "cain se enojo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cain_enojo.png",
+   "en": [
+    "si bien hicieres",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.72,
+    0.45,
+    1.5
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cain_campo.png",
+   "en": [
+    "en el campo lejos de todos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.3,
+    0.52,
+    1.35
+   ],
+   "fx": [
+    "niebla",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/luz_juicio.png",
+   "en": [
+    "dios pregunta",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.6,
+    1.05,
+    0.62,
+    0.42,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.64,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cain_campo.png",
+   "en": [
+    "no se soy yo acaso",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.3,
+    0.42,
+    1.6
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/sangre_tierra.png",
+   "en": [
+    "que has hecho",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.42,
+    0.8,
+    1.6
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "siglos mas tarde",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.62,
+    0.5,
+    1.22,
+    0.4,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/sangre_tierra.png",
+   "en": [
+    "la sangre de abel pedia",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.42,
+    0.8,
+    1.6,
+    0.42,
+    0.78,
+    1.9
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "la sangre de jesus habla",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.55,
+    0.42,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "un hijo le hizo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/estrellas.png",
+   "en": [
+    "abraham habia esperado",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/tienda.png",
+   "en": [
+    "y a los cien anos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "img": "img/luz_juicio.png",
+   "en": [
+    "hasta que un dia dios",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.64,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "tres dias de camino",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.62,
+    0.5,
+    1.22,
+    0.4,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "al tercer dia",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.62,
+    0.3,
+    1.5
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "volveremos los dos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.38,
+    0.6,
+    1.55
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "hebreos dice que abraham",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "entonces pone la lena",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.35,
+    0.55,
+    1.6
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/subida.png",
+   "en": [
+    "y en el camino isaac pregunta",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.42,
+    0.5,
+    1.75
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cuchillo.png",
+   "en": [
+    "abraham responde",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.6,
+    0.35,
+    1.3,
+    0.5,
+    0.45,
+    1.1
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cuchillo.png",
+   "en": [
+    "llegan arriba",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.42,
+    0.6,
+    1.5
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cuchillo.png",
+   "en": [
+    "una voz desde el cielo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.58,
+    0.2,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/carnero.png",
+   "en": [
+    "abraham alza los ojos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.8,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/carnero.png",
+   "en": [
+    "pero fijate",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/templo.png",
+   "en": [
+    "siglos despues en el monte",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/jordan.png",
+   "en": [
+    "y un dia junto al rio",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.3,
+    0.45,
+    1.45
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/jordan.png",
+   "en": [
+    "he aqui el cordero",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.74,
+    0.5,
+    1.7
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.75,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/cuchillo.png",
+   "en": [
+    "a abraham dios le dijo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "y pablo escribe que dios",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cuchillo.png",
+   "en": [
+    "en moriah dios detuvo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.25,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "en la cruz no lo detuvo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.45,
+    1.1,
+    0.5,
+    0.38,
+    1.75
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/carnero.png",
+   "en": [
+    "abraham llamo a aquel lugar",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.8,
+    0.2,
+    1.4
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.8,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/jacob.png",
+   "en": [
+    "isaac tuvo un hijo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.2,
+    0.15
+   ]
+  },
+  {
+   "img": "img/jacob.png",
+   "en": [
+    "no sera quitado el cetro",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.35,
+    0.45,
+    1.55
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.2,
+    0.15
+   ]
+  },
+  {
+   "img": "img/david.png",
+   "en": [
+    "un cetro es la vara",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.7,
+    0.55
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "siglos despues hebreos afirma",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/leon_cordero.png",
+   "en": [
+    "y el apocalipsis",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.4,
+    0.45,
+    1.5
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.5,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/leon_cordero.png",
+   "en": [
+    "pero cuando juan se da vuelta",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.62,
+    0.6,
+    1.8
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.55,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/esclavos.png",
+   "en": [
+    "pasaron mas de cuatrocientos",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/esclavos.png",
+   "en": [
+    "dios envio plaga tras plaga",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.38,
+    0.5,
+    1.22,
+    0.6,
+    0.5,
+    1.22
+   ],
+   "fx": [
+    "polvo",
+    "oscuro"
+   ]
+  },
+  {
+   "img": "img/medianoche.png",
+   "en": [
+    "hasta que llego la ultima",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "oscuro",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/familia_cordero.png",
+   "en": [
+    "pero dios dio una salida",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/puerta.png",
+   "en": [
+    "y poner su sangre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.3,
+    1.5
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/puerta.png",
+   "en": [
+    "y la sangre os sera",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/medianoche.png",
+   "en": [
+    "a medianoche se oyo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.4,
+    0.5,
+    1.45
+   ],
+   "fx": [
+    "oscuro",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/medianoche.png",
+   "en": [
+    "pero las casas con sangre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.78,
+    0.55,
+    1.6
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/familia_cordero.png",
+   "en": [
+    "y dios agrego un detalle",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.45,
+    1.6
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "mas de mil anos despues jesus muere",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "a los crucificados",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.4,
+    0.45,
+    1.5
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "y juan escribe",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.62,
+    1.4
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/puerta.png",
+   "en": [
+    "por eso pablo dice",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.45,
+    1.35
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "que es cristo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.5,
+    0.5,
+    0.45,
+    1.1
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ],
+   "tdur": 2.6
+  },
+  {
+   "img": "img/tabernaculo.png",
+   "en": [
+    "en el desierto dios le dio",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/sacerdote.png",
+   "en": [
+    "en su interior habia un velo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.75,
+    0.42,
+    1.45
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    0.3
+   ]
+  },
+  {
+   "img": "img/sacerdote.png",
+   "en": [
+    "solo una vez al ano",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.48,
+    0.5,
+    1.4
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    0.3
+   ]
+  },
+  {
+   "img": "img/sacerdote.png",
+   "en": [
+    "por que tanta sangre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.53,
+    0.48,
+    1.8
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.55,
+    0.45
+   ]
+  },
+  {
+   "img": "img/tabernaculo.png",
+   "en": [
+    "porque la vida de la carne",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.3,
+    1.5
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.5,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/ofrendas.png",
+   "en": [
+    "el pecado cuesta una vida",
+    2,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.3,
+    0.45,
+    1.4
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/sangre_tierra.png",
+   "en": [
+    "por eso el nuevo testamento",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.42,
+    0.8,
+    1.6
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "remision significa perdon",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/tabernaculo.png",
+   "en": [
+    "pero habia un problema",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/copa.png",
+   "en": [
+    "mas de mil anos despues en un aposento",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.55,
+    0.66,
+    1.3,
+    0.6,
+    0.5,
+    1.55
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    0.3
+   ]
+  },
+  {
+   "img": "img/copa.png",
+   "en": [
+    "bebed de ella",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.6,
+    0.5,
+    1.5,
+    0.62,
+    0.33,
+    1.85
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    0.3
+   ]
+  },
+  {
+   "img": "img/copa.png",
+   "en": [
+    "remision la misma palabra",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.62,
+    0.4,
+    1.8,
+    0.55,
+    0.6,
+    1.3
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    0.3
+   ]
+  },
+  {
+   "img": "img/sacerdote.png",
+   "en": [
+    "hebreos lo dice asi",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.75,
+    0.4,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.75,
+    0.3
+   ]
+  },
+  {
+   "img": "img/serpientes.png",
+   "en": [
+    "pero en el desierto el pueblo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/serpientes.png",
+   "en": [
+    "hemos pecado",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.6,
+    0.65,
+    1.5
+   ],
+   "fx": [
+    "polvo",
+    "oscuro"
+   ]
+  },
+  {
+   "img": "img/serpiente_bronce.png",
+   "en": [
+    "moises oro por el pueblo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/serpiente_bronce.png",
+   "en": [
+    "hazte una serpiente",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.62,
+    0.3,
+    1.55
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/serpiente_bronce.png",
+   "en": [
+    "no tenian que hacer nada",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.4,
+    0.75,
+    1.5
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/nicodemo.png",
+   "en": [
+    "siglos despues de noche",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.5,
+    0.65
+   ]
+  },
+  {
+   "img": "img/nicodemo.png",
+   "en": [
+    "y como moises levanto",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.68,
+    0.5,
+    1.55
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.5,
+    0.65
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "la cura colgaba",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/serpiente_bronce.png",
+   "en": [
+    "antes de morir moises",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.55,
+    1.65
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/puerta.png",
+   "en": [
+    "moises saco al pueblo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/jordan.png",
+   "en": [
+    "siglos despues cuando jesus",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/pentecostes.png",
+   "en": [
+    "y pedro lo confirmo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/job.png",
+   "en": [
+    "en uno de los libros",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo",
+    "niebla"
+   ]
+  },
+  {
+   "img": "img/job.png",
+   "en": [
+    "yo se que mi redentor",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.6,
+    0.25,
+    1.5
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/job.png",
+   "en": [
+    "job no sabia su nombre",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/david.png",
+   "en": [
+    "siglos despues el rey david",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.72,
+    0.55
+   ]
+  },
+  {
+   "img": "img/david.png",
+   "en": [
+    "porque no dejaras",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.32,
+    0.5,
+    1.5
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.72,
+    0.55
+   ]
+  },
+  {
+   "img": "img/pentecostes.png",
+   "en": [
+    "david murio y su cuerpo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/tumba.png",
+   "en": [
+    "a este jesus resucito",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.4,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "pero hay un salmo",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "manos y pies traspasados",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.5,
+    0.4,
+    1.7
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/multitud.png",
+   "en": [
+    "ropa repartida",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo",
+    "oscuro"
+   ]
+  },
+  {
+   "img": "img/pesebre.png",
+   "en": [
+    "y despues vienen los profetas",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.35,
+    0.25
+   ]
+  },
+  {
+   "img": "img/belen.png",
+   "en": [
+    "un pueblo pequeno llamado belen",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/burro.png",
+   "en": [
+    "un rey que entraria",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/multitud.png",
+   "en": [
+    "treinta monedas de plata",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.6,
+    0.3,
+    1.5
+   ],
+   "fx": [
+    "oscuro",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/cruces.png",
+   "en": [
+    "un hombre traspasado",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.05,
+    0.5,
+    0.5,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.6,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/tumba.png",
+   "en": [
+    "y una tumba",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.06,
+    0.45,
+    0.5,
+    1.5
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.4,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/biblia.png",
+   "en": [
+    "todo eso estaba escrito",
+    1,
+    -0.15
+   ],
+   "cam": [
+    0.5,
+    0.5,
+    1.32,
+    0.5,
+    0.5,
+    1.06
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.07,
+    0.22
+   ]
+  }
+ ],
+ "capitulos": [
+  {
+   "en": [
+    "estaba escrito",
+    1,
+    0
+   ],
+   "a": "ESTABA ESCRITO",
+   "b": "Parte 1",
+   "dur": 4.2
+  },
+  {
+   "en": [
+    "la primera profecia",
+    1,
+    0
+   ],
+   "a": "GÉNESIS 3",
+   "b": "La primera promesa",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "pero antes de que esa promesa",
+    1,
+    0
+   ],
+   "a": "GÉNESIS 4",
+   "b": "La sangre de Abel",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "un hijo le hizo",
+    1,
+    0
+   ],
+   "a": "GÉNESIS 22",
+   "b": "Dios se proveerá de cordero",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "isaac tuvo un hijo",
+    1,
+    0
+   ],
+   "a": "GÉNESIS 49",
+   "b": "El cetro de Judá",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "pasaron mas de cuatrocientos",
+    1,
+    0
+   ],
+   "a": "ÉXODO 12",
+   "b": "La sangre en la puerta",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "en el desierto dios le dio",
+    1,
+    0
+   ],
+   "a": "LEVÍTICO 16-17",
+   "b": "La sangre y la remisión",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "pero en el desierto el pueblo",
+    1,
+    0
+   ],
+   "a": "NÚMEROS 21",
+   "b": "La serpiente de bronce",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "antes de morir moises",
+    1,
+    0
+   ],
+   "a": "DEUTERONOMIO 18",
+   "b": "Un profeta como Moisés",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "en uno de los libros",
+    1,
+    0
+   ],
+   "a": "JOB 19",
+   "b": "Yo sé que mi Redentor vive",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "siglos despues el rey david",
+    1,
+    0
+   ],
+   "a": "SALMO 16",
+   "b": "No verá corrupción",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "en la parte 2",
+    1,
+    0
+   ],
+   "a": "PRÓXIMAMENTE",
+   "b": "Estaba escrito · Parte 2",
+   "dur": 6.0
+  }
+ ],
+ "refs": [
+  {
+   "desde": [
+    "un descendiente de la mujer",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y ese dia paso",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 3:15"
+  },
+  {
+   "desde": [
+    "hojas de higuera",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "antes de sacarlos",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 3:7"
+  },
+  {
+   "desde": [
+    "los vistio",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "para cubrir al culpable",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 3:21"
+  },
+  {
+   "desde": [
+    "pablo escribe",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y juan explica",
+    1,
+    -0.2
+   ],
+   "texto": "Gálatas 4:4"
+  },
+  {
+   "desde": [
+    "y juan explica",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "en la cruz jesus fue herido",
+    1,
+    -0.2
+   ],
+   "texto": "1 Juan 3:8"
+  },
+  {
+   "desde": [
+    "un dia los dos trajeron",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "por que hebreos lo responde",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 4:3-5"
+  },
+  {
+   "desde": [
+    "por la fe abel",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "cain se enojo",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 11:4"
+  },
+  {
+   "desde": [
+    "si bien hicieres",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "en el campo lejos de todos",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 4:7"
+  },
+  {
+   "desde": [
+    "donde esta abel",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "siglos mas tarde",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 4:8-10"
+  },
+  {
+   "desde": [
+    "la sangre de jesus habla",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "un hijo le hizo",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 12:24"
+  },
+  {
+   "desde": [
+    "las estrellas del cielo",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y a los cien anos",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 15:5"
+  },
+  {
+   "desde": [
+    "y a los cien anos",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "hasta que un dia dios",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 21:5"
+  },
+  {
+   "desde": [
+    "toma ahora",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "tres dias de camino",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:2"
+  },
+  {
+   "desde": [
+    "a sus siervos",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "hebreos dice que abraham",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:5"
+  },
+  {
+   "desde": [
+    "hebreos dice que abraham",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "entonces pone la lena",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 11:19"
+  },
+  {
+   "desde": [
+    "entonces pone la lena",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y en el camino isaac pregunta",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:6"
+  },
+  {
+   "desde": [
+    "padre aqui estan",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "llegan arriba",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:7-8"
+  },
+  {
+   "desde": [
+    "una voz desde el cielo",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "abraham alza los ojos",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:11-12"
+  },
+  {
+   "desde": [
+    "y ve un carnero",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "pero fijate",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:13"
+  },
+  {
+   "desde": [
+    "siglos despues en el monte",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y un dia junto al rio",
+    1,
+    -0.2
+   ],
+   "texto": "2 Crónicas 3:1"
+  },
+  {
+   "desde": [
+    "he aqui el cordero",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "a abraham dios le dijo",
+    1,
+    -0.2
+   ],
+   "texto": "Juan 1:29"
+  },
+  {
+   "desde": [
+    "no me rehusaste",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y pablo escribe que dios",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:12"
+  },
+  {
+   "desde": [
+    "no escatimo",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "en moriah dios detuvo",
+    1,
+    -0.2
+   ],
+   "texto": "Romanos 8:32"
+  },
+  {
+   "desde": [
+    "abraham llamo a aquel lugar",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "isaac tuvo un hijo",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 22:14"
+  },
+  {
+   "desde": [
+    "no sera quitado el cetro",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "un cetro es la vara",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 49:10"
+  },
+  {
+   "desde": [
+    "siglos despues hebreos afirma",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y el apocalipsis",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 7:14"
+  },
+  {
+   "desde": [
+    "y el apocalipsis",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "pasaron mas de cuatrocientos",
+    1,
+    -0.2
+   ],
+   "texto": "Apocalipsis 5:5-6"
+  },
+  {
+   "desde": [
+    "cada familia debia",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y la sangre os sera",
+    1,
+    -0.2
+   ],
+   "texto": "Éxodo 12:5-7"
+  },
+  {
+   "desde": [
+    "y la sangre os sera",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "a medianoche se oyo",
+    1,
+    -0.2
+   ],
+   "texto": "Éxodo 12:13"
+  },
+  {
+   "desde": [
+    "a medianoche se oyo",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y dios agrego un detalle",
+    1,
+    -0.2
+   ],
+   "texto": "Éxodo 12:29"
+  },
+  {
+   "desde": [
+    "ni quebrareis",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "mas de mil anos despues jesus muere",
+    1,
+    -0.2
+   ],
+   "texto": "Éxodo 12:46"
+  },
+  {
+   "desde": [
+    "a los crucificados",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "por eso pablo dice",
+    1,
+    -0.2
+   ],
+   "texto": "Juan 19:32-36"
+  },
+  {
+   "desde": [
+    "nuestra pascua",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "en el desierto dios le dio",
+    1,
+    -0.2
+   ],
+   "texto": "1 Corintios 5:7"
+  },
+  {
+   "desde": [
+    "solo una vez al ano",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "por que tanta sangre",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 9:7"
+  },
+  {
+   "desde": [
+    "porque la vida de la carne",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "el pecado cuesta una vida",
+    2,
+    -0.2
+   ],
+   "texto": "Levítico 17:11"
+  },
+  {
+   "desde": [
+    "por eso el nuevo testamento",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "remision significa perdon",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 9:22"
+  },
+  {
+   "desde": [
+    "pero habia un problema",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "mas de mil anos despues en un aposento",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 10:4"
+  },
+  {
+   "desde": [
+    "bebed de ella",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "remision la misma palabra",
+    1,
+    -0.2
+   ],
+   "texto": "Mateo 26:27-28"
+  },
+  {
+   "desde": [
+    "hebreos lo dice asi",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "pero en el desierto el pueblo",
+    1,
+    -0.2
+   ],
+   "texto": "Hebreos 9:12"
+  },
+  {
+   "desde": [
+    "y vinieron serpientes",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "moises oro por el pueblo",
+    1,
+    -0.2
+   ],
+   "texto": "Números 21:6-7"
+  },
+  {
+   "desde": [
+    "hazte una serpiente",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "no tenian que hacer nada",
+    1,
+    -0.2
+   ],
+   "texto": "Números 21:8"
+  },
+  {
+   "desde": [
+    "y como moises levanto",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "la cura colgaba",
+    1,
+    -0.2
+   ],
+   "texto": "Juan 3:14-15"
+  },
+  {
+   "desde": [
+    "profeta de en medio de ti",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "moises saco al pueblo",
+    1,
+    -0.2
+   ],
+   "texto": "Deuteronomio 18:15"
+  },
+  {
+   "desde": [
+    "este verdaderamente",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "y pedro lo confirmo",
+    1,
+    -0.2
+   ],
+   "texto": "Juan 6:14"
+  },
+  {
+   "desde": [
+    "y pedro lo confirmo",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "en uno de los libros",
+    1,
+    -0.2
+   ],
+   "texto": "Hechos 3:22"
+  },
+  {
+   "desde": [
+    "yo se que mi redentor",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "job no sabia su nombre",
+    1,
+    -0.2
+   ],
+   "texto": "Job 19:25-26"
+  },
+  {
+   "desde": [
+    "porque no dejaras",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "david murio y su cuerpo",
+    1,
+    -0.2
+   ],
+   "texto": "Salmo 16:10"
+  },
+  {
+   "desde": [
+    "david murio y fue sepultado",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "pero hay un salmo",
+    1,
+    -0.2
+   ],
+   "texto": "Hechos 2:29-32"
+  }
+ ],
+ "temblores": [
+  {
+   "en": [
+    "aplastara",
+    1,
+    0
+   ],
+   "fuerza": 0.8
+  },
+  {
+   "en": [
+    "fue vencida",
+    1,
+    0
+   ],
+   "fuerza": 0.6
+  },
+  {
+   "en": [
+    "si bien hicieres",
+    1,
+    0
+   ],
+   "fuerza": 0.5
+  },
+  {
+   "en": [
+    "donde esta abel",
+    1,
+    0
+   ],
+   "fuerza": 0.5
+  },
+  {
+   "en": [
+    "que has hecho",
+    1,
+    0
+   ],
+   "fuerza": 1.0
+  },
+  {
+   "en": [
+    "abraham abraham",
+    1,
+    0
+   ],
+   "fuerza": 0.8
+  },
+  {
+   "en": [
+    "y la sangre os sera",
+    1,
+    0
+   ],
+   "fuerza": 0.6
+  },
+  {
+   "en": [
+    "clamor",
+    1,
+    0
+   ],
+   "fuerza": 1.0
+  },
+  {
+   "en": [
+    "porque la vida de la carne",
+    1,
+    0
+   ],
+   "fuerza": 0.5
+  },
+  {
+   "en": [
+    "hemos pecado",
+    1,
+    0
+   ],
+   "fuerza": 1.0
+  },
+  {
+   "en": [
+    "hazte una serpiente",
+    1,
+    0
+   ],
+   "fuerza": 0.5
+  }
+ ]
+}

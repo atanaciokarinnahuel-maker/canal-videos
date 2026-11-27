@@ -1,0 +1,342 @@
+{
+ "modelo": "eleven_v4",
+ "grave": 0.94,
+ "voces": {
+  "narrador": "t3eeeqhBjrUqcrPvDqUn",
+  "dios": "t3eeeqhBjrUqcrPvDqUn",
+  "jesus": "BPwS5yO6aXvwg8auqNwS",
+  "cain": "ifgQptCyquMG1K4fdoT3",
+  "jacob": "k0cKCpdFDYiojW6PwPrO",
+  "moises": "57D8YIbQSuE3REDPO6Vm",
+  "job": "GcxVzkrklctDNSL0D1AO",
+  "david": "4XUsiqPDK4UACIM2BILe",
+  "pedro": "18GZPpJvaVG53Nt3H52N",
+  "m1": "18GZPpJvaVG53Nt3H52N",
+  "m2": "4XUsiqPDK4UACIM2BILe",
+  "m3": "57D8YIbQSuE3REDPO6Vm",
+  "m4": "GcxVzkrklctDNSL0D1AO",
+  "m5": "k0cKCpdFDYiojW6PwPrO"
+ },
+ "lineas": [
+  {
+   "v": "narrador",
+   "t": "[whispers] [dramatically] Un padre levanta un cuchillo sobre su propio hijo. [pause] Una familia, en la noche más oscura de Egipto, pinta su puerta con sangre. [pause] Un hombre sangra en una cruz, a las afueras de Jerusalén…",
+   "pausa": 0.6
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Tres escenas. Separadas por unos dos mil años. Y unidas por un mismo hilo: [dramatically] la sangre.",
+   "pausa": 0.6
+  },
+  {
+   "v": "narrador",
+   "t": "[slowly] Porque la Biblia dice algo que incomoda… y que lo explica todo: [deep voice] sin derramamiento de sangre, no se hace remisión.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Hoy vamos a abrir la Biblia desde la primera página, y vamos a seguir ese hilo, profecía por profecía, hasta ver a quién apuntaba. [dramatically] Estaba escrito. [pause] Desde el principio.",
+   "pausa": 1.4
+  },
+  {
+   "reusar": "insumos-voz/profecias-01-primera-promesa",
+   "desde": 0,
+   "hasta": 226,
+   "eco": [
+    [
+     47,
+     61
+    ]
+   ],
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Pero antes de que esa promesa se cumpliera… la sangre volvió a caer sobre la tierra. [pause] Adán y Eva tuvieron dos hijos: Caín, que labraba la tierra, y Abel, que era pastor de ovejas.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Un día, los dos trajeron una ofrenda. Caín trajo del fruto de la tierra. Abel trajo de los primogénitos de sus ovejas, de lo más gordo de ellas. [pause] Y Dios miró con agrado a Abel y a su ofrenda… pero no a Caín.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "¿Por qué? [softly] Hebreos lo responde: por la fe, Abel ofreció a Dios más excelente sacrificio que Caín. [pause] Caín se enojó. Y Dios le advirtió:",
+   "pausa": 0.5
+  },
+  {
+   "v": "dios",
+   "t": "[deep voice] Si bien hicieres, ¿no serás enaltecido? Y si no hicieres bien, el pecado está a la puerta.",
+   "efecto": "eco",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "[whispers] [dramatically] En el campo, lejos de todos… Caín se levanta contra su hermano Abel. [pause] Y lo mata. [softly] Entonces, en medio del silencio… Dios pregunta:",
+   "pausa": 0.5
+  },
+  {
+   "v": "dios",
+   "t": "[deep voice] [slowly] ¿Dónde está Abel, tu hermano?",
+   "efecto": "eco",
+   "pausa": 0.6
+  },
+  {
+   "v": "cain",
+   "t": "[nervous] No sé. [defensively] ¿Soy yo acaso guarda de mi hermano?",
+   "pausa": 0.6
+  },
+  {
+   "v": "dios",
+   "t": "[angry] [deep voice] ¿Qué has hecho? La voz de la sangre de tu hermano clama a mí desde la tierra.",
+   "efecto": "eco",
+   "pausa": 0.9
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Siglos más tarde, la carta a los Hebreos compara esa sangre con otra.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] La sangre de Abel pedía justicia. [pause] La sangre de Jesús… [softly] habla mejor que la de Abel.",
+   "pausa": 1.2
+  },
+  {
+   "reusar": "insumos-voz/profecias-02-pregunta-de-isaac",
+   "desde": 0,
+   "hasta": 323,
+   "eco": [
+    [
+     54,
+     74
+    ],
+    [
+     184,
+     192
+    ],
+    [
+     276,
+     282
+    ]
+   ],
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Isaac tuvo un hijo: Jacob. Y Jacob tuvo doce. [pause] Al final de su vida, ya anciano, Jacob reunió a sus hijos alrededor de su cama para bendecirlos. Y cuando llegó a Judá… dijo algo que nadie entendió del todo:",
+   "pausa": 0.5
+  },
+  {
+   "v": "jacob",
+   "t": "[elderly voice] [slowly] No será quitado el cetro de Judá, ni el legislador de entre sus pies, hasta que venga Siloh; y a él se congregarán los pueblos.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "Un cetro es la vara de un rey. [pause] Y de Judá salieron los reyes: David, Salomón… [pause] Siglos después, Hebreos afirma que nuestro Señor vino de la tribu de Judá. Y el Apocalipsis lo llama el León de la tribu de Judá.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] Pero cuando Juan se da vuelta para mirar al León… [softly] ve un Cordero, como inmolado.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Pasaron más de cuatrocientos años. [pause] Los descendientes de Jacob ya no eran una familia: eran un pueblo entero… esclavo en Egipto.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Dios envió plaga tras plaga, y Faraón no los dejó ir. [pause] Hasta que llegó la última. [whispers] La más terrible: esa noche, moriría todo primogénito en la tierra de Egipto.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Pero Dios dio una salida. Cada familia debía tomar un cordero sin defecto, macho, de un año. Debía sacrificarlo al caer la tarde… y poner su sangre en los dos postes y en el dintel de la puerta.",
+   "pausa": 0.5
+  },
+  {
+   "v": "dios",
+   "t": "[deep voice] Y la sangre os será por señal en las casas donde vosotros estéis; y veré la sangre y pasaré de vosotros.",
+   "efecto": "eco",
+   "pausa": 0.8
+  },
+  {
+   "v": "narrador",
+   "t": "[whispers] A medianoche, se oyó un gran clamor en Egipto. [pause] Pero las casas con sangre en la puerta… quedaron a salvo.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Y Dios agregó un detalle que parece pequeño. Del cordero de la Pascua… [slowly] ni quebraréis hueso suyo.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Más de mil años después, Jesús muere en Jerusalén… justo en la Pascua. A los crucificados les quebraban las piernas para apurar su muerte. A los dos que estaban a su lado, se las quebraron. [pause] A Jesús, no: ya había muerto.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] Y Juan escribe: esto sucedió para que se cumpliese la Escritura: No será quebrado hueso suyo. [pause] [softly] Por eso Pablo dice: nuestra pascua, que es Cristo, ya fue sacrificada por nosotros.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] En el desierto, Dios le dio a Israel un lugar para encontrarse con Él: el tabernáculo. [pause] En su interior había un velo grueso. Detrás del velo, el Lugar Santísimo. [whispers] Nadie podía entrar.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Solo una vez al año, en el Día de la Expiación, el sumo sacerdote cruzaba el velo… y nunca sin sangre: sangre por sus propios pecados y por los del pueblo.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "¿Por qué tanta sangre? [pause] Dios mismo lo explicó:",
+   "pausa": 0.5
+  },
+  {
+   "v": "dios",
+   "t": "[deep voice] [slowly] Porque la vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas; y la misma sangre hará expiación de la persona.",
+   "efecto": "eco",
+   "pausa": 0.8
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] El pecado cuesta una vida. Y Dios aceptaba una vida… en lugar de otra. [pause] Por eso el Nuevo Testamento lo resume así: sin derramamiento de sangre no se hace remisión. [softly] Remisión significa perdón: la deuda cancelada.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "Pero había un problema. [pause] Los sacrificios se repetían año tras año… porque la sangre de los toros y de los machos cabríos no puede quitar los pecados. Eran una sombra. Apuntaban a algo más.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Más de mil años después, en un aposento alto, Jesús toma una copa…",
+   "pausa": 0.5
+  },
+  {
+   "v": "jesus",
+   "t": "[softly] [sad] Bebed de ella todos; [warmly] porque esto es mi sangre del nuevo pacto, que por muchos es derramada para remisión de los pecados.",
+   "pausa": 0.9
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] Remisión. La misma palabra. [pause] Lo que la sangre de los animales anunciaba… su sangre lo iba a cumplir. [softly] Hebreos lo dice así: no por sangre de machos cabríos ni de becerros, sino por su propia sangre, entró una vez para siempre en el Lugar Santísimo, habiendo obtenido eterna redención.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Pero en el desierto, el pueblo volvió a hablar contra Dios. [pause] Y vinieron serpientes ardientes. Mordían al pueblo… y muchos morían.",
+   "pausa": 0.5
+  },
+  {
+   "v": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+   ],
+   "t": "[crying] [shouting] ¡Hemos pecado!",
+   "efecto": "multitud",
+   "pausa": 0.6
+  },
+  {
+   "v": "narrador",
+   "t": "Moisés oró por el pueblo. Y Dios le respondió algo extraño:",
+   "pausa": 0.5
+  },
+  {
+   "v": "dios",
+   "t": "[deep voice] Hazte una serpiente ardiente, y ponla sobre una asta; y cualquiera que fuere mordido y mirare a ella, vivirá.",
+   "efecto": "eco",
+   "pausa": 0.8
+  },
+  {
+   "v": "narrador",
+   "t": "No tenían que hacer nada. [pause] Solo mirar. [pause] Siglos después, de noche, un maestro de la ley llamado Nicodemo visita a Jesús. Y Jesús le explica esa historia:",
+   "pausa": 0.5
+  },
+  {
+   "v": "jesus",
+   "t": "[softly] Y como Moisés levantó la serpiente en el desierto, así es necesario que el Hijo del Hombre sea levantado, [warmly] para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.",
+   "pausa": 0.8
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] La cura colgaba de un madero. [softly] Y bastaba con mirar.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "Antes de morir, Moisés le dio al pueblo una promesa:",
+   "pausa": 0.5
+  },
+  {
+   "v": "moises",
+   "t": "[elderly voice] [slowly] Profeta de en medio de ti, de tus hermanos, como yo, te levantará Jehová tu Dios; a él oiréis.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "Moisés sacó al pueblo de Egipto con la sangre de un cordero, y les habló en nombre de Dios. [pause] Siglos después, cuando Jesús multiplicó los panes, la multitud dijo: Este verdaderamente es el profeta que había de venir al mundo. [softly] Y Pedro lo confirmó en el templo: el profeta como Moisés… era Jesús.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] En uno de los libros más antiguos de la Biblia, un hombre lo pierde todo: sus bienes, sus hijos, su salud. [pause] Sentado entre la ceniza, con el cuerpo lleno de llagas, Job dice:",
+   "pausa": 0.5
+  },
+  {
+   "v": "job",
+   "t": "[trembling voice] Yo sé que mi Redentor vive, y al fin se levantará sobre el polvo; y después de deshecha esta mi piel, en mi carne he de ver a Dios.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Job no sabía su nombre. [pause] Pero sabía que su Redentor vivía. Y que un día lo vería… con sus propios ojos.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Siglos después, el rey David escribe un canto que no tiene sentido… si habla de él mismo:",
+   "pausa": 0.5
+  },
+  {
+   "v": "david",
+   "t": "[softly] Porque no dejarás mi alma en el Seol, ni permitirás que tu santo vea corrupción.",
+   "pausa": 0.7
+  },
+  {
+   "v": "narrador",
+   "t": "David murió, y su cuerpo vio corrupción, como el de todos. [pause] Mil años después, en Jerusalén, el día de Pentecostés, Pedro se pone de pie frente a una multitud:",
+   "pausa": 0.5
+  },
+  {
+   "v": "pedro",
+   "t": "[excited] David murió y fue sepultado, y su sepulcro está con nosotros hasta el día de hoy. [pause] A este Jesús resucitó Dios, de lo cual todos nosotros somos testigos.",
+   "pausa": 1.2
+  },
+  {
+   "v": "narrador",
+   "t": "[whispers] Pero hay un salmo… escrito unos mil años antes de la cruz… que parece un relato en vivo de la crucifixión. [pause] Manos y pies traspasados. Ropa repartida… y sorteada. Burlas con las mismas palabras que se dijeron frente a la cruz.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[dramatically] Y después vienen los profetas: un niño que nacería de una virgen. Un pueblo pequeño llamado Belén. Un rey que entraría montado en un burro. Treinta monedas de plata. Un hombre traspasado… [pause] y una tumba que no pudo retenerlo.",
+   "pausa": 0.5
+  },
+  {
+   "v": "narrador",
+   "t": "[softly] Todo eso estaba escrito. Y lo vamos a ver en la Parte 2. [warmly] Suscríbete y activa la campanita para no perdértela. [pause] Y escríbeme en los comentarios: ¿cuál de estas profecías no conocías?",
+   "pausa": 0.4
+  }
+ ]
+}

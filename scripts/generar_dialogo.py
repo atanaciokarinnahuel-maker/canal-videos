@@ -70,8 +70,38 @@ def tts(voz, texto):
     if cur: words.append({"text": cur, "start": a, "end": b})
     return mp3, words
 
+ECO = "bass=g=3:f=110,acompressor=threshold=-24dB:ratio=3:attack=5:release=200:makeup=3,aecho=0.85:0.55:95|190:0.28|0.14"
+
+def reusar(k, ln):
+    """Tramo de una voz ya generada (p. ej. un Short): {"reusar": carpeta, "desde": i, "hasta": j, "eco": [[a, b], ...]}.
+    Las palabras a..b (índices de words.json de esa carpeta) llevan el eco de la voz de Dios. No gasta créditos."""
+    ww = json.load(open(os.path.join(ln["reusar"], "words.json")))["words"]
+    a, b = ln["desde"], ln["hasta"]
+    t0 = max(0.0, ww[a]["start"] - 0.06); t1 = ww[b]["end"] + 0.12
+    spans = [(ww[i]["start"] - t0 - 0.05, ww[j]["end"] - t0 + 0.35) for i, j in ln.get("eco", [])]
+    seg = os.path.join(tmp, f"seg_{k:03d}.wav"); src = os.path.join(ln["reusar"], "voz.mp3")
+    if spans:
+        en = "+".join(f"between(t,{x:.3f},{y:.3f})" for x, y in spans)
+        fc = (f"[0:a]atrim={t0:.3f}:{t1:.3f},asetpts=PTS-STARTPTS,asplit=2[p][e];"
+              f"[p]volume=0:enable='{en}'[p2];[e]{ECO},volume=0:enable='not({en})'[e2];"
+              f"[p2][e2]amix=inputs=2:normalize=0:duration=first[o]")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-filter_complex", fc, "-map", "[o]", "-ar", "44100", "-ac", "1", seg], check=True)
+    else:
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af", f"atrim={t0:.3f}:{t1:.3f},asetpts=PTS-STARTPTS",
+                        "-ar", "44100", "-ac", "1", seg], check=True)
+    dentro = lambda i: any(x <= i <= y for x, y in ln.get("eco", []))
+    words = [{"text": ww[i]["text"], "start": ww[i]["start"] - t0, "end": ww[i]["end"] - t0, "v": "dios" if dentro(i) else ln.get("v", "narrador")}
+             for i in range(a, b + 1)]
+    return seg, words
+
 partes, todas, t = [], [], 0.0
 for k, ln in enumerate(cfg["lineas"]):
+    if "reusar" in ln:
+        seg, words = reusar(k, ln)
+        for w in words:
+            todas.append({"text": w["text"], "start": round(t + w["start"], 3), "end": round(t + w["end"], 3), "v": w["v"]})
+        d = dur(seg); pausa = float(ln.get("pausa", 0.6)); partes.append((seg, pausa)); t += d + pausa
+        continue
     vs = ln["v"] if isinstance(ln["v"], list) else [ln["v"]]
     gen = [tts(voces[v], ln["t"]) for v in vs]
     mp3, words = gen[0]
@@ -91,7 +121,7 @@ for k, ln in enumerate(cfg["lineas"]):
     else:
         chain = base
         if ef == "eco":                                     # palabras de Dios: más presencia y un eco leve
-            chain += ",bass=g=3:f=110,acompressor=threshold=-24dB:ratio=3:attack=5:release=200:makeup=3,aecho=0.85:0.55:95|190:0.28|0.14"
+            chain += "," + ECO
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", mp3, "-af", chain, "-ar", "44100", "-ac", "1", seg], check=True)
     for w in words:
         todas.append({"text": w["text"], "start": round(t + w["start"] / k_g, 3), "end": round(t + w["end"] / k_g, 3), "v": vs[0]})

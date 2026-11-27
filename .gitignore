@@ -6,3 +6,9 @@ fuentes/profecias-*/r2.log
 fuentes/profecias-*/l.txt
 fuentes/profecias-*/frames/
 fuentes/profecias-*/musica.wav
+# Render del video largo (plantilla grabado)
+fuentes/largo-*/parte*/part_*.mp4
+fuentes/largo-*/parte*/r_*.log
+fuentes/largo-*/parte*/frames/
+fuentes/largo-*/parte*/musica.wav
+fuentes/largo-*/parte*/l.txt
