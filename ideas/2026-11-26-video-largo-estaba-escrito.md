@@ -43,3 +43,22 @@ Respuestas de Karin a las preguntas previas (el video es largo y gasta muchos cr
 ## Herramientas nuevas
 - `scripts/generar_dialogo.py`: varias voces por línea, etiquetas de emoción, eco para Dios, multitud mezclada, caché por línea
   (re-correr no vuelve a pagar).
+
+## Parte 1: producción (27 nov 2026)
+- Guion: `fuentes/largo-01-estaba-escrito/parte1_lineas.json` (57 líneas, 15:38). Voz en `insumos-voz/largo-01-parte1/`.
+- Animación: motor nuevo `plantillas/grabado/` (horizontal 1920x1080, ilustraciones IA en estilo grabado con cámara,
+  transición de tinta, rayos, vela, niebla, brasas, temblores, títulos de capítulo y referencias en pantalla).
+  38 ilustraciones (190 créditos c/u), 125 planos, 12 capítulos. Planos: `construir_escenas_parte1.py`.
+- Música por capítulos: `plantillas/grabado/musica_largo.py` (pasa de menor a mayor en cada capítulo, trueno en cada temblor).
+- Armado final: `scripts/armar_largo.sh` (une partes, música y voz con la misma mezcla que los Shorts).
+- Miniaturas: `fuentes/largo-01-estaba-escrito/miniaturas/` (A: la puerta con sangre; B: el cuchillo de Abraham).
+- Título, descripción con capítulos, hashtags y comentario fijado: `parte1/publicacion.txt`.
+- Ilustraciones descartadas: hojas de higuera (mostraba un desnudo de espaldas). Corregida: la copa (tenía una cúpula anacrónica).
+- Créditos: quedan unos 4.700 hasta el 30 nov. La parte 2 va con el mes nuevo.
+
+## Parte 2 (pendiente, desde el 30 nov)
+- Salmo 22 y los profetas (Is 7:14, Is 9:6, Is 53, Mi 5:2, Zac 9:9, Zac 11:12-13, Zac 12:10, Dn 9), la cruz, la tumba vacía.
+- Ilustraciones de la sangre que faltan: Getsemaní con la corona y la tela roja que se vuelve blanca (Is 1:18).
+  Ya están en la Parte 1: la copa (10:54) y la puerta que se vuelve cruz (9:20).
+- 2 o 3 momentos con video IA (el velo que se rasga, la piedra que se mueve, la resurrección).
+- Cierre: invitación a la fe (Ef 2:8-9, Ro 10:9-10) y oración guiada.
