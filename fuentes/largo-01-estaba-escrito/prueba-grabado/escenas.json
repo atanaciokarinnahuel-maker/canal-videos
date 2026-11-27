@@ -1,0 +1,295 @@
+{
+ "escenas": [
+  {
+   "img": "img/01.png",
+   "en": 0,
+   "cam": [
+    0.42,
+    0.5,
+    1.02,
+    0.3,
+    0.52,
+    1.32
+   ],
+   "fx": [
+    "niebla",
+    "polvo"
+   ]
+  },
+  {
+   "img": "img/02.png",
+   "en": [
+    "Dios",
+    1,
+    -0.35
+   ],
+   "cam": [
+    0.5,
+    0.6,
+    1.05,
+    0.62,
+    0.42,
+    1.28
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.64,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/03.png",
+   "en": [
+    "la voz de la sangre",
+    1,
+    -0.3
+   ],
+   "cam": [
+    0.5,
+    0.55,
+    1.05,
+    0.43,
+    0.8,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.3,
+    -0.1
+   ]
+  },
+  {
+   "img": "img/04.png",
+   "en": [
+    "Miles",
+    1,
+    -0.2
+   ],
+   "cam": [
+    0.55,
+    0.66,
+    1.3,
+    0.62,
+    0.42,
+    1.75
+   ],
+   "fx": [
+    "vela",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    0.3
+   ]
+  },
+  {
+   "img": "img/05.png",
+   "en": [
+    "Crucifícale",
+    1,
+    -0.2
+   ],
+   "cam": [
+    0.5,
+    0.55,
+    1.12,
+    0.5,
+    0.45,
+    1.3
+   ],
+   "fx": [
+    "polvo"
+   ],
+   "tdur": 0.5
+  },
+  {
+   "img": "img/06.png",
+   "en": [
+    "Consumado",
+    1,
+    -0.4
+   ],
+   "cam": [
+    0.5,
+    0.55,
+    1.05,
+    0.55,
+    0.42,
+    1.35
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  },
+  {
+   "img": "img/03.png",
+   "en": [
+    "la sangre de abel",
+    1,
+    -0.3
+   ],
+   "cam": [
+    0.42,
+    0.8,
+    1.6,
+    0.42,
+    0.78,
+    1.9
+   ],
+   "fx": [
+    "polvo"
+   ],
+   "tdur": 0.9
+  },
+  {
+   "img": "img/06.png",
+   "en": [
+    "la sangre de jesus",
+    1,
+    -0.3
+   ],
+   "cam": [
+    0.55,
+    0.5,
+    1.25,
+    0.55,
+    0.4,
+    1.6
+   ],
+   "fx": [
+    "rayos",
+    "polvo"
+   ],
+   "luz": [
+    0.62,
+    -0.05
+   ]
+  }
+ ],
+ "capitulos": [
+  {
+   "en": 0.6,
+   "a": "GÉNESIS 4",
+   "b": "La sangre de Abel",
+   "dur": 3.6
+  },
+  {
+   "en": [
+    "Miles",
+    1,
+    -0.1
+   ],
+   "a": "MATEO 26",
+   "b": "La copa",
+   "dur": 3.0
+  }
+ ],
+ "refs": [
+  {
+   "desde": [
+    "Dónde",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "Miles",
+    1,
+    -0.2
+   ],
+   "texto": "Génesis 4:9-10"
+  },
+  {
+   "desde": [
+    "Bebed",
+    1,
+    -0.1
+   ],
+   "hasta": [
+    "Crucifícale",
+    1,
+    -0.2
+   ],
+   "texto": "Mateo 26:27-28"
+  },
+  {
+   "desde": [
+    "Crucifícale",
+    1,
+    0.1
+   ],
+   "hasta": [
+    "Consumado",
+    1,
+    -0.4
+   ],
+   "texto": "Lucas 23:21"
+  },
+  {
+   "desde": [
+    "Consumado",
+    1,
+    0.2
+   ],
+   "hasta": [
+    "la sangre de abel",
+    1,
+    -0.3
+   ],
+   "texto": "Juan 19:30"
+  },
+  {
+   "desde": [
+    "la sangre de jesus",
+    1,
+    -0.1
+   ],
+   "hasta": 62.5,
+   "texto": "Hebreos 12:24"
+  }
+ ],
+ "temblores": [
+  {
+   "en": [
+    "Dónde",
+    1,
+    0
+   ],
+   "fuerza": 0.5
+  },
+  {
+   "en": [
+    "Qué",
+    1,
+    0
+   ],
+   "fuerza": 1.0
+  },
+  {
+   "en": [
+    "Crucifícale",
+    1,
+    0
+   ],
+   "fuerza": 1.3
+  },
+  {
+   "en": [
+    "Consumado",
+    1,
+    0.1
+   ],
+   "fuerza": 0.4
+  }
+ ]
+}
